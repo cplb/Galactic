@@ -28,7 +28,7 @@ cplb2@cam.ac.uk}}
 
 \date{\today}
 
-\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2002}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2011}
 
 \maketitle
 
@@ -58,9 +58,9 @@ where $M_\bullet$ is the mass of the supermassive black hole. Close to the centr
 \begin{equation}
 r_c = \frac{GM_\bullet}{\sigma_\star^2}
 \end{equation}
-where $\sigma^2$ is the line-of-sight velocity dispersion. We will assume that the mass of stars enclosed within the radius $M_c$ is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$~\cite{Bahcall1976}. We will define a reference number density by
+where $\sigma^2$ is the line-of-sight velocity dispersion. We will assume that the mass of stars enclosed within the radius is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$~\cite{Bahcall1976}. We will define a reference number density from the enclosed mass as
 \begin{equation}
-M_c = \frac{4\pi r_c^3}{3}n_\star M_\star.
+M_\star(r_c) = \frac{4\pi r_c^3}{3}n_\star M_\star.
 \end{equation}
 Within the the core, the density function can be calculated using the approximation of Fokker-Planck formalism. The population of bound ($\mathcal{E} < 0$) stars is evolved numerically until a steady state is reached: the unbound ($\mathcal{E} > 0$) stars form a reservoir with an assumed Maxwellian distribution. Denoting a species of star by its mass $M$:
 \begin{equation}
@@ -78,6 +78,28 @@ f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma_M^2)^{3/2}}\left(-\frac{\mathc
 \end{equation}
 The exponent $p_M$ varies depending upon the mass of the object, yielding mass segregation. For a system with a single mass component, Bahcall and Wolf~\cite{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\cite{Bahcall1976,Kesher2009}, we will assume this holds for the dominant species of stars as although it will vary slightly with $p$ this change is small compared to errors introduced by fitting a simple power law~\cite{Hopman2006, Alexander2009}.}
 
+\subsection{Model Parameters}
+
+We will be using the Fokker-Planck model of Hopman and Alexander~\cite{Hopman2006, Hopman2006a, Hopman2009}. This includes four stellar species: main sequence stars (MS), white dwarfs (WD), neutron stars (NS), and black holes (BH). Their properties are summarised in \tabref{HA}.
+\begin{table*}
+ \centering
+ \begin{minipage}{140mm}
+  \caption{Stellar model parameters for the galactic centre using the results of Hopman and Alexander~\cite{Hopman2009}. We use the main sequence star as our reference. The number fractions for unbound stars are estimates corresponding to a model of continuous star formation~\cite{Alexander2005}.\label{tab:HA}}
+  \begin{tabular}{@{}lrrrr@{}}
+  \hline
+   Star & $M/M_\odot$ & $C_M/C_\star$ & $p_M$ & $k_M/k_\star$~\cite{Toonen2009} \\
+ \hline
+ MS & $1.0$ & $1$ & $-0.1$ & $1$ \\
+ WD & $0.6$ & $0.1$ & $-0.1$ & $0.09$ \\
+ NS & $1.4$ & $0.01$ & $0$ & $0.01$  \\
+ BH & $10$ & $0.001$ & $0.5$ & $0.008$ \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{table*}
+
+We assume a black hole mass of $M_\bullet = 4.31 \times 10^6 M_\odot$~\cite{Gillessen2009} and a velocity dispersion of $\sigma = 103\units{km\,s^{-1}}$~\cite{Tremaine2002}. This gives a cusp radius of $r_c = 1.75\units{pc}$. Using the results of Ghez et al.~\cite{Ghez2006} we would expect the total mass of stars in the core to be $M_\star(r_c) = 6.4 \times 10^6 M_\odot$ (which is within $10\%$ of the value obtianed similarly from Genzel et al.~\cite{Genzel2003}). This gives a stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
+
 \subsection{Eccentricity \& Periapsis}
 
 We wish to make a change of variables to characterise orbits by their eccentricity $e$ and periapse radius $r_p$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $J$ per unit mass are entirely characterised by these parameters
@@ -85,7 +107,7 @@ We wish to make a change of variables to characterise orbits by their eccentrici
 \mathcal{E} & = & -\frac{GM_\bullet(1 - e)}{2r_p},\\
 J^2 & = & GM_\bullet(1 + e)r_p.
 \end{eqnarray}
-We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric, therefore we are only interested in the combination
+We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric~\cite{Genzel2003, Schodel2007}, therefore we are only interested in the combination
 \begin{eqnarray}
 v_\perp^2 & = & v_\phi^2 + v_\theta^2\\
  & = & v^2 - v_r^2.
@@ -174,7 +196,7 @@ To generate a representative sample for the orbital parameters $e$ and $r_p$, we
 
 \subsection{The Inner Cut-Off}
 
-From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r_p$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbitting stars. Our treatment of these is approximate, however should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite definite cut-off, while the others use statistical arguemnts, they are therefore true for a typical star and it is unlikely that a star would be found beyond the imposed limits.
+From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r_p$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbitting stars. Our treatment of these is approximate, however should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite definite cut-off, while the others use statistical arguments, they are therefore true for a typical star and it is unlikely that a star would be found beyond the imposed limits.
 
 \subsubsection{Tidal Disruption}
 
@@ -221,18 +243,18 @@ We will assume that an orbit is depleted of stars if the inspiral timescale is s
 \begin{equation}
 \tau_R = \frac{3(2\pi\sigma_\star^2)^{3/2}}{32\pi^2G^2M_\star^2n_\star\ln\Lambda},
 \end{equation}
-where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$.\footnote{This agrees upto a factor of $\sim2$ with the (8-71) of Binney and Tremaine~\cite{Binney1987} derived from the diffusion coefficient of the Fokker-Planck equation.} From this we will estimate the relaxation time for an orbit as
+where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$.\footnote{This agrees up to a factor of $\sim2$ with the (8-71) of Binney and Tremaine~\cite{Binney1987} derived from the diffusion coefficient of the Fokker-Planck equation.} From this we will estimate the relaxation time for an orbit as
 \begin{eqnarray}
-T_R(r_p,e) & = & \left(\frac{\langle v(r_p,e)\rangle}{\sigma_\star}\right)^3\frac{n_\star}{\langle n(r_p,e)\rangle}\tau_R\\
- & = & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{n_\star}{\langle n(r_p,e)\rangle}\tau_R
+T_R(r_p,e) & = & \left(\frac{\langle v(r)\rangle}{\sigma_\star}\right)^3\frac{n_\star}{\langle n(r)\rangle}\tau_R\\
+ & = & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{n_\star}{\langle n(r)\rangle}\tau_R
 \end{eqnarray}
-using the velocity $\langle v\rangle$ and number density $\langle n\rangle$ averaged over the duration of the orbit as characteristic quantities. While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
+using the velocity $\langle v(r)\rangle$ and number density $\langle n(r)\rangle$ averaged over the duration of the orbit as characteristic quantities.\footnote{In calculating $\langle n(r)\rangle$ we neglect the possibility that the density may be decreased due to the depopulation of orbits. We therefore underestimate the relaxation timescale with this simple approach.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of Turner~\cite{Turner1977} it is possible to show that the change in eccentricity $\Delta e$, and fractional change in periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\O(10\eta)$, where $\eta = M/M_\bullet$.}
 
 \subsubsection{Collisions}
 
-As a consequence of the higher densities in the glacatic core, starsmay undergo a large number of close encounters with other stars. It takes $20$--$30$ grazing collisions to disrupt a MS star~\cite{Frietag2006}. We shall ignore the possibility of disruption for the other species since they have much smaller cross-sectional areas. The number of collisions a star will undergo in a time interval $\delta t$ is
+As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. It takes $20$--$30$ grazing collisions to disrupt a MS star~\cite{Frietag2006}. We shall ignore the possibility of disruption for the other species since they have much smaller cross-sectional areas. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) \pi R_\star^2 v(r,e,r_p)\delta t.
 \end{equation}
