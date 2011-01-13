@@ -1,9 +1,10 @@
-\documentclass[useAMS,usenatbib]{mn2e}
+\documentclass[useAMS,usedcolumn,usegraphicx,usenatbib]{mn2e}
 
 %%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%
 \newcommand{\eqnref}[1]{(\ref{eq:#1})}
 \newcommand{\figref}[1]{fig.~\ref{fig:#1}}
 \newcommand{\Figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\tabref}[1]{table~\ref{tab:#1}}
 \newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
 \newcommand{\Secref}[1]{Section~\ref{sec:#1}}
 
@@ -17,12 +18,14 @@
 \newcommand{\intd}[4]{\ensuremath{\int_{#1}^{#2}{#3}\,\dd{#4}}}
 \newcommand{\recip}[1]{\ensuremath{\frac{1}{#1}}}
 
+\newcommand{\order}[1]{\ensuremath{\mathcal{O}({#1})}}
 %\newcommand{\P}{\ensuremath{\mathrm{P}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Galactic Dynamics]{Galactic Dynamics}
-\author[C. P. L. Berry]{C. P. L. Berry$^{1}$\thanks{E-mail:
-cplb2@cam.ac.uk}}
+\author[C. P. L. Berry and J. R. Gair]{C. P. L. Berry$^{1}$\thanks{E-mail:
+cplb2@cam.ac.uk}  and J. R. Gair$^{1}$\\
+$^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA}
 
 \begin{document}
 
@@ -35,18 +38,18 @@ cplb2@cam.ac.uk}}
 \label{firstpage}
 
 \begin{abstract}
-Hi
+I thought I would try out the MNRAS \LaTeX style.
 \end{abstract}
 
 \begin{keywords}
 cake -- biscuits.
 \end{keywords}
 
-\section{Event Rates}
+\section{Event rates}
 
-\subsection{The Density Function}
+\subsection{The density function}
 
-We wish to calculate the probability that there is an encounter between a compact object on an orbital trajectory described by eccentricity $e$ and periapse radius $r_p$ and the supermassive black hole at the galactic centre. We begin by following the work of Bahcall and Wolf~\cite{Bahcall1976, Bahcall1977} and assuming that the density function within the galactic core is just a function of the orbital energy; the number of stars is given by
+We wish to calculate the probability that there is an encounter between a compact object on an orbital trajectory described by eccentricity $e$ and periapse radius $r_p$ and the supermassive black hole at the galactic centre. We begin by following the work of \citet{Bahcall1976, Bahcall1977} and assuming that the density function within the galactic core is just a function of the orbital energy; the number of stars is given by
 \begin{equation}
 N = \int \dd^3r \int \dd^3v f(\mathcal{E}).
 \end{equation}
@@ -58,36 +61,36 @@ where $M_\bullet$ is the mass of the supermassive black hole. Close to the centr
 \begin{equation}
 r_c = \frac{GM_\bullet}{\sigma_\star^2}
 \end{equation}
-where $\sigma^2$ is the line-of-sight velocity dispersion. We will assume that the mass of stars enclosed within the radius is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$~\cite{Bahcall1976}. We will define a reference number density from the enclosed mass as
+where $\sigma^2$ is the line-of-sight velocity dispersion. We will assume that the mass of stars enclosed within the radius is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$~\citep{Bahcall1976}. We will define a reference number density from the enclosed mass as
 \begin{equation}
-M_\star(r_c) = \frac{4\pi r_c^3}{3}n_\star M_\star.
+m_\star(r_c) = \frac{4\pi r_c^3}{3}n_\star M_\star.
 \end{equation}
 Within the the core, the density function can be calculated using the approximation of Fokker-Planck formalism. The population of bound ($\mathcal{E} < 0$) stars is evolved numerically until a steady state is reached: the unbound ($\mathcal{E} > 0$) stars form a reservoir with an assumed Maxwellian distribution. Denoting a species of star by its mass $M$:
 \begin{equation}
 f_M(\mathcal{E}) = \frac{C_M n_\star}{(2\pi\sigma_M^2)^{3/2}} \exp\left(-\frac{\mathcal{E}}{\sigma_M^2}\right)
 \end{equation}
-where $C_M$ is a normalisation constant.\footnote{$C_M$ determines the population ratio of species $M$ far from the black hole~\cite{Alexander2009}.} If different stellar species are in equipartition (as was assumed by Bahcall and Wolf~\cite{Bahcall1976, Bahcall1977}) then we expect
+where $C_M$ is a normalisation constant.\footnote{$C_M$ determines the population ratio of species $M$ far from the black hole~\cite{Alexander2009}.} If different stellar species are in equipartition (as was assumed by \citet{Bahcall1976, Bahcall1977}) then we expect
 \begin{equation}
 M \sigma_M^2 = M_\star \sigma_\star^2.
 \end{equation}
-However, if the unbound stellar population has reached equilibrium by violent relaxation ~\cite{Lynden-Bell1967}, then all mass groups are expected to have similar velocity dispersions: this has been used by Hopman and Alexander~\cite{Alexander2009, O'Leary2009} and will be assumed here. The steady-state density function is largely insensitive to this choice of boundary condition~\cite{Bahcall1977, Alexander2009}.
+However, if the unbound stellar population has reached equilibrium by violent relaxation~\citep{Lynden-Bell1967}, then all mass groups are expected to have similar velocity dispersions: this has been used by \citet{Alexander2009, O'Leary2009} and will be assumed here. The steady-state density function is largely insensitive to this choice of boundary condition~\citep{Bahcall1977, Alexander2009}.
 
 For bound orbits ($\mathcal{E} < 0$) the density function can be approximated as a power law
 \begin{equation}
-f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma_M^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma_M^2}\right)^p_M.
+f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma_M^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma_M^2}\right)^{p_M}.
 \end{equation}
-The exponent $p_M$ varies depending upon the mass of the object, yielding mass segregation. For a system with a single mass component, Bahcall and Wolf~\cite{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\cite{Bahcall1976,Kesher2009}, we will assume this holds for the dominant species of stars as although it will vary slightly with $p$ this change is small compared to errors introduced by fitting a simple power law~\cite{Hopman2006, Alexander2009}.}
+The exponent $p_M$ varies depending upon the mass of the object, yielding mass segregation. For a system with a single mass component, \citet{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as although it will vary slightly with $p$ this change is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
 
 \subsection{Model Parameters}
 
-We will be using the Fokker-Planck model of Hopman and Alexander~\cite{Hopman2006, Hopman2006a, Hopman2009}. This includes four stellar species: main sequence stars (MS), white dwarfs (WD), neutron stars (NS), and black holes (BH). Their properties are summarised in \tabref{HA}.
-\begin{table*}
+We will be using the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alexander2009}. This includes four stellar species: main sequence stars (MS), white dwarfs (WD), neutron stars (NS), and black holes (BH). Their properties are summarised in \tabref{HA}.
+\begin{table}
+\begin{minipage}{\columnwidth}
  \centering
- \begin{minipage}{140mm}
-  \caption{Stellar model parameters for the galactic centre using the results of Hopman and Alexander~\cite{Hopman2009}. We use the main sequence star as our reference. The number fractions for unbound stars are estimates corresponding to a model of continuous star formation~\cite{Alexander2005}.\label{tab:HA}}
+  \caption{Stellar model parameters for the galactic centre using the results of \citet{Alexander2009} We use the main sequence star as our reference. The number fractions for unbound stars are estimates corresponding to a model of continuous star formation~\citep{Alexander2005}.\label{tab:HA}}
   \begin{tabular}{@{}lrrrr@{}}
   \hline
-   Star & $M/M_\odot$ & $C_M/C_\star$ & $p_M$ & $k_M/k_\star$~\cite{Toonen2009} \\
+   Star & $M/M_\odot$ & $C_M/C_\star$ & $p_M$ & $k_M/k_\star$\footnote{\citet{Toonen2009}} \\
  \hline
  MS & $1.0$ & $1$ & $-0.1$ & $1$ \\
  WD & $0.6$ & $0.1$ & $-0.1$ & $0.09$ \\
@@ -96,9 +99,9 @@ We will be using the Fokker-Planck model of Hopman and Alexander~\cite{Hopman200
 \hline
 \end{tabular}
 \end{minipage}
-\end{table*}
+\end{table}
 
-We assume a black hole mass of $M_\bullet = 4.31 \times 10^6 M_\odot$~\cite{Gillessen2009} and a velocity dispersion of $\sigma = 103\units{km\,s^{-1}}$~\cite{Tremaine2002}. This gives a cusp radius of $r_c = 1.75\units{pc}$. Using the results of Ghez et al.~\cite{Ghez2006} we would expect the total mass of stars in the core to be $M_\star(r_c) = 6.4 \times 10^6 M_\odot$ (which is within $10\%$ of the value obtianed similarly from Genzel et al.~\cite{Genzel2003}). This gives a stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
+We assume a black hole mass of $M_\bullet = 4.31 \times 10^6 M_\odot$~\cite{Gillessen2009} and a velocity dispersion of $\sigma = 103\units{km\,s^{-1}}$~\cite{Tremaine2002}. This gives a cusp radius of $r_c = 1.75\units{pc}$. Using the results of \citet{Ghez2008} we would expect the total mass of stars in the core to be $m_\star(r_c) = 6.4 \times 10^6 M_\odot$ (which is within $10\%$ of the value obtianed similarly from \citet{Genzel2003}). This gives a stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
 
 \subsection{Eccentricity \& Periapsis}
 
@@ -107,7 +110,7 @@ We wish to make a change of variables to characterise orbits by their eccentrici
 \mathcal{E} & = & -\frac{GM_\bullet(1 - e)}{2r_p},\\
 J^2 & = & GM_\bullet(1 + e)r_p.
 \end{eqnarray}
-We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric~\cite{Genzel2003, Schodel2007}, therefore we are only interested in the combination
+We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric~\citep{Genzel2003, Schodel2007}, therefore we are only interested in the combination
 \begin{eqnarray}
 v_\perp^2 & = & v_\phi^2 + v_\theta^2\\
  & = & v^2 - v_r^2.
@@ -202,13 +205,13 @@ From \eqnref{Gamma} we see that the event rate is highly sensitive to the smalle
 
 Tidal forces from the black hole can disrupt stars. This occurs at the tidal radius
 \begin{equation}
-r_t \simeq \left(\frac{M_bullet}{M}\right)^{1/3}R_M
+r_t \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \end{equation}
-where $R_M$ is the radius of the star~\cite{Kobayashi2004}. Tidal disruption is most significant for MS stars since they are least dense.
+where $R_M$ is the radius of the star~\citep{Kobayashi2004}. Tidal disruption is most significant for MS stars since they are least dense.
 
 \subsection{Gravitational Wave Inspiral}
 
-Stars orbitting about the black hole will continually radiate energy and angular momentum causing them to inspiral. Using the analysis of Peters~\cite{Peters1964} for Keplerian binaries, for bound orbits the orbit-averaged rate of change of the periapsis and eccentricity are
+Stars orbitting about the black hole will continually radiate energy and angular momentum causing them to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries, for bound orbits the orbit-averaged rate of change of the periapsis and eccentricity are
 \begin{eqnarray}
 \left\langle\diff{r_p}{t}\right\rangle & = & -\frac{64}{5}\frac{\Theta}{r_p^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
 \left\langle\diff{e}{t}\right\rangle & = & -\frac{304}{5}\frac{\Theta}{r_p^4}\frac{(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2 + \frac{47}{192}e^3\right),
@@ -234,38 +237,39 @@ The inspiral is complete when the eccentricity has decayed to zero. Consequently
 \tau(r_{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{A^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, however it may be written in closed from as
-\begin{equation}
-\tau(r_{p0},e_0) = \tau_c(r_{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299}F_1\left(\frac{24}{19};\frac{3}{2},\frac{-1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
-\end{equation}
+\begin{eqnarray}
+\tau(r_{p0},e_0) & = & \tau_c(r_{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299}\\*
+ & &  \times F_1\left(\frac{24}{19};\frac{3}{2},\frac{-1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
+\end{eqnarray}
 using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$.\footnote{For small eccentricities $\tau(r_{p0},e_0) \simeq \tau_c(r_{p0})(1 + 4e_0)$.}
 
-We will assume that an orbit is depleted of stars if the inspiral timescale is shorter than the relaxation timescale. This indicates the characteristic time for two-body collisions to change the velocity the star by order of itself~\cite{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. Bahcall and Wolf~\cite{Bahcall1977} find that the system has a characteristic timescale
+We will assume that an orbit is depleted of stars if the inspiral timescale is shorter than the relaxation timescale. This indicates the characteristic time for two-body collisions to change the velocity the star by order of itself~\citep{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. \citet{Binney1987} derive the relaxation timescale from the diffusion coefficient of the Fokker-Planck equation (section 8.4), for a system with a purely Maxwellian distribution
 \begin{equation}
-\tau_R = \frac{3(2\pi\sigma_\star^2)^{3/2}}{32\pi^2G^2M_\star^2n_\star\ln\Lambda},
+\tau_R = 0.34\sigma_\star^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
-where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$.\footnote{This agrees up to a factor of $\sim2$ with the (8-71) of Binney and Tremaine~\cite{Binney1987} derived from the diffusion coefficient of the Fokker-Planck equation.} From this we will estimate the relaxation time for an orbit as
+where $\rho_\star$ is the mass density and the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$. \citet{Bahcall1977} find a similar characteristic timescale, but with numerical prefactor $3/4\sqrt{8\pi} = 0.15$. We shall adopt the former to be conservative. From this we estimate the relaxation time for an orbit as
 \begin{eqnarray}
-T_R(r_p,e) & = & \left(\frac{\langle v(r)\rangle}{\sigma_\star}\right)^3\frac{n_\star}{\langle n(r)\rangle}\tau_R\\
- & = & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{n_\star}{\langle n(r)\rangle}\tau_R
+T_R(r_p,e) & = & \left(\frac{\langle v(r)\rangle}{\sigma_\star}\right)^3\frac{\rho_\star}{\langle \rho(r)\rangle}\tau_R\\
+ & = & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{\rho_\star}{\langle \rho(r)\rangle}\tau_R
 \end{eqnarray}
-using the velocity $\langle v(r)\rangle$ and number density $\langle n(r)\rangle$ averaged over the duration of the orbit as characteristic quantities.\footnote{In calculating $\langle n(r)\rangle$ we neglect the possibility that the density may be decreased due to the depopulation of orbits. We therefore underestimate the relaxation timescale with this simple approach.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
+using the velocity $\langle v(r)\rangle$ and density $\langle \rho(r)\rangle$ averaged over the duration of the orbit as characteristic quantities.\footnote{In calculating $\langle n(r)\rangle$ we neglect the possibility that the density may be decreased due to the depopulation of orbits. We therefore underestimate the relaxation timescale with this simple approach.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
 
-Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of Turner~\cite{Turner1977} it is possible to show that the change in eccentricity $\Delta e$, and fractional change in periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\O(10\eta)$, where $\eta = M/M_\bullet$.}
+Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the change in eccentricity $\Delta e$, and fractional change in periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\order{10\eta}$, where $\eta = M/M_\bullet$.}
 
 \subsubsection{Collisions}
 
-As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. It takes $20$--$30$ grazing collisions to disrupt a MS star~\cite{Frietag2006}. We shall ignore the possibility of disruption for the other species since they have much smaller cross-sectional areas. The number of collisions a star will undergo in a time interval $\delta t$ is
+As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. It takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they have much smaller cross-sectional areas. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) \pi R_\star^2 v(r,e,r_p)\delta t.
 \end{equation}
-For circular orbits we can find the radius at which collisions will lead to disruptions by setting $\delta K = 30$ and $\delta t = \tau_R$. We use the relaxation timescale for the system as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r delta t$, and then converting to an integral, we have for bound orbits
+For circular orbits we can find the radius at which collisions will lead to disruptions by setting $\delta K = 30$ and $\delta t = \tau_R$. We use the relaxation timescale for the system as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, we have for bound orbits
 \begin{equation}
 K = 2\pi R_\star^2 \frac{\tau_R}{P(r_p,e)}\intd{r_p}{(1+e)r_p/(1-e)}{n(r)\frac{v_r(r,e,r_p)}{v_r(r,e,r_p)}}{r},
 \end{equation}
 where $P$ is the period of the orbit. Again we may set $K = 30$ to find the orbits for which stars will be disrupted within a relaxation timescale. For unbound stars we are only interested in stars that would become disrupted before their periapse passage, so
 \begin{equation}
 K = \pi R_\star^2 \intd{r_p}{r_c}{n(r)\frac{v_r(r,e,r_p)}{v_r(r,e,r_p)}}{r},
-\end{equaiton}
+\end{equation}
 assuming that the stars in the reservoir external to the core are unlikely to undergo close collisions.
 
 \section{Introduction}
@@ -709,8 +713,9 @@ Dr H. C. Bhatt for a critical reading of the original version of the
 paper and an anonymous referee for very useful comments that improved
 the presentation of the paper.
 
-
+\bibliographystyle{mn2e}
 \begin{thebibliography}{99}
+
 \bibitem[\protect\citeauthoryear{Baird}{1981}]{b1} Baird S.R., 1981,
 ApJ, 245, 208
 \bibitem[\protect\citeauthoryear{Beichman et al.}{1985a}]{b2} Beichman
@@ -763,6 +768,7 @@ H.J., 1988, A\&A, 194, 125
 A\&A, 196, 173
 \bibitem[\protect\citeauthoryear{Zuckerman \& Dyck}{1986}]{b25} Zuckerman B., Dyck H.M., 1986, ApJ,
 311, 345
+\bibliography{Galactic}
 \end{thebibliography}
 
 \appendix
