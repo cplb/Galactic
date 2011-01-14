@@ -38,7 +38,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-I thought I would try out the MNRAS \LaTeX style.
+I thought I would try out the MNRAS \LaTeX{} style.
 \end{abstract}
 
 \begin{keywords}
@@ -100,50 +100,51 @@ We will be using the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alex
 \end{tabular}
 \end{minipage}
 \end{table}
+The steeper power law for black holes means that they segregate about the massive black hole: they dominate in place of main sequence stars for radii $r < 10^{-4}r_c$.
 
 We assume a black hole mass of $M_\bullet = 4.31 \times 10^6 M_\odot$~\cite{Gillessen2009} and a velocity dispersion of $\sigma = 103\units{km\,s^{-1}}$~\cite{Tremaine2002}. This gives a cusp radius of $r_c = 1.75\units{pc}$. Using the results of \citet{Ghez2008} we would expect the total mass of stars in the core to be $m_\star(r_c) = 6.4 \times 10^6 M_\odot$ (which is within $10\%$ of the value obtianed similarly from \citet{Genzel2003}). This gives a stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
 
 \subsection{Eccentricity \& Periapsis}
 
 We wish to make a change of variables to characterise orbits by their eccentricity $e$ and periapse radius $r_p$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $J$ per unit mass are entirely characterised by these parameters
-\begin{eqnarray}
-\mathcal{E} & = & -\frac{GM_\bullet(1 - e)}{2r_p},\\
-J^2 & = & GM_\bullet(1 + e)r_p.
-\end{eqnarray}
+\begin{align}
+\mathcal{E} = {} & -\frac{GM_\bullet(1 - e)}{2r_p},\\
+J^2 = {} & GM_\bullet(1 + e)r_p.
+\end{align}
 We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric~\citep{Genzel2003, Schodel2007}, therefore we are only interested in the combination
-\begin{eqnarray}
-v_\perp^2 & = & v_\phi^2 + v_\theta^2\\
- & = & v^2 - v_r^2.
-\end{eqnarray}
+\begin{align}
+v_\perp^2 = {} & v_\phi^2 + v_\theta^2\\
+ = {} & v^2 - v_r^2.
+\end{align}
 Under this change of variables
 \begin{equation}
 \dd^2v = \dd v_r \dd v_\phi \dd v_\theta \rightarrow 2\pi v_\perp \dd v_r \dd v_\perp.
 \end{equation}
 The specific energy and angular momentum are given by
-\begin{eqnarray}
-\mathcal{E} & = & \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r},\\
-J^2 & = & r^2 v_\perp^2.
-\end{eqnarray}
+\begin{align}
+\mathcal{E} = {} & \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r},\\
+J^2 = {} & r^2 v_\perp^2.
+\end{align}
 If we combine these with our earlier expressions in terms of $e$ and $r_p$ we find
-\begin{eqnarray}
-v_\perp^2 & = & \frac{GM_\bullet(1 + e)r_p}{r^2},\\
-v_r^2 & = & GM\left[\frac{2}{r} - \frac{(1 - e)}{r_p} - \frac{(1 + e)r_p}{r^2}\right].
-\end{eqnarray}
+\begin{align}
+v_\perp^2 = {} & \frac{GM_\bullet(1 + e)r_p}{r^2},\\
+v_r^2 = {} & GM\left[\frac{2}{r} - \frac{(1 - e)}{r_p} - \frac{(1 + e)r_p}{r^2}\right].
+\end{align}
 From the later we can verify that the turning points of an orbit occur at
 \begin{equation}
 r = r_p,\quad \frac{1+e}{1-e}r_p;
 \end{equation}
 the periapse is the only turning point for orbits with $e > 1$. Since we now have expressions for $\{v_r, v_\perp\}$ in terms of $\{e, r_p\}$ we can calculate the Jacobian
-\begin{eqnarray}
-\left|\frac{\partial(v_r, v_\perp)}{\partial(e, r_p)}\right| & = & \partialdiff{v_r}{e}\partialdiff{v_\perp}{r_p} - \partialdiff{v_r}{r_p}\partialdiff{v_\perp}{e} \\
- & = & \recip{2v_rv_\perp}\frac{e}{r_p}\left(\frac{GM}{r}\right)^2.
-\end{eqnarray}
+\begin{align}
+\left|\frac{\partial(v_r, v_\perp)}{\partial(e, r_p)}\right| = {} & \partialdiff{v_r}{e}\partialdiff{v_\perp}{r_p} - \partialdiff{v_r}{r_p}\partialdiff{v_\perp}{e} \\
+ = {} & \recip{2v_rv_\perp}\frac{e}{r_p}\left(\frac{GM}{r}\right)^2.
+\end{align}
 Using this, we may rewrite our velocity element as
-\begin{eqnarray}
-\dd^3v & = & \dd v_r \dd v_\phi \dd v_\theta\\
- & = & 2\pi v_\perp \dd v_r \dd v_\perp\\
- & = & \frac{\pi e}{v_rr_p}\left(\frac{GM}{r}\right)^2\dd e \dd r_p.
-\end{eqnarray}
+\begin{align}
+\dd^3v = {} & \dd v_r \dd v_\phi \dd v_\theta\\
+ = {} & 2\pi v_\perp \dd v_r \dd v_\perp\\
+ = {} & \frac{\pi e}{v_rr_p}\left(\frac{GM}{r}\right)^2\dd e \dd r_p.
+\end{align}
 As a consequence of our assumed spherical symmetry, the volume element can be expressed as
 \begin{equation}
 \dd^3r = 4\pi r^2 \dd r.
@@ -166,18 +167,18 @@ where $N(e, r_p; r)$ is the total number of stars with orbits given by $\{e, r_p
 \delta t = 2\frac{\delta r}{v_r},
 \end{equation}
 where the factor of $2$ is included to account for both inwards and outwards motion. Hence
-\begin{eqnarray}
-N(e, r_p; r) & = & \recip{2} v_r P n(r, e, r_p)\\
- & = & \frac{2\pi^2(GM)^2 P e}{r_p}f(\mathcal{E}).
-\end{eqnarray}
+\begin{align}
+N(e, r_p; r) = {} & \recip{2} v_r P n(r, e, r_p)\\
+ = {} & \frac{2\pi^2(GM)^2 P e}{r_p}f(\mathcal{E}).
+\end{align}
 The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r_p \leq r \leq (1+e)r_p/(1-e)$, and so we may define $N(e, r_p) \equiv N(e, r_p; r)$. This is a consequence of the density function being dependent only upon an orbital constant of the motion.
 
 If a burst of radiation is emitted each time a star passes through periapse, then the event rate for burst emission from orbits with parameters $\{e, r_p\}$, is given by
-\begin{eqnarray}
-\Gamma(e, r_p) & = & \frac{N(e, r_p)}{P(e, r_p)}\\
- & = & \frac{2\pi^2(GM)^2 e}{r_p}f(\mathcal{E}).
+\begin{align}
+\Gamma(e, r_p) = {} & \frac{N(e, r_p)}{P(e, r_p)}\\
+ = {} & \frac{2\pi^2(GM)^2 e}{r_p}f(\mathcal{E}).
 \label{eq:Gamma}
-\end{eqnarray}
+\end{align}
 The orbital period drops out from the calculation, so we do not have to worry about an appropriate definition for unbound orbits.
 
 From the event rate we may define a probability of seeing a given number of events subject to the assumption that these events are uncorrelated. The probability is simply given by the Poisson distribution; the probability of there being $r$ events is
@@ -207,15 +208,15 @@ Tidal forces from the black hole can disrupt stars. This occurs at the tidal rad
 \begin{equation}
 r_t \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \end{equation}
-where $R_M$ is the radius of the star~\citep{Kobayashi2004}. Tidal disruption is most significant for MS stars since they are least dense.
+where $R_M$ is the radius of the star~\citep{Kobayashi2004}. Any star on an orbit with $r_p < r_T$ will be disrupted in the cause of its orbit. Tidal disruption is most significant for MS stars since they are least dense.
 
 \subsection{Gravitational Wave Inspiral}
 
 Stars orbitting about the black hole will continually radiate energy and angular momentum causing them to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries, for bound orbits the orbit-averaged rate of change of the periapsis and eccentricity are
-\begin{eqnarray}
-\left\langle\diff{r_p}{t}\right\rangle & = & -\frac{64}{5}\frac{\Theta}{r_p^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
-\left\langle\diff{e}{t}\right\rangle & = & -\frac{304}{5}\frac{\Theta}{r_p^4}\frac{(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2 + \frac{47}{192}e^3\right),
-\end{eqnarray}
+\begin{align}
+\left\langle\diff{r_p}{t}\right\rangle = {} & -\frac{64}{5}\frac{\Theta}{r_p^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
+\left\langle\diff{e}{t}\right\rangle = {} & -\frac{304}{5}\frac{\Theta}{r_p^4}\frac{(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2 + \frac{47}{192}e^3\right),
+\end{align}
 where we have introduced
 \begin{equation}
 \Theta = \frac{G^3M_\bullet M(M_\bullet + M)}{c^5}
@@ -237,22 +238,22 @@ The inspiral is complete when the eccentricity has decayed to zero. Consequently
 \tau(r_{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{A^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, however it may be written in closed from as
-\begin{eqnarray}
-\tau(r_{p0},e_0) & = & \tau_c(r_{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299}\\*
- & &  \times F_1\left(\frac{24}{19};\frac{3}{2},\frac{-1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
-\end{eqnarray}
-using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$.\footnote{For small eccentricities $\tau(r_{p0},e_0) \simeq \tau_c(r_{p0})(1 + 4e_0)$.}
+\begin{align}
+\tau(r_{p0},e_0) = {} & \tau_c(r_{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299}\\*
+ & \times F_1\left(\frac{24}{19};\frac{3}{2},\frac{-1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
+\end{align}
+using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$.\footnote{For small eccentricities $\tau(r_{p0},e_0) \simeq \tau_c(r_{p0})[1 + 4e_0 + (273/43)e_0^2]$.}
 
 We will assume that an orbit is depleted of stars if the inspiral timescale is shorter than the relaxation timescale. This indicates the characteristic time for two-body collisions to change the velocity the star by order of itself~\citep{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. \citet{Binney1987} derive the relaxation timescale from the diffusion coefficient of the Fokker-Planck equation (section 8.4), for a system with a purely Maxwellian distribution
 \begin{equation}
 \tau_R = 0.34\sigma_\star^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
 where $\rho_\star$ is the mass density and the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$. \citet{Bahcall1977} find a similar characteristic timescale, but with numerical prefactor $3/4\sqrt{8\pi} = 0.15$. We shall adopt the former to be conservative. From this we estimate the relaxation time for an orbit as
-\begin{eqnarray}
-T_R(r_p,e) & = & \left(\frac{\langle v(r)\rangle}{\sigma_\star}\right)^3\frac{\rho_\star}{\langle \rho(r)\rangle}\tau_R\\
- & = & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{\rho_\star}{\langle \rho(r)\rangle}\tau_R
-\end{eqnarray}
-using the velocity $\langle v(r)\rangle$ and density $\langle \rho(r)\rangle$ averaged over the duration of the orbit as characteristic quantities.\footnote{In calculating $\langle n(r)\rangle$ we neglect the possibility that the density may be decreased due to the depopulation of orbits. We therefore underestimate the relaxation timescale with this simple approach.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
+\begin{align}
+T_R(r_p,e) = {} & \left(\frac{\langle v(r)\rangle_{(r_p,e)}}{\sigma_\star}\right)^3\frac{M_\star\rho_\star}{\langle M(r)\rangle_{(r_p,e)}\langle \rho(r)\rangle_{(r_p,e)}}\tau_R\\
+ = {} & \left(\frac{2 E(e)}{\pi}\right)^3\left(\frac{r_c(1 - e)}{r_p}\right)^{3/2}\frac{\rho_\star}{\langle M(r)\rangle_{(r_p,e)}\langle \rho(r)\rangle_{(r_p,e)}}\tau_R
+\end{align}
+using the velocity $\langle v(r)\rangle_{(r_p,e)}$, stellar mass of encountered stars $\langle M(r)\rangle_{(r_p,e)}$ and density $\langle \rho(r)\rangle_{(r_p,e)}$ averaged over the duration of the orbit as characteristic quantities. The subscript ${(r_p,e)}$ indicates that we average along the trajectory of the orbit specified by these parameters/\footnote{In calculating $\langle \rho(r)\rangle_{(r_p,e)}$ and $\langle M(r)\rangle_{(r_p,e)}$ we include the tidal disruption of stars but not the possible depopulation of orbits due to inspiral or collisions. This would require solving iteratively for $n(r)$, which is not justifiable at this level of approximation. The relaxation timescale will be underestimated using this simple approach. The error will be greatest for low eccentricity orbits which spend most of their time in the same region of space.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the change in eccentricity $\Delta e$, and fractional change in periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\order{10\eta}$, where $\eta = M/M_\bullet$.}
 
@@ -264,11 +265,11 @@ As a consequence of the higher densities in the galactic core, stars may undergo
 \end{equation}
 For circular orbits we can find the radius at which collisions will lead to disruptions by setting $\delta K = 30$ and $\delta t = \tau_R$. We use the relaxation timescale for the system as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, we have for bound orbits
 \begin{equation}
-K = 2\pi R_\star^2 \frac{\tau_R}{P(r_p,e)}\intd{r_p}{(1+e)r_p/(1-e)}{n(r)\frac{v_r(r,e,r_p)}{v_r(r,e,r_p)}}{r},
+K = 2\pi R_\star^2 \frac{\tau_R}{P(r_p,e)}\intd{r_p}{(1+e)r_p/(1-e)}{n(r)\frac{v(r,e,r_p)}{v_r(r,e,r_p)}}{r},
 \end{equation}
 where $P$ is the period of the orbit. Again we may set $K = 30$ to find the orbits for which stars will be disrupted within a relaxation timescale. For unbound stars we are only interested in stars that would become disrupted before their periapse passage, so
 \begin{equation}
-K = \pi R_\star^2 \intd{r_p}{r_c}{n(r)\frac{v_r(r,e,r_p)}{v_r(r,e,r_p)}}{r},
+K = \pi R_\star^2 \intd{r_p}{r_c}{n(r)\frac{v(r,e,r_p)}{v_r(r,e,r_p)}}{r},
 \end{equation}
 assuming that the stars in the reservoir external to the core are unlikely to undergo close collisions.
 
