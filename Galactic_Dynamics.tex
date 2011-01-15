@@ -7,6 +7,7 @@
 \newcommand{\tabref}[1]{table~\ref{tab:#1}}
 \newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
 \newcommand{\Secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\apref}[1]{Appendix~\ref{sec:#1}}
 
 \newcommand{\units}[1]{\ensuremath{~\mathrm{#1}}}
 
@@ -255,7 +256,7 @@ T_R(r_p,e) & = & \left(\frac{\langle v(r)\rangle\sub{orb}}{\sigma_\star}\right)^
 \end{eqnarray}
 using the velocity $\langle v(r)\rangle\sub{orb}$, stellar mass of encountered stars $\langle M(r)\rangle\sub{orb}$ and density $\langle \rho(r)\rangle\sub{orb}$ averaged over the duration of the orbit as characteristic quantities. The subscript $\mathrm{orb}$ indicates that we average along the trajectory of the orbit specified by parameters $\left\{r_p,e\right\}$.\footnote{In calculating $\langle \rho(r)\rangle\sub{orb}$ and $\langle M(r)\rangle\sub{orb}$ we include the tidal disruption of stars but not the possible depopulation of orbits due to inspiral or collisions. This would require solving iteratively for $n(r)$, which is not justifiable at this level of approximation. The relaxation timescale will be underestimated using this simple approach. The error will be greatest for low eccentricity orbits which spend most of their time in the same region of space.} While the former may be written in closed form using the complete elliptic integral of the second kind, the latter is best evaluated numerically.
 
-Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the change in eccentricity $\Delta e / e$ and periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\order{\eta}\sqrt{e}$, where $\eta = M/M_\bullet$, and so are only important for very high eccentricity orbits. These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
+Unbound stars only undergo a single periapse passage and only radiate one burst of radiation, we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the change in eccentricity $\Delta e / e$ and periapsis $\Delta r_p / r_p$ for an extreme mass-ratio binary are less than $\order{\eta}\sqrt{e}$, where $\eta = M/M_\bullet$, and so are only important for very high eccentricity orbits (\apref{Unbound}). These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
 
 \subsubsection{Collisions}
 
@@ -283,7 +284,7 @@ assuming that the stars in the reservoir external to the core are unlikely to un
 
 \appendix
 
-\section[]{Evolution of orbital parameters for unbound orbits due to gravitational wave emission}
+\section[]{Evolution of orbital parameters for unbound orbits due to gravitational wave emission}\label{sec:Unbound}
 
 Following the approach of \citet{Turner1977} we can calculate the evolution of the eccentricity and periapse of a Keplerian binary through the loss of energy and angular momentum through carried away by gravitational radiation. The change in fractional eccentricity over an orbit, approximating the orbital parameters remain constant throughout the orbit, is
 \begin{eqnarray}
@@ -307,13 +308,17 @@ For extreme mass-ratio binaries, as is the case here, the mass-ratio is a small 
 \begin{equation}
 \eta = M/M_\bullet \ll 1.
 \end{equation}
-The smallest possible periapsis is off order of the Schwarzschild radius of the massive black hole, such that $r_p > GM_\bullet/c^2$. These give
+The smallest possible periapsis is of order of the Schwarzschild radius of the massive black hole, such that 
 \begin{equation}
-\Sigma < \eta \ll 1.
+r_p = \alpha\frac{GM_\bullet}{c^2}; \quad \alpha > 1.
+\end{equation}
+These give
+\begin{equation}
+\Sigma = \frac{\eta}{\alpha^{5/2}} < \eta \ll 1.
 \end{equation}
 Hence the changes in orbital parameters will be significant for
 \begin{equation}
-e \gtrsim \recip{\eta^2}.
+e \sim \frac{25}{256}\frac{\alpha^5}{\eta^2} > \frac{25}{256}\recip{\eta^2}.
 \end{equation}
 
 \bsp
