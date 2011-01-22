@@ -70,10 +70,10 @@ m_\star(r\sub{c}) = \frac{4\pi r\sub{c}^3}{3}n_\star M_\star.
 \end{equation}
 Within the the core, the distribution function can be calculated using the approximation of Fokker-Planck formalism. The population of bound stars is evolved numerically until a steady state is reached: the unbound stars form a reservoir with an assumed Maxwellian distribution. Denoting a species of star by its mass $M$:
 \begin{equation}
-f_M(\mathcal{E}) = \frac{C_M n_\star}{(2\pi\sigma_M^2)^{3/2}} \exp\left(-\frac{\mathcal{E}}{\sigma_M^2}\right),\quad\left\{\mathcal{E} > 0\right\},
+f_M(\mathcal{E}) = \frac{C_M n_\star}{(2\pi\sigma_M^2)^{3/2}} \exp\left(-\frac{\mathcal{E}}{\sigma_M^2}\right),\quad\mathcal{E} > 0,
 \label{eq:Unbound_DF}
 \end{equation}
-where $C_M$ is a normalisation constant.\footnote{$C_M$ determines the population ratio of species $M$ far from the black hole~\cite{Alexander2009}.} If different stellar species are in equipartition (as was assumed by \citet{Bahcall1976, Bahcall1977}) then we expect
+where $C_M$ is a normalisation constant.\footnote{$C_M$ determines the population ratio of species $M$ far from the black hole~\cite{Alexander2009}.} If different stellar species are in equipartition (as was assumed by \citealt{Bahcall1976, Bahcall1977}) then we expect
 \begin{equation}
 M \sigma_M^2 = M_\star \sigma_\star^2.
 \end{equation}
@@ -85,7 +85,7 @@ This will be assumed here following \citet{Alexander2009, O'Leary2009}. The stea
 
 For bound orbits the distribution function can be approximated as a power law
 \begin{equation}
-f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma^2}\right)^{p_M},\quad\left\{\mathcal{E} < 0\right\}.
+f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma^2}\right)^{p_M},\quad\mathcal{E} < 0.
 \end{equation}
 The exponent $p_M$ varies depending upon the mass of the object, determining mass segregation. For a system with a single mass component, \citet{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as, although it will vary slightly with $p$, variation is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
 
@@ -109,6 +109,12 @@ We will be using the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alex
 \end{minipage}
 \end{table}
 The steeper power law for black holes means that they segregate about the MBH: they dominate in place of main sequence stars for radii $r < 10^{-4}r\sub{c}$.
+
+Binaries may form in the galactic centre, encouraged by its high dtellar density~\citep{O'Leary2009}. However the binary fraction is still expected to be small~\citep{Hopman2009}. Consequently, and because binaries will be disrupted by the MBH for periapses smaller than
+\begin{equation}
+r\sub{B}  \simeq r\sub{T} \simeq \left(\frac{M_\bullet}{M_1 + M_2}\right)^{1/3}a\sub{B},
+\end{equation}
+where $M_1$ and $M_2$ are the masses in the binary, and $a\sub{B}$ is the binary's semi-major axis [cf.\ \eqnref{Tidal} below], we shall ignore the possible presence of binaries.
 
 We assume a black hole mass of $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$~\citep{Gillessen2009} and a velocity dispersion of $\sigma = (103 \pm 20)\units{km\,s^{-1}}$~\citep{Tremaine2002}. This gives a core radius of $r\sub{c} = (1.7 \pm 0.7)\units{pc}$. Using the results of \citet{Ghez2008} we would expect the total mass of stars in the core to be $m_\star(r\sub{c}) = 6.4 \times 10^6 M_\odot$ (which is within $10\%$ of the value obtianed similarly from \citealt{Genzel2003}). This gives a reference stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
 
@@ -212,6 +218,7 @@ From \eqnref{Gamma} we see that the event rate is highly sensitive to the smalle
 Tidal forces from the black hole can disrupt stars. This occurs at the tidal radius
 \begin{equation}
 r\sub{T} \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
+\label{eq:Tidal}
 \end{equation}
 where $R_M$ is the radius of the star~\citep{Kobayashi2004}. Any star on an orbit with $r\sub{p} < r\sub{T}$ will be disrupted in the course of its orbit. Tidal disruption is most significant for MS stars since they are least dense; calculated in this way, only MS stars would be tidally disrupted outside of the MBH's event horizon. The tidal radius defines the cut-off for periapsis of high eccentricity ($e \ga 1$ orbits~\citep{Lightman1977}
 
@@ -226,9 +233,9 @@ where we have introduced
 \begin{equation}
 \Theta = \frac{G^3M_\bullet M(M_\bullet + M)}{c^5}.
 \end{equation}
-For a circular orbit the inspiral time from initial periapsis $r_{p0}$ is
+For a circular orbit the inspiral time from initial periapsis $r\sub{p0}$ is
 \begin{equation}
-\tau\sub{c}(r_{p0}) = \frac{5}{256}\frac{r_{p0}^4}{\Theta}.
+\tau\sub{c}(r\sub{p0}) = \frac{5}{256}\frac{r\sub{p0}^4}{\Theta}.
 \end{equation}
 For an orbit of finite eccentricity ($0 < e < 1$), we can solve for the periapsis as a function of eccentricity
 \begin{equation}
@@ -236,18 +243,18 @@ r\sub{p}(e) = A(1 + e)^{-1}\left(1 + \frac{121}{304}e^2\right)^{870/2299}e^{12/1
 \end{equation}
 where $A$ is a constant fixed by the initial conditions: for an orbit with initial eccentricity $e_0$
 \begin{equation}
-A = (1 + e_0)\left(1 + \frac{121}{304}e_0^2\right)^{-870/2299}e_0^{-12/19}r_{p0}.
+A = (1 + e_0)\left(1 + \frac{121}{304}e_0^2\right)^{-870/2299}e_0^{-12/19}r\sub{p0}.
 \end{equation}
 The inspiral is complete when the eccentricity has decayed to zero. Consequently the inspiral time is~\citep{Peters1964}
 \begin{equation}
-\tau(r_{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{A^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
+\tau(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{A^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, however it may be written in closed from as
 \begin{eqnarray}
-\tau(r_{p0},e_0) &=& \tau\sub{c}(r_{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
+\tau(r\sub{p0},e_0) &=& \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
  & & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
 \end{eqnarray}
-using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$ (\citealt{Olver2010}, 16.15.1).\footnote{For small eccentricities $\tau(r_{p0},e_0) \simeq \tau\sub{c}(r_{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
+using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$ (\citealt{Olver2010}, 16.15.1).\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
 
 We will assume that an orbit is depleted of stars if the inspiral time-scale is shorter than the relaxation time-scale. This indicates the characteristic time for two-body collisions to change the velocity the star by order of itself~\citep{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. Following \citep{Spitzer1971}, a relaxation time-scale can be estimated from the diffusion coefficient of the Fokker-Planck equation (\citealt{Binney1987}, section 8.3.4), for a system with a purely Maxwellian distribution
 \begin{equation}
@@ -267,7 +274,7 @@ Unbound stars only undergo a single periapse passage and only radiate one burst 
 
 \subsubsection{Collisions}
 
-As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. It takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to disrupt: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
+As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. A star is unlikely to be disrupted by a single collison~\citep{Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to disrupt: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) \pi R_\star^2 v(r,e,r\sub{p})\delta t.
 \end{equation}
