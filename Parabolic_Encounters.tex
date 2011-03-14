@@ -49,7 +49,7 @@ black hole physics -- Galaxy: centre -- gravitational waves.
 
 \section{Background \& Introduction}
 
-Currently it is understood that many, if not all, galactic nuclei harboured a black hole at some point\cite{Lynden-Bell1971, Rees1984}. The best opportunity to study these objects comes from the compact object in our own galactic centre (GC), which is coincident with Sagittarius A* (Sgr A*). This is identified as a massive black hole (MBH) of mass $M_\bullet = \num{4.31e6} M_\odot$ at a distance of only $R_0 = \SI{8.33}{\kilo\parsec}$\cite{Gillessen2009}. According to the no-hair theorem the MBH should be described completely by its mass $M_\bullet$ and spin $a$ (since we expect  the charge of an astrophysical black hole to be negligible)\cite{Israel1967, Israel1968, Carter1971, Hawking1972, Robinson1975, Chandrasekhar1998}. Consequently, measuring the spin is necessary to fully understand the MBH and its role in the evolution of the Galaxy. It has been suggested that the spin could be inferred from careful observation of the orbits of stars within a few milliparsecs of the GC\cite{Merritt2010}, although this is complicated because of perturbations due to other stars, or from observations of quasi-periodic oscillations (QPOs) of radio emissions\cite{Kato2010}, though there are difficulties in interpreting these results\cite{Psaltis2008}.
+Currently it is understood that many, if not all, galactic nuclei harboured a black hole at some point\cite{Lynden-Bell1971, Rees1984}. The best opportunity to study these objects comes from the compact object in our own galactic centre (GC), which is coincident with Sagittarius A* (Sgr A*). This is identified as a massive black hole (MBH) of mass $M_\bullet = \num{4.31e6} M_\odot$ at a distance of only $R_0 = \SI{8.33}{\kilo\parsec}$\cite{Gillessen2009}. According to the no-hair theorem the MBH should be described completely by its mass $M_\bullet$ and spin $a$ (since we expect  the charge of an astrophysical black hole to be negligible)\cite{Israel1967, Israel1968, Carter1971, Hawking1972, Robinson1975, Chandrasekhar1998}. Consequently, measuring the spin is necessary to fully understand the MBH and its role in the evolution of the Galaxy. It has been suggested that the spin could be inferred from careful observation of the orbits of stars within a few milliparsecs of the GC\cite{Merritt2010}, although this is complicated because of perturbations due to other stars, or from observations of quasi-periodic oscillations (QPOs) of radio emissions\cite{Kato2010}, though there are difficulties in interpreting these results\cite{Psaltis2008a}.
 
 An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as smaller BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by. The planned LISA mission is designed to be able to detect GWs in the frequency range of interest for these encounters\cite{Bender1998, Danzmann2003}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs)\cite{Rubbo2006}. Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to emit continuously significant gravitational radiation in the LISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs).
 
@@ -99,12 +99,12 @@ For a parabolic orbit $E = 1$, thus the particle is at rest at infinity. This si
 \begin{equation}
 Q = L_\theta^2 + \cos^2\theta\left[a^2\left(1 - E^2\right) + \frac{L_z^2}{\sin^2\theta}\right],
 \end{equation}
-where $L_\theta$ is the (non-conserved) specific angular momentum in the $\theta$-direction (note $L_\theta^2 = V_\theta$). For $E = 1$ we have
+where $L_\theta$ is the (non-conserved) specific angular momentum in the $\theta$-direction ($ V_\theta = L_\theta^2$). For $E = 1$ we have
 \begin{align}
 Q = {} & L_\theta^2 + \cot^2\theta\, L_z^2 \nonumber \\
  = {} & L_\infty^2 - L_z^2
 \end{align}
-where $L_\infty$ is the total specific angular momentum at infinity, where the metric is asymptotically flat\cite{DeFelice1980}.\footnote{See Rosquist {\it et al}.\cite{Rosquist2009} for an interesting discussion of the interpretation of $Q$ in the limit $G \rightarrow 0$ corresponding to a flat spacetime.} This is as in Schwarzschild spacetime.
+where $L_\infty$ is the total specific angular momentum at infinity, where the metric is asymptotically flat\cite{DeFelice1980}.\footnote{See Rosquist {\it et al}.\cite{Rosquist2009} for a discussion of the interpretation of $Q$ in the limit $G \rightarrow 0$ corresponding to a flat spacetime.} This is as in Schwarzschild spacetime.
 
 \subsection{Integration Variables \& Turning Points}
 
@@ -476,7 +476,7 @@ What is particularly exciting is the amount of information we could obtain from 
 
 \section{Energy Spectra}
 
-To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of Peters and Matthews\cite{Peters1963, Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
+To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of Peters and Mathews\cite{Peters1963, Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
 
 We do not intend to use the kludge waveforms to calculate an accurate energy flux: this would be inconsistent as we assume that the orbits do not evolve with time. We only calculate the energy flux as a sanity check; to check that the kludge approximation is consistent with other approaches.
 
@@ -514,9 +514,9 @@ using the fact that the signal is real so $\widetilde{H}_{ij}^*(f) = \widetilde{
 \label{eq:NK_dEdf}
 \end{align}
 
-\subsection{Peters \& Matthews Spectrum}
+\subsection{Peters \& Mathews Spectrum}
 
-To calculate the Peters and Matthews energy spectrum for a parabolic orbit, we use the limiting result of Gair\cite{Gair2010}
+To calculate the Peters and Mathews energy spectrum for a parabolic orbit, we use the limiting result of Turner\cite{Turner1977, Berry2010}
 \begin{align}
 \diff{E}{f} = {} & \frac{4\pi^2}{5}\frac{G^3}{c^5}\frac{M_\bullet^2\mu^2}{r\sub{p}^2}\left\{\left[\frac{8f^2}{f\sub{c}^2}B\left(\frac{f}{f\sub{c}}\right) - \frac{2f}{f\sub{c}}A\left(\frac{f}{f\sub{c}}\right)\right]^2 \right. \nonumber \\
  & \left. + \left(\frac{128f^4}{f\sub{c}^4} + \frac{4f^2}{3f\sub{c}^2}\right)\left[A\left(\frac{f}{f\sub{c}}\right)\right]^2\right\},
@@ -531,29 +531,29 @@ and functions $A(\widetilde{f})$ and $B(\widetilde{f})$ are defined in terms of 
 A(\widetilde{f}) = {} & \recip{\pi}\sqrt{\frac{2}{3}}K_{1/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right); \\
 B(\widetilde{f}) = {} & \recip{\sqrt{3}\pi}\left[K_{-2/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) + K_{4/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) - \recip{\sqrt{2}\widetilde{f}}K_{1/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right)\right],
 \end{align}
-where $K_\nu(z)$ is a modified Bessel function of the second kind\cite{Watson1995}.
+where $K_\nu(z)$ is a modified Bessel function of the second kind.
 
 \subsection{Comparison}
 
-Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of $r\sub{p} = 35.0 r\sub{S}$, where $r\sub{S}$ is the MBH's Schwarzschild radius. For consistency with the approximation of Peters and Matthews the NK waveform has been calculated using only the quadrupole formula.
+Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of $r\sub{p} = 35.0 r\sub{S}$, where $r\sub{S}$ is the MBH's Schwarzschild radius. For consistency with the approximation of Peters and Mathews the NK waveform has been calculated using only the quadrupole formula.
 The two spectra appear to be in good agreement, showing the same general shape. The NK spectrum is more tightly peaked, but is always within a factor of $2$ (ignoring the high-frequency tail).
 \begin{figure}[htbp]
   \begin{center}
    \subfigure[Log-log plot.]{\resizebox{0.65\textwidth}{!}{\import{./Images/}{loglog_E.tex}}} \\
    \subfigure[Log-linear plot.]{\resizebox{0.65\textwidth}{!}{\import{./Images/}{loglin_E.tex}}}
-    \caption{Energy spectra for a parabolic orbit of a $\mu = \SI{1e31}{\kg} \simeq 5 M_\odot$ object about a $M_\bullet = \SI{8.6e36}{\kg} \simeq \num{4.3e6} M_\odot$ Schwarzschild MBH with $L_z = 12 M_\bullet$ and $Q = 0$; the periapse distance is $r\sub{p} = 69.9 M_\bullet$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Matthews flux is indicated by the dashed line. The NK waveform only uses the quadrupole formula.}
+    \caption{Energy spectra for a parabolic orbit of a $\mu = \SI{1e31}{\kg} \simeq 5 M_\odot$ object about a $M_\bullet = \SI{8.6e36}{\kg} \simeq \num{4.3e6} M_\odot$ Schwarzschild MBH with $L_z = 12 M_\bullet$ and $Q = 0$; the periapse distance is $r\sub{p} = 69.9 M_\bullet$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform only uses the quadrupole formula.}
     \label{fig:Energy}
   \end{center}
 \end{figure}
 
-We may also compare the total energy flux. For the orbit shown in \figref{Energy} integrating the NK spectrum gives $E\sub{NK} = \SI{5.936e36}{\joule}$; the Peters and Matthews total energy is $E\sub{PM} = \SI{5.747e36}{\joule}$. The total energy flux from the kludge waveform is larger than the Peters and Matthews result. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH\cite{Gair2005}. From the level of agreement we may be confident that the NK waveforms are a reasonable approximation.
+We may also compare the total energy flux. For the orbit shown in \figref{Energy} integrating the NK spectrum gives $E\sub{NK} = \SI{5.936e36}{\joule}$; the Peters and Mathews total energy is $E\sub{PM} = \SI{5.747e36}{\joule}$. The total energy flux from the kludge waveform is larger than the Peters and Mathews result. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH\cite{Gair2005}. From the level of agreement we may be confident that the NK waveforms are a reasonable approximation.
 
 Introducing the octopole moments makes a small change to the energy spectrum, as seen in \figref{Energy_oct}.
 \begin{figure}[htbp]
   \begin{center}
    \subfigure[Log-log plot.]{\resizebox{0.65\textwidth}{!}{\import{./Images/}{loglog_E_oct.tex}}} \\
    \subfigure[Log-linear plot.]{\resizebox{0.65\textwidth}{!}{\import{./Images/}{loglin_E_oct.tex}}}
-    \caption{Energy spectra for the same orbit as shown in \figref{Energy}. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Matthews flux is indicated by the dashed line. The NK waveform includes contributions from the current quadrupole and mass octopole as given by \eqnref{Octopole}.}
+    \caption{Energy spectra for the same orbit as shown in \figref{Energy}. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes contributions from the current quadrupole and mass octopole as given by \eqnref{Octopole}.}
     \label{fig:Energy_oct}
   \end{center}
 \end{figure}
@@ -561,7 +561,7 @@ The peak of the spectrum is shifted to a slightly higher frequency, and the tota
 
 \section{Discussion \& Further Work}
 
-We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. These assume that the orbit is parabolic and employs a numerical kludge approximation. The two schemes for a NK presented here yield almost indistinguishable results. The waveforms created appear to be consistent with results obtained using Peters and Matthews waveforms in the weak-field regime. The NK approach should be superior to that of Peters and Matthews in the strong-field regime as it uses exact geodesics of Kerr spacetime.
+We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. These assume that the orbit is parabolic and employs a numerical kludge approximation. The two schemes for a NK presented here yield almost indistinguishable results. The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms in the weak-field regime. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses exact geodesics of Kerr spacetime.
 
 Using the NK waveforms we have conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. Unfortunately it does not appear possible to infer the distance to the GC.
 
