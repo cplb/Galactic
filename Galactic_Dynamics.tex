@@ -1,4 +1,6 @@
 \documentclass[useAMS,usedcolumn,usegraphicx,usenatbib]{mn2e}
+\usepackage{amssymb,amstext,amsfonts} %% ... with default font
+\usepackage[fleqn]{amsmath}
 \usepackage{dcolumn}
 \usepackage{hyperref}
 
@@ -121,10 +123,10 @@ We assume a black hole mass of $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$
 \subsection{Parameterising in terms of eccentricity \& periapsis}
 
 We will characterise orbits by their eccentricity $e$ and periapse radius $r\sub{p}$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $J$ per unit mass are entirely characterised by these parameters
-\begin{eqnarray}
-\mathcal{E} &=& -\frac{GM_\bullet(1 - e)}{2r\sub{p}},\\
-J^2 &=& GM_\bullet(1 + e)r\sub{p}.
-\end{eqnarray}
+\begin{align}
+\mathcal{E} = {} & -\frac{GM_\bullet(1 - e)}{2r\sub{p}},\\
+J^2 = {} & GM_\bullet(1 + e)r\sub{p}.
+\end{align}
 The distribution function, however, is defined per element of phase space: it is necessary to change variables from position and velocity to eccentricity and periapsis. We start by decomposing the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We will assume that the galactic core is spherically symmetric~\citep{Genzel2003, Schodel2007}, therefore we are only interested in the combination
 \begin{equation}
 v_\perp^2 = v_\phi^2 + v_\theta^2 = v^2 - v_r^2.
@@ -134,24 +136,24 @@ Under this change of variables
 \dd^3v = \dd v_r \dd v_\phi \dd v_\theta \rightarrow 2\pi v_\perp \dd v_r \dd v_\perp.
 \end{equation}
 The specific energy and angular momentum are given by
-\begin{eqnarray}
-\mathcal{E} &=& \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r},\\
-J^2 &=& r^2 v_\perp^2.
-\end{eqnarray}
+\begin{align}
+\mathcal{E} = {} & \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r},\\
+J^2 = {} & r^2 v_\perp^2.
+\end{align}
 If we combine these with our earlier expressions in terms of $e$ and $r\sub{p}$ we find
-\begin{eqnarray}
-v_\perp^2 &=& \frac{GM_\bullet(1 + e)r\sub{p}}{r^2}, \nonumber \\*
-v_r^2 &=& GM\left[\frac{2}{r} - \frac{(1 - e)}{r\sub{p}} - \frac{(1 + e)r\sub{p}}{r^2}\right].
-\end{eqnarray}
+\begin{align}
+v_\perp^2 = {} & \frac{GM_\bullet(1 + e)r\sub{p}}{r^2}, \nonumber \\*
+v_r^2 = {} & GM\left[\frac{2}{r} - \frac{(1 - e)}{r\sub{p}} - \frac{(1 + e)r\sub{p}}{r^2}\right].
+\end{align}
 From the latter we can verify that the turning points of an orbit occur at
 \begin{equation}
 r = r\sub{p}, \: \frac{1+e}{1-e}r\sub{p};
 \end{equation}
 the periapse is the only turning point for orbits with $e > 1$. Since we now have expressions for $\{v_r, v_\perp\}$ in terms of $\{e, r\sub{p}\}$ we can calculate the Jacobian
-\begin{eqnarray}
-\left|\frac{\partial(v_r, v_\perp)}{\partial(e, r\sub{p})}\right| &=& \partialdiff{v_r}{e}\partialdiff{v_\perp}{r\sub{p}} - \partialdiff{v_r}{r\sub{p}}\partialdiff{v_\perp}{e} \\
- &=& \recip{2v_rv_\perp}\frac{e}{r\sub{p}}\left(\frac{GM}{r}\right)^2.
-\end{eqnarray}
+\begin{align}
+\left|\frac{\partial(v_r, v_\perp)}{\partial(e, r\sub{p})}\right| = {} & \partialdiff{v_r}{e}\partialdiff{v_\perp}{r\sub{p}} - \partialdiff{v_r}{r\sub{p}}\partialdiff{v_\perp}{e} \\
+ = {} & \recip{2v_rv_\perp}\frac{e}{r\sub{p}}\left(\frac{GM}{r}\right)^2.
+\end{align}
 Using this, we may rewrite our velocity element as
 \begin{equation}
 \dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM}{r}\right)^2\dd e \dd r\sub{p}.
@@ -178,18 +180,18 @@ where $N(e, r\sub{p}; r)$ is the total number of stars with orbits given by $\{e
 \delta t = 2\frac{\delta r}{v_r},
 \end{equation}
 where the factor of $2$ is included to account for both inwards and outwards motion. Hence
-\begin{eqnarray}
-N(e, r\sub{p}; r) &=& \recip{2} v_r P n(r, e, r\sub{p})\\
- &=& \frac{2\pi^2(GM)^2 e P}{r\sub{p}}f(\mathcal{E}).
-\end{eqnarray}
+\begin{align}
+N(e, r\sub{p}; r) = {} & \recip{2} v_r P n(r, e, r\sub{p})\\
+ = {} & \frac{2\pi^2(GM)^2 e P}{r\sub{p}}f(\mathcal{E}).
+\end{align}
 The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we may define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion.
 
 If a burst of radiation is emitted each time a star passes through periapse, then the event rate for burst emission from orbits with parameters $\{e, r\sub{p}\}$, is given by
-\begin{eqnarray}
-\Gamma(e, r\sub{p}) &=& \frac{N(e, r\sub{p})}{P(e, r\sub{p})}\\
- &=& \frac{2\pi^2(GM)^2 e}{r\sub{p}}f(\mathcal{E}).
+\begin{align}
+\Gamma(e, r\sub{p}) = {} & \frac{N(e, r\sub{p})}{P(e, r\sub{p})}\\
+ = {} & \frac{2\pi^2(GM)^2 e}{r\sub{p}}f(\mathcal{E}).
 \label{eq:Gamma}
-\end{eqnarray}
+\end{align}
 The orbital period drops out from the calculation, so we do not have to worry about an appropriate definition for unbound orbits.
 
 From the event rate we may define a probability of seeing a given number of events subject to the assumption that they are uncorrelated: it is given by the Poisson distribution. The probability of there being $r$ events is
@@ -225,10 +227,10 @@ where $R_M$ is the radius of the star~\citep{Kobayashi2004}. Any star on an orbi
 \subsubsection{Gravitational wave inspiral}
 
 Stars orbiting about the black hole will continually radiate energy and angular momentum causing them to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries, the orbit-averaged rate of change of the periapsis and eccentricity for bound orbits are
-\begin{eqnarray}
-\left\langle\diff{r\sub{p}}{t}\right\rangle &=& -\frac{64}{5}\frac{\Theta}{r\sub{p}^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
-\left\langle\diff{e}{t}\right\rangle &=& -\frac{304}{5}\frac{\Theta}{r\sub{p}^4}\frac{e(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2\right),
-\end{eqnarray}
+\begin{align}
+\left\langle\diff{r\sub{p}}{t}\right\rangle = {} & -\frac{64}{5}\frac{\Theta}{r\sub{p}^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
+\left\langle\diff{e}{t}\right\rangle = {} & -\frac{304}{5}\frac{\Theta}{r\sub{p}^4}\frac{e(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2\right),
+\end{align}
 where we have introduced
 \begin{equation}
 \Theta = \frac{G^3M_\bullet M(M_\bullet + M)}{c^5}.
@@ -250,10 +252,10 @@ The inspiral is complete when the eccentricity has decayed to zero. Consequently
 \tau(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\Lambda^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, however it may be written in closed form as
-\begin{eqnarray}
-\tau(r\sub{p0},e_0) &=& \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
- & & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
-\end{eqnarray}
+\begin{align}
+\tau(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
+  {} & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
+\end{align}
 using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$ (\citealt{Olver2010}, 16.15.1).\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
 
 We will assume that an orbit is depleted of stars if the inspiral time-scale is shorter than the relaxation time-scale. This indicates the characteristic time for two-body collisions to change the velocity of the star by order of itself~\citep{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. Following \citep{Spitzer1971}, a relaxation time-scale can be estimated from the diffusion coefficient of the Fokker-Planck equation (\citealt{Binney1987}, section 8.3.4), for a system with a purely Maxwellian distribution
@@ -302,19 +304,19 @@ CPLB is supported by STFC. JRG is supported by the Royal Society.
 \section[]{Evolution of orbital parameters for unbound orbits due to gravitational wave emission}\label{sec:Unbound}
 
 Following the approach of \citet{Turner1977} we can calculate the evolution of the eccentricity and periapse of a Keplerian binary through the loss of energy and angular momentum carried away by gravitational radiation. The change in fractional eccentricity over an orbit, approximating the orbital parameters remain constant throughout the orbit, is
-\begin{eqnarray}
-\frac{\Delta e}{e} &=& -\frac{608}{15}\Sigma\left[\recip{(1+e)^{5/2}}\left(1 + \frac{121}{304}e^2\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber\\*
- & & \left. + \frac{(e - 1)^{1/2}}{e^2(1+e)^2}\left(\frac{67}{456} + \frac{1069}{912}e^2 + \frac{3}{38}e^4\right)\right],
-\end{eqnarray}
+\begin{align}
+\frac{\Delta e}{e} = {} & -\frac{608}{15}\Sigma\left[\recip{(1+e)^{5/2}}\left(1 + \frac{121}{304}e^2\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber\\*
+  {} & + \left. \frac{(e - 1)^{1/2}}{e^2(1+e)^2}\left(\frac{67}{456} + \frac{1069}{912}e^2 + \frac{3}{38}e^4\right)\right],
+\end{align}
 introducing dimensionless parameter
 \begin{equation}
 \Sigma = \frac{G^{5/2}M_\bullet M(M_\bullet+ M)}{c^5r\sub{p}^{5/2}}.
 \end{equation}
 Similarly, the fractional change in periapsis is
-\begin{eqnarray}
-\frac{\Delta r\sub{p}}{r\sub{p}} &=& -\frac{128}{5}\Sigma\left[\recip{(1+e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber \\*
- & & \left. - \frac{(e - 1)^{1/2}}{e(1 + e)^3}\left(\frac{67}{288} - \frac{13}{8}e + \frac{133}{576}e^2 - \frac{1}{4}e^3 - \frac{1}{8}e^4\right)\right].
-\end{eqnarray}
+\begin{align}
+\frac{\Delta r\sub{p}}{r\sub{p}} = {} & -\frac{128}{5}\Sigma\left[\recip{(1+e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber \\*
+  {} &  - \left. \frac{(e - 1)^{1/2}}{e(1 + e)^3}\left(\frac{67}{288} - \frac{13}{8}e + \frac{133}{576}e^2 - \frac{1}{4}e^3 - \frac{1}{8}e^4\right)\right].
+\end{align}
 Both of these changes obtain their greatest magnitudes for large eccentricities, then
 \begin{equation}
 \frac{\Delta e}{e} \simeq \frac{\Delta r\sub{p}}{r\sub{p}} \simeq -\frac{16}{5}\Sigma e^{1/2}.

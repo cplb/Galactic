@@ -2,6 +2,7 @@
 \usepackage{amssymb,amstext,amsfonts} %% ... with default font
 \usepackage[fleqn]{amsmath}
 \usepackage{slashed}
+%\usepackage{enumitem}
 \usepackage{mathrsfs}
 \usepackage{dcolumn}
 \usepackage{hyperref}
@@ -283,7 +284,7 @@ The measured strain $\boldsymbol{s}(t)$ will be the combination of the signal an
 \end{equation}
 we will assume that the noise $n_A(t)$ is stationary and Gaussian. When analysing signals, it is most convenient to work with the Fourier transform
 \begin{equation}
-\tilde{g}(f) = \mathsc{F}\{g(t)\} = \intd{-\infty}{\infty}{g(t)e^{2\pi i ft}}{t}.
+\tilde{g}(f) = \mathscr{F}\{g(t)\} = \intd{-\infty}{\infty}{g(t)e^{2\pi i ft}}{t}.
 \end{equation}
 For a Guassian noise signal $n_A(t)$, each Fourier component $\tilde{n}_A(f)$ also has a Gaussian probability distribution; the assumption of stationarity means that different Fourier components are uncorrelated, thus~\citep{Cutler1994}
 \begin{equation}
