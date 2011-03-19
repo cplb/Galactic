@@ -612,19 +612,19 @@ and the Kaiser-Bessel window \citep{Harris1978, Kaiser1980}
 \begin{equation}
 w\sub{KB}(t;\beta) = \frac{I_0\left[\beta\sqrt{1 - (2 t/\tau)^2}\right]}{I_0(\beta)},
 \end{equation}
-where $I_\nu(z)$ is the modified Bessel function of the first kind, and $\beta$ is an adjustable parameter. The Kaiser-Bessel window has the smallest peak sidelobe, but the worst decay; the Nuttall window has best the best asymptotic behaviour; the Blackman-Harris window has a peak sidelobe similar to the Nuttall window, and decays asymptotically as fast (slow) as the Kaiser-Bessel window, but has the advantage of having suppressed sidelobes next to the central lobe. Another window has been recently suggested for use with gravitational waveforms: the Planck-taper window \citep{Damour2000,McKechan2010}
+where $I_\nu(z)$ is the modified Bessel function of the first kind, and $\beta$ is an adjustable parameter. The Kaiser-Bessel window has the smallest peak sidelobe, but the worst decay ($1/f$); the Nuttall window has best the best asymptotic behaviour ($1/f^3$); the Blackman-Harris window has a peak sidelobe similar to the Nuttall window, and decays asymptotically as fast (slow) as the Kaiser-Bessel window, but has the advantage of having suppressed sidelobes next to the central lobe. Another window has been recently suggested for use with gravitational waveforms: the Planck-taper window \citep{Damour2000,McKechan2010}
 \begin{equation}
 w\sub{P}(t; \epsilon) = \begin{cases}
- {\displaystyle \recip{\exp[Z_+(t/\tau; \epsilon)]+1}} & {\displaystyle -\frac{\tau}{2} \leq t < -\frac{\tau}{2}(1 - 2\epsilon)} \\
- 1 & {\displaystyle -\frac{\tau}{2}(1 - 2\epsilon) < t < \frac{\tau}{2}(1 - 2\epsilon)} \\
- {\displaystyle \recip{\exp[Z_-(t/\tau; \epsilon)]+1}} & {\displaystyle -\frac{\tau}{2}(1 - 2\epsilon) < t \leq \frac{\tau}{2}}
+ {\displaystyle \recip{\exp(Z_+)+1}} & {\displaystyle -\frac{\tau}{2} \leq t < -\tau\left(\recip{2} - \epsilon\right)} \\
+ 1 & {\displaystyle -\tau\left(\recip{2} - \epsilon\right) < t < \tau\left(\recip{2} - \epsilon\right)} \\
+ {\displaystyle \recip{\exp(Z_-)+1}} & {\displaystyle -\tau\left(\recip{2} - \epsilon\right) < t \leq \frac{\tau}{2}}
 \end{cases},
 \end{equation}
 with
 \begin{equation}
-Z_\pm(\xi; \epsilon) = 2\epsilon\left(\recip{1 \pm 2\xi} + \recip{1 - 2\epsilon \pm 2\xi}\right).
+Z_\pm(t; \epsilon) = 2\epsilon\left[\recip{1 \pm 2(t/\tau)} + \recip{1 - 2\epsilon \pm 2(t/\tau)}\right].
 \end{equation}
-This was put forward for use with binary coalescences, and has superb asymptotic decay. Unfortunately, for this application, the peak sidelobe is high. We therefore put forward a new window function: the Planck-Bessel window which simply combines the Kaiser-Bessel and Planck-taper windows to produce a window which inherits the best features of both, albeit in a diluted form
+This was put forward for use with binary coalescences, and has superb asymptotic decay. Unfortunately, for this application, the peak sidelobe is high. We therefore propose a new window function: the Planck-Bessel window which simply combines the Kaiser-Bessel and Planck-taper windows to produce a window which inherits the best features of both, albeit in a diluted form
 \begin{equation}
 w\sub{PB}(t;\beta,\epsilon) = w\sub{P}(t; \epsilon)w\sub{KB}(t;\beta).
 \end{equation}
