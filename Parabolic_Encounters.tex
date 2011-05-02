@@ -77,7 +77,7 @@ We will make the simplifying assumption that all these orbits are marginally bou
 
 In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit so that they may be held constant. We use this to construct an approximate numerical kludge waveform \citep{Babak2007}.
 
-This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, and in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, in \sec{Signal} how the signal would be analysed to extract the information encoded in the the waveform. [Something else here] In \secref{Energy} we confirm the accuracy of the kludge waveforms by comparing the energy flux with fluxes calculated from other approaches. We conclude in \secref{End} with a summary of our results.
+This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, and in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, in \secref{Signal} how the signal would be analysed to extract the information encoded in the the waveform. [Something else here] In \secref{Energy} we confirm the accuracy of the kludge waveforms by comparing the energy flux with fluxes calculated from other approaches. We conclude in \secref{End} with a summary of our results.
 
 Throughout this work we will assume metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet will be used for the output of two LISA detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ will be used where noted, but in general factors of $G$ and $c$ will be retained.
 
@@ -632,8 +632,9 @@ This was put forward for use with binary coalescences, and has superb asymptotic
 w\sub{PB}(t;\beta,\epsilon) = w\sub{P}(t; \epsilon)w\sub{KB}(t;\beta).
 \end{equation}
 The window functions' frequency responses are plotted in \figref{Response}.
-\begin{figure}[htbp]
+\begin{figure}
   \begin{center}
+  \includegraphics[width=0.45\textwidth]{Fig_Response}
     \caption{Window function frequency response. To avoid clutter, the response function is only plotted in detail until $f\tau = 8$, above this a smoothed value is plotted, as indicated by the dashed line. As well as having good-asymptotic behaviour, the Planck-taper window has the narrowest main lobe, except for the rectangular window.}
     \label{fig:Response}
   \end{center}
