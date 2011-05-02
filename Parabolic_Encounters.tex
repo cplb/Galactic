@@ -16,7 +16,7 @@
 \newcommand{\tabref}[1]{Table~\ref{tab:#1}}
 \newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
 \newcommand{\Secref}[1]{Section~\ref{sec:#1}}
-\newcommand{\apref}[1]{Appendix~\ref{sec:#1}}
+\newcommand{\apref}[1]{Appendix~\ref{ap:#1}}
 
 \newcommand{\units}[1]{\ensuremath{~\mathrm{#1}}}
 
@@ -59,15 +59,17 @@ I thought I would try out the MNRAS \LaTeX{} style.
 black hole physics -- Galaxy: centre -- gravitational waves -- methods: data analysis.
 \end{keywords}
 
-\section{Background \& introduction}
+\section{Background and introduction}
 
 Many, if not all, galactic nuclei  are believed to have harboured a massive black hole (MBH) during their evolution \citep{Lynden-Bell1971, Rees1984}. The best opportunity to study these objects comes from the compact object in our own galactic centre (GC), which is coincident with Sagittarius A* (Sgr A*). This is identified as an MBH of mass $M_\bullet = 4.31 \times 10^6 M_\odot$ at a distance of only $R_0 = 8.33\units{kpc}$ \citep{Gillessen2009}. According to the no-hair theorem, the MBH should be described completely by its mass $M_\bullet$ and spin $a$, since we expect the charge of an astrophysical black hole to be negligible \citep{Israel1967, Israel1968, Carter1971, Hawking1972, Robinson1975, Chandrasekhar1998}. Consequently, to gain a full understanding of the MBH we need to measure its spin. This will give us insight into its history and role in the evolution of the Galaxy.
 
 It has been suggested that the spin could be inferred from careful observation of the orbits of stars within a few milliparsec of the GC \citep{Merritt2010}, although this is complicated because of perturbations due to other stars, or from observations of quasi-periodic oscillations (QPOs) of radio emissions \citep{Kato2010}, though there are difficulties in interpreting these results \citep{Psaltis2008a}.
 
-This latter method has produced a value of the dimensionless spin, $a_\ast = Jc/GM_\bullet^2$ where $J$ is the MBH's angular momentum, of $a_\ast = 0.44 \pm 0.08$. To obtain this result \citet{Kato2010} have combined their observations of Sgr A* with observations of galactic X-ray sources containing solar mass BHs, to find a best-fit unique spin parameter for all BHs. However, it is not clear that all BHs should share the same value of the spin parameter; especially considering that the BHs considered here differ by six orders of magnitude, with none in the intermediate range. Even if BH spin is determined by a universal process, we would expect some distribution of spin parameters \citep{King2008}. Thus we cannot precisely determine the spin of the galactic centre's MBH from an average including other BHs. While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the MBH's spin, it is desirable to have an independent measurement.
+This latter method has produced a value of the dimensionless spin, $a_\ast = Jc/GM_\bullet^2$ where $J$ is the MBH's angular momentum, of $a_\ast = 0.44 \pm 0.08$. To obtain this result \citet{Kato2010} have combined their observations of Sgr A* with observations of galactic X-ray sources containing solar mass BHs, to find a best-fit unique spin parameter for all BHs. However, it is not clear that all BHs should share the same value of the spin parameter; especially considering that the BHs considered here differ by six orders of magnitude, with none in the intermediate range. Even if BH spin is determined by a universal process, we would expect some distribution of spin parameters \citep{King2008}. Thus we cannot precisely determine the spin of the galactic centre's MBH from an average including other BHs.
 
-An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as smaller black holes (BHs)s, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by. The planned Laser Interferometer Space Antenna (LISA) mission is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs) \citep{Amaro-Seoane2007}.
+While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the MBH's spin, it is desirable to have an independent measurement.
+
+An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as smaller black holes (BHs)s, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by. The proposed Laser Interferometer Space Antenna (LISA) mission is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs) \citep{Amaro-Seoane2007}.
 
 Studies of these systems have usually focused upon when the orbit completes multiple cycles, allowing a high signal-to-noise ratio to be accumulated. Here, we will investigate what can be learnt from high eccentricity orbits. These are the initial bursting orbits from which an EMRI may evolve. The event rate for the detection of such EMRBs with LISA has been estimated to be as high as $15\units{yr^{-1}}$ \citep{Rubbo2006}, although this has been revised downwards to the order of $1\units{yr^{-1}}$ \citep{Hopman2007}. Even if only a single burst is detected during the LISA mission, this is still an exciting possibility since the information carried by the GW should give an unparalleled probe of the structure of spacetime of the GC. Exactly what can be inferred will depend upon the orbit.
 
@@ -75,11 +77,13 @@ We will make the simplifying assumption that all these orbits are marginally bou
 
 In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit so that they may be held constant. We use this to construct an approximate numerical kludge waveform \citep{Babak2007}.
 
+This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, and in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, in \sec{Signal} how the signal would be analysed to extract the information encoded in the the waveform. [Something else here] In \secref{Energy} we confirm the accuracy of the kludge waveforms by comparing the energy flux with fluxes calculated from other approaches. We conclude in \secref{End} with a summary of our results.
+
 Throughout this work we will assume metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet will be used for the output of two LISA detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ will be used where noted, but in general factors of $G$ and $c$ will be retained.
 
-\section{Parabolic orbits in Kerr spacetime}
+\section{Parabolic orbits in Kerr spacetime\label{sec:Geodesic}}
 
-\subsection{The metric \& geodesic equations}
+\subsection{The metric and geodesic equations}
 
 Astrophysical BHs are described by the Kerr metric \citep{Kerr1963}. In standard Boyer-Lindquist coordinates the line element is (\citealt{Boyer1967, Hobson2006}, section 13.7)
 \begin{equation}
@@ -92,7 +96,7 @@ where we have introduced functions
 \Sigma = {} & \left(r^2 +a^2\right)^2 - a^2\Delta\sin^2\theta,\\
 \omega = {} & \frac{2GM_\bullet ar}{c\Sigma}.
 \end{align}
-The spin parameter is related to the BH's angular momentum by
+The spin parameter $a$ is related to the BH's angular momentum by
 \begin{equation}
 J = M_\bullet ac.
 \end{equation}
@@ -123,9 +127,9 @@ Q = L_\theta^2 + \cot^2\theta\, L_z^2 = L_\infty^2 - L_z^2,
 \end{equation}
 where $L_\infty$ is the total specific angular momentum at infinity, where the metric is asymptotically flat \citep{DeFelice1980}.\footnote{See \citet{Rosquist2009} for a discussion of the interpretation of $Q$ in the limit $G \rightarrow 0$, corresponding to a flat spacetime.} This is as in Schwarzschild spacetime.
 
-\subsection{Integration variables \& turning points}
+\subsection{Integration variables and turning points}
 
-In integrating the geodesic equations difficulties can arise because of the presence of turning points in the motion, when the sign of the $r$ or $\theta$ geodesic equation will change. The radial turning points are at the periapsis $r\sub{p}$ and at infinity. We may locate the periapsis by finding the roots of
+In integrating the geodesic equations, difficulties can arise because of the presence of turning points in the motion, when the sign of the $r$ or $\theta$ geodesic equation will change. The radial turning points are at the periapsis $r\sub{p}$ and at infinity. We may locate the periapsis by finding the roots of
 \begin{align}
 V_r = {} & 0 \nonumber \\
 2M_\bullet r^3 - \left(L_z^2+Q\right)r^2 + 2M_\bullet\left[\left(L_z - a\right)^2 + Q\right]r - a^2Q = {} & 0.
@@ -137,9 +141,10 @@ We may avoid the difficulties of the turning point by introducing an angular var
 r = \frac{p}{1+e\cos\psi},
 \end{equation}
 where $e = 1$ is the eccentricity and $p = 2r\sub{p}$ is the semilatus rectum. As $\psi$ covers its full range from $-\pi$ to $\pi$, $r$ traces out one full orbit from infinity through the periapsis at $\psi = 0$ back to infinity. The geodesic equation for $\psi$ is
-\begin{equation}
-\rho^2 \diff{\psi}{\tau} = \left\{M_\bullet\left[2r\sub{p} - \left(r_1 + r_2\right)\left(1 + \cos\psi\right) + \frac{r_1 r_2}{2r\sub{p}}\left(1 + \cos\psi\right)^2\right]\right\}^{1/2}.
-\end{equation}
+\begin{align}
+\rho^2 \diff{\psi}{\tau} = {} & \left\{M_\bullet\left[2r\sub{p} - \left(r_1 + r_2\right)\left(1 + \cos\psi\right) \right.\right. \nonumber \\*
+ {} & + \left.\left. \frac{r_1 r_2}{2r\sub{p}}\left(1 + \cos\psi\right)^2\right]\right\}^{1/2}.
+\end{align}
 This may be integrated without problem. Parameterizing an orbit by its periapsis and eccentricity has the additional benefit of allowing easier comparison with its flat-space equivalent \citep{Gair2005}.
 
 The $\theta$ motion is usually bounded, with $\theta_0 \leq \theta \leq \pi - \theta_0$; in the event that $L_z = 0$ the particle follows a polar orbit and $\theta$ will cover its full range. The turning points are given by
@@ -156,7 +161,7 @@ See \figref{L_triangle} for a geometrical visualization.
 \begin{figure}[tbp]
 \begin{center}
 %%\includegraphics[width=0.35\textwidth]{./Images/Triangle.eps}
-    \caption{The angular momenta $L_\infty$, $L_z$ and $\sqrt{Q}$ define a right-angled triangle. The acute angles are $\theta_0$, the extremal value of the polar angle, and $\iota$, the orbital inclination.}% \citep{Glampedakis2002a}
+    \caption{The angular momenta $L_\infty$, $L_z$ and $\sqrt{Q}$ define a right-angled triangle. The acute angles are $\theta_0$, the extremal value of the polar angle, and $\iota$, the orbital inclination \citep{Glampedakis2002a}.}% \citep{Glampedakis2002a}
    \label{fig:L_triangle}
 \end{center}
 \end{figure}
@@ -170,7 +175,7 @@ Over one $2\pi$ period of $\chi$, $\theta$ oscillates over its full range, from 
 \end{equation}
 and may be integrated simply.
 
-\section{Waveform Construction}
+\section{Waveform Construction\label{sec:Kludge}}
 
 For given angular momenta $L_z$ and $Q$, and initial starting position, we can calculate the geodesic trajectory. The orbiting body is assumed to follow this track exactly: we ignore evolution due to the radiation of energy and angular momentum, which should be negligible for EMRBs. From this trajectory we calculate the waveform using a semirelativistic approximation \citep{Ruffini1981}: we assume that the particle moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This quick-and-dirty technique is known as a numerical kludge (NK), and has been shown to approximate well results computed by more accurate methods \citep{Babak2007}.
 
@@ -231,7 +236,7 @@ where the (spatial) projection operator $P_{ij}$ is
 P_{ij} = \delta_{ij} - n_in_j.
 \end{equation}
 
-\section{Detection with LISA}
+\section{Detection with LISA\label{sec:Detector}}
 
 The LISA detector is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}[tbhp]
@@ -245,7 +250,7 @@ The currently envisioned LISA mission geometry is shown in \figref{SS_LISA}.
 \begin{figure}
 \begin{center}
 %\includegraphics[width=0.5\textwidth]{./Images/SS_LISA.eps}
-    \caption{The relationship between the detector coordinates $x\sub{d}^i$ and the ecliptic coordinates of the SS $x_\odot^i$.}% \citep{Bender1998}
+    \caption{The relationship between the detector coordinates $x\sub{d}^i$ and the ecliptic coordinates of the SS $x_\odot^i$ \citep{Bender1998}.}
    \label{fig:SS_LISA}
 \end{center}
 \end{figure}
@@ -253,7 +258,7 @@ We define the detector coordinates such that the detector-arms lie in the $x\sub
 \begin{figure}
 \begin{center}
 %\includegraphics[width=0.35\textwidth]{./Images/LISA_arms.eps}
-    \caption{The alignment of the three detector arms, with lengths $L_1$, $L_2$ and $L_3$, within the $x\sub{d}$-$y\sub{d}$ plane. The origin of the detector coordinates coincides with the centre of mass of the constellation of satellites.}% \citep{Cutler1998}
+    \caption{The alignment of the three detector arms, with lengths $L_1$, $L_2$ and $L_3$, within the $x\sub{d}$-$y\sub{d}$ plane \citep{Cutler1998}. The origin of the detector coordinates coincides with the centre of mass of the constellation of satellites.}
    \label{fig:LISA_arms}
 \end{center}
 \end{figure}
@@ -279,7 +284,7 @@ t\sub{d} \simeq t_\odot - t\sub{AU}\cos\left[\overline{\phi}(t_\odot) - \overlin
 \end{equation}
 where $t\sub{AU}$ is the light travel-time for LISA's orbital radius. The time $t\sub{d}$ is required for $\phi(t)$ and $\varphi(t)$.
 
-\section{Signal analysis}
+\section{Signal analysis\label{sec:Signal}}
 
 \subsection{Frequency domain formalism}
 
@@ -324,20 +329,20 @@ p(\boldsymbol{s}(t)|\boldsymbol{h}(t)) \propto \exp\left[-\recip{2}\innerprod{\b
 
 \subsection{LISA noise curve}\label{sec:Noise}
 
-LISA's noise has two sources: instrumental noise and confusion noise, primarily from white dwarf binaries. The latter may be divided into contributions from galactic and extragalactic binaries. In this work we use the noise model of Barack and Cutler \citep{Barack2004}. The shape of the noise curve can be seen in \figref{Noise}. The instrumental noise dominates at both high and low frequencies. The confusion noise is important at intermediate frequencies, and is responsible for the cusp around $f = 10^{-3}\units{Hz}$.
+LISA's noise has two sources: instrumental noise and confusion noise, primarily from white dwarf binaries. The latter may be divided into contributions from galactic and extragalactic binaries. In this work we use the noise model of \citet{Barack2004}. The shape of the noise curve can be seen in \figref{Noise}. The instrumental noise dominates at both high and low frequencies. The confusion noise is important at intermediate frequencies, and is responsible for the cusp around $f = 10^{-3}\units{Hz}$.
 \begin{figure}
 \begin{center}
 %{\resizebox{0.65\textwidth}{!}{%\import{./Images/}{Noise.tex}}}
-\caption{Approximate noise curve for LISA. The solid line includes both instrumental and confusion noise, the dashed line shows only instrumental.}% \citep{Barack2004}
+\caption{Approximate noise curve for LISA \citep{Barack2004}. The solid line includes both instrumental and confusion noise, the dashed line shows only instrumental.}% \citep{Barack2004}
 \label{fig:Noise}
 \end{center}
 \end{figure}
 
 \subsection{Window functions}
 
-There is one remaining complication regarding signal analysis: since we are Fourier transforming a finite signal we encounter spectral leakage; a contribution from large amplitude spectral components leaks into other components (sidelobes), obscuring and distorting the spectrum at these frequencies \citep{Harris1978}. This is an inherent problem with finite signals; it will be as much of a problem when analysing signals from LISA as it is computing waveforms here. To mitigate, but unfortunately not eliminate, these effects, the time-domain signal can be multiplied by a window function. These are discussed in detail in \apref{window}.
+There is one remaining complication regarding signal analysis: since we are Fourier transforming a finite signal we encounter spectral leakage; a contribution from large amplitude spectral components leaks into other components (sidelobes), obscuring and distorting the spectrum at these frequencies \citep{Harris1978}. This is an inherent problem with finite signals; it will be as much of a problem when analysing signals from LISA as it is computing waveforms here. To mitigate, but unfortunately not eliminate, these effects, the time-domain signal can be multiplied by a window function. These are discussed in detail in \apref{window}. We have adopted the Nuttall four-term window with continuous first derivative \citep{Nuttall1981} for the results presented here.
 
-\section{Parameter estimation \& waveforms}
+\section{Parameter estimation and waveforms}
 
 \subsection{Model parameters}\label{sec:Parameters}
 
@@ -346,14 +351,14 @@ The shape of the waveform depends on a number of parameters: those defining the 
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
 \item[(2)] The spin parameter $a$. Naively this could be anywhere in the range $|a| < M_\bullet$, however it may be limited by the accretion history. Considering the torque from radiation emitted by an accretion disc and swallowed by the BH it may be argued that $|a| \lesssim 0.998 M_\bullet$ \citep{Thorne1974}. If the MBH grew via a series of randomly orientated accretion events, then the spin parameter can be low, and we expect an average value $|a| \sim 0.1$--$0.3 M_\bullet$ \citep{King2006, King2008}. We will use the convention that $a$ is positive, and will change the sense of rotation by flipping the $z$-axis.
 \item[(3)] The polar angle $\Theta$ defining the propagation direction.
-\item[(4)] The inclination angle $\Psi$. Since $a$ is positive, this is in the range $-\pi$--$\pi$.
+\item[(4)] The inclination angle $\Psi$. Since $a$ is positive, this is in the range $[-\pi, \pi]$.
 \item[(5)] The SS-GC distance $R_0$. As for $M_\bullet$, this is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$.
 \item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 \citep{Reid1999} $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
 \item[(8)] The angular momentum of the orbit about the MBH's spin axis $L_z$.
 \item[(9)] The Carter constant for the orbit $Q$.
 \item[(10)] The mass of the orbiting particle $\mu$. This will depend upon the type of object: whether it is a MS star, WD, NS or BH.
 \item[(11--13)] The initial position of the particle $(x_0, y_0, z_0)$. For specific values of $Q$ and $L_z$ there is a definite upper limit on $|z_0|/\sqrt{x_0^2+y_0^2}$ given by the size of $\theta_0$ from \eqnref{theta_0}.
-\item[(14, 15)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$.\\
+\item[(14, 15)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$. We will assume that the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}.\\
 \end{enumerate}%\end{longtable}\end{center}
 The azimuthal angle $\Phi$ is omitted, since it arbitrarily defines the orientation of the MBH's $x$- and $y$-axes. We shall define it to be zero without loss of generality. We have a $15$-dimensional parameter space. However, for a given signal arrival time the orbital parameters of LISA will be known; we will not try to infer these.
 
@@ -404,7 +409,7 @@ The orbits specified in figures \ref{fig:Orbit_1}, \ref{fig:Orbit_2} and \ref{fi
 
 The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Using spherical polars makes negligible difference: on the scale shown here the only discernible difference would be in the spikes of the high-frequency tail of the orbits with smaller periapses, and even that is minor. We conclude that the choice of coordinates for the kludge approximation is unimportant, and shall continue using oblate-spheroidal coordinates for the rest of this work.
 
-\subsection{Inference \& Fisher matrices}
+\subsection{Inference and Fisher matrices}
 
 Having detected a GW signal $\boldsymbol{s}(t)$ we are interested in what we can learn about the source. We have an inference problem that can be solved by appropriate application of Bayes' Theorem (\citealt{Jaynes2003}, chapter 4): the probability distribution for our parameters given that we have detected the signal $\boldsymbol{s}(t)$ is given by the posterior
 \begin{equation}
@@ -445,13 +450,11 @@ If the prior were approximately Gaussian with variance-covariance matrix $\bolds
 \end{equation}
 From this the inverse Fisher matrix $\boldsymbol{\Gamma}^{-1}$ is an upper bound on the size of the posterior covariance matrix.\footnote{It may also be shown to be the Cram\'{e}r-Rao bound on the error covariance of an unbiased estimator \citep{Cutler1994, Vallisneri2008}. Thus it represents the frequentist error: the lower bound on the covariance for an unbiased parameter estimator $\boldsymbol{\lambda}\sub{est}$ calculated from an infinite set of experiments with the same signal $\boldsymbol{h}(t)$ but different realizations of the noise $\boldsymbol{n}(t)$.}
 
-As a first estimate of what we may learn from parabolic encounters we have only looked at the inverse Fisher matrix elements. If these are small then we expect we would be able to precisely determine a parameter, whereas if they are large we would not be able to learn much more than we already know from our prior.
+To understand what we can from parabolic encounters alone, we will look at the inverse Fisher matrix elements. If these are small then we expect we would be able to precisely determine a parameter, whereas if they are large we would not be able to learn much more than we already know from our prior.
 
 \subsection{Inverse Fisher matrices}
 
-Calculating the inverse Fisher matrix for example orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is not surprising since the primary role of both is determining the amplitude of the waveform in \eqnref{Octopole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst, unless we can determine the mass of the object by other means, which seems unlikely. It appears that we must give up on determining $R_0$. Instead we should accept our prior value and remove $R_0$ from the parameter set.
-
-The inverse Fisher matrix's elements for some example orbits are tabulated in the appendix. For the values presented here the parameters are normalised with respect to their maximum likelihood values $\widehat{\lambda}^a = \lambda^a/\lambda\sub{ML}^a$; the Fisher matrices are calculated by differentiating with respect to these parameters so that $\boldsymbol{\Gamma}^{-1}$ gives the relative variance-covariance.
+Calculating the inverse Fisher matrix for example orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{Octopole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse.
 
 There are a few general properties. The parameters $M_\bullet$ and $\Theta$ always have relatively small variances. These parameters are crucial for defining the BH system: $M_\bullet$ sets the scale for the system and $\Theta$ the orientation. If $a$ were small, the spacetime would be almost spherically symmetric and we would expect a large variance for $\Theta$. The angular momentum $L_z$ also has a small variance, it is important for specifying the orbit; its partner $Q$, however, does not always have a small variance, in fact in some cases it has one of the largest. This appears to correlate with the sizes of the covariances of $Q$: the orbits with the smallest periapses have relatively large covariances for the set of parameters $\{a, Q, z_0\}$, indicating that there is some degeneracy between these. In these cases $Q$ has a much larger variance, as does $z_0$. The initial coordinates $x_0$, $y_0$ and $z_0$ typically have small variances, the exception being the aforementioned case for $z_0$.
 
@@ -463,7 +466,7 @@ From this preliminary look at a few example orbits, it appears that we should be
 
 What is particularly exciting is the amount of information we could obtain from a single encounter, which may be all that we would have the opportunity to observe with LISA. Taking the results of \tabref{Fisher_3}, which are for an orbit of periapsis $r\sub{p} = 52.7 M_\bullet$, as an example, we could infer maximum-likelihood values $M_\bullet = (4.32 \pm 0.07) \times 10^6 M_\odot$, $a = (0.50{} \pm {}0.02) M_\bullet$, and $\Theta = {(60.0 \pm 1.6)^{\circ}}$. Here we have ignored uncertainty introduced by the error in $R_0$ which will increase the uncertainty; however, we have also only considered information from GWs and not considered additional information from our prior knowledge: combining these as in \eqnref{Posterior_variance} would give a smaller posterior variance. While further work will be needed to be certain how much we could expect to learn from EMRBs, this is encouraging.
 
-\section{Energy spectra}
+\section{Energy spectra\label{sec:Energy}}
 
 To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of \citet{Peters1963, Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
 
@@ -501,7 +504,7 @@ using the fact that the signal is real so $\widetilde{H}_{ij}^*(f) = \widetilde{
 \label{eq:NK_dEdf}
 \end{align}
 
-\subsection{Peters \& Mathews spectrum}
+\subsection{Peters and Mathews spectrum}
 
 To calculate the Peters and Mathews energy spectrum for a parabolic orbit, we use the limiting result of \citet{Turner1977}
 \begin{align}
@@ -547,11 +550,11 @@ Introducing the octopole moments makes a small change to the energy spectrum, as
 \end{figure}
 The peak of the spectrum is shifted to a slightly higher frequency, and the total energy radiated is increased to $E\sub{NK} = 6.202 \times 10^{36}\units{J}$. At such radii the higher order terms only make a correction of the order of a few percent.
 
-\section{Discussion}
+\section{Discussion\label{sec:End}}
 
 We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. These assume that the orbit is parabolic and employs a numerical kludge approximation. The two coordniate schemes for a NK presented here yield almost indistinguishable results. The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms in the weak-field regime. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses exact geodesics of Kerr spacetime.
 
-Using the NK waveforms we have conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. Unfortunately it does not appear possible to infer the distance to the GC.
+Using the NK waveforms we have conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. Unfortunately it does not appear possible to infer the distance to the GC because of a large degeneracy with the compact object's mass.
 
 Before we can quote results for how accurately we can determine the various parameters, we must consider the probability of each orbit. This work would build upon the earlier results of \citet{Rubbo2006} and \citet{Hopman2007}, who only considered the probability for a signal to be detectable. To calculate these probabilities it will be necessary to assume a particular dynamical model for the galactic centre so that we can define distributions for angular momenta $L_z$ and $Q$, mass $\mu$ and initial position. It will also be necessary to consider on which orbits MS stars would survive without being tidally disrupted \citep{Kobayashi2004}. Once the distribution of orbit parameters is known, it will be possible to assign probabilities to being able to infer parameters to a level of accuracy, for example there may be a probability $p = 0.05$ of constraining $M_\bullet$ to within $0.01\%$ and a probability $p = 0.25$ of constraining $M_\bullet$ to within $1\%$. This could be done using a Monte Carlo method to sample the distribution of orbits, and calculating the variance-covariance matrix for the inferred parameters for each sample orbit. We could extend the simple Fisher matrix analysis performed here to a full Bayesian analysis with the distributions for $L_z$, $Q$, $\mu$, $x_0$, $y_0$ and $z_0$ serving as priors. However this may be too computationally expensive to justify implementing. From our preliminary investigation, which uses an extremely restricted sample of parameter space, it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} = 50 M_\bullet$. This translates to a distance of $10^{11}\units{m}$ or $10^{-5}\units{pc}$, and therefore may be unlikely to occur within the lifetime of LISA.
 
@@ -565,13 +568,13 @@ A natural continuation of this work would be to consider EMRBs from other MBHs. 
 
 \appendix
 
-\section{Window Functions}\label{ap:window}
+\section{Window functions}\label{ap:window}
 
-When we perform a Fourier transform using a computer we must necessarily only transform a finite time-span. The effect of this is the same as transforming the true, infinite signal multiplied by a unit top-hat function of width equal to the time-span. Fourier transforming this yields the true waveform convolved with a $\sinc$. If $\tilde{h}'(f)$ is the computed Fourier transform then
+When we perform a Fourier transform using a computer we must necessarily only transform a finite time-span $\tau$. The effect of this is the same as transforming the true, infinite signal multiplied by a unit top-hat function of width equal to the time-span. Fourier transforming this yields the true waveform convolved with a $\sinc$. If $\tilde{h}'(f)$ is the computed Fourier transform then
 \begin{equation}
 \tilde{h}'(f) = \intd{-\tau/2}{\tau/2}{h(t)e^{2\pi i ft}}{t} = \left[\tilde{h}(f) \ast \tau \sinc(\pi f\tau)\right],
 \end{equation}
-where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$ is the unwindowed Fourier transform. This windowing of the data is a problem inherent in the method and results in spectral leakage.
+where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$ is the unwindowed Fourier transform of the infinite signal. This windowing of the data is a problem inherent in the method and results in spectral leakage.
 
 \Figref{Rectangular} shows the computed Fourier transforms for an example parabolic encounter.
 \begin{figure}[htbp]
@@ -584,9 +587,9 @@ where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$ is the unwindowed Fourier transform. 
 \end{figure}
 The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. The $\order{1/{f}}$ behaviour of the $\sinc$ gives the shape of the tail. This has possibly been misidentified in figure 8 of \citet{Burko2007} as the characteristic strain for parabolic encounters.
 
-Despite being many orders of magnitude below the peak level, the high-frequency tail is still well above the noise curve for a wide range of frequencies. It therefore contributes to the evaluation of any inner products, and could mask interesting features.  It is possible to reduce the amount of leakage using apodization: to improve the frequency response of a finite time series one can use a weighting window function $w(t)$ which modifies the impulse response in a prescribed way. The simplest window function is the rectangular (or Dirichlet) window; this is just the top-hat described above. Other window functions are generally tapered.\footnote{When using a tapered window function it is important to ensure that the window is centred upon the signal; otherwise the calculated transform will have a reduced amplitude.} There is a wide range of window functions described in the literature \citep{Harris1978,Kaiser1980,Nuttall1981,McKechan2010}. The introduction of a window function influences the spectrum in a manner dependent upon its precise shape; there are two distinct distortions: local smearing due to the finite width of the centre lobe, and distant leakage due to finite amplitude sidelobes. The window function may be optimised such that the peak sidelobe has a small amplitude, or such that the sidelobes decay away rapidly with frequency. Choosing a window function is a trade-off between these various properties, and will depend upon the particular application.
+Despite being many orders of magnitude below the peak level, the high-frequency tail is still well above the noise curve for a wide range of frequencies. It therefore contributes to the evaluation of any inner products, and could mask interesting features.  It is possible to reduce the amount of leakage using apodization: to improve the frequency response of a finite time series one can use a weighting window function $w(t)$ which modifies the impulse response in a prescribed way. The simplest window function is the rectangular (or Dirichlet) window $w\sub{R}(t)$; this is just the top-hat described above. Other window functions are generally tapered.\footnote{When using a tapered window function it is important to ensure that the window is centred upon the signal; otherwise the calculated transform will have a reduced amplitude.} There is a wide range of window functions described in the literature \citep{Harris1978,Kaiser1980,Nuttall1981,McKechan2010}. The introduction of a window function influences the spectrum in a manner dependent upon its precise shape; there are two distinct distortions: local smearing due to the finite width of the centre lobe, and distant leakage due to finite amplitude sidelobes. The window function may be optimised such that the peak sidelobe has a small amplitude, or such that the sidelobes decay away rapidly with frequency. Choosing a window function is a trade-off between these various properties, and will depend upon the particular application.
 
-For use with the parabolic spectra, the primary concern is suppress the sidelobes. Many windows with good sidelobe behaviour exist in the literature, we will consider three: the Blackman-Harris minimum 4-term window \citep{Harris1978, Nuttall1981}
+For use with the parabolic spectra, the primary concern is suppress the sidelobes. Many windows with good sidelobe behaviour exist in the literature, we will consider three: the Blackman-Harris minimum four-term window \citep{Harris1978, Nuttall1981}
 \begin{equation}
 w\sub{BH}(t) = \sum_{n=0}^{3} a\super{BH}_n\cos\left(\frac{2n\pi t}{\tau}\right),
 \end{equation}
@@ -597,7 +600,7 @@ a\super{BH}_0 = 0.35875, \quad a\super{BH}_1 = 0.48829,\\
 a\super{BH}_2 = 0.14128, \quad a\super{BH}_3 = 0.01168;
 \end{split}
 \end{equation}
-the Nuttall 4-term window with continuous first derivative \citep{Nuttall1981}
+the Nuttall four-term window with continuous first derivative \citep{Nuttall1981}
 \begin{equation}
 w\sub{N}(t) = \sum_{n=0}^{3} a\super{N}_n\cos\left(\frac{2n\pi t}{\tau}\right),
 \end{equation}
@@ -624,21 +627,33 @@ with
 \begin{equation}
 Z_\pm(t; \epsilon) = 2\epsilon\left[\recip{1 \pm 2(t/\tau)} + \recip{1 - 2\epsilon \pm 2(t/\tau)}\right].
 \end{equation}
-This was put forward for use with binary coalescences, and has superb asymptotic decay. Unfortunately, for this application, the peak sidelobe is high. We therefore propose a new window function: the Planck-Bessel window which simply combines the Kaiser-Bessel and Planck-taper windows to produce a window which inherits the best features of both, albeit in a diluted form
+This was put forward for use with binary coalescences, and has superb asymptotic decay. However, the peak sidelobe is high, which could be disadvantages for this application. We therefore propose a new window function: the Planck-Bessel window which simply combines the Kaiser-Bessel and Planck-taper windows to produce a window which inherits the best features of both, albeit in a diluted form
 \begin{equation}
 w\sub{PB}(t;\beta,\epsilon) = w\sub{P}(t; \epsilon)w\sub{KB}(t;\beta).
 \end{equation}
+The window functions' frequency responses are plotted in \figref{Response}.
+\begin{figure}[htbp]
+  \begin{center}
+    \caption{Window function frequency response. To avoid clutter, the response function is only plotted in detail until $f\tau = 8$, above this a smoothed value is plotted, as indicated by the dashed line. As well as having good-asymptotic behaviour, the Planck-taper window has the narrowest main lobe, except for the rectangular window.}
+    \label{fig:Response}
+  \end{center}
+\end{figure}
+There is no window that performs best everywhere.
 
-\Figref{Window} shows the computed Fourier transforms for an example parabolic encounter using no window (alternatively a rectangular or Dirichlet window), and the Nuttall 4-term window with continuous first derivative \citep{Nuttall1981}.\footnote{The Blackman-Harris minimum 4-term window \citep{Harris1978, Nuttall1981}, and the Kaiser-Bessel window \citep{Harris1978, Kaiser1980} give almost identical results.}
+\Figref{Windowing} shows the computed Fourier transforms for an example parabolic encounter using no window (alternatively a rectangular or Dirichlet window), and the Nuttall four-term window with continuous first derivative \citep{Nuttall1981}.\footnote{The Blackman-Harris minimum four-term window \citep{Harris1978, Nuttall1981}, and the Kaiser-Bessel window \citep{Harris1978, Kaiser1980} give almost identical results.}
 \begin{figure}[htbp]
   \begin{center}
   % \subfigure[Spectrum using no window. The calculated SNR is $\rho = 11$.]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_Rectangular.tex}}} \quad
 %\subfigure[Spectrum using a Nuttall window. The calculated SNR is $\rho = 4.6$.]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_Nuttall_first_derivative.tex}}} \\
-    \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's 4-term window with continuous first derivative. The input parameters are: $M_\bullet =3.3 \times 10^6 M_\odot$, $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $\Phi = 0$, $R_0 = 8.33\units{kpc}$, $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$, $\overline{\phi}_0 = 0$, $\varphi_0 = 0$, $L_z = 10.44 M_\bullet$, $Q = 0.055 M_\bullet^2$, $\mu = 5 M_\odot$, $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.0 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{11}\units{m}$; see \secref{Parameters} for a discussion of these parameters. The periapse distance is $r\sub{p} = 52.7 M_\bullet$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}% \citep{Nuttall1981}
-    \label{fig:Window}
+    \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's four-term window with continuous first derivative \citep{Nuttall1981}. The input parameters are: $M_\bullet =3.3 \times 10^6 M_\odot$, $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $\Phi = 0$, $R_0 = 8.33\units{kpc}$, $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$, $\overline{\phi}_0 = 0$, $\varphi_0 = 0$, $L_z = 10.44 M_\bullet$, $Q = 0.055 M_\bullet^2$, $\mu = 5 M_\odot$, $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.0 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{11}\units{m}$; see \secref{Parameters} for a discussion of these parameters. The periapse distance is $r\sub{p} = 52.7 M_\bullet$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}
+    \label{fig:Windowing}
   \end{center}
 \end{figure}
-The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. Using the Nuttall window, the spectral leakage is greatly reduced; the peak sidelobe is lower, and the tail decays away as $1/{f^3}$ instead of $1/{f}$. This window is used for all future waveforms.
+The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. Using the Nuttall window, the spectral leakage is greatly reduced; the peak sidelobe is lower, and the tail decays away as $1/{f^3}$ instead of $1/{f}$.
+
+The choice of window function will influence the results as it changes the form of $\widetilde{h}(f)$. The variation in results between windows depends upon the signal: variation is greatest for low frequency bursts, as then there is greatest scope for leakage into the LISA frequency band; variation is least significant for zoom-whirl orbits as then there are strong signals to relatively high frequencies, and spectral leakage is confined to mostly below the noise level. To quantify the influence of window functions, we studied the diagonal elements of the Fisher matrix from a selection of orbits with periapsis ranging from $\sim 10 M_\bullet$--$\sim 300 M_\bullet$. For orbits with small periapses all five windows (excluding the rectangular window) produced very similar results: the Planck-taper window differed by a maximum of $\sim 0.5 \%$ from the others, which all agreed to better than $0.1 \%$. The worst case results came from the lowest frequency orbits, then the Planck-taper window deviated by a maximum of $\sim 30 \%$ in the value for the Fisher matrix elements, the Blackman-Harris deviated by $\sim 20 \%$ and the others agreed to better than $\sim 5 \%$. The Planck-taper window's performance is limited by its poor sidelobe behaviour; the Blackman-Harris has the worst performance at high frequency.
+
+For this work we have used the Nuttal window. Its performance is comparable to the Kaiser-Bessel and Planck-Bessel windows, however it is computationally less expensive to implement as it does not contain Bessel functions. Results should be accurate to a few percent at worst, and results from closer orbits, which provide better constraints, should be less affected by the choice of window function. Therefore, we are confident that none of our conclusions are sensitive to the particular windowing method implemented.
 
 \bsp
 
