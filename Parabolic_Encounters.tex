@@ -81,7 +81,7 @@ This paper is organised as follows. In \secref{Geodesic} we discuss the construc
 
 Throughout this work we will assume metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet will be used for the output of two LISA detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ will be used where noted, but in general factors of $G$ and $c$ will be retained.
 
-\section{Parabolic orbits in Kerr spacetime\label{sec:Geodesic}}
+\section{Parabolic orbits in Kerr spacetime}\label{sec:Geodesic}
 
 \subsection{The metric and geodesic equations}
 
@@ -131,8 +131,8 @@ where $L_\infty$ is the total specific angular momentum at infinity, where the m
 
 In integrating the geodesic equations, difficulties can arise because of the presence of turning points in the motion, when the sign of the $r$ or $\theta$ geodesic equation will change. The radial turning points are at the periapsis $r\sub{p}$ and at infinity. We may locate the periapsis by finding the roots of
 \begin{align}
-V_r = {} & 0 \nonumber \\
-2M_\bullet r^3 - \left(L_z^2+Q\right)r^2 + 2M_\bullet\left[\left(L_z - a\right)^2 + Q\right]r - a^2Q = {} & 0.
+V_r = {} & 2M_\bullet r^3 - \left(L_z^2+Q\right)r^2 + 2M_\bullet\left[\left(L_z - a\right)^2 + Q\right]r - a^2Q \nonumber \\
+ = {} & 0.
 \end{align}
 This has three roots, which we shall denote $\{r_1, r_2, r\sub{p}\}$; the periapsis $r\sub{p}$ is the largest real root. We do not find the apoapsis as a (fourth) root to this equation as we have removed it by taking $E = 1$ before solving: this turning point can be found by setting the unconstrained expression for $V_r$ equal to zero, and then solving for $E(r)$; taking the limit $r \rightarrow \infty$ gives $E \rightarrow 1$ \citep{Wilkins1972}.
 
@@ -148,20 +148,19 @@ where $e = 1$ is the eccentricity and $p = 2r\sub{p}$ is the semilatus rectum. A
 This may be integrated without problem. Parameterizing an orbit by its periapsis and eccentricity has the additional benefit of allowing easier comparison with its flat-space equivalent \citep{Gair2005}.
 
 The $\theta$ motion is usually bounded, with $\theta_0 \leq \theta \leq \pi - \theta_0$; in the event that $L_z = 0$ the particle follows a polar orbit and $\theta$ will cover its full range. The turning points are given by
-\begin{align}
-V_\theta = {} & 0 \nonumber \\
-Q - \cot^2\theta\, L_z^2= {} & 0.
-\end{align}
+\begin{equation}
+V_\theta = Q - \cot^2\theta\, L_z^2 = 0
+\end{equation}
 Only if $L_z = 0$ may we reach the poles \citep{Wilkins1972}. If we change variable to $\zeta = \cos^2\theta$, we have a maximum value $\zeta_0 = \cos^2\theta_0$ given by
 \begin{equation}
 \label{eq:theta_0}
 \zeta_0 = \frac{Q}{Q+L_z^2} = \frac{Q}{L_\infty^2}.
 \end{equation}
 See \figref{L_triangle} for a geometrical visualization.
-\begin{figure}[tbp]
+\begin{figure}
 \begin{center}
-%%\includegraphics[width=0.35\textwidth]{./Images/Triangle.eps}
-    \caption{The angular momenta $L_\infty$, $L_z$ and $\sqrt{Q}$ define a right-angled triangle. The acute angles are $\theta_0$, the extremal value of the polar angle, and $\iota$, the orbital inclination \citep{Glampedakis2002a}.}% \citep{Glampedakis2002a}
+\includegraphics[width=0.2\textwidth]{Triangle.eps}
+    \caption{The angular momenta $L_\infty$, $L_z$ and $\sqrt{Q}$ define a right-angled triangle. The acute angles are $\theta_0$, the extremal value of the polar angle, and $\iota$, the orbital inclination \citep{Glampedakis2002a}.}
    \label{fig:L_triangle}
 \end{center}
 \end{figure}
@@ -175,7 +174,7 @@ Over one $2\pi$ period of $\chi$, $\theta$ oscillates over its full range, from 
 \end{equation}
 and may be integrated simply.
 
-\section{Waveform Construction\label{sec:Kludge}}
+\section{Waveform Construction}\label{sec:Kludge}
 
 For given angular momenta $L_z$ and $Q$, and initial starting position, we can calculate the geodesic trajectory. The orbiting body is assumed to follow this track exactly: we ignore evolution due to the radiation of energy and angular momentum, which should be negligible for EMRBs. From this trajectory we calculate the waveform using a semirelativistic approximation \citep{Ruffini1981}: we assume that the particle moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This quick-and-dirty technique is known as a numerical kludge (NK), and has been shown to approximate well results computed by more accurate methods \citep{Babak2007}.
 
@@ -236,7 +235,7 @@ where the (spatial) projection operator $P_{ij}$ is
 P_{ij} = \delta_{ij} - n_in_j.
 \end{equation}
 
-\section{Detection with LISA\label{sec:Detector}}
+\section{Detection with LISA}\label{sec:Detector}
 
 The LISA detector is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}[tbhp]
@@ -284,7 +283,7 @@ t\sub{d} \simeq t_\odot - t\sub{AU}\cos\left[\overline{\phi}(t_\odot) - \overlin
 \end{equation}
 where $t\sub{AU}$ is the light travel-time for LISA's orbital radius. The time $t\sub{d}$ is required for $\phi(t)$ and $\varphi(t)$.
 
-\section{Signal analysis\label{sec:Signal}}
+\section{Signal analysis}\label{sec:Signal}
 
 \subsection{Frequency domain formalism}
 
@@ -466,7 +465,7 @@ From this preliminary look at a few example orbits, it appears that we should be
 
 What is particularly exciting is the amount of information we could obtain from a single encounter, which may be all that we would have the opportunity to observe with LISA. Taking the results of \tabref{Fisher_3}, which are for an orbit of periapsis $r\sub{p} = 52.7 M_\bullet$, as an example, we could infer maximum-likelihood values $M_\bullet = (4.32 \pm 0.07) \times 10^6 M_\odot$, $a = (0.50{} \pm {}0.02) M_\bullet$, and $\Theta = {(60.0 \pm 1.6)^{\circ}}$. Here we have ignored uncertainty introduced by the error in $R_0$ which will increase the uncertainty; however, we have also only considered information from GWs and not considered additional information from our prior knowledge: combining these as in \eqnref{Posterior_variance} would give a smaller posterior variance. While further work will be needed to be certain how much we could expect to learn from EMRBs, this is encouraging.
 
-\section{Energy spectra\label{sec:Energy}}
+\section{Energy spectra}\label{sec:Energy}
 
 To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of \citet{Peters1963, Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
 
@@ -635,7 +634,7 @@ The window functions' frequency responses are plotted in \figref{Response}.
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_Response}
-    \caption{Window function frequency response. To avoid clutter, the response function is only plotted in detail until $f\tau = 8$, above this a smoothed value is plotted, as indicated by the dashed line. As well as having good-asymptotic behaviour, the Planck-taper window has the narrowest main lobe, except for the rectangular window.}
+    \caption{Window function frequency response. To avoid clutter, the response function is only plotted in detail until $f\tau = 8$, above this a smoothed value is plotted, as indicated by the dot-dashed line. As well as having good asymptotic behaviour, the Planck-taper window has the narrowest main lobe, except for the rectangular window.}
     \label{fig:Response}
   \end{center}
 \end{figure}
