@@ -207,14 +207,14 @@ In the limit of $a \rightarrow 0$, the two coincide, as they do in the limit of 
 
 It must be stressed that there is no well motivated argument that either coordinate system must yield an accurate GW; their use is justified {\it post facto} by comparison with results obtained from more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The ambiguity in assigning flat-space coordinates reflects the inconsistency of the semi-relativistic approximation: the geodesic trajectory was calculated for the Kerr geometry; by moving to flat spacetime we lose the reason for its existence. However, this inconsistency should not be regarded as a major problem; it is just an artifact of the basic assumption that the shape of the trajectory is important for determining the character of the radiation, but the curvature of the spacetime in the vicinity of the source is not. By binding the particle to the exact geodesic, we ensure that the kludge waveform has spectral components at the correct frequencies, but by assuming flat spacetime for generation of GWs they will not have the correct amplitudes.
 
-\subsection{Quadrupole-octopole formula}
+\subsection{Quadrupole-octupole formula}
 
-Now we have a flat-space particle trajectory $x\sub{p}^\mu(\tau)$, we may apply a flat-space wave generation formula. We shall use the quadrupole-octopole formula to calculate the gravitational strain \citep{Bekenstein1973, Press1977}
+Now we have a flat-space particle trajectory $x\sub{p}^\mu(\tau)$, we may apply a flat-space wave generation formula. We shall use the quadrupole-octupole formula to calculate the gravitational strain \citep{Bekenstein1973, Press1977}
 \begin{equation}
 h^{jk}(t, \boldsymbol{x}) = -\frac{2G}{c^6r}\left(\ddot{I}^{jk} - 2n_i\ddot{S}^{ijk} + n_i\dddot{M}^{ijk}\right)_{t'\, =\, t - r/c}
-\label{eq:Octopole}
+\label{eq:octupole}
 \end{equation}
-where an over-dot represents differentiation with respect to time $t$ (and not $\tau$), $t'$ is the retarded time, $r = \left|\boldsymbol{x} - \boldsymbol{x}\sub{p}\right|$ is the radial distance, $\boldsymbol{n}$ is the radial unit vector, and the mass quadrupole ${I}^{jk}$, current quadrupole ${S}^{ijk}$ and mass octopole ${M}^{ijk}$ are defined by
+where an over-dot represents differentiation with respect to time $t$ (and not $\tau$), $t'$ is the retarded time, $r = \left|\boldsymbol{x} - \boldsymbol{x}\sub{p}\right|$ is the radial distance, $\boldsymbol{n}$ is the radial unit vector, and the mass quadrupole ${I}^{jk}$, current quadrupole ${S}^{ijk}$ and mass octupole ${M}^{ijk}$ are defined by
 \begin{align}
 {I}^{jk}(t') = {} & \intd{}{}{{x'}^j{x'}^kT^{00}(t', \boldsymbol{x'})}{^3x'};\\
 {S}^{ijk}(t') = {} & \intd{}{}{{x'}^j{x'}^kT^{0i}(t', \boldsymbol{x'})}{^3x'};\\
@@ -254,11 +254,11 @@ where $\langle\ldots\rangle$ indicates averaging over several wavelengths or per
 \begin{equation}
 \diff{E}{t} = \frac{c^3}{32\pi G} R^2 \int{\dd\Omega}\left\langle\diff{h_{ij}}{t}\diff{h^{ij}}{t}\right\rangle,
 \end{equation}
-with $\int{\dd\Omega}$ representing integration over all solid angles. From \eqnref{Octopole} we see that the waves have a $1/{r}$ dependence; if we define
+with $\int{\dd\Omega}$ representing integration over all solid angles. From \eqnref{octupole} we see that the waves have a $1/{r}$ dependence; if we define
 \begin{equation}
 h_{ij} = \frac{H_{ij}}{r},
 \end{equation}
-we see that, using \eqnref{Octopole}, the flux is independent of $R$, as required for energy conservation, and
+we see that, using \eqnref{octupole}, the flux is independent of $R$, as required for energy conservation, and
 \begin{equation}
 \diff{E}{t} = \frac{c^3}{32\pi G} \int{\dd\Omega}\left\langle\diff{H_{ij}}{t}\diff{H^{ij}}{t}\right\rangle.
 \end{equation}
@@ -310,12 +310,12 @@ Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of
 
 Comparing the total energy flux: the orbit shown in \figref{Energy} integrating the NK spectrum gives $E\sub{NK} = 5.936 \times 10^{36}\units{J}$; the Peters and Mathews total energy is $E\sub{PM} = 5.747 \times 10^{36}\units{J}$. The total energy flux from the kludge waveform is larger than the Peters and Mathews result. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapse, whereas for a periapse small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. From the level of agreement we may be confident that the NK waveforms are a reasonable approximation.
 
-Introducing the octopole moments makes a small change to the energy spectrum, as seen in \figref{Energy_oct}.
+Introducing the octupole moments makes a small change to the energy spectrum, as seen in \figref{Energy_oct}.
 \begin{figure}
   \begin{center}
    %\subfigure[Log-log plot.]{\resizebox{0.65\textwidth}{!}{%\import{./Images/}{loglog_E_oct.tex}}} \\
    %\subfigure[Log-linear plot.]{\resizebox{0.65\textwidth}{!}{%\import{./Images/}{loglin_E_oct.tex}}}
-    \caption{Energy spectra for the same orbit as shown in \figref{Energy}. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes contributions from the current quadrupole and mass octopole as given by \eqnref{Octopole}.}
+    \caption{Energy spectra for the same orbit as shown in \figref{Energy}. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes contributions from the current quadrupole and mass octupole as given by \eqnref{octupole}.}
     \label{fig:Energy_oct}
   \end{center}
 \end{figure}
@@ -548,9 +548,9 @@ To investigate the variation of inverse Fisher matrix elements for different orb
 
 \subsection{Inverse Fisher matrices}
 
-Calculating the inverse Fisher matrices for these orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{Octopole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse. This is the only prior information we shall use.
+Calculating the inverse Fisher matrices for these orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{octupole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse. This is the only prior information we shall use.
 
-From \eqnref{Octopole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqn{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This will allow an easier combination of results from the computations for a NS and for a BH. From the variance-covariance matrix we can define the standard deviation for a particular parameter
+From \eqnref{octupole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqn{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This will allow an easier combination of results from the computations for a NS and for a BH. From the variance-covariance matrix we can define the standard deviation for a particular parameter
 \begin{equation}
 \sigma_a = \sqrt{\Sigma_{aa}} \quad \mathrm{(no summation)}.
 \end{equation}
