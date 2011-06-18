@@ -1,0 +1,73 @@
+\subsection{Window functions}
+
+There is one remaining complication regarding signal analysis: since we are Fourier transforming a finite signal we encounter spectral leakage; a contribution from large amplitude spectral components leaks into other components (sidelobes), obscuring and distorting the spectrum at these frequencies~\citep{Harris1978}. This is an inherent problem with finite signals; it will be as much of a problem when analysing signals from LISA as it is computing waveforms here. To mitigate, but unfortunately not eliminate, these effects, the time-domain signal can be multiplied by a window function. These are discussed in detail in the appendix.
+
+\appendix
+
+\section[]{Window Functions}
+
+When we perform a Fourier transform using a computer we must necessarily only transform a finite time-span. The effect of this is the same as transforming the true, infinite signal multiplied by a unit top hat function of width equal to the time-span. Fourier transforming this yields the true waveform convolved with a $\sinc$. If $\tilde{h}'(f)$ is the computed Fourier transform then
+\begin{align}
+\tilde{h}'(f) = {} & \intd{-\tau/2}{\tau/2}{h(t)e^{2\pi i ft}}{t} \\
+ = {} & \left[\tilde{h}(f) \ast \tau \sinc(\pi f\tau)\right],
+\end{align}
+where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$, is the unwindowed Fourier transform. This windowing of the data is a problem inherent in the method and results in spectral leakage.
+
+\Figref{Rectangular} shows the computed Fourier transforms for an example parabolic encounter.
+\begin{figure}[htbp]
+  \begin{center} 
+  %\subfigure[]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_Rectangular.tex}}} \quad
+%\subfigure[]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_Rectangular.tex}}} \\
+    \caption{Example spectra calculated using a rectangular window.  The high-frequency tail is the result of spectral leakage. The input parameters are: $M_\bullet = 4.3 \times 10^6 M_\odot$, $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $\Phi = 0$, $R_0 = 8.33\units{kpc}$, $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$, $\overline{\phi}_0 = 0$, $\varphi_0 = 0$, $L_z = 10.44 M_\bullet$, $Q = 0.055 M_\bullet^2$, $\mu = 5 M_\odot$, $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.0 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{11}\units{m}$; see \secref{Parameters} for a discussion of these parameters. The periapse distance is $r\sub{p} = 52.7 M_\bullet$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The calculated SNR is $\rho = 11$.}
+    \label{fig:Rectangular}
+  \end{center}
+\end{figure}
+The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. The $\order{1/{f}}$ behaviour of the $\sinc$ gives the shape of the tail. This has possibly been misidentified in figure 8 of \citet{Burko2007} as the characteristic strain for parabolic encounters.
+
+Despite being many orders of magnitude below the peak level, the high-frequency tail is still well above the noise curve for a wide range of frequencies. It therefore contributes to the evaluation of any inner products, and could mask interesting features.  It is possible to reduce the amount of leakage using apodization: to improve the frequency response of a finite time series one can use a weighting window function $w(t)$ which modifies the impulse response in a prescribed way. The simplest window function is the rectangular (or Dirichlet) window; this is just the top hat described above. Other window functions are generally tapered.\footnote{When using a tapered window function it is important to ensure that the window is centred upon the signal; otherwise the calculated transform will have a reduced amplitude.} There is a wide range of window functions described in the literature~\citep{Harris1978,Kaiser1980,Nuttall1981,McKechan2010}. The introduction of a window function influences the spectrum in a manner dependent upon its precise shape; there are two distinct distortions: local smearing due to the finite width of the centre lobe, and distant leakage due to finite amplitude sidelobes. The window function may be optimised such that the peak sidelobe has a small amplitude, or such that the sidelobes decay away rapidly with frequency. Choosing a window function is a trade-off between these various properties, and will depend upon the particular application.
+
+For use with the parabolic spectra, the primary concern is suppress the sidelobes. Many windows with good sidelobe behaviour exist in the literature, we will consider three: the Blackman-Harris minimum 4-term window~\citep{Harris1978, Nuttall1981}
+\begin{equaiton}
+\begin{split}
+w\sub{BH}(t) = a_0 + a_1\cos\left(\frac{2\pi t}{\tau}\right) + a_2\cos\left(\frac{4\pi t}{\tau}\right) + a_3\cos\left(\frac{6\pi t}{\tau}\right);\\
+a_0 = 0.35875; a_1 = 0.48829; a_2 = 0.14128; a_3 = 0.01168;
+\end{split}
+\end{equation}
+the Nuttall 4-term window with continuous first derivative~\citep{Nuttall1981}
+\begin{equaiton}
+\begin{split}
+w\sub{N}(t) = a_0 + a_1\cos\left(\frac{2\pi t}{\tau}\right) + a_2\cos\left(\frac{4\pi t}{\tau}\right) + a_3\cos\left(\frac{6\pi t}{\tau}\right);\\
+a_0 = 0.355768; a_1 = 0.487396; a_2 = 0.144232; a_3 = 0.012604;
+\end{split}
+\end{equation}
+and the Kaiser-Bessel window~\citep{Harris1978, Kaiser1980}
+\begin{equaiton}
+w\sub{KB}(t;\beta) = \frac{I_0(\beta\sqrt{1 - (2 t/\tau)^2})}{I_0(\beta)},
+\end{equation}
+where $I_0$ is the modified Bessel function of the first kind, and $\beta$ is an adjustable parameter. The Kaiser-Bessel window has the smallest peak sidelobe, but the worst decay; the Nuttall window has best the best asymptotic behaviour; the Blackman-Harris window has a peak sidelobe similar to the Nuttall window, and decays asymptotically as fast (slow) as the Kaiser-Bessel window, but has the advantage of having suppressed sidelobes next to the central lobe. Another window has been recently suggested for use with gravitational waveforms: the Planck-taper window~\citep{Damour2000,McKechan2010}
+\begin{equaiton}
+\begin{split}
+w\sub{P}(t; \epsilon) = \begin{cases}
+ {\displaystyle \recip{\exp(z_+(t/\tau; \epsilon))+1}} & \quad & {\displaystyle -\frac{\tau}{2} \leq t < -\frac{\tau}{2}(1 - 2\epsilon)} \\
+ 1 & {\displaystyle -\frac{\tau}{2}(1 - 2\epsilon) < t < \frac{\tau}{2}(1 - 2\epsilon)} \\
+ {\displaystyle \recip{\exp(z_-(t/\tau; \epsilon))+1}} & \quad & {\displaystyle -\frac{\tau}{2}(1 - 2\epsilon) < t \leq \frac{\tau}{2}}
+\end{cases};
+z_\pm(\xi; \epsilon) = 2\epsilon\left(\recip{1 \pm 2\xi} + \recip{1 - 2\epsilon \pm 2\xi}\right).
+\end{split}
+\end{equation}
+This was put forward for use with binary coalescences, and has superb asymptotic decay. Unfortunately, for this application, the peak sidelobe is high. We therefore put forward a new window function: the Planck-Bessel window which simply combines the Kaiser-Bessel and Planck-taper windows to produce a window which inherits the best features of both, albeit in a diluted form
+\begin{equation}
+w\sub{PB}(t;\beta,\epsilon) = w\sub{KB}(t;\beta)w\sub{P}(t; \epsilon).
+\end{equation}
+
+\Figref{Window} shows the computed Fourier transforms for an example parabolic encounter using no window (alternatively a rectangular or Dirichlet window), and the Nuttall 4-term window with continuous first derivative~\citep{Nuttall1981}.\footnote{The Blackman-Harris minimum 4-term window~\citep{Harris1978, Nuttall1981}, and the Kaiser-Bessel window~\citep{Harris1978, Kaiser1980} give almost identical results.}
+\begin{figure}[htbp]
+  \begin{center}
+  % \subfigure[Spectrum using no window. The calculated SNR is $\rho = 11$.]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_Rectangular.tex}}} \quad
+%\subfigure[Spectrum using a Nuttall window. The calculated SNR is $\rho = 4.6$.]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_Nuttall_first_derivative.tex}}} \\
+    \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's 4-term window with continuous first derivative. The input parameters are: $M_\bullet =3.3 \times 10^6 M_\odot$, $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $\Phi = 0$, $R_0 = 8.33\units{kpc}$, $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$, $\overline{\phi}_0 = 0$, $\varphi_0 = 0$, $L_z = 10.44 M_\bullet$, $Q = 0.055 M_\bullet^2$, $\mu = 5 M_\odot$, $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.0 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{11}\units{m}$; see \secref{Parameters} for a discussion of these parameters. The periapse distance is $r\sub{p} = 52.7 M_\bullet$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}%~\citep{Nuttall1981}
+    \label{fig:Window}
+  \end{center}
+\end{figure}
+The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. Using the Nuttall window, the spectral leakage is greatly reduced; the peak sidelobe is lower, and the tail decays away as $1/{f^3}$ instead of $1/{f}$. This window is used for all future waveforms.
+

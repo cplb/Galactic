@@ -79,7 +79,7 @@ J = M_\bullet ac;
 \end{equation}
 it is often convenient to use the dimensionless spin
 \begin{equation}
-a_\ast = \frac{Jc}{GM_\bullet^2}.
+a_\ast = \frac{cJ}{GM_\bullet^2}.
 \end{equation}
 As we have a good estimate of the mass, to gain a full description of the MBH we have only to measure its spin; this will give us insight into its history and role in the evolution of the Galaxy.
 
@@ -232,7 +232,7 @@ It must be stressed that there is no well motivated argument that either coordin
 
 Now we have a flat-space particle trajectory $x\sub{p}^\mu(\tau)$, we may apply a flat-space wave generation formula. We shall use the quadrupole-octupole formula to calculate the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}
 \begin{equation}
-h^{jk}(t, \boldsymbol{x}) = -\frac{2G}{c^6r}\left(\ddot{I}^{jk} - 2n_i\ddot{S}^{ijk} + n_i\dddot{M}^{ijk}\right)_{t'\, =\, t - r/c}
+h^{jk}(t, \boldsymbol{x}) = -\frac{2G}{c^6r}\left(\ddot{I}^{jk} - 2n_i\ddot{S}^{ijk} + n_i\dddot{M}^{ijk}\right)_{t'\, =\, t - r/c},
 \label{eq:octupole}
 \end{equation}
 where an over-dot represents differentiation with respect to time $t$ (and not $\tau$), $t'$ is the retarded time, $r = \left|\boldsymbol{x} - \boldsymbol{x}\sub{p}\right|$ is the radial distance, $\boldsymbol{n}$ is the radial unit vector, and the mass quadrupole ${I}^{jk}$, current quadrupole ${S}^{ijk}$ and mass octupole ${M}^{ijk}$ are defined by
@@ -241,7 +241,7 @@ where an over-dot represents differentiation with respect to time $t$ (and not $
 {S}^{ijk}(t') = {} & \intd{}{}{{x'}^j{x'}^kT^{0i}(t', \boldsymbol{x'})}{^3x'};\\
 {M}^{ijk}(t') = {} & \recip{c}\intd{}{}{{x'}^i{x'}^j{x'}^kT^{00}(t', \boldsymbol{x'})}{^3x'}.
 \end{align}
-This is correct for a slow moving source. It is the familiar quadrupole formula (\citealt{Misner1973}, section 36.10; \citealt{Hobson2006}, section 17.9), derived from linearized theory, plus the next order terms. For a point mass, the energy-momentum tensor $T^{\mu\nu}$ contains a $\delta$-function which allows easy evaluation of the integrals of the various moments to give
+This is correct for a slowly moving source. It is the familiar quadrupole formula (\citealt{Misner1973}, section 36.10; \citealt{Hobson2006}, section 17.9), derived from linearized theory, plus the next order terms. For a point mass, the energy-momentum tensor $T^{\mu\nu}$ contains a $\delta$-function which allows easy evaluation of the integrals of the various moments to give
 \begin{align}
 {I}^{jk} = {} & c^2\mu x\sub{p}^jx\sub{p}^k;\\
 {S}^{ijk} = {} & c\mu v\sub{p}^ix\sub{p}^jx\sub{p}^k;\\
@@ -480,19 +480,23 @@ To understand what we can from parabolic encounters alone, we will look at the i
 
 \subsection{Data set}
 
-To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms for computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $8.6 \times 10^{36}~\mathrm{kg} \simeq 4.3 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $8.33~\mathrm{kpc}$. Four different spin values were chosen $a_\star = 0, 0.3, 0.6, 0.9$. Waveforms were calculated for two different compact objects, one of mass $2.8 \times 10^{30}~\mathrm{kg} \simeq 1.4 M_\odot$ as appropriate for a neutron star, one of mass $2 \times 10^{31}~\mathrm{kg} \simeq 10 M_\odot$ represented a black hole. For each spin and mass, waveforms were computed for orbits with periapses at six different radii, uniformly spaced in logarithmic space between $4 r\sub{S}$ and $50 r\sub{S}$, where $r\sub{S} = 2 GM_\bullet / c^2$ corresponds to the Schwarzschild radius. At each radii, orbits with three different inclinations $\iota = \pi/12, \pi/4, 5\pi/12$ were calculated, each for both prograde and retrograde rotation. In addition to this, the initial position, orientation of the MBH, and orbital position of LISA were varied: for each combination of MBH spin, compact object mass, periapsis, inclination and rotation sense, 20 random combinations of the remaining parameters were used (each being drawn from a separate uniform distribution over the permitted range).
+To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms for computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $8.33~\mathrm{kpc}$. Four different spin values were chosen $a_\star = 0, 0.3, 0.6, 0.9$. Waveforms were calculated for two different compact objects, one of mass $1.4 M_\odot$ as appropriate for a neutron star, one of mass $10 M_\odot$ represented a black hole. For each spin and mass, waveforms were computed for orbits with periapses at six different radii, uniformly separated in logarithmic space between $4 r\sub{S}$ and $50 r\sub{S}$, where $r\sub{S} = 2 GM_\bullet / c^2$ corresponds to the Schwarzschild radius. At each radii, orbits with three different inclinations $\iota = \pi/12, \pi/4, 5\pi/12$ were calculated, each for both prograde and retrograde rotation. In addition to this, the initial position, orientation of the MBH, and orbital position of LISA were varied: for each combination of MBH spin, compact object mass, periapsis, inclination and rotation sense, 20 random combinations of the remaining parameters were used (each being drawn from a separate uniform distribution over the permitted range).
 
 \subsection{Inverse Fisher matrices}
 
-Calculating the inverse Fisher matrices for these orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{octupole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse. This is the only prior information we shall use.
+%Calculating the inverse Fisher matrices for these orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{octupole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse. This is the only prior information we shall use.
 
-From \eqnref{octupole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to be a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqnref{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This will allow an easier combination of results from the computations for a NS and for a BH. From the variance-covariance matrix we can define the standard deviation for a particular parameter
+From \eqnref{octupole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to be a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqnref{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This will allow an easier combination of results from the computations for a NS and for a BH. From the variance-covariance matrix we can define the uncertainty for a particular parameter
 \begin{equation}
 \sigma_a = \sqrt{\Sigma_{aa}} \qquad \mathrm{(no\ summation)}.
 \end{equation}
 This should be proportional to $\mu^{-1}$.
 
 We take the mean of $\ln \sigma$ for each set of 20 randomised parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since the standard deviation is a scale parameter that may be distributed over a range of magnitudes (\citealt{Mackay2003}, chapter 22). Using the median value for $\sigma$ yields results that are similar quantitatively.}
+
+There exists a correltation between the periapse radius and SNR, as shown in \figref{SNR}. Closer orbits produce louder bursts. The straight line is a maximum likelihood fit assuming that the SNR has a Gaussian distribtion with standard deviation derived from the scatter of points. The parameter uncertainties are well correlated with the SNR. Some are sensitive to other parameters, such as the MBH spin, or the orbital inclination.
+
+
 
 \subsection{Junk}
 
@@ -508,9 +512,9 @@ What is particularly exciting is the amount of information we could obtain from 
 
 \section{Energy spectra}\label{sec:Energy}
 
-To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of \citet{Peters1963, Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
+To check that the NK waveforms are sensible, we may compare the energy spectra calculated from these with those obtained from the classic treatment of \citet{Peters1963}, and \citet{Peters1964}. This calculates GW emission for Keplerian orbits in flat spacetime, assuming only quadrupole radiation. The spectrum produced should be similar to that obtained from the NK in weak fields, that is for orbits with a large periapsis; however we do not expect an exact match because of the differing input physics and various approximations.
 
-In addition to using the energy spectrum, we can also use the total energy flux to check the NK waveforms. The total flux contains less information that the spectrum; however results have been calculated for parabolic orbits in Schwarzschild spacetime using time-domain black hole perturbation theory \citep{Martel2004}. These should be more accurate than results calculated using the Peters and Mathews.
+In addition to using the energy spectrum, we can also use the total energy flux to check the NK waveforms. The total flux contains less information that the spectrum; however results have been calculated for parabolic orbits in Schwarzschild spacetime using time-domain black hole perturbation theory \citep{Martel2004}. These should be more accurate than results calculated using the Peters and Mathews formalism.
 
 We do not intend to use the kludge waveforms to calculate an accurate energy flux: this would be inconsistent as we assume that the orbits do not evolve with time. We only calculate the energy flux as a sanity check, to confirm that the kludge approximation is consistent with other approaches.
 
@@ -558,10 +562,10 @@ where $f\sub{c}$ is the orbital frequency of a circular orbit of radius equal to
 \begin{equation}
 f\sub{c} = \recip{2\pi}\sqrt{\frac{G(M_\bullet + \mu)}{r\sub{p}^3}},
 \end{equation}
-and functions $A(\widetilde{f})$ and $B(\widetilde{f})$ are defined in terms of Bessel functions. Their precise forms are \citep{Berry2010}
+and functions $A\left(\widetilde{f}\right)$ and $B\left(\widetilde{f}\right)$ are defined in terms of Bessel functions. Their precise forms are \citep{Berry2010}
 \begin{align}
-A(\widetilde{f}) = {} & \recip{\pi}\sqrt{\frac{2}{3}}K_{1/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right); \\
-B(\widetilde{f}) = {} & \recip{\sqrt{3}\pi}\left[K_{-2/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) + K_{4/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) \right. \nonumber \\
+A\left(\widetilde{f}\right) = {} & \recip{\pi}\sqrt{\frac{2}{3}}K_{1/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right); \\
+B\left(\widetilde{f}\right) = {} & \recip{\sqrt{3}\pi}\left[K_{-2/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) + K_{4/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right) \right. \nonumber \\
  {} & - \left. \recip{\sqrt{2}\widetilde{f}}K_{1/3}\left(\frac{2^{3/2}\widetilde{f}}{3}\right)\right],
 \end{align}
 where $K_\nu(z)$ is a modified Bessel function of the second kind. This result should be accurate to $\sim10\%$ for orbits with periapse radii larger than $\sim10r\sub{S}$, where $r\sub{S}$ is the MBH's Schwarzschild radius \citep{Berry2010}.
@@ -578,18 +582,20 @@ Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of
   \end{center}
 \end{figure}
 
-Comparing the total energy flux: the orbit shown in \figref{Energy} integrating the NK spectrum gives $E\sub{NK} = 5.936 \times 10^{36}\units{J}$; the Peters and Mathews total energy is $E\sub{PM} = 5.747 \times 10^{36}\units{J}$. The total energy flux from the kludge waveform is larger than the Peters and Mathews result. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapse, whereas for a periapse small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. From the level of agreement we may be confident that the NK waveforms are a reasonable approximation.
-
-Introducing the octupole moments makes a small change to the energy spectrum, as seen in \figref{Energy_oct}.
+Comparing the total energy fluxes, ratios of the various energies are plotted in \figref{Energy_ratio}.
 \begin{figure}
   \begin{center}
-   %\subfigure[Log-log plot.]{\resizebox{0.65\textwidth}{!}{%\import{./Images/}{loglog_E_oct.tex}}} \\
-   %\subfigure[Log-linear plot.]{\resizebox{0.65\textwidth}{!}{%\import{./Images/}{loglin_E_oct.tex}}}
-    \caption{Energy spectra for the same orbit as shown in \figref{Energy}. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes contributions from the current quadrupole and mass octupole as given by \eqnref{octupole}.}
-    \label{fig:Energy_oct}
+   \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_peri}} \quad
+   \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_orbit}}
+    \caption{Ratios of energies as a function of periapsis $r\sub{p}$ and $2\pi$ divided by the total angle of rotation in one orbit $\Delta\phi$ ($2\pi/\Delta\phi = 1$ for a Keplerian orbit). The solid line shows the ratio of the numerical kludge and Martel energies $E\sub{NK}/E\sub{M}$; the dashed line shows the ratio of the NK energy calculated using only the quadrupole term and the Martel energy $E\sub{NK(Q)}/E\sub{M}$; the dot-dashed line shows the ratio of the quadrupole and quadrupole-octupole NK energies $E\sub{NK(Q)}/E\sub{NK}$, and the dotted line shows the ratio of the Peters and Mathews and quadrupole NK energies $E\sub{PM}/E\sub{NK(Q)}$.}
+    \label{fig:Energy_ratio}
   \end{center}
 \end{figure}
-The peak of the spectrum is shifted to a slightly higher frequency, and the total energy radiated is increased to $E\sub{NK} = 6.202 \times 10^{36}\units{J}$. At such radii the higher order terms only make a correction of the order of a few percent.
+The ratios all tend to one in the weak field, as required, but differences become more pronounced in the strong field. The NK energy is larger than the Peters and Mathews result $E\sub{PM}$: since this only assumes quadrupole radiation, we have only plotted it against the quadrupole NK energy $E\sub{NK(Q)}$. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $\Delta\phi = 2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapse, whereas for a periapse small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. As expected, there appears to be reasonable correlation between the amount of rotation $2\pi/\Delta\phi$ and the ratio of energies.
+
+Error in the NK energy compared with the time-domain black hole perturbation theory results of Martel comes form two sources: the neglecting of higher order multipole contributions and the ignoring of background curvature. The contribution of the former can be estimated by looking at the difference in the NK energy by including the current quadrupole and mass octupole terms. Form \figref{Energy_ratio} we see that these terms give a negligible contribution in the weak field, but the difference is $\sim20\%$ in the strong field. This explains why the Martel energy $E\sub{M}$ is greater in the strong field, as it includes contributions from all multipoles. Neglecting the background curvature increases the NK energy relative to $E\sub{M}$. This partially cancels out the error introduced by not including higher order terms: this accidentally leads to $E\sub{NK(Q)}$ being more accurate than $E\sub{NK}$ for $r\sub{p} \sim 12 r\sub{S}$ \citep{Tanaka1993}.
+
+From the level of agreement we may be confident that the NK waveforms are a reasonable approximation. The difference in energy flux is only greater than $10\%$ for very strong fields $r\sub{p} \simeq 2 r\sun{S}$; since this is dependent on the square of the waveform, typical accuracy in the waveform may be $\sim 5\%$ \citep{Gair2005,Tanaka1993}.
 
 \section{Discussion}\label{sec:End}
 
