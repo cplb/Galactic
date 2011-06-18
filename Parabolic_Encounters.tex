@@ -1,6 +1,7 @@
 \documentclass[useAMS,usedcolumn,usegraphicx,usenatbib]{mn2e}
 \usepackage{amssymb,amstext,amsfonts} %% ... with default font
 \usepackage[fleqn]{amsmath}
+\usepackage{subfigure}
 \usepackage{slashed}
 \usepackage[lowtilde]{url}
 %\usepackage{enumitem}
@@ -494,7 +495,7 @@ This should be proportional to $\mu^{-1}$.
 
 We take the mean of $\ln \sigma$ for each set of 20 randomised parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since the standard deviation is a scale parameter that may be distributed over a range of magnitudes (\citealt{Mackay2003}, chapter 22). Using the median value for $\sigma$ yields results that are similar quantitatively.}
 
-There exists a correltation between the periapse radius and SNR, as shown in \figref{SNR}. Closer orbits produce louder bursts. The straight line is a maximum likelihood fit assuming that the SNR has a Gaussian distribtion with standard deviation derived from the scatter of points. The parameter uncertainties are well correlated with the SNR. Some are sensitive to other parameters, such as the MBH spin, or the orbital inclination.
+There exists a correlation between the periapse radius and SNR, as shown in \figref{SNR}. Closer orbits produce louder bursts. The straight line is a maximum likelihood fit assuming that the SNR has a Gaussian distribution with standard deviation derived from the scatter of points. The parameter uncertainties are well correlated with the SNR. Some are sensitive to other parameters, such as the MBH spin, or the orbital inclination.
 
 
 
@@ -583,14 +584,14 @@ Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of
 \end{figure}
 
 Comparing the total energy fluxes, ratios of the various energies are plotted in \figref{Energy_ratio}.
-\begin{figure}
+\begin{figure*}
   \begin{center}
    \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_peri}} \quad
    \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_orbit}}
     \caption{Ratios of energies as a function of periapsis $r\sub{p}$ and $2\pi$ divided by the total angle of rotation in one orbit $\Delta\phi$ ($2\pi/\Delta\phi = 1$ for a Keplerian orbit). The solid line shows the ratio of the numerical kludge and Martel energies $E\sub{NK}/E\sub{M}$; the dashed line shows the ratio of the NK energy calculated using only the quadrupole term and the Martel energy $E\sub{NK(Q)}/E\sub{M}$; the dot-dashed line shows the ratio of the quadrupole and quadrupole-octupole NK energies $E\sub{NK(Q)}/E\sub{NK}$, and the dotted line shows the ratio of the Peters and Mathews and quadrupole NK energies $E\sub{PM}/E\sub{NK(Q)}$.}
     \label{fig:Energy_ratio}
   \end{center}
-\end{figure}
+\end{figure*}
 The ratios all tend to one in the weak field, as required, but differences become more pronounced in the strong field. The NK energy is larger than the Peters and Mathews result $E\sub{PM}$: since this only assumes quadrupole radiation, we have only plotted it against the quadrupole NK energy $E\sub{NK(Q)}$. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $\Delta\phi = 2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapse, whereas for a periapse small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. As expected, there appears to be reasonable correlation between the amount of rotation $2\pi/\Delta\phi$ and the ratio of energies.
 
 Error in the NK energy compared with the time-domain black hole perturbation theory results of Martel comes form two sources: the neglecting of higher order multipole contributions and the ignoring of background curvature. The contribution of the former can be estimated by looking at the difference in the NK energy by including the current quadrupole and mass octupole terms. Form \figref{Energy_ratio} we see that these terms give a negligible contribution in the weak field, but the difference is $\sim20\%$ in the strong field. This explains why the Martel energy $E\sub{M}$ is greater in the strong field, as it includes contributions from all multipoles. Neglecting the background curvature increases the NK energy relative to $E\sub{M}$. This partially cancels out the error introduced by not including higher order terms: this accidentally leads to $E\sub{NK(Q)}$ being more accurate than $E\sub{NK}$ for $r\sub{p} \sim 12 r\sub{S}$ \citep{Tanaka1993}.
