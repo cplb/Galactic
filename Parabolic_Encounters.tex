@@ -428,7 +428,7 @@ Figures \ref{fig:Orbit_1}--\ref{fig:Orbit_7} show example waveforms to demonstra
     \label{fig:Orbit_7}
   \end{center}
 \end{figure}
-The orbits specified in figures \ref{fig:Orbit_1}, \ref{fig:Orbit_2} and \ref{fig:Orbit_6} all loop once about the MBH --- they are the simplest zoom-whirl orbits. The others, including the orbit of \figref{Window}, are simpler trajectories that are recognisable as parabolic in shape. There is a clear distinction between the two types of orbit, as the loops introduce higher frequency harmonics.
+The orbits specified in figures \ref{fig:Orbit_1}, \ref{fig:Orbit_2} and \ref{fig:Orbit_6} all loop once about the MBH --- they are the simplest zoom-whirl orbits. The others, including the orbits of \figref{Energy}, are simpler trajectories that are recognisable as parabolic in shape. There is a clear distinction between the two types of orbit, as the loops introduce higher frequency harmonics.
 
 The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Using spherical polars makes negligible difference: on the scale shown here the only discernible difference would be in the spikes of the high-frequency tail of the orbits with smaller periapses, and even that is minor. We conclude that the choice of coordinates for the kludge approximation is unimportant, and shall continue using oblate-spheroidal coordinates for the rest of this work.
 
@@ -508,7 +508,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.77\log(r\sub{p}\r\sub{S}) + 4.05$. This has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
+    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.77\log(r\sub{p}/r\sub{S}) + 4.05$. This has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
@@ -596,11 +596,13 @@ where $K_\nu(z)$ is a modified Bessel function of the second kind. This result s
 
 \subsection{Comparison}
 
-Two energy spectra are plotted in \figref{Energy} for orbits with a periapsis of $r\sub{p} = 35.0 r\sub{S}$.\begin{figure*}
+Two energy spectra are plotted in \figref{Energy} for orbits with a periaps3s of $r\sub{p} = 30.0 r\sub{S}$ and $r\sub{p} = 30.0 r\sub{S}$.\begin{figure*}
   \begin{center}
-   \subfigure[Log-log plot.]{\includegraphics[width=0.45\textwidth]{Loglog_E}} \quad
-   \subfigure[Log-linear plot.]{\includegraphics[width=0.45\textwidth]{LOglin_E}}
-    \caption{Energy spectra for a parabolic orbit of a $\mu = 10 M_\odot$ object about a Schwarzscild BH with $M_\bullet = 4.31 \times 10^6 M_\odot$; the periapse distance is $r\sub{p} = 69.9 M_\bullet$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes octupole contributions.}
+   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_30}} \quad
+   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_30}} \\
+   \subfigure[$r\sub{p} = 60.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_60}} \quad
+   \subfigure[$r\sub{p} = 60.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_60}}
+    \caption{Energy spectra for a parabolic orbit of a $\mu = 10 M_\odot$ object about a Schwarzscild BH with $M_\bullet = 4.31 \times 10^6 M_\odot$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes octupole contributions. The high frequency tail is the result of spectral leakage.}
     \label{fig:Energy}
   \end{center}
 \end{figure*}
