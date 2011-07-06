@@ -508,13 +508,15 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.77\log(r\sub{p}/r\sub{S}) + 4.05$. This has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
+    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\hat{\rho}/M_\odot^{-1}\right) = -2.77\log(r\sub{p}/r\sub{S}) + 4.05$. This has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
 Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude for a small set of parameters.
 
 The parameter uncertainties are well correlated with the SNR. Some are sensitive to other parameters, such as the MBH spin, or the orbital inclination.
+
+There is possibly some subtly dependence upon inclination that is being lost under the noise of the intrinsic scatter.
 
 $\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable.
 
@@ -596,17 +598,19 @@ where $K_\nu(z)$ is a modified Bessel function of the second kind. This result s
 
 \subsection{Comparison}
 
-Two energy spectra are plotted in \figref{Energy} for orbits with a periaps3s of $r\sub{p} = 30.0 r\sub{S}$ and $r\sub{p} = 30.0 r\sub{S}$.\begin{figure*}
+Two energy spectra are plotted in \figref{Energy} for orbits with a periapses of $r\sub{p} = 7.5 r\sub{S}$, $15.0 r\sub{S}$ and $30.0 r\sub{S}$.\begin{figure*}
   \begin{center}
-   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_30}} \quad
-   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_30}} \\
-   \subfigure[$r\sub{p} = 60.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_60}} \quad
-   \subfigure[$r\sub{p} = 60.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_60}}
+   \subfigure[$r\sub{p} = 7.5 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_15}} \quad
+   \subfigure[$r\sub{p} = 7.5 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_15}} \\
+   \subfigure[$r\sub{p} = 15.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_30}} \quad
+   \subfigure[$r\sub{p} = 15.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_30}} \\
+   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_60}} \quad
+   \subfigure[$r\sub{p} = 30.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_60}}
     \caption{Energy spectra for a parabolic orbit of a $\mu = 10 M_\odot$ object about a Schwarzscild BH with $M_\bullet = 4.31 \times 10^6 M_\odot$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes octupole contributions. The high frequency tail is the result of spectral leakage.}
     \label{fig:Energy}
   \end{center}
 \end{figure*}
-The two spectra appear to be in good agreement, showing the same general shape. The NK spectrum is more tightly peaked, but is always within a factor of $2.2$ (ignoring the high-frequency tail).
+The two spectra appear to be in good agreement, showing the same general shape in the weak-field limit. The NK spectrum is more tightly peaked, but is always within a factor of $2$ at the apex.
 
 Comparing the total energy fluxes, ratios of the various energies are plotted in \figref{Energy_ratio}.
 \begin{figure*}

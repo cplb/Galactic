@@ -2,12 +2,12 @@
 % into LaTeX documents using the packages graphicx, color and psfrag.
 % It is accompanied by a postscript file. A sample LaTeX file is:
 %    \documentclass{article}\usepackage{graphicx,color,psfrag}
-%    \begin{document}\input{Loglin_E}\end{document}
+%    \begin{document}\input{Loglog_E}\end{document}
 % See http://www.mathworks.de/matlabcentral/fileexchange/loadFile.do?objectId=4638
 % for recent versions of laprint.m.
 %
 % created by:           LaPrint version 3.16 (13.9.2004)
-% created on:           01-Jul-2011 16:46:14
+% created on:           06-Jul-2011 13:04:35
 % eps bounding box:     15 cm x 11.25 cm
 % comment:              
 %
@@ -16,7 +16,7 @@
 %
 % text strings:
 \psfrag{s03}[t][t]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$f/\mathrm{Hz}$}\end{tabular}}%
-\psfrag{s04}[b][b]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$(\mathrm{d}E/\mathrm{d}{f})/\left(10^{42} \times \mathrm{J\,Hz}^{-1}\right)$}\end{tabular}}%
+\psfrag{s04}[b][b]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$(\mathrm{d}E/\mathrm{d}{f})/\mathrm{J\,Hz}^{-1}$}\end{tabular}}%
 %
 % xticklabels:
 \psfrag{x01}[t][t]{$10^{-6}$}%
@@ -27,16 +27,20 @@
 \psfrag{x06}[t][t]{$10^{-1}$}%
 %
 % yticklabels:
-\psfrag{v01}[r][r]{$0.0$}%
-\psfrag{v02}[r][r]{$0.5$}%
-\psfrag{v03}[r][r]{$1.0$}%
-\psfrag{v04}[r][r]{$1.5$}%
+\psfrag{v01}[r][r]{$10^{30}$}%
+\psfrag{v02}[r][r]{$10^{32}$}%
+\psfrag{v03}[r][r]{$10^{34}$}%
+\psfrag{v04}[r][r]{$10^{36}$}%
+\psfrag{v05}[r][r]{$10^{38}$}%
+\psfrag{v06}[r][r]{$10^{40}$}%
+\psfrag{v07}[r][r]{$10^{42}$}%
+\psfrag{v08}[r][r]{$10^{44}$}%
 %
 % Figure:
-\resizebox{12cm}{!}{\includegraphics{Loglin_E_60.eps}}%
+\resizebox{12cm}{!}{\includegraphics{Loglog_E_15.eps}}%
 \end{psfrags}%
 %
-% End Loglin_E.tex
-% E_quad = 4.056134617607044e+37
-% E_oct = 4.189107106448714e+37
-% E_PM = 3.899468143116376e+37
+% End Loglog_E.tex
+% E_quad = 5.8194e+39
+% E_oct = 6.5283e+39
+% E_PM = 4.9915e+39
