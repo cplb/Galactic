@@ -1,7 +1,7 @@
 \documentclass[useAMS,usedcolumn,usegraphicx,usenatbib]{mn2e}
 \usepackage{amssymb,amstext,amsfonts} %% ... with default font
 \usepackage[fleqn]{amsmath}
-\usepackage{subfigure}
+\usepackage{subfigure,caption}
 \usepackage{slashed}
 \usepackage[lowtilde]{url}
 %\usepackage{enumitem}
@@ -374,7 +374,7 @@ The shape of the waveform depends on a number of parameters: those defining the 
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
 \item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). We will use the convention that $a_\ast$ is positive, and will change the sense of rotation by flipping the $z$-axis.
 \item[(3)] The polar angle $\Theta$ defining the propagation direction.
-\item[(4)] The inclination angle $\Psi$. Since $a$ is positive, this is in the range $[-\pi, \pi]$.
+\item[(4)] The orientation angle $\Psi$. Since $a$ is positive, this is in the range $[-\pi, \pi]$.
 \item[(5)] The SS-GC distance $R_0$. As for $M_\bullet$, this is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. We use the logarithm of $R_0$ in place of $R_0$.
 \item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 \citep{Reid1999} $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
 \item[(8)] The angular momentum of the orbit about the MBH's spin axis $L_z$.
@@ -497,7 +497,7 @@ From \eqnref{octupole} we see that the amplitude of the waveform is proportional
 \begin{equation}
 \sigma_a = \sqrt{\Sigma_{aa}} \qquad \mathrm{(no\ summation)}.
 \end{equation}
-This should be proportional to $\mu^{-1}$. We will denote
+This should be proportional to $\mu^{-1}$. We will denote the mass-normalised quantities
 \begin{equation}
 \hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}; \quad \hat{\sigma}_a = \mu\sigma_a.
 \end{equation}
@@ -512,15 +512,52 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude for a small set of parameters.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that the $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude for a small set of parameters.
 
-The parameter uncertainties are well correlated with the SNR. Some are sensitive to other parameters, such as the MBH spin, or the orbital inclination.
+The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. Some show a dependence upon the MBH spin or the orbital inclination.
+\begin{figure*}
+  \begin{center}
+   \subfigure[MBH mass $M_\bullet$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_1}} \quad
+   \subfigure[MBH spin $a_\ast$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_2}} \\
+   \subfigure[Propagation angle $\Theta$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_3}} \quad
+   \subfigure[Orientation angle $\Psi$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_4}} \\
+   \subfigure[Distance $\ln R_0$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_5}} \quad
+   \subfigure[MBH direction $\overline{\Theta}$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_6}} \\
+   \subfigure[MBH direction $\overline{\Theta}$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_7}} \quad
+   \subfigure[Orbital angular momentum $L_z$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_8}}
+    \caption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
+    \label{fig:sigmas}
+  \end{center}
+\end{figure*}
+\begin{figure*}
+  \ContinuedFloat
+  \begin{center}
+   \subfigure[Carter constant $Q$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_9}} \quad
+   \subfigure[CO mass $\mu$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_10}} \\
+   \subfigure[Initial position $x_0$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_11}} \quad
+   \subfigure[Initial position $y_0$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_12}} \\
+   \subfigure[Initial position $z_0${\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_13}}
+    \caption{(Continued) Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
+    \label{fig:sigmas}
+  \end{center}
+\end{figure*}
+The uncertainty for the majority of parameters seem to be reasonably well described by a simple power-law. This is fitted, as for the SNR-periapsis relation, using maximum likelihood, assuming that $\ln \rho$ and $\ln \sigma_a$ have Gaussian distributions with standard deviations derived from the scatter of points. Since we are only interested in quantifying the general trend to give a broad estimate of the behaviour, we shall not be concerned by the error introduced here. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread.
 
-There is possibly some subtly dependence upon inclination that is being lost under the noise of the intrinsic scatter.
+The uncertainty in the MBH mass and in the GC distance show a clear kink, and are better fit by a broken power-law. Above the break, higher SNRs give diminished returns. A broken power-law does not improve the fit of any of the other uncertainties which only depend upon the SNR.
 
-$\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable.
+Unsurprisingly, the uncertainty in the spin depends upon the spin parameter. Larger values of $a_\ast$ give smaller uncertainties: at the same periapse radius a larger spin parameter would have a greater impact on the spacetime, and thus the orbit. However, $\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable. The complicated behaviour reflects the intricate dependence of the shape of the trajectory, which determines the waveform, upon the orbital parameters, including the initial position, as well as the background spacetime. There is more scatter for smaller $a_\ast$, perhaps reflecting that a small change in a small spin parameter has a greater impact on the trajectory than a small change in a large spin parameter.
 
-The complicated behaviour reflects the intricate dependence of the shape of the trajectory, which determines the waveform, upon the orbital parameters, including the initial position, as well as the background spacetime.
+The orbital inclination influences $\sigma_{L_z}$, $\sigma_Q$ and $\sigma_{z_0}$. The first two are easily understood, since the inclination determines the value of the two components of angular momenta for a given $r_\sub{p}$. The dependence in $\sigma_{z_0}$ can be explained by considering motion out of the equatorial plane: this is determined by the inclination, which sets the momentum out of the plane, and the initial position, which specifies the trajectory.
+
+The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour is expected as a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it play the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
+
+A broken power-law better fits $\hat{\sigma}_{L_z}$ for $\iota = 5\pi/12$ and $\pi/4$, and $\hat{\sigma}_Q$ for $\iota = \pi/12$ and $\pi/4$. In both cases the change in gradient for the $\iota = \pi/4$ case is slight.
+
+The uncertainty in $z_0$ is smaller for larger inclinations, as then we greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$ and $5\pi/12$. The latter case is almost certainly the result of the large degree of scatter for high SNR, which is again a consequence of the sensitivity of the trajectory upon the orbital parameters.
+
+Amongst the other parameters there appears to be no definite dependence upon either spin or inclination. The amount of scatter at high SNR may change with inclination, so it is possible some subtle dependence upon inclination that is being lost under the noise of the intrinsic scatter.
+
+The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
 
 \subsection{Junk}
 
@@ -598,7 +635,8 @@ where $K_\nu(z)$ is a modified Bessel function of the second kind. This result s
 
 \subsection{Comparison}
 
-Two energy spectra are plotted in \figref{Energy} for orbits with a periapses of $r\sub{p} = 7.5 r\sub{S}$, $15.0 r\sub{S}$ and $30.0 r\sub{S}$.\begin{figure*}
+Two energy spectra are plotted in \figref{Energy} for orbits with a periapses of $r\sub{p} = 7.5 r\sub{S}$, $15.0 r\sub{S}$ and $30.0 r\sub{S}$.
+\begin{figure*}
   \begin{center}
    \subfigure[$r\sub{p} = 7.5 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_15}} \quad
    \subfigure[$r\sub{p} = 7.5 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_15}} \\
