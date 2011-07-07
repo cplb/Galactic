@@ -1,7 +1,7 @@
 \documentclass[useAMS,usedcolumn,usegraphicx,usenatbib]{mn2e}
 \usepackage{amssymb,amstext,amsfonts} %% ... with default font
 \usepackage[fleqn]{amsmath}
-\usepackage{subfigure,caption}
+\usepackage{subfigure}
 \usepackage{slashed}
 \usepackage[lowtilde]{url}
 %\usepackage{enumitem}
@@ -370,7 +370,7 @@ There is one remaining complication regarding signal analysis: since we are Four
 \subsection{Model parameters}\label{sec:Parameters}
 
 The shape of the waveform depends on a number of parameters: those defining the MBH; those defining the companion object on its orbit, and those defining the LISA detector. Let us define $\boldsymbol{\lambda} = \left\{\lambda^1, \lambda^2, \ldots, \lambda^N\right\}$ as the set of $N$ parameters which specify the GW. For our model, the input parameters are:
-\begin{enumerate}%[leftmargin=*, widest=\:(88--88)]%\setlength{\tabcolsep}{3pt}\begin{center}\begin{longtable}[0.85\textwidth]{r p{0.85\textwidth}}
+\begin{enumerate}
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
 \item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). We will use the convention that $a_\ast$ is positive, and will change the sense of rotation by flipping the $z$-axis.
 \item[(3)] The polar angle $\Theta$ defining the propagation direction.
@@ -491,8 +491,6 @@ In addition to this, the initial position, orientation of the MBH, and orbital p
 
 \subsection{Inverse Fisher matrices and SNR}
 
-%Calculating the inverse Fisher matrices for these orbits, we find that there is a large degeneracy between the mass $\mu$ and the distance $R_0$. This is because the primary role of both is determining the amplitude of the waveform in \eqnref{octupole}. This is the only place that $\mu$ appears. We cannot determine both from an extreme mass-ratio burst. Consequently, to obtain well-conditioned inverse Fisher matrices, it is necessary to use our prior for $R_0$. Including this we obtain a well defined inverse. This is the only prior information we shall use.
-
 From \eqnref{octupole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to be a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqnref{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This will allow an easier combination of results from the computations for a NS and for a BH. From the variance-covariance matrix we can define the uncertainty for a particular parameter
 \begin{equation}
 \sigma_a = \sqrt{\Sigma_{aa}} \qquad \mathrm{(no\ summation)}.
@@ -514,7 +512,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 \end{figure}
 Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that the $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude for a small set of parameters.
 
-The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. Some show a dependence upon the MBH spin or the orbital inclination.
+The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread. Some uncertainties show a dependence upon the MBH spin or the orbital inclination.
 \begin{figure*}
   \begin{center}
    \subfigure[MBH mass $M_\bullet$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_1}} \quad
@@ -525,23 +523,58 @@ The parameter uncertainties are well correlated with the SNR. The uncertainties 
    \subfigure[MBH direction $\overline{\Theta}$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_6}} \\
    \subfigure[MBH direction $\overline{\Theta}$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_7}} \quad
    \subfigure[Orbital angular momentum $L_z$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_8}}
-    \caption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
-    \label{fig:sigmas}
+   \caption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
+   \label{fig:sigmas}
   \end{center}
 \end{figure*}
 \begin{figure*}
-  \ContinuedFloat
   \begin{center}
    \subfigure[Carter constant $Q$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_9}} \quad
    \subfigure[CO mass $\mu$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_10}} \\
    \subfigure[Initial position $x_0$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_11}} \quad
    \subfigure[Initial position $y_0$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_12}} \\
    \subfigure[Initial position $z_0${\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_13}}
-    \caption{(Continued) Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
+   \contcaption{(Continued) Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
     \label{fig:sigmas}
   \end{center}
 \end{figure*}
-The uncertainty for the majority of parameters seem to be reasonably well described by a simple power-law. This is fitted, as for the SNR-periapsis relation, using maximum likelihood, assuming that $\ln \rho$ and $\ln \sigma_a$ have Gaussian distributions with standard deviations derived from the scatter of points. Since we are only interested in quantifying the general trend to give a broad estimate of the behaviour, we shall not be concerned by the error introduced here. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread.
+
+The uncertainty for the majority of parameters seem to be reasonably well described by a simple power-law. This is fitted, as for the SNR-periapsis relation, using maximum likelihood, assuming that $\ln \rho$ and $\ln \sigma_a$ have Gaussian distributions with standard deviations derived from the scatter of points. Since we are only interested in quantifying the general trend to give a broad estimate of the behaviour, we shall not be concerned by the error introduced here. The fitted parameters are given in \tabref{lines}.
+\begin{table}
+\begin{minipage}{\columnwidth}
+ \centering
+ \caption{Best fit parameters for power-laws of the form $\log\left(\hat{\rho}/M_\odot^{-1}\right) = A\log(\Xi) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
+ \label{tab:lines}
+ \begin{tabular}{@{} l l D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{1.2} @{}}
+ \hline
+ $X$ & Extrinsic parameter & $A_1$ & $B_1$ & $A_2$ & $B_2$ & $\chi^2/\nu$\\
+ \hline
+ $\hat{\sigma}_{M_\bullet}/\left(10^6 M_\odot^2\right)$ & -- & \\
+ $\hat{\sigma}_{a_\ast}/M_\odot$ & $a_\ast = 0.0$ & \\
+  & $a_\ast = 0.3$ & \\
+  & $a_\ast = 0.6$ & \\
+  & $a_\ast = 0.9$ & \\
+ $\hat{\sigma}_\Theta/M_\odot$ & -- & \\
+ $\hat{\sigma}_\Psi/M_\odot$ & -- & \\
+ $\hat{\sigma}_{\ln R_0}/M_\odot$ & -- &\\
+ $\hat{\sigma}_{\overline{\Theta}}/M_\odot$ & -- & \\
+ $\hat{\sigma}_{\overline{\Phi}}/M_\odot$ & -- & \\
+ $\hat{\sigma}_{L_z}/\left(G M_\bullet c^{-1} M_\odot\right)$ & $\iota = \pi/12$ & \\
+  & $\iota = \pi/4$ & \\
+  & $\iota = 5\pi/12$ & \\
+ $\hat{\sigma}_Q/\left(G^2 M_\bullet^2 c^{-2}M_\odot\right)$ & $\iota = \pi/12$ & \\
+  & $\iota = \pi/4$ & \\
+  & $\iota = 5\pi/12$ & \\
+ $\hat{\sigma}_\mu/\mu$ & -- & \\
+ $\hat{\sigma}_{x_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & -- & \\
+ $\hat{\sigma}_{y_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & -- & \\
+ $\hat{\sigma}_{z_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$  & $\iota = \pi/12$ & \\
+  & $\iota = \pi/4$ & \\
+  & $\iota = 5\pi/12$ & \\
+ \hline
+ \end{tabular}
+\end{minipage}
+\end{table}
 
 The uncertainty in the MBH mass and in the GC distance show a clear kink, and are better fit by a broken power-law. Above the break, higher SNRs give diminished returns. A broken power-law does not improve the fit of any of the other uncertainties which only depend upon the SNR.
 
@@ -555,9 +588,7 @@ A broken power-law better fits $\hat{\sigma}_{L_z}$ for $\iota = 5\pi/12$ and $\
 
 The uncertainty in $z_0$ is smaller for larger inclinations, as then we greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$ and $5\pi/12$. The latter case is almost certainly the result of the large degree of scatter for high SNR, which is again a consequence of the sensitivity of the trajectory upon the orbital parameters.
 
-Amongst the other parameters there appears to be no definite dependence upon either spin or inclination. The amount of scatter at high SNR may change with inclination, so it is possible some subtle dependence upon inclination that is being lost under the noise of the intrinsic scatter.
-
-The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
+Only the spin and inclination appear to influence the SNR-uncertainty relations. The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticeable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
 
 \subsection{Junk}
 
