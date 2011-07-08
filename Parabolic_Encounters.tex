@@ -84,11 +84,11 @@ a_\ast = \frac{cJ}{GM_\bullet^2}.
 \end{equation}
 As we have a good estimate of the mass, to gain a full description of the MBH we have only to measure its spin; this will give us insight into its history and role in the evolution of the Galaxy.
 
-The spin of an MBH is determined by several competing processes. An MBH accumulates mass and angular momentum through accretion \citep{Volonteri2010}. Accretion from a gaseous disc will spin up the MBH, potentially leading to high spin values \citep{Volonteri2005}, while a series of randomly orientated accretion events will lead to a low spin value: we expect an average value $|a_\ast| \sim 0.1$--$0.3$ \citep*{King2006, King2008}. The MBH will also grow through mergers \citep{Yu2002, Malbon2007}. Minor mergers with smaller black holes (BHs) can decrease the spin \citep*{Hughes2003, Gammie2004}, while a series of major mergers, between similar mass MBHs, would lead to a likely spin of $|a_\ast| \sim 0.69$ \citep{Berti2008, Berti2007, Gonzalez2007}. Measuring the spin of MBHs will help us understand the relative importance of these processes, and perhaps gain a glimpse into the their host galaxies' pasts.
+The spin of an MBH is determined by several competing processes. An MBH accumulates mass and angular momentum through accretion \citep{Volonteri2010}. Accretion from a gaseous disc will spin up the MBH, potentially leading to high spin values \citep{Volonteri2005}, while a series of randomly orientated accretion events will lead to a low spin value: we expect an average value $|a_\ast| \sim 0.1$--$0.3$ \citep*{King2006, King2008}. The MBH will also grow through mergers \citep{Yu2002, Malbon2007}. Minor mergers with smaller black holes (BHs) can decrease the spin \citep*{Hughes2003, Gammie2004}, while a series of major mergers, between similar mass MBHs, would lead to a likely spin of $|a_\ast| \sim 0.69$ \citep{Berti2008, Berti2007, Gonzalez2007}. Measuring the spin of MBHs will help us understand the relative importance of these processes, and perhaps gain a glimpse into their host galaxies' pasts.
 
 Elliptical and spiral galaxies are expected to host MBH's of differing spins because of their different evolutions: one expects MBHs in elliptical galaxies to have on average higher spin than black holes in spiral galaxies, where random, small accretion episodes might have played a more important role \citep*{Volonteri2007, Sikora2007}.
 
-It has been suggested that the spin of the Galaxy's MBH could be inferred from careful observation of the orbits of stars within a few milliparsec of the GC \citep{Merritt2010}, although this is complicated because of perturbations due to other stars, or from observations of quasi-periodic oscillations (QPOs) in the luminosity of flares believed to originate from material orbitting close to the inner most stable orbits \citep{Genzel2003a, Belanger2006, Trippe2007, Hamaus2009, Kato2010}, though there are difficulties in interpreting these results \citep{Psaltis2008a}.
+It has been suggested that the spin of the Galaxy's MBH could be inferred from careful observation of the orbits of stars within a few milliparsecs of the GC \citep{Merritt2010}, although this is complicated because of perturbations due to other stars, or from observations of quasi-periodic oscillations (QPOs) in the luminosity of flares believed to originate from material orbiting close to the innermost stable orbits \citep{Genzel2003a, Belanger2006, Trippe2007, Hamaus2009, Kato2010}, though there are difficulties in interpreting these results \citep{Psaltis2008a}.
 
 This latter method, combined with a disc-seismology model, has produced a value of the dimensionless spin of $a_\ast = 0.44 \pm 0.08$. To obtain this result \citet{Kato2010} have combined their observations of Sgr A* with observations of galactic X-ray sources containing solar mass BHs, to find a best-fit unique spin parameter for all BHs. However, it is not clear that all BHs should share the same value of the spin parameter; especially considering that the BHs considered here differ by six orders of magnitude, with none in the intermediate range. Even if BH spin is determined by a universal process, we would expect some distribution of spin parameters \citep{King2008, Berti2008}. Thus we cannot precisely determine the spin of the galactic centre's MBH from an average including other BHs.
 
@@ -104,7 +104,7 @@ We will make the simplifying assumption that all these orbits are marginally bou
 
 In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit so that they may be held constant. We use this to construct an approximate numerical kludge waveform \citep{Babak2007}.
 
-This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, and in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, in \secref{Signal} how the signal would be analysed to extract the information encoded in the the waveform. [Something else here] In \secref{Energy} we confirm the accuracy of the kludge waveforms by comparing the energy flux with fluxes calculated from other approaches. We conclude in \secref{End} with a summary of our results. An appendix is included on the use of window functions to reduce spectral leakage when analysing waveforms. In this we present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range.
+This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, and in \secref{Signal} and \secref{Parameters} how the signal would be analysed to extract the information encoded, and how this can be used to infer parameters. Results obtained using our waveform model to estimate the accuracy to which parameters could be measured are presented in \secref{Results}. We give fiducial power-law fits for signal-to-noise ratio (SNR) as a function of periapse radius, and parameter uncertainty as a function of SNR, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux with fluxes calculated from other approaches. We conclude in \secref{End} with a summary of our results. An appendix is included on the use of window functions to reduce spectral leakage when analysing waveforms. In this we present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range.
 
 Throughout this work we will assume metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet will be used for the output of two LISA detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ will be used where noted, but in general factors of $G$ and $c$ will be retained.
 
@@ -335,7 +335,7 @@ The properties of the noise allow us to define a natural inner product and assoc
 \innerprod{\boldsymbol{g}}{\boldsymbol{k}} = 2\intd{0}{\infty}{\frac{\tilde{g}_A^*(f)\tilde{k}_A(f) + \tilde{g}_A(f)\tilde{k}_A^*(f)}{S_n(f)}}{f}.
 \label{eq:inner}
 \end{equation}
-Using this definition, the signal-to-noise ratio (SNR) is approximately
+Using this definition, the signal-to-noise ratio is approximately
 \begin{equation}
 \rho[\boldsymbol{h}] = \innerprod{\boldsymbol{h}}{\boldsymbol{h}}^{1/2}.
 \label{eq:SNR}
@@ -477,11 +477,11 @@ From this the inverse Fisher matrix $\boldsymbol{\Gamma}^{-1}$ is an upper bound
 
 To understand what we can from parabolic encounters alone, we will look at the inverse Fisher matrix elements. If these are small then we expect we would be able to precisely determine a parameter, whereas if they are large we would not be able to learn much more than we already know from our prior.
 
-\section{Results}
+\section{Results}\label{sec:Results}
 
 \subsection{Data set}
 
-To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms for computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $8.33~\mathrm{kpc}$.
+To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms were computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $8.33~\mathrm{kpc}$.
 
 Four different spin values were chosen $a_\star = 0, 0.3, 0.6, 0.9$. Waveforms were calculated for two different compact objects, one of mass $1.4 M_\odot$ as appropriate for a neutron star, one of mass $10 M_\odot$ represented a black hole. For each spin and mass, orbits with three different inclinations $\iota = \pi/12, \pi/4, 5\pi/12$ were calculated, each for both prograde and retrograde rotation.
 
@@ -510,7 +510,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that the $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude for a small set of parameters.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that the $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
 The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread. Some uncertainties show a dependence upon the MBH spin or the orbital inclination.
 \begin{figure*}
@@ -528,7 +528,7 @@ The parameter uncertainties are well correlated with the SNR. The uncertainties 
 \begin{figure*}
 \ContinuedFloat
   \begin{center}
-   \subfloat[MBH direction $\overline{\Theta}$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_7}} \quad
+   \subfloat[MBH direction $\overline{\Phi}$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_7}} \quad
    \subfloat[Orbital angular momentum $L_z$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_8}} \\
    \subfloat[Carter constant $Q$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_9}} \quad
    \subfloat[CO mass $\mu$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_10}} \\
@@ -551,7 +551,7 @@ The uncertainty for the majority of parameters seem to be reasonably well descri
 \begin{table*}
 \begin{minipage}{0.65\textwidth}
  \centering
- \caption{Best fit parameters for power-laws of the form $\log\left(\hat{\rho}/M_\odot^{-1}\right) = A\log(\Xi) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
+ \caption{Best fit parameters for power-laws of the form $\log\left(\Xi) = A\log(\hat{\rho}/M_\odot^{-1}\right) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
  \label{tab:lines}
  \begin{tabular}{@{} l l D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{1.2} @{}}
  \hline
@@ -573,7 +573,7 @@ The uncertainty for the majority of parameters seem to be reasonably well descri
  $\hat{\sigma}_Q/\left(G^2 M_\bullet^2 c^{-2}M_\odot\right)$ & $\iota = \pi/12$ & -1.35 & 36.17 & -0.98 & 35.87 & 0.26 \\
   & $\iota = \pi/4$ & -1.27 & 36.93 & -1.00 & 36.74 & 0.25 \\
   & $\iota = 5\pi/12$ & -1.10 & 36.87 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.06 \\
- $\hat{\sigma}_\mu/\mu$ & \multicolumn{1}{c}{--} & -0.96 & 0.30 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.60 \\
+ $\hat{\sigma}_\mu/(\mu M_\odot)$ & \multicolumn{1}{c}{--} & -0.96 & 0.30 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.60 \\
  $\hat{\sigma}_{x_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.97 & 2.36 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.10 \\
  $\hat{\sigma}_{y_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.96 & 2.35 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.07 \\
  $\hat{\sigma}_{z_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$  & $\iota = \pi/12$ & -0.93 & 2.83 & -0.72 & 2.63 & 0.27 \\
@@ -584,19 +584,37 @@ The uncertainty for the majority of parameters seem to be reasonably well descri
 \end{minipage}
 \end{table*}
 
+For small SNRs, the Fisher matrix is no longer an appropriate estimate for the inverse covariance matrix; this only hold in the limit of high SNR~\cite{Vallisneri2005}. Therefore we should not expect these results to hold for low SNRs. However, we are unlikely to detect these signals in practise, so this is not a significant concern.
+
 The uncertainty in the MBH mass and in the GC distance show a clear kink, and are better fit by a broken power-law. Above the break, higher SNRs give diminished returns. A broken power-law does not improve the fit of any of the other uncertainties which only depend upon the SNR.
+
+The fits for $x_0$ and $y_0$, and for $\overline{\Theta}$ and $\overline{\Phi}$ are practically identical. In both cases the variables are physically similar, so this behaviour is as expected.
 
 Unsurprisingly, the uncertainty in the spin depends upon the spin parameter. Larger values of $a_\ast$ give smaller uncertainties: at the same periapse radius a larger spin parameter would have a greater impact on the spacetime, and thus the orbit. However, $\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable. The complicated behaviour reflects the intricate dependence of the shape of the trajectory, which determines the waveform, upon the orbital parameters, including the initial position, as well as the background spacetime. There is more scatter for smaller $a_\ast$, perhaps reflecting that a small change in a small spin parameter has a greater impact on the trajectory than a small change in a large spin parameter.
 
 The orbital inclination influences $\sigma_{L_z}$, $\sigma_Q$ and $\sigma_{z_0}$. The first two are easily understood, since the inclination determines the value of the two components of angular momenta for a given $r\sub{p}$. The dependence in $\sigma_{z_0}$ can be explained by considering motion out of the equatorial plane: this is determined by the inclination, which sets the momentum out of the plane, and the initial position, which specifies the trajectory.
 
-The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour is expected as a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it play the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
+The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour is expected as a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it plays the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
 
 A broken power-law better fits $\hat{\sigma}_{L_z}$ for $\iota = 5\pi/12$ and $\pi/4$, and $\hat{\sigma}_Q$ for $\iota = \pi/12$ and $\pi/4$. In both cases the change in gradient for the $\iota = \pi/4$ case is slight.
 
-The uncertainty in $z_0$ is smaller for larger inclinations, as then we greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$ and $5\pi/12$. The latter case is almost certainly the result of the large degree of scatter for high SNR, which is again a consequence of the sensitivity of the trajectory upon the orbital parameters.
+The uncertainty in $z_0$ is smaller for larger inclinations, as then we have greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$ and $5\pi/12$. The latter case is almost certainly the result of the large degree of scatter for high SNR, which is again a consequence of the sensitivity of the trajectory upon the orbital parameters.
 
 Only the spin and inclination appear to influence the SNR-uncertainty relations. The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticeable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
+
+\subsection{Comparison with existing results}
+
+Having quantified the accuracy with which we could hope to infer parameters from an EMRB waveform, we can now compare these results with existing measurements, to see if it is possible to learn anything new.
+
+We have no {\it a priori} knowledge about the CO, or its orbit, so anything we can deduce about its initial position, angular momentum or mass would be new. Measurements of the mass are only useful if $\sigma_\mu/\mu$ is less than 1. Form our power law, this would occur for a $1.4 M_\odot$ ($10 M_\odot$) object when $\rho \simeq 2.00$ ($1.88$). Since we would only expect to detect signals with SNRs of order of a few, we conclude that any detectable signal will give us some constraint on the compact object's mass. An uncertainty of $10\%$ would be possible for $\rho \simeq 21.7$ ($20.2$).
+
+Similarly, we have no information on the orientation of the MBH, so any measurement for which $\sigma_\Theta$ or $\sigma_\Psi$ is less than $2\pi$ would be of interest. This happens for very low SNR for both angles, so again a detection would allow us to infer something new. An uncertainty of $\pi/72 = 5\deg$ corresponds to $\rho \simeq 9.78$ ($5.76$) for $\Theta$ and $\rho \simeq 29.6$ ($25.1$) for $\Psi$.
+
+We have existing measurements for the position of the MBH. The current constraints on $\overline{Theta}$ and $\overline{\Phi}$ cannot be matched by observing EMRBs. The uncertainty in $\ln R_0$ based on existing measurements is $\sigma_{\ln R_0}^0\simeq 0.042$. This could be bettered by an EMRB with $\rho = 2.68$ ($2.75$).
+
+Of paramount interest are the MBH mass and spin. The current uncertainty in the mass is $\sigma_{M_\bullet}^0 = 0.36 \times 10^6 M_\odot$. This can be equalled for very low SNR, $\rho \simeq 0.11$ ($0.12$), so any detection should be able to improve measurement for $M_\bullet$. A $0.1\%$ accuracy could be obtained for $\rho \approx 10.4$ ($8.11$).
+
+The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
 \subsection{Junk}
 
@@ -674,7 +692,7 @@ where $K_\nu(z)$ is a modified Bessel function of the second kind. This result s
 
 \subsection{Comparison}
 
-Two energy spectra are plotted in \figref{Energy} for orbits with a periapses of $r\sub{p} = 7.5 r\sub{S}$, $15.0 r\sub{S}$ and $30.0 r\sub{S}$.
+Two energy spectra are plotted in \figref{Energy} for orbits with periapses of $r\sub{p} = 7.5 r\sub{S}$, $15.0 r\sub{S}$ and $30.0 r\sub{S}$.
 \begin{figure*}
   \begin{center}
    \subfloat[$r\sub{p} = 7.5 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_15}} \quad
@@ -683,7 +701,7 @@ Two energy spectra are plotted in \figref{Energy} for orbits with a periapses of
    \subfloat[$r\sub{p} = 15.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_30}} \\
    \subfloat[$r\sub{p} = 30.0 r\sub{S}$, log-log plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglog_E_60}} \quad
    \subfloat[$r\sub{p} = 30.0 r\sub{S}$, log-linear plot.]{\includegraphics[width=0.45\textwidth]{Fig_Loglin_E_60}}
-    \caption{Energy spectra for a parabolic orbit of a $\mu = 10 M_\odot$ object about a Schwarzscild BH with $M_\bullet = 4.31 \times 10^6 M_\odot$. The spectra calculated from a the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes octupole contributions. The high frequency tail is the result of spectral leakage.}
+    \caption{Energy spectra for a parabolic orbit of a $\mu = 10 M_\odot$ object about a Schwarzscild BH with $M_\bullet = 4.31 \times 10^6 M_\odot$. The spectra calculated from the NK waveform is shown by the solid line and the Peters and Mathews flux is indicated by the dashed line. The NK waveform includes octupole contributions. The high frequency tail is the result of spectral leakage.}
     \label{fig:Energy}
   \end{center}
 \end{figure*}
@@ -711,9 +729,9 @@ where $\Ibar_{ij} = I_{ij} - (1/3)I\delta_{ij}$ is the reduced mass quadrupole t
 \end{enumerate}
 All three agree to within computational error. This demonstrates the validity of the code, and shows that the use of a window function does not significantly distort the waveform.
 
-The ratios all tend towards one in the weak field, as required, but differences become more pronounced in the strong field. The NK energy is larger than the Peters and Mathews result $E\sub{PM}$: since this only assumes quadrupole radiation, we have only plotted it against $E\sub{NK(Q)}$. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $\Delta\phi = 2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapse, whereas for a periapse small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. As expected, there appears to be reasonable correlation between the amount of rotation $2\pi/\Delta\phi$ and the ratio of energies.
+The ratios all tend towards one in the weak field, as required, but differences become more pronounced in the strong field. The NK energy is larger than the Peters and Mathews result $E\sub{PM}$: since this only assumes quadrupole radiation, we have only plotted it against $E\sub{NK(Q)}$. This behaviour has been seen before for high eccentricity orbits about a non-spinning BH \citep{Gair2005}. It may be explained by considering the total amount of rotation for the different orbits: the Peters and Mathews spectrum assumes a Keplerian orbit, so the total rotation is $\Delta\phi = 2\pi$; the orbit in Kerr geometry rotates more than this (the angle would be $2\pi$ in the limit of an infinite periapsis, whereas for a periapsis small enough that the orbit shows zoom-whirl behaviour, the total angle may be many times $2\pi$). The greater rotation leads to increased emission of gravitational waves and a larger energy flux \citep{Berry2010}. As expected, there appears to be reasonable correlation between the amount of rotation $2\pi/\Delta\phi$ and the ratio of energies.
 
-Error in the NK energy compared with the time-domain black hole perturbation theory results of Martel comes form two sources: the neglecting of higher order multipole contributions and the ignoring of background curvature. The contribution of the former can be estimated by looking at the difference in the NK energy by including the current quadrupole and mass octupole terms. Form \figref{Energy_ratio} we see that these terms give a negligible contribution in the weak field, but the difference is $\sim20\%$ in the strong field. This explains why the Martel energy $E\sub{M}$ is greater in the strong field, as it includes contributions from all multipoles. Neglecting the background curvature increases the NK energy relative to $E\sub{M}$. This partially cancels out the error introduced by not including higher order terms: this accidentally leads to $E\sub{NK(Q)}$ being more accurate than $E\sub{NK}$ for $r\sub{p} \gtrsim 5 r\sub{S}$ \citep{Tanaka1993}.
+Error in the NK energy compared with the time-domain black hole perturbation theory results of Martel comes from two sources: the neglecting of higher order multipole contributions and the ignoring of background curvature. The contribution of the former can be estimated by looking at the difference in the NK energy by including the current quadrupole and mass octupole terms. Form \figref{Energy_ratio} we see that these terms give a negligible contribution in the weak field, but the difference is $\sim20\%$ in the strong field. This explains why the Martel energy $E\sub{M}$ is greater in the strong field, as it includes contributions from all multipoles. Neglecting the background curvature increases the NK energy relative to $E\sub{M}$. This partially cancels out the error introduced by not including higher order terms: this accidentally leads to $E\sub{NK(Q)}$ being more accurate than $E\sub{NK}$ for $r\sub{p} \gtrsim 5 r\sub{S}$ \citep{Tanaka1993}.
 
 From the level of agreement we may be confident that the NK waveforms are a reasonable approximation. The difference in energy flux is only greater than $10\%$ for very strong fields $r\sub{p} \simeq 2 r\sub{S}$; since this is dependent on the square of the waveform, typical accuracy in the waveform may be $\sim 5\%$ \citep{Gair2005,Tanaka1993}.
 
@@ -758,14 +776,14 @@ where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$ is the unwindowed Fourier transform o
   \begin{center}
    \subfloat[Spectrum using no window. The calculated SNR is $\rho = 12.5$.]{\label{fig:Windowing_Rectangular} \includegraphics[width=0.45\textwidth]{Fig_h_I_9_rectangular}} \quad
    \subfloat[Spectrum using a Nuttall window. The calculated SNR is $\rho = 8.5$.]{\label{fig:Windowing_Nuttal} \includegraphics[width=0.45\textwidth]{Fig_h_I_9_Nuttall}}
-    \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's four-term window with continuous first derivative \citep{Nuttall1981}. The spin of the MBH is $a_\ast = 0.5$, the mass of the orbitting CO is $\mu = 10 M_\odot$, the periapsis is $r\sub{p} = 25 r\sub{S}$ and the inclination is $\iota = 0.1$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}
+    \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's four-term window with continuous first derivative \citep{Nuttall1981}. The spin of the MBH is $a_\ast = 0.5$, the mass of the orbiting CO is $\mu = 10 M_\odot$, the periapsis is $r\sub{p} = 25 r\sub{S}$ and the inclination is $\iota = 0.1$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}
     \label{fig:Windowing}
   \end{center}
 \end{figure*}
 
 Despite being many orders of magnitude below the peak level, the high-frequency tail is still well above the noise curve for a wide range of frequencies. It therefore contributes to the evaluation of any inner products, and could mask interesting features.  It is possible to reduce the amount of leakage using apodization: to improve the frequency response of a finite time series one can use a weighting window function $w(t)$ which modifies the impulse response in a prescribed way. The simplest window function is the rectangular (or Dirichlet) window $w\sub{R}(t)$; this is just the top-hat described above. Other window functions are generally tapered.\footnote{When using a tapered window function it is important to ensure that the window is centred upon the signal; otherwise the calculated transform will have a reduced amplitude.} There is a wide range of window functions described in the literature \citep*{Harris1978,Kaiser1980,Nuttall1981,McKechan2010}. The introduction of a window function influences the spectrum in a manner dependent upon its precise shape; there are two distinct distortions: local smearing due to the finite width of the centre lobe, and distant leakage due to finite amplitude sidelobes. The window function may be optimised such that the peak sidelobe has a small amplitude, or such that the sidelobes decay away rapidly with frequency. Choosing a window function is a trade-off between these various properties, and will depend upon the particular application.
 
-For use with the parabolic spectra, the primary concern is to suppress the sidelobes. Many windows with good sidelobe behaviour exist in the literature, we will consider three: the Blackman-Harris minimum four-term window \citep{Harris1978, Nuttall1981}
+For use with the parabolic spectra, the primary concern is to suppress the sidelobes. Many windows with good sidelobe behaviour exist in the literature; we will consider three: the Blackman-Harris minimum four-term window \citep{Harris1978, Nuttall1981}
 \begin{equation}
 w\sub{BH}(t) = \sum_{n=0}^{3} a\super{BH}_n\cos\left(\frac{2n\pi t}{\tau}\right),
 \end{equation}
@@ -791,7 +809,7 @@ and the Kaiser-Bessel window \citep{Harris1978, Kaiser1980}
 \begin{equation}
 w\sub{KB}(t;\beta) = \frac{I_0\left[\beta\sqrt{1 - (2 t/\tau)^2}\right]}{I_0(\beta)},
 \end{equation}
-where $I_\nu(z)$ is the modified Bessel function of the first kind, and $\beta$ is an adjustable parameter. Increasing $\beta$ reduces the peak sidelobe, but also widens the central lobe. The Kaiser-Bessel window has the smallest peak sidelobe, but the worst decay ($1/f$); the Nuttall window has best the best asymptotic behaviour ($1/f^3$); the Blackman-Harris window has a peak sidelobe similar to the Nuttall window, and decays asymptotically as fast (slow) as the Kaiser-Bessel window, but has the advantage of having suppressed sidelobes next to the central lobe. Another window has been recently suggested for use with gravitational waveforms: the Planck-taper window (\citealt*{Damour2000}; \citealt{McKechan2010})
+where $I_\nu(z)$ is the modified Bessel function of the first kind, and $\beta$ is an adjustable parameter. Increasing $\beta$ reduces the peak sidelobe, but also widens the central lobe. The Kaiser-Bessel window has the smallest peak sidelobe, but the worst decay ($1/f$); the Nuttall window has the best asymptotic behaviour ($1/f^3$); the Blackman-Harris window has a peak sidelobe similar to the Nuttall window, and decays asymptotically as fast (slow) as the Kaiser-Bessel window, but has the advantage of having suppressed sidelobes next to the central lobe. Another window has been recently suggested for use with gravitational waveforms: the Planck-taper window (\citealt*{Damour2000}; \citealt{McKechan2010})
 \begin{equation}
 w\sub{P}(t; \epsilon) = \begin{cases}
  {\displaystyle \recip{\exp(Z_+)+1}} & {\displaystyle -\frac{\tau}{2} \leq t < -\tau\left(\recip{2} - \epsilon\right)} \\
