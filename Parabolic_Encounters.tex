@@ -74,7 +74,7 @@ Many, if not all, galactic nuclei have harboured a massive black hole (MBH) duri
 
 The best opportunity to study MBHs comes from the compact object in our own galactic centre (GC), which is coincident with Sagittarius A* (Sgr A*). This is identified as an MBH of mass $M_\bullet = 4.31 \times 10^6 M_\odot$ at a distance of only $R_0 = 8.33\units{kpc}$ \citep{Gillessen2009}.
 
-According to the no-hair theorem, the MBH should be described completely by just its mass $M_\bullet$ and spin $a$; we expect the charge of an astrophysical black hole to be negligible \citep{Israel1967, Israel1968, Carter1971, Hawking1972, Robinson1975, Chandrasekhar1998}. The spin parameter $a$ is related to the BH's angular momentum $J$ by
+According to the no-hair theorem, the MBH should be described completely by just its mass $M_\bullet$ and spin $a$, since we expect the charge of an astrophysical black hole to be negligible \citep{Israel1967, Israel1968, Carter1971, Hawking1972, Robinson1975, Chandrasekhar1998}. The spin parameter $a$ is related to the BH's angular momentum $J$ by
 \begin{equation}
 J = M_\bullet ac;
 \end{equation}
@@ -92,7 +92,7 @@ It has been suggested that the spin of the Galaxy's MBH could be inferred from c
 
 This latter method, combined with a disc-seismology model, has produced a value of the dimensionless spin of $a_\ast = 0.44 \pm 0.08$. To obtain this result \citet{Kato2010} have combined their observations of Sgr A* with observations of galactic X-ray sources containing solar mass BHs, to find a best-fit unique spin parameter for all BHs. However, it is not clear that all BHs should share the same value of the spin parameter; especially considering that the BHs considered here differ in mass by six orders of magnitude, with none in the intermediate range. Even if BH spin is determined by a universal process, we still expect some distribution of spin parameters \citep{King2008, Berti2008}. Thus we cannot precisely determine the spin of the galactic centre's MBH from an average including other BHs.
 
-X-ray observations can be used to infer the spin of MBHs through the observation of $\mathrm{Fe}$ $\mathrm{K}$ emission lines from active galactic nuclei \citep{Miller2007, McClintock2011}. So far this has been done for a handful of other galaxies' central MBHs \citep{Brenneman2006, Miniutti2009, Schmoll2009, delaCallePerez2010, Zoghbi2010, Nardini2011,  Patrick2011}. Estimates for the spin cover a range of values up to the maximal value for an extremal Kerr black hole. Typical values are in the intermediate range of $a_\ast \sim 0.7$ with an uncertainty of about $10\%$ on each measurement.
+The spins of MBHs in active galactic nuclei have been inferred using X-ray observations of $\mathrm{Fe}$ $\mathrm{K}$ emission lines \citep{Miller2007, McClintock2011}. So far this has been done for a handful of other galaxies' central MBHs \citep{Brenneman2006, Miniutti2009, Schmoll2009, delaCallePerez2010, Zoghbi2010, Nardini2011,  Patrick2011}. Estimates for the spin cover a range of values up to the maximal value for an extremal Kerr black hole. Typical values are in the intermediate range of $a_\ast \sim 0.7$ with an uncertainty of about $10\%$ on each measurement.
 
 While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the spin of the Galaxy's MBH, it is desirable to have an independent observation, a direct measurement.
 
@@ -225,7 +225,7 @@ r\sub{ob} \cos\theta\sub{ob}
 \end{equation}
 These are appealing because in the limit that $G \rightarrow 0$, where the gravitating mass goes to zero, the Kerr metric in Boyer-Lindquist coordinates reduces to the Minkowski metric in oblate-spheroidal coordinates.
 \end{enumerate}
-In the limit of $a \rightarrow 0$, the two coincide, as they do in the limit of large $r\sub{BL}$.
+In the limit of $a \rightarrow 0$, the two coincide, as they do in the limit of large $r$.
 
 It must be stressed that there is no well motivated argument that either coordinate system must yield an accurate GW; their use is justified {\it post facto} by comparison with results obtained from more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The ambiguity in assigning flat-space coordinates reflects the inconsistency of the semirelativistic approximation: the geodesic trajectory was calculated for the Kerr geometry; by moving to flat spacetime we lose the reason for its existence. However, this inconsistency should not be regarded as a major problem; it is just an artifact of the basic assumption that the shape of the trajectory is important for determining the character of the radiation, but the curvature of the spacetime in the vicinity of the source is not. By binding the particle to the exact geodesic, we ensure that the kludge waveform has spectral components at the correct frequencies, but by assuming flat spacetime for generation of GWs they will not have the correct amplitudes.
 
@@ -238,9 +238,9 @@ h^{jk}(t, \boldsymbol{x}) = -\frac{2G}{c^6r}\left(\ddot{I}^{jk} - 2n_i\ddot{S}^{
 \end{equation}
 where an over-dot represents differentiation with respect to time $t$ (and not $\tau$), $t'$ is the retarded time, $r = \left|\boldsymbol{x} - \boldsymbol{x}\sub{p}\right|$ is the radial distance, $\boldsymbol{n}$ is the radial unit vector, and the mass quadrupole ${I}^{jk}$, current quadrupole ${S}^{ijk}$ and mass octupole ${M}^{ijk}$ are defined by
 \begin{align}
-{I}^{jk}(t') = {} & \intd{}{}{{x'}^j{x'}^kT^{00}(t', \boldsymbol{x'})}{^3x'};\\
-{S}^{ijk}(t') = {} & \intd{}{}{{x'}^j{x'}^kT^{0i}(t', \boldsymbol{x'})}{^3x'};\\
-{M}^{ijk}(t') = {} & \recip{c}\intd{}{}{{x'}^i{x'}^j{x'}^kT^{00}(t', \boldsymbol{x'})}{^3x'}.
+{I}^{jk}\left(t'\right) = {} & \intd{}{}{{x'}^j{x'}^kT^{00}\left(t', \boldsymbol{x'}\right) }{^3x'};\\
+{S}^{ijk}\left(t'\right) = {} & \intd{}{}{{x'}^j{x'}^kT^{0i}\left(t', \boldsymbol{x'}\right)}{^3x'};\\
+{M}^{ijk}\left(t'\right)  = {} & \recip{c}\intd{}{}{{x'}^i{x'}^j{x'}^kT^{00}\left(t', \boldsymbol{x'}\right)}{^3x'}.
 \end{align}
 This is correct for a slowly moving source. It is the familiar quadrupole formula (\citealt*{Misner1973}, section 36.10; \citealt{Hobson2006}, section 17.9), derived from linearized theory, plus the next order terms. For a point mass, the energy-momentum tensor $T^{\mu\nu}$ contains a $\delta$-function which allows easy evaluation of the integrals of the various moments to give
 \begin{align}
@@ -260,7 +260,7 @@ P_{ij} = \delta_{ij} - n_in_j.
 
 \section{Detection with LISA}\label{sec:Detector}
 
-The LISA detector is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
+The classix LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.35\textwidth]{BH_SS.eps}
@@ -374,9 +374,9 @@ The shape of the waveform depends on a number of parameters: those defining the 
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
 \item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). We will use the convention that $a_\ast$ is positive, and will change the sense of rotation by flipping the $z$-axis.
 \item[(3)] The polar angle $\Theta$ defining the propagation direction.
-\item[(4)] The orientation angle $\Psi$. Since $a$ is positive, this is in the range $[-\pi, \pi]$.
+\item[(4)] The orientation angle $\Psi$. Since $a_\ast$ is positive, this is in the range $[-\pi, \pi]$.
 \item[(5)] The SS-GC distance $R_0$. As for $M_\bullet$, this is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. We use the logarithm of $R_0$ in place of $R_0$.
-\item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 \citep{Reid1999} $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
+\item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999}. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
 \item[(8)] The angular momentum of the orbit about the MBH's spin axis $L_z$.
 \item[(9)] The Carter constant for the orbit $Q$.
 \item[(10)] The mass of the orbiting particle $\mu$. This will depend upon the type of object: whether it is a MS star, WD, NS or BH.
@@ -387,13 +387,11 @@ The azimuthal angle $\Phi$ is omitted, since it arbitrarily defines the orientat
 
 \subsection{Waveforms}
 
-Figures \ref{fig:Orbit_1}--\ref{fig:Orbit_7} show example waveforms to demonstrate some of the possible variations in the signal. All these assume $M_\bullet = 8.6 \times 10^{31}\units{kg} \simeq 4.3 \times 10^6 M_\odot$, $R_0 = 8.33\units{kpc}$, $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ and $\mu = 10^{31}\units{kg} \simeq 5 M_\odot$; other parameters are specified in the captions.
+\Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these asssume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other parameters are specified in the captions.
 \begin{figure}
   \begin{center}
-   %\subfloat[Detector I spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_1.tex}}} \quad
-   %\subfloat[Detector II spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_1.tex}}} \\
-    \caption{Waveform for model parameters: $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $L_z = 3.67 M_\bullet$, $Q = 0.409 M_\bullet^2$, $x_0 = 3.0 \times 10^{12}\units{m}$, $y_0 = 4.0 \times 10^{12}\units{m}$, $z_0 = 2.0 \times 10^{11}\units{m}$. The periapse distance is $r\sub{p} = 4.67 M_\bullet$, the SNR is $\rho = 8800$.}
-    \label{fig:Orbit_1}
+   \subfloat[]
+    \label{fig:Orbit_11}
   \end{center}
 \end{figure}
 \begin{figure}
@@ -401,7 +399,7 @@ Figures \ref{fig:Orbit_1}--\ref{fig:Orbit_7} show example waveforms to demonstra
    %\subfloat[Detector I spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_2.tex}}} \quad
    %\subfloat[Detector II spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_2.tex}}} \\
     \caption{Waveform for model parameters: $a = 0.5 M_\bullet$, $\Theta = \pi/3$, $L_z = 5.22 M_\bullet$, $Q = 0.055 M_\bullet^2$, , $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.5 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{11}\units{m}$. The periapse distance is $r\sub{p} = 11.77 M_\bullet$, the SNR is $\rho = 140$.}
-    \label{fig:Orbit_2}
+    \label{fig:Orbit_12}
   \end{center}
 \end{figure}
 \begin{figure}
@@ -409,26 +407,90 @@ Figures \ref{fig:Orbit_1}--\ref{fig:Orbit_7} show example waveforms to demonstra
    %\subfloat[Detector I spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_5.tex}}} \quad
    %\subfloat[Detector II spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_5.tex}}} \\
     \caption{Waveform for model parameters: $a = 0.2 M_\bullet$, $\Theta = \pi/2$, $L_z = 10.45 M_\bullet$, $Q = 2.18 M_\bullet^2$, $x_0 = 3.5 \times 10^{12}\units{m}$, $y_0 = 3.5 \times 10^{12}\units{m}$, $z_0 = 5.0 \times 10^{11}\units{m}$. The periapse distance is $r\sub{p} = 53.7 M_\bullet$, the SNR is $\rho = 2.2$.}
-    \label{fig:Orbit_5}
+    \label{fig:Orbit_13}
+\caption{Example burst waveforms from the galactic centre. The strain $\widetilde{h}\sub{I}(f)$ is indicated by the solid line, $\widetilde{h}\sub{II}(f)$ is indicated by the dot-dashed line. The LISA noise curve is indicated by the dashed line. The kludge has been formulated using oblate spheroidal coordinates.}
   \end{center}
-\end{figure}
-\begin{figure}
-  \begin{center}
-   %\subfloat[Detector I spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_6.tex}}} \quad
-   %\subfloat[Detector II spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_6.tex}}} \\
-    \caption{Waveform for model parameters: $a = 0.7 M_\bullet$, $\Theta = \pi/2$, $L_z = 5.22 M_\bullet$, $Q = 21.8 M_\bullet^2$, $x_0 = 2.8 \times 10^{12}\units{m}$, $y_0 = 2.8 \times 10^{12}\units{m}$, $z_0 = 3.0 \times 10^{12}\units{m}$. The periapse distance is $r\sub{p} = 22.7 M_\bullet$, the SNR is $\rho = 44$.}
-    \label{fig:Orbit_6}
-  \end{center}
-\end{figure}
-\begin{figure}
-  \begin{center}
-   %\subfloat[Detector I spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_I_7.tex}}} \quad
-   %\subfloat[Detector II spectrum]{\resizebox{0.45\textwidth}{!}{%\import{./Images/}{h_II_7.tex}}} \\
-    \caption{Waveform for model parameters: $a = 0.7 M_\bullet$, $\Theta = \pi/2$, $L_z = 15.7 M_\bullet$, $Q = 84.6 M_\bullet^2$, $x_0 = 1.0 \times 10^{12}\units{m}$, $y_0 = 4.2 \times 10^{12}\units{m}$, $z_0 = 1.0 \times 10^{12}\units{m}$. The periapse distance is $r\sub{p} = 148 M_\bullet$, the SNR is $\rho = 0.18$.}
-    \label{fig:Orbit_7}
-  \end{center}
+\label{fig:Examples}
 \end{figure}
 The orbits specified in figures \ref{fig:Orbit_1}, \ref{fig:Orbit_2} and \ref{fig:Orbit_6} all loop once about the MBH --- they are the simplest zoom-whirl orbits. The others, including the orbits of \figref{Energy}, are simpler trajectories that are recognisable as parabolic in shape. There is a clear distinction between the two types of orbit, as the loops introduce higher frequency harmonics.
+
+elseif orbit == 11 % One loop SNRo = 1.5638e+04, SNRs = 1.4137e+04.
+    P_BH(1) = 4.31e6*M_sun; % BH mass in kg
+    P_BH(2) = 0.9; % Specific angular momentum
+    P_BH(3) = pi/2; % Polar angle from spin axis
+    P_BH(4) = 0; % Azimuthal angle without loss of generality
+    P_BH(5) = pi/4; % Psi
+    P_BH(6) = 2.57e20; % Solar system-galactic centre distance in m
+    P_BH(7) = 95.607669 * pi/180;
+    P_BH(8) = 266.851760 * pi/180;
+    
+    m2s_1_M_BH = c_light / (G_grav * P_BH(1)); % metres^2/second to BH mass
+      
+    flat_peri = 0;
+    
+        [L_zs Q_Cs] = Orbit_angular_momenta(3.5, 0.05, 1, P_BH(2));
+
+        [L_zo Q_Co] = Orbit_angular_momenta(sqrt(3.5^2-P_BH(2)^2), 0.05, 1, P_BH(2));
+    
+    
+    theta = 1.56;
+    phi = pi/4;
+    
+    P_orbit(1) = L_zs(1) / m2s_1_M_BH; % Specific angular momentum about BH's z-axis 6.5e18!!!
+    P_orbit(2) = Q_Cs(1) / m2s_1_M_BH^2; % Carter's constant per unit mass squared
+    P_orbit(3) = 10*M_sun; % Mass of orbitting body in kg
+    P_orbit(4) = 0; % Starting coordinates for orbit in BH's coordinates, time set to zero without loss of generality
+    P_orbit(5) = 100e11*sin(theta)*cos(phi); % x
+    P_orbit(6) = 100e11*sin(theta)*sin(phi); % y
+    P_orbit(7) = 100e11*cos(theta); % z
+elseif orbit == 12 % One large loop SNRo = 97.2716 SNRs = 97.1458
+    P_BH(1) = 4.31e6*M_sun; % BH mass in kg
+    P_BH(2) = 0.5; % Specific angular momentum
+    P_BH(3) = 0; % Polar angle from spin axis
+    P_BH(4) = 0; % Azimuthal angle without loss of generality
+    P_BH(5) = 0; % Psi
+    P_BH(6) = 2.57e20; % Solar system-galactic centre distance in m
+    P_BH(7) = 95.607669 * pi/180;
+    P_BH(8) = 266.851760 * pi/180;
+    
+    m2s_1_M_BH = c_light / (G_grav * P_BH(1)); % metres^2/second to BH mass
+    
+    [L_z Q_C] = Orbit_angular_momenta(20, 1.5, 1, P_BH(2));
+    
+    theta = pi/6;
+    phi = pi/4;
+    
+    P_orbit(1) = L_z(1) / m2s_1_M_BH; % Specific angular momentum about BH's z-axis 6.5e18!!!
+    P_orbit(2) = Q_C(1) / m2s_1_M_BH^2; % Carter's constant per unit mass squared
+    P_orbit(3) = 10*M_sun; % Mass of orbitting body in kg
+    P_orbit(4) = 0; % Starting coordinates for orbit in BH's coordinates, time set to zero without loss of generality
+    P_orbit(5) = 100e11*sin(theta)*cos(phi); % x
+    P_orbit(6) = 100e11*sin(theta)*sin(phi); % y
+    P_orbit(7) = 100e11*cos(theta); % z
+elseif orbit == 13 % Dull SNRo = 10.7168 SNRs = 10.7157
+    P_BH(1) = 4.31e6*M_sun; % BH mass in kg
+    P_BH(2) = 0.3; % Specific angular momentum
+    P_BH(3) = pi/3; % Polar angle from spin axis
+    P_BH(4) = 0; % Azimuthal angle without loss of generality
+    P_BH(5) = pi/6; % Psi
+    P_BH(6) = 2.57e20; % Solar system-galactic centre distance in m
+    P_BH(7) = 95.607669 * pi/180;
+    P_BH(8) = 266.851760 * pi/180;
+    
+    m2s_1_M_BH = c_light / (G_grav * P_BH(1)); % metres^2/second to BH mass
+    
+    [L_z Q_C] = Orbit_angular_momenta(50, 0, 1, P_BH(2));
+    
+    theta = pi/2;
+    phi = pi/4;
+    
+    P_orbit(1) = L_z(1) / m2s_1_M_BH; % Specific angular momentum about BH's z-axis 6.5e18!!!
+    P_orbit(2) = Q_C(1) / m2s_1_M_BH^2; % Carter's constant per unit mass squared
+    P_orbit(3) = 10*M_sun; % Mass of orbitting body in kg
+    P_orbit(4) = 0; % Starting coordinates for orbit in BH's coordinates, time set to zero without loss of generality
+    P_orbit(5) = 100e11*sin(theta)*cos(phi); % x
+    P_orbit(6) = 100e11*sin(theta)*sin(phi); % y
+    P_orbit(7) = 100e11*cos(theta); % z
 
 The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Using spherical polars makes negligible difference: on the scale shown here the only discernible difference would be in the spikes of the high-frequency tail of the orbits with smaller periapses, and even that is minor. We conclude that the choice of coordinates for the kludge approximation is unimportant, and shall continue using oblate-spheroidal coordinates for the rest of this work.
 
@@ -466,7 +528,7 @@ The form of the posterior distribution will depend upon the nature of the prior 
 \end{equation}
 The Fisher information matrix gives the uncertainty associated with the estimated parameter values, in this case the maximum-likelihood values.
 
-If the prior were to restrict the allowed range for a parameter, for example, as is the case for the spin $a$, then the posterior would be a truncated Gaussian, and $\boldsymbol{\Gamma}^{-1}$ may no longer represent the variance-covariance.
+If the prior were to restrict the allowed range for a parameter, for example, as is the case for the spin $a_\ast$, then the posterior would be a truncated Gaussian, and $\boldsymbol{\Gamma}^{-1}$ may no longer represent the variance-covariance.
 
 If the prior were approximately Gaussian with variance-covariance matrix $\boldsymbol{\Sigma}_0$, then the posterior would also be Gaussian.\footnote{If we only know the typical value and spread of a parameter then a Gaussian is the maximum entropy prior (\citealt{Jaynes2003}, section 7.11): the prior that is least informative given what we do know.} The posterior variance-covariance would be \citep{Cutler1994, Vallisneri2008}
 \begin{equation}
@@ -481,13 +543,13 @@ To understand what we can from parabolic encounters alone, we will look at the i
 
 \subsection{Data set}
 
-To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms were computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $8.33~\mathrm{kpc}$.
+To investigate the variation of inverse Fisher matrix elements for different orbits, waveforms were computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $M_\bullet = 4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates at a distance of $R_0 = 8.33~\mathrm{kpc}$.
 
 Four different spin values were chosen $a_\star = 0, 0.3, 0.6, 0.9$. Waveforms were calculated for two different compact objects, one of mass $1.4 M_\odot$ as appropriate for a neutron star, one of mass $10 M_\odot$ represented a black hole. For each spin and mass, orbits with three different inclinations $\iota = \pi/12, \pi/4, 5\pi/12$ were calculated, each for both prograde and retrograde rotation.
 
 Waveforms were computed for orbits with periapses uniformly separated in logarithmic space between $4 r\sub{S}$ and $50 r\sub{S}$, where $r\sub{S} = 2 GM_\bullet / c^2$ corresponds to the Schwarzschild radius. For an initial run, six different radii were chosen. For a subsequent run, 20 different radii were randomly chosen for each spin, mass, inclination and sense of rotation.
 
-In addition to this, the initial position, orientation of the MBH, and orbital position of LISA were varied: for each combination of MBH spin, compact object mass, inclination, rotation sense and periapsis, 20 random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution over the permitted range) were used for the initial run, and 10 were used for the second run.
+In addition to this, the initial position, orientation of the MBH, and orbital position of LISA were varied: for each combination of MBH spin, compact object mass, inclination, rotation sense and periapsis, 20 random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution over the permitted range) were used for the initial run, and 10 were used for the second run. The initial position was chosen such that the inital distance from the MBH was $10^{13}~\mathrm{m} \simeq 785 r_\sub{S}$
 
 \subsection{Inverse Fisher matrices and SNR}
 
@@ -500,7 +562,7 @@ This should be proportional to $\mu^{-1}$. We will denote the mass-normalised qu
 \hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}; \quad \hat{\sigma}_a = \mu\sigma_a.
 \end{equation}
 
-We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes (\citealt{Mackay2003}, chapter 22). Using median values yields results that are quantitatively similar.}
+We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes (\citealt{Mackay2003}, sctions 22.1, 23.3). Using median values yields results that are quantitatively similar.}
 
 There exists a correlation between the periapse radius and SNR, as shown in \figref{SNR}.
 \begin{figure}
@@ -510,7 +572,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that the $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
 The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread. Some uncertainties show a dependence upon the MBH spin or the orbital inclination.
 \begin{figure*}
@@ -551,7 +613,7 @@ The uncertainty for the majority of parameters seem to be reasonably well descri
 \begin{table*}
 \begin{minipage}{0.65\textwidth}
  \centering
- \caption{Best fit parameters for power-laws of the form $\log\left(\Xi) = A\log(\hat{\rho}/M_\odot^{-1}\right) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
+ \caption{Best fit parameters for power-laws of the form $\log(\Xi) = A\log\left(\hat{\rho}/M_\odot^{-1}\right) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
  \label{tab:lines}
  \begin{tabular}{@{} l l D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{1.2} @{}}
  \hline
@@ -571,14 +633,14 @@ The uncertainty for the majority of parameters seem to be reasonably well descri
   & $\iota = \pi/4$ & -1.06 & 17.60 & -0.90 & 17.55 & 1.12 \\
   & $\iota = 5\pi/12$ & -0.98 & 17.26 & -0.68 & 16.90 & 0.23 \\
  $\hat{\sigma}_Q/\left(G^2 M_\bullet^2 c^{-2}M_\odot\right)$ & $\iota = \pi/12$ & -1.35 & 36.17 & -0.98 & 35.87 & 0.26 \\
-  & $\iota = \pi/4$ & -1.27 & 36.93 & -1.00 & 36.74 & 0.25 \\
-  & $\iota = 5\pi/12$ & -1.10 & 36.87 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.06 \\
- $\hat{\sigma}_\mu/(\mu M_\odot)$ & \multicolumn{1}{c}{--} & -0.96 & 0.30 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.60 \\
- $\hat{\sigma}_{x_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.97 & 2.36 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.10 \\
- $\hat{\sigma}_{y_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.96 & 2.35 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.07 \\
- $\hat{\sigma}_{z_0}/\left(5 \times 10^5 r_\mathrm{S} M_\odot\right)$  & $\iota = \pi/12$ & -0.93 & 2.83 & -0.72 & 2.63 & 0.27 \\
-  & $\iota = \pi/4$ & -0.80 & 2.65 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.41 \\
-  & $\iota = 5\pi/12$ & -0.72 & 2.36 & -0.89 & 2.56 & 0.49 \\
+  & $\iota = \pi/4$ & -1.27 & 36.93 & -1.01 & 36.75 & 0.25 \\
+  & $\iota = 5\pi/12$ & -1.11 & 36.88 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.06 \\
+ $\hat{\sigma}_\mu/(\mu M_\odot)$ & \multicolumn{1}{c}{--} & -0.97 & 0.30 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.60 \\
+ $\hat{\sigma}_{x_0}/\left(r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.97 & 1.42 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.11 \\
+ $\hat{\sigma}_{y_0}/\left(r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.96 & 1.42 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.08 \\
+ $\hat{\sigma}_{z_0}/\left(r_\mathrm{S} M_\odot\right)$  & $\iota = \pi/12$ & -0.94 & 1.89 & -0.72 & 1.70 & 0.27 \\
+  & $\iota = \pi/4$ & -0.80 & 1.72 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.41 \\
+  & $\iota = 5\pi/12$ & -0.77 & 1.43 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.70 \\
  \hline
  \end{tabular}
 \end{minipage}
@@ -588,17 +650,17 @@ For small SNRs, the Fisher matrix is no longer an appropriate estimate for the i
 
 The uncertainty in the MBH mass and in the GC distance show a clear kink, and are better fit by a broken power-law. Above the break, higher SNRs give diminished returns. A broken power-law does not improve the fit of any of the other uncertainties which only depend upon the SNR.
 
-The fits for $x_0$ and $y_0$, and for $\overline{\Theta}$ and $\overline{\Phi}$ are practically identical. In both cases the variables are physically similar, so this behaviour is as expected.
+The fits for $x_0$ and $y_0$, and for $\overline{\Theta}$ and $\overline{\Phi}$ are practically identical. In both cases the variables are physically similar.
 
 Unsurprisingly, the uncertainty in the spin depends upon the spin parameter. Larger values of $a_\ast$ give smaller uncertainties: at the same periapse radius a larger spin parameter would have a greater impact on the spacetime, and thus the orbit. However, $\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable. The complicated behaviour reflects the intricate dependence of the shape of the trajectory, which determines the waveform, upon the orbital parameters, including the initial position, as well as the background spacetime. There is more scatter for smaller $a_\ast$, perhaps reflecting that a small change in a small spin parameter has a greater impact on the trajectory than a small change in a large spin parameter.
 
 The orbital inclination influences $\sigma_{L_z}$, $\sigma_Q$ and $\sigma_{z_0}$. The first two are easily understood, since the inclination determines the value of the two components of angular momenta for a given $r\sub{p}$. The dependence in $\sigma_{z_0}$ can be explained by considering motion out of the equatorial plane: this is determined by the inclination, which sets the momentum out of the plane, and the initial position, which specifies the trajectory.
 
-The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour is expected as a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it plays the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
+The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour occurs because a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it plays the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
 
 A broken power-law better fits $\hat{\sigma}_{L_z}$ for $\iota = 5\pi/12$ and $\pi/4$, and $\hat{\sigma}_Q$ for $\iota = \pi/12$ and $\pi/4$. In both cases the change in gradient for the $\iota = \pi/4$ case is slight.
 
-The uncertainty in $z_0$ is smaller for larger inclinations, as then we have greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$ and $5\pi/12$. The latter case is almost certainly the result of the large degree of scatter for high SNR, which is again a consequence of the sensitivity of the trajectory upon the orbital parameters.
+The uncertainty in $z_0$ is smaller for larger inclinations, as then we have greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$.
 
 Only the spin and inclination appear to influence the SNR-uncertainty relations. The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticeable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
 
@@ -610,11 +672,11 @@ We have no {\it a priori} knowledge about the CO, or its orbit, so anything we c
 
 Similarly, we have no information on the orientation of the MBH, so any measurement for which $\sigma_\Theta$ or $\sigma_\Psi$ is less than $2\pi$ would be of interest. This happens for very low SNR for both angles, so again a detection would allow us to infer something new. An uncertainty of $\pi/72 = 5\deg$ corresponds to $\rho \simeq 9.78$ ($5.76$) for $\Theta$ and $\rho \simeq 29.6$ ($25.1$) for $\Psi$.
 
-We have existing measurements for the position of the MBH. The current constraints on $\overline{Theta}$ and $\overline{\Phi}$ cannot be matched by observing EMRBs. The uncertainty in $\ln R_0$ based on existing measurements is $\sigma_{\ln R_0}^0\simeq 0.042$. This could be bettered by an EMRB with $\rho = 2.68$ ($2.75$).
+We have existing measurements for the position of the MBH. The current constraints on $\overline{\Theta}$ and $\overline{\Phi}$ cannot be matched by observing EMRBs. The uncertainty in $\ln R_0$ based on existing measurements is $\sigma_{\ln R_0}^0\simeq 0.042$. This could be bettered by an EMRB with $\rho \simeq 2.68$ ($2.75$).
 
 Of paramount interest are the MBH mass and spin. The current uncertainty in the mass is $\sigma_{M_\bullet}^0 = 0.36 \times 10^6 M_\odot$. This can be equalled for very low SNR, $\rho \simeq 0.11$ ($0.12$), so any detection should be able to improve measurement for $M_\bullet$. A $0.1\%$ accuracy could be obtained for $\rho \approx 10.4$ ($8.11$).
 
-The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
+The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast = 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
 \section{Energy spectra}\label{sec:Energy}
 
@@ -647,7 +709,7 @@ If we now integrate to find the total energy emitted we obtain
 E = \frac{c^3}{32\pi G} \int{\dd\Omega}\int_{-\infty}^{\infty}{\dd t} \, \diff{H_{ij}}{t}\diff{H^{ij}}{t}.
 \label{eq:integrate_E}
 \end{equation}
-Since we are considering all time, the localization of the energy is no longer of importance and it is unnecessary to average over several periods. Switching to Fourier representation $\widetilde{H}_{ij}(f) = \mathscr{F}\{H_{ij}(t)\}$,
+Since we are considering all time, the localization of the energy is no longer of importance and it is unnecessary to average over several periods. Switching to Fourier representation $\widetilde{H}_{ij}(f) = \mathscr{F}\left\{H_{ij}(t)\right\}$,
 \begin{equation}
 E = \frac{\pi c^3}{4 G} \int{\dd\Omega}\int_{0}^{\infty}{\dd f} \, f^2 \widetilde{H}^{ij}(f)\widetilde{H}_{ij}^*(f),
 \label{eq:total_E}
@@ -729,15 +791,13 @@ We have outlined an approximate method of generating gravitational waveforms for
 
 The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms for large periapses, indicating that they have the correct weak-field form. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses the exact geodesics of the Kerr spacetime.
 
-Using the NK waveforms we have conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. Unfortunately, it is necessary to use a prior for the distance to the GC because of a large degeneracy with the compact object's mass, and we are unable to place significantly stricter constraints on this value.
+Using the NK waveforms we have conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. 
 
 From our investigation it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} = 50 M_\bullet$. This translates to a distance of $10^{11}\units{m}$ or $10^{-5}\units{pc}$.
 
 Before we can quote results for how accurately we can determine the various parameters, we must consider the probability of each orbit. This will be the subject of a future paper, building upon the earlier results of \citet{Rubbo2006} and \citet{Hopman2007}, who only considered the probability for a signal to be detectable. Using a model for the galactic centre it is possible to define distributions for angular momenta $L_z$ and $Q$, for a species of mass $\mu$. With these it is possible to estimate the event rate, and define an expectation value for the elements of the variance-covariance matrix $\boldsymbol{\Sigma}$. This would describe how much information, on average, we could hope to obtain from EMRB observations.
 
-It will also be necessary to consider on which orbits MS stars would survive without being tidally disrupted \citep{Kobayashi2004}.
-
-Some consideration should also be given to methods of fitting a waveform to an observed signal. Given an input signal, what is the best algorithm for finding the optimal set of parameters to characterise the observed waveform? It is necessary to consider this to check if there are degenerate combinations of parameters that produce similar waveforms; if these are sufficiently distinct in parameter space we would not be aware of them by only considering the region immediately about the ML point. In this work we have assumed that we can correctly identify the waveform's parameters. We do not intend to use NK waveforms to actually identify real GWs: more accurate methods should be employed for that; the point of this study would be to identify potential pitfalls that could be encountered when using accurate waveforms.
+Some consideration should also be given to methods of fitting a waveform to an observed signal. Given an input signal, what is the best algorithm for finding the optimal set of parameters to characterise the observed waveform? It is necessary to consider this to check if there are degenerate combinations of parameters that produce similar waveforms; a first step would to be to consider the off-diagonal terms of the inverse Fisher matrix with give parameter correlations. For example there is a large degeneracy between the GC distance and the compact object mass, fortunately this can be mitigated through the use of prior knowledge of $R_0$. However, if there are degenerate regions sufficiently distinct in parameter space we would not be aware of them by only considering the region immediately about the ML point and a Fisher matrix analysis is insufficient. In this work we have assumed that we can correctly identify the waveform's parameters. We do not intend to use NK waveforms to actually identify real GWs: more accurate methods should be employed for that; the point of this study would be to identify potential pitfalls that could be encountered when using accurate waveforms.
 
 We have shown that the uncertainties in the maximum likelihood parameters as obtained from a Fisher matrix analysis are correlated with the SNR. In most cases they may be approximated as simple power laws, although this does not encapsulate the full richness of phenomenology, and may break down at small periapses, most notably for the spin parameter. The dependence on compact object mass can easily be removed by scaling.
 
@@ -756,14 +816,14 @@ When we perform a Fourier transform using a computer we must necessarily only tr
 \begin{equation}
 \tilde{h}'(f) = \intd{-\tau/2}{\tau/2}{h(t)e^{2\pi i ft}}{t} = \left[\tilde{h}(f) \ast \tau \sinc(\pi f\tau)\right],
 \end{equation}
-where $\tilde{h}(f) = \mathscr{F}\{h(t)\}$ is the unwindowed Fourier transform of the infinite signal. This windowing of the data is a problem inherent in the method and results in spectral leakage.
+where $\tilde{h}(f) = \mathscr{F}\left\{h(t)\right\}$ is the unwindowed Fourier transform of the infinite signal. This windowing of the data is a problem inherent in the method and results in spectral leakage.
 
 \Figref{Windowing_Rectangular} shows the computed Fourier transform for an example parabolic encounter. The waveform has two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. The $\order{1/{f}}$ behaviour of the $\sinc$ gives the shape of the tail. This has possibly been misidentified in figure 8 of \citet{Burko2007} as the characteristic strain for parabolic encounters.
 
 \begin{figure*}
   \begin{center}
    \subfloat[Spectrum using no window. The calculated SNR is $\rho = 12.5$.]{\label{fig:Windowing_Rectangular} \includegraphics[width=0.45\textwidth]{Fig_h_I_9_rectangular}} \quad
-   \subfloat[Spectrum using a Nuttall window. The calculated SNR is $\rho = 8.5$.]{\label{fig:Windowing_Nuttal} \includegraphics[width=0.45\textwidth]{Fig_h_I_9_Nuttall}}
+   \subfloat[Spectrum using a Nuttall window. The calculated SNR is $\rho = 8.5$.]{\label{fig:Windowing_Nuttall} \includegraphics[width=0.45\textwidth]{Fig_h_I_9_Nuttall}}
     \caption{Example spectra calculated using (a) a rectangular window and (b) Nuttall's four-term window with continuous first derivative \citep{Nuttall1981}. The spin of the MBH is $a_\ast = 0.5$, the mass of the orbiting CO is $\mu = 10 M_\odot$, the periapsis is $r\sub{p} = 25 r\sub{S}$ and the inclination is $\iota = 0.1$. The high-frequency tail is the result of spectral leakage. The level of the LISA noise curve is indicated by the dashed line. The spectra are from detector I, detector II has similar spectra.}
     \label{fig:Windowing}
   \end{center}
@@ -827,7 +887,7 @@ There is no window that performs best everywhere.
 
 The waveforms have two distinct regions: a low-frequency curve, and a high-frequency tail. The low-frequency signal is the spectrum we are interested in; the high-frequency components are the result of spectral leakage. Using the Nuttall window, the spectral leakage is greatly reduced; the peak sidelobe is lower, and the tail decays away as $1/{f^3}$ instead of $1/{f}$.
 
-The choice of window function will influence the results as it changes the form of $\widetilde{h}(f)$. The variation in results between windows depends upon the signal: variation is greatest for low frequency bursts, as then there is greatest scope for leakage into the LISA frequency band; variation is least significant for zoom-whirl orbits as then there are strong signals to relatively high frequencies, and spectral leakage is confined to mostly below the noise level. To quantify the influence of window functions, we studied the diagonal elements of the Fisher matrix from a selection of orbits with periapsis ranging from $\sim 10 M_\bullet$--$300 M_\bullet$. For orbits with small periapses all five windows (excluding the rectangular window) produced very similar results: the Planck-taper window differed by a maximum of $\sim 0.5\%$ from the others, which all agreed to better than $0.1\%$. The worst case results came from the lowest frequency orbits, then the Planck-taper window deviated by a maximum of $\sim 30\%$ in the value for the Fisher matrix elements, the Blackman-Harris deviated by $\sim 20\%$ and the others agreed to better than $\sim 5\%$. The Planck-taper window's performance is limited by its poor sidelobe behaviour; the Blackman-Harris has the worst performance at high frequency.
+The choice of window function will influence the results as it changes the form of $\widetilde{h}(f)$. The variation in results between windows depends upon the signal: variation is greatest for low frequency bursts, as then there is greatest scope for leakage into the LISA frequency band; variation is least significant for zoom-whirl orbits as then there are strong signals to relatively high frequencies, and spectral leakage is confined to mostly below the noise level. To quantify the influence of window functions, we studied the diagonal elements of the Fisher matrix from a selection of orbits with periapsis ranging from $\sim 5 r\sub{S}$--$150 r\sub{S}$. For orbits with small periapses all five windows (excluding the rectangular window) produced very similar results: the Planck-taper window differed by a maximum of $\sim 0.5\%$ from the others, which all agreed to better than $0.1\%$. The worst case results came from the lowest frequency orbits, then the Planck-taper window deviated by a maximum of $\sim 30\%$ in the value for the Fisher matrix elements, the Blackman-Harris deviated by $\sim 20\%$ and the others agreed to better than $\sim 5\%$. The Planck-taper window's performance is limited by its poor sidelobe behaviour; the Blackman-Harris has the worst performance at high frequency.
 
 For this work we have used the Nuttal window. Its performance is comparable to the Kaiser-Bessel and Planck-Bessel windows; however it is computationally less expensive to implement as it does not contain Bessel functions. Results should be accurate to a few percent at worst, and results from closer orbits, which provide better constraints, should be less affected by the choice of window function. Therefore, we are confident that none of our conclusions is sensitive to the particular windowing method implemented.
 
