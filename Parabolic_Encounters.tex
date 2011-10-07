@@ -367,8 +367,8 @@ There is one remaining complication regarding signal analysis: since we are Four
 The shape of the waveform depends on a number of parameters: those defining the MBH; those defining the companion object on its orbit, and those defining the LISA detector. Let us define $\boldsymbol{\lambda} = \left\{\lambda^1, \lambda^2, \ldots, \lambda^N\right\}$ as the set of $N$ parameters which specify the GW. For our model, the input parameters are:
 \begin{enumerate}
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
-\item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). We will use the convention that $a_\ast$ is positive, and will change the sense of rotation by flipping the $z$-axis.
-\item[(4)] The orientation angle $\Psi$. Since $a_\ast$ is positive, this is in the range $[-\pi, \pi]$.
+\item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). To simplify the numerics, we use the parameter $q = \tanh^{-1} a_\ast$ in the code.
+\item[(4)] The orientation angle $\Psi$.
 \item[(5)] The SS-GC distance $R_0$. As for $M_\bullet$, this is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. We use the logarithm of $R_0$ in place of $R_0$.
 \item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999}. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
 \item[(8)] The angular momentum of the orbit about the MBH's spin axis $L_z$.
@@ -672,8 +672,8 @@ The two spectra appear to be in good agreement, showing the same general shape i
 Comparing the total energy fluxes, ratios of the various energies are plotted in \figref{Energy_ratio}.
 \begin{figure*}
   \begin{center}
-   \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_peri}} \quad
-   \subfigure[]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_orbit}}
+   \subfigure[Versus periapsis]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_peri}} \quad
+   \subfigure[Versus amount of rotation]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_orbit}}
     \caption{Ratios of energies as a function of periapsis $r\sub{p}$ and $2\pi$ divided by the total angle of rotation in one orbit $\Delta\phi$ ($2\pi/\Delta\phi = 1$ for a Keplerian orbit). The solid line shows the ratio of the numerical kludge and Martel energies $E\sub{NK}/E\sub{M}$; the dashed line shows the ratio of the NK energy calculated using only the mass quadrupole term and the Martel energy $E\sub{NK(Q)}/E\sub{M}$; the dot-dashed line shows the ratio of the quadrupole and quadrupole-octupole NK energies $E\sub{NK(Q)}/E\sub{NK}$, and the dotted line shows the ratio of the Peters and Mathews and quadrupole NK energies $E\sub{PM}/E\sub{NK(Q)}$. Compare with figure 4 of \citet{Gair2005}.}
     \label{fig:Energy_ratio}
   \end{center}
@@ -721,7 +721,7 @@ A natural continuation of this work would be to consider EMRBs from other MBHs. 
 
 \section*{Acknowledgments}
 
-The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices. CPLB is supported by STFC. JRG is supported by the Royal Society.
+The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices, and are grateful to Dave Green for helpful suggestions regarding apodization. CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \bibliographystyle{mn2e}
 \bibliography{Parabolic}
