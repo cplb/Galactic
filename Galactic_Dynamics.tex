@@ -88,6 +88,7 @@ and we have equipartition of energy per unit mass~\citep{Lynden-Bell1967}. This 
 For bound orbits the DF can be approximated as a power law~\citep{Peebles1972}
 \begin{equation}
 f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma^2}\right)^{p_M},\quad\mathcal{E} < 0.
+\label{eq:Bound_DF}
 \end{equation}
 The exponent $p_M$ varies depending upon the mass of the object, determining mass segregation. For a system with a single mass component, \citet{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as, although it will change slightly with $p$, variation is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
 
@@ -133,7 +134,7 @@ v_\perp^2 = v_\phi^2 + v_\theta^2 = v^2 - v_r^2.
 \end{equation}
 Under this change of variables
 \begin{equation}
-\dd^3v = \dd v_r \dd v_\phi \dd v_\theta \rightarrow 2\pi v_\perp \dd v_r \dd v_\perp.
+\dd^3v = \dd v_r \dd v_\phi \dd v_\theta \rightarrow 2\pi v_\perp \,\dd v_r \,\dd v_\perp.
 \end{equation}
 The specific energy and angular momentum are given by
 \begin{align}
@@ -156,17 +157,17 @@ the periapse is the only turning point for orbits with $e > 1$. Since we now hav
 \end{align}
 Using this, we may rewrite our velocity element as
 \begin{equation}
-\dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM}{r}\right)^2\dd e \dd r\sub{p}.
+\dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM}{r}\right)^2\,\dd e \,\dd r\sub{p}.
 \end{equation}
 As a consequence of our assumed spherical symmetry, the volume element can be expressed as
 \begin{equation}
-\dd^3r = 4\pi r^2 \dd r.
+\dd^3r = 4\pi r^2 \,\dd r.
 \end{equation}
 Thus, the phase space volume element can be expressed as
 \begin{equation}
-\dd^3r\dd^3v = \frac{4\pi^2(GM)^2e}{v_rr\sub{p}}\dd r\dd e \dd r\sub{p}.
+\dd^3r\dd^3v = \frac{4\pi^2(GM)^2e}{v_rr\sub{p}}\,\dd r\,\dd e \,\dd r\sub{p}.
 \end{equation}
-The number of stars in an element $\dd r\dd e \dd r\sub{p}$ is
+The number of stars in an element $\dd r\,\dd e\,\dd r\sub{p}$ is
 \begin{equation}
 n(r, e, r\sub{p}) = \frac{4\pi^2(GM)^2e}{v_rr\sub{p}}f(\mathcal{E}).
 \end{equation}
@@ -213,7 +214,7 @@ To generate a representative sample for the orbital parameters $e$ and $r\sub{p}
 
 \subsection{The inner cut-off}
 
-From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r\sub{p}$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, however should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite cut-off, while the others use statistical arguments; they are therefore true for a typical star, and it is unlikely that a star would be found beyond the imposed limits.
+From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r\sub{p}$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, however should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite cut-off, while the others use statistical arguments; they are therefore true for a typical star, and it is unlikely that a star would be found beyond the imposed limits. For these methods we will need to define a reference timescale for relaxation, over which two-body interactions lead to significant changes in the orbital properties of the star. This is done in \secref{Relax}, with further details found in \apref{Timescale}.
 
 \subsubsection{Tidal disruption}
 
@@ -226,53 +227,23 @@ where $R_M$ is the radius of the star~\citep{Hills1975, Rees1988, Kobayashi2004}
 
 Tidal disruption is most significant for MS stars since they are least dense; calculated in this way, only MS stars would be tidally disrupted outside of the MBH's event horizon~\citep{Sigurdsson1997}. The tidal radius defines the cut-off for periapsis of high eccentricity ($e \ga 1$) orbits~\citep{Lightman1977}.
 
+\subsubsection{Relaxation timescale}\label{sec:Relax}
+
+The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The potential of the stars may be split into two components: the smooth background potential representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion.
+
+The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation timescale characterises the time taken for this to happen~\citep{Binney1987}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation timescale. For a system with a purely Maxwellian distribution, the timescale has form
+\begin{equation}
+\tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
+\end{equation}
+where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1960} defined the timescale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. \citet{Bahcall1977} define a reference timescale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference timescale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference timescale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citep{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the timescale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+
+All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
+
 \subsubsection{Gravitational wave inspiral}
 
-Stars orbiting about the black hole will continually radiate energy and angular momentum causing them to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries, the orbit-averaged rate of change of the periapsis and eccentricity for bound orbits are
-\begin{align}
-\left\langle\diff{r\sub{p}}{t}\right\rangle = {} & -\frac{64}{5}\frac{\Theta}{r\sub{p}^3}\frac{(1 - e)^{3/2}}{(1 + e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right) \\
-\left\langle\diff{e}{t}\right\rangle = {} & -\frac{304}{5}\frac{\Theta}{r\sub{p}^4}\frac{e(1 - e)^{3/2}}{(1 + e)^{5/2}}\left(1 + \frac{121}{304}e^2\right),
-\end{align}
-where we have introduced
-\begin{equation}
-\Theta = \frac{G^3M_\bullet M(M_\bullet + M)}{c^5}.
-\end{equation}
-For a circular orbit the inspiral time from initial periapsis $r\sub{p0}$ is
-\begin{equation}
-\tau\sub{c}(r\sub{p0}) = \frac{5}{256}\frac{r\sub{p0}^4}{\Theta}.
-\end{equation}
-For an orbit of finite eccentricity ($0 < e < 1$), we can solve for the periapsis as a function of eccentricity
-\begin{equation}
-r\sub{p}(e) = \Lambda(1 + e)^{-1}\left(1 + \frac{121}{304}e^2\right)^{870/2299}e^{12/19},
-\end{equation}
-where $\Lambda$ is a constant fixed by the initial conditions: for an orbit with initial eccentricity $e_0$
-\begin{equation}
-\Lambda = (1 + e_0)\left(1 + \frac{121}{304}e_0^2\right)^{-870/2299}e_0^{-12/19}r\sub{p0}.
-\end{equation}
-The inspiral is complete when the eccentricity has decayed to zero. Consequently the inspiral time is~\citep{Peters1964}
-\begin{equation}
-\tau(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\Lambda^4}{\Theta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
-\end{equation}
-This is best evaluated numerically, however it may be written in closed form as
-\begin{align}
-\tau(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
-  {} & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
-\end{align}
-using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$ (\citealt{Olver2010}, 16.15.1).\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
+Stars orbiting about the black hole will continually emit gravitational radiation, this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries 
 
-We will assume that an orbit is depleted of stars if the inspiral time-scale is shorter than the relaxation time-scale. This indicates the characteristic time for two-body collisions to change the velocity of the star by order of itself~\citep{Binney1987}, and so indicates the time over which scattering may repopulate the orbit. Following \citep{Spitzer1971}, a relaxation time-scale can be estimated from the diffusion coefficient of the Fokker-Planck equation (\citealt{Binney1987}, section 8.3.4), for a system with a purely Maxwellian distribution
-\begin{equation}
-\tau\sub{R} \simeq 0.34\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
-\end{equation}
-where $\rho_\star$ is the mass density and the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$. \citet{Bahcall1977} find a similar characteristic time-scale, but with numerical prefactor $3/4\sqrt{8\pi} \simeq 0.15$. We shall adopt the former to be conservative. From this we estimate the relaxation time for an orbit as
-\begin{equation}
-T\sub{R}(r\sub{p},e) \approx \left(\frac{\langle v(r)\rangle\sub{orb}}{\sigma}\right)^3\frac{M_\star\rho_\star}{\langle M(r)\rangle\sub{orb}\langle \rho(r)\rangle\sub{orb}}\tau\sub{R}
-\end{equation}
-using the velocity $\langle v(r)\rangle\sub{orb}$, stellar mass of encountered stars $\langle M(r)\rangle\sub{orb}$ and density $\langle \rho(r)\rangle\sub{orb}$ averaged over the duration of the orbit as characteristic quantities.\footnote{For comparison, \citet{Hopman2005} approximate the typical relaxation time associated with an orbit with the value at the semimajor axis.} The subscript $\mathrm{orb}$ indicates that we average along the trajectory of the orbit specified by parameters $\left\{r\sub{p},e\right\}$.\footnote{In calculating $\langle \rho(r)\rangle\sub{orb}$ and $\langle M(r)\rangle\sub{orb}$ we include the tidal disruption of stars but not the possible depopulation of orbits due to inspiral or collisions. This would require solving iteratively for $n(r)$, which is not justifiable at this level of approximation. The relaxation time-scale will be underestimated using this simple approach. The error will be greatest for low eccentricity orbits which spend most of their time in the same region of space.} The average velocity may be written in closed form using the complete elliptic integral of the second kind,
-\begin{equation}
-\frac{\langle v(r)\rangle\sub{orb}}{\sigma} = \frac{2 E(e)}{\pi}\sqrt{\frac{r\sub{c}(1 - e)}{r\sub{p}}},
-\end{equation}
-however the other averages are best evaluated numerically.
+We will assume that an orbit is depleted of stars if the inspiral time-scale is shorter than the relaxation time-scale.
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation; we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the relative changes in eccentricity $\Delta e / e$ and periapsis $\Delta r\sub{p} / r\sub{p}$ for an extreme mass-ratio binary are less than $\sqrt{e}\order{\eta}$, where $\eta = M/M_\bullet$ is small, and so are only important for very high eccentricity orbits (\apref{Unbound}). These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
 
@@ -282,7 +253,7 @@ As a consequence of the higher densities in the galactic core, stars may undergo
 \begin{equation}
 \delta K = n(r) A v(r,e,r\sub{p})\delta t,
 \end{equation}
-where $A$ is the star's cross-sectional area for a grazing collision. We shall assume that the relative velocity of the colliding stars is much greater than the escape velocity of the star so we may neglect the effects of gravitational focussing, then the cross-sectional area is simply the geometric $A = \pi R_\star^2$.
+where $A$ is the star's cross-sectional area for a grazing collision. We shall assume that the relative velocity of the colliding stars is much greater than the escape velocity of the star so we may neglect the effects of gravitational focusing, then the cross-sectional area is simply the geometric $A = \pi R_\star^2$.
 
 For circular orbits we can find the radius at which collisions will lead to disruptions by setting $\delta K = 30$ and $\delta t = \tau\sub{R}$. We use the relaxation time-scale for the system as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, we have for bound orbits
 \begin{equation}
@@ -303,7 +274,112 @@ CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \appendix
 
-\section[]{Evolution of orbital parameters from gravitational wave emission}
+\begin{onecolumn}
+
+\section{Chandrasekhar's relaxation timescale}\label{sec:Timescale}
+
+\citet{Chandrasekhar1960} defined a relaxation timescale for a stellar system by approximating the fluctuations in the stellar gravitational potentail as a series of two-body encounters. The time over which the squared change in energy is equal to the (initial) kinetic energy of the star is the time taken for relaxation.
+
+\subsection{Chandrasekhar's derivation of the change in energy}
+
+We will consider the interaction of a field star, denoted by 1, with a test star, 2; the centre of gravity and relative velocities are
+\begin{subequations}
+\begin{align}
+\boldsymbol{V}\sub{g} =  {} & \recip{m_1 + m_2}\left(m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2\right);\\
+\boldsymbol{V} =  {} & \boldsymbol{v}_1 - \boldsymbol{v}_2.
+\end{align}
+\label{eq:Vs}
+\end{subequations}
+Hence
+\begin{subequations}
+\begin{align}
+v_1^2 = {} & V\sub{g}^2 - 2\frac{m_2}{m_1 + m_2}V\sub{g}V \cos\Phi + \left(\frac{m_2}{m_1 + m_2}\right)^2V^2;\\
+v_2^2 = {} & V\sub{g}^2 + 2\frac{m_1}{m_1 + m_2}V\sub{g}V \cos\Phi + \left(\frac{m_1}{m_1 + m_2}\right)^2V^2,
+\end{align}
+\end{subequations}
+where $\Phi$ is the angle between $\boldsymbol{V}\sub{g}$ and $\boldsymbol{V}$, and
+\begin{subequations}
+\begin{align}
+V\sub{g}^2 = {} & \recip{(m_1 + m_2)^2}\left(m_1v_1^2 + m_2v_2^2 + 2 m_1 m_2 v_1 v_2 \cos\theta\right);\\
+V^2 = {} & v_1^2 + v_2 - 2 v_1 v_2 \cos\theta,
+\end{align}
+\label{eq:V2s}
+\end{subequations}
+where $\theta$ is the angle between $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. The change in energy of during the interaction is
+\begin{align}
+\Delta E = {} & \recip{2} m_2 \left({v'_2}^2 - v_2^2\right)\\
+ = {} & \frac{m_1 m_2}{m_1 + m_2}v\sub{g}V\left(\cos\Phi' - \cos\Phi\right),
+\end{align}
+using a primed variables for values after the interaction, and unprimed ones for before. If we project the angle out onto the orbital plane
+\begin{equation}
+\Delta E = \frac{m_1 m_2}{m_1 + m_2}v\sub{g}V\left(\cos\phi' - \cos\phi\right)\cos i,
+\end{equation}
+where $\phi$ is the angle in the plane, and $i$ is the inclination of $\boldsymbol{V}\sub{g}$ out of the plane. We define the deflection angle $\psi$ such that
+\begin{equation}
+\phi' - \phi = \pi - 2\psi,
+\end{equation}
+hence
+\begin{equation}
+\Delta E = -2\frac{m_1 m_2}{m_1 + m_2}V\sub{g}V\cos(\phi - \psi)\cos\psi\cos i.
+\end{equation}
+
+We now need to calculate the encounter rate. This requires us to know number of field stars per unit volume and per volume space element. We will make the simplifying assumption that the density of stars is uniform. This is not the case for the Galactic centre; however, we will approximate it as so in order to make the problem tractable. Using an averaged value, the number of stars is
+\begin{equation}
+\dd N = n(v_1, \theta, \phi)\,\dd v_1 \,\dd \theta \,\dd \varphi \,\dd^3x,
+\end{equation}
+using spherical polar coordinates for velocity space. Using $D$ as the impact parameter for the encounter and $\Theta$ for the angle between the fundamental plane (containing $\boldsymbol{v}_1$ ans $\boldsymbol{v}_2$) and the the orbital plane, the number of events in time interval $\dd t$ is
+\begin{equation}
+\dd \Gamma =  n(v_1, \theta, \varphi)\,\dd v_1 \,\dd \theta \,\dd \varphi \frac{\dd \Theta}{2\pi} 2\pi D \,\dd D V \,\dd t.
+\end{equation}
+The squared change in energy for these encounters is
+\begin{align}
+\Delta E^2(v_1,\theta,\varphi,D,\Theta) = {} & \left(\Delta E\right)^2\,\dd \Gamma\\
+ = {} & 4 n(v_1,\theta,\varphi)V\sub{g}^2V^3\left(\frac{m_1m_2}{m_1+m_2}\right)^2\cos^2i\cos^2(\phi-\psi)\cos^2\psi D\,\dd v_1\,\dd\theta\,\dd\varphi\,\dd\Theta\,\dd D\,\dd t.
+\end{align}
+We must integrate out all these dependencies.
+
+Since we have assumed that the stellar density does not depend upon position, we can simply integrate over the impact parameter; this is related to the deflection angle by
+\begin{equation}
+\recip{\cos^2\psi} = 1 + \frac{D^2V^4}{G(m_1 + m_2)}.
+\end{equation}
+Thus
+\begin{equation}
+\Delta E^2(v_1,\theta,\varphi,\psi,\Theta) =  4 n(v_1,\theta,\varphi)\frac{V\sub{g}^2}{V}G^2m_1^2 m_2^2\cos^2i\frac{\cos^2(\phi-\psi)\sin\psi}{\cos\psi} \,\dd \psi\,\dd v_1\,\dd\theta\,\dd\varphi\,\dd\Theta\,\dd t.
+\end{equation}
+The integral over $\psi$ is
+\begin{align}
+I(\psi_0) = {} & \intd{0}{\psi_0}{\frac{\cos^2(\phi-\psi)\sin\psi}{\cos\psi}}{\psi}\\
+ = {} & \frac{\sin 2\phi}{2}\left(\psi_0 - \frac{\sin 2\psi_0}{2}\right) - \frac{\cos 2\phi}{2}\left(\frac{\cos 2\psi_0}{2}\right) - \sin^2\phi\ln(\cos\psi_0).
+\end{align}
+Naively we would think that the upper limit for the deflection limit should be $\psi_0 = \pi/2$; however, this would introduce a logarithmic divergence. In actuality there will be a physical cut-off, reflecting a finite bound for the maximum impact parameter $D_0$. This will be set by the scale of the system, beyond which scattering is negligible. While the logarithmic term is finite, it will still be large, dominating the other terms which are $\order{1}$; we shall therefore neglect the subdominant terms
+\begin{equation}
+\Delta E^2(v_1,\theta,\varphi,\Theta) \simeq  4 n(v_1,\theta,\varphi)\frac{V\sub{g}^2}{V}G^2m_1^2 m_2^2\cos^2i\sin^2\phi\ln\left(\recip{\cos\psi_0}\right)\,\dd v_1\,\dd\theta\,\dd\varphi\,\dd\Theta\,\dd t.
+\end{equation}
+
+Next, we integrate over the orbital plane inclination using
+\begin{equation}
+\cos i\sin\phi = \sin\Phi\cos\Theta,
+\end{equation}
+so that
+\begin{equation}
+\Delta E^2(v_1,\theta,\varphi) \simeq  4\pi n(v_1,\theta,\varphi)\frac{V\sub{g}^2}{V}G^2m_1^2 m_2^2\sin^2\Phi\ln\left(\recip{\cos\psi_0}\right)\,\dd v_1\,\dd\theta\,\dd\varphi\,\dd t.
+\end{equation}
+We are now left with just the velocity variables.
+
+An expression for $\sin^2\Phi$ can be obtained from \eqnref{Vs} and \eqnref{V2s}, after some rearrangement
+\begin{equation}
+\frac{V_g^2}{V}\sin^2\Phi = \frac{v_1^2v_2^2\sin^2\theta}{\left(v_1^2 + v_2^2 - 2v_1 v_2 \cos\theta\right)^{(3/2)}}.
+\end{equation}
+To proceed further we must specify the form of $n(v_1,\theta,\varphi)$, if we assume isotropy
+\begin{equation}
+n(v_1,\theta,\varphi) = n(v_1)\recip{4\pi}\sin\theta.
+\end{equation}
+The integral over $\varphi$ is then trivial,
+\begin{equation}
+\Delta E^2(v_1,\theta) \simeq  \pi n(v_1)\frac{G^2m_1^2 m_2^2v_1^2v_2^2\sin^3\theta}{\left(v_1^2 + v_2^2 - 2v_1 v_2 \cos\theta\right)^{(3/2)}}\ln\left[1 + \frac{D_0\left(v_1^2 + v_2^2 - 2v_1 v_2 \cos\theta\right)^2}{G^2\left(m_1 + m_2\right)^2}\right]\,\dd v_1\,\dd\theta\,\dd t.
+\end{equation}
+
+\section{Evolution of orbital parameters from gravitational wave emission}
 
 \subsection{Bound orbits}
 
@@ -341,7 +417,7 @@ using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\be
 
 \subsection{Unbound orbits}\label{sec:Unbound}
 
-Unbound orbits only pass through periapsis once. We therefore expect that their evolution through the loss of energy and angular momentum carried away by gravitational radiation to be small. Following the approach of \citet{Turner1977} we can calculate the change in the eccentricity and periapse of an unbound Keplerian binary. The change in fractional eccentricity over an orbit, approximating the orbital parameters remain constant throughout the orbit, is
+Unbound orbits only pass through periapsis once. We therefore expect that their evolution through the loss of energy and angular momentum carried away by gravitational waves to be small. Following the approach of \citet{Turner1977} we can calculate the change in the eccentricity and periapse of an unbound Keplerian binary. The change in fractional eccentricity over an orbit, approximating the orbital parameters remain constant throughout, is
 \begin{align}
 \frac{\Delta e}{e} = {} & -\frac{608}{15}\Sigma\left[\recip{(1+e)^{5/2}}\left(1 + \frac{121}{304}e^2\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber\\*
   {} & + \left. \frac{(e - 1)^{1/2}}{e^2(1+e)^2}\left(\frac{67}{456} + \frac{1069}{912}e^2 + \frac{3}{38}e^4\right)\right],
@@ -376,6 +452,8 @@ Hence the changes in orbital parameters will be significant for
 e \sim \frac{25}{256}\frac{\alpha^5}{\eta^2} > \frac{25}{256}\recip{\eta^2}.
 \end{equation}
 Such orbits should be exceedingly rare, and so it is safe to neglect inspiral for unbound orbits.
+
+\end{onecolumn}
 
 \bsp
 
