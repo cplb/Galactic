@@ -15,6 +15,7 @@
 
 \DeclareMathOperator{\Ei}{Ei}
 \DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\Beta}{B}
 
 \newcommand{\units}[1]{\ensuremath{~\mathrm{#1}}}
 
@@ -409,12 +410,12 @@ This may be further simplified, reusing the limit of large $q$,
 \begin{align}
 J \simeq {} & \recip{3 v_1 v_2} \left[\left(3V_-^2 + V_+^2\right)V_+\ln\left(qV_+^2\right) - \left(3V_+^2 + V_-^2\right)V_-\ln\left(qV_-^2\right)\right] \\
  \simeq {} & \frac{4}{3v_1v_2}\begin{cases}
-\left(v_1^3 + v_2^3\right)\ln\left[q\left(v_1 + v_2\right)^2\right] - left(v_2^3 - v_1^3\right)\ln\left[q\left(v_1 - v_2\right)^2\right] & v_1 \leq v_2 \\
-\left(v_1^3 + v_2^3\right)\ln\left[q\left(v_1 + v_2\right)^2\right] - left(v_1^3 - v_2^3\right)\ln\left[q\left(v_1 - v_2\right)^2\right] & v_1 \geq v_2
+\left(v_1^3 + v_2^3\right)\ln\left[q\left(v_1 + v_2\right)^2\right] - \left(v_2^3 - v_1^3\right)\ln\left[q\left(v_1 - v_2\right)^2\right] & v_1 \leq v_2 \\
+\left(v_1^3 + v_2^3\right)\ln\left[q\left(v_1 + v_2\right)^2\right] - \left(v_1^3 - v_2^3\right)\ln\left[q\left(v_1 - v_2\right)^2\right] & v_1 \geq v_2
 \end{cases} \\
  \simeq {} & \frac{8}{3}\begin{cases}
 \frac{v_2^2}{v_1}\ln\left(\frac{v_1 + v_2}{v_2 - v_1}\right) + \frac{v_1^2}{v_2}\left[\ln qv_2^2 + \ln\left(1 - \frac{v_1^2}{v_2^2}\right)\right] & v_1 < v_2 \\
-v_2\left(\lnqv_2^2 + \ln 4\right) & v_1 = v_2\\
+v_2\left(\ln qv_2^2 + \ln 4\right) & v_1 = v_2\\
 \frac{v_1^2}{v_2}\ln\left(\frac{v_1 + v_2}{v_1 - v_2}\right) + \frac{v_2^2}{v_1}\left[\ln qv_2^2 + \ln\left(\frac{v_1^2}{v_2^2} - 1\right)\right] & v_1 > v_2
 \end{cases} \\
 \approx {} & \frac{8}{3}\begin{cases}
@@ -451,7 +452,7 @@ keeping $w$ as a function of $v$.
 
 The DF for unbound stars is assumed to be Maxwellian; it is defined in \eqnref{Unbound_DF} and is applicable for $x > 0$, implying $w > 1$:
 \begin{align}
-f_{\mathrm{u},\,M}(v) = {} & \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}C_M \intd{0}{w-1}{\frac{\exp(-x)}{(w-x)^4}}{x}
+f_{\mathrm{u},\,M}(v) = {} & \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}C_M \intd{0}{w-1}{\frac{\exp(-x)}{(w-x)^4}}{x} \\
  = {} & \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}C_M\epsilon\left(\frac{v^2}{2\sigma^2}\right),
 \end{align}
 introducing
@@ -485,7 +486,7 @@ The velocity space density is related to the distribution by
 
 Using the specific forms for the velocity space density, we can calculate the squared change in energy. The functional form depends upon the velocity of the test star. If $v_2^2/2\sigma^2 < 1$, then
 \begin{equation}
-\Delta E^2 \approx \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{v_2}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{v_2}{\sqrt{2}\sigma}{3kv_1v_2^2\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)}{v_1}\right\}\,\delta t,
+\Delta E^2 \approx \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{v_2}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{v_2}{\sqrt{2}\sigma}{3kv_1v_2^2\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C\epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t,
 \end{equation}
 where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals yields
 \begin{equation}
@@ -495,7 +496,7 @@ assuming that $p < 1/2$. The contribution from bound and unbound stars can be id
 
 If $v_2^2/2\sigma^2 > 1$,
 \begin{equation}
-\Delta E^2 \approx \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{\sqrt{2}\sigma}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{\sqrt{2}\sigma}{v_2}{\frac{v_1^4}{v_2}\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)}{v_1} + \intd{v_2}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p)\Gamma(1 + p)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)}{v_1}\right\}\,\delta t.
+\Delta E^2 \approx \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{\sqrt{2}\sigma}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} + \intd{\sqrt{2}\sigma}{v_2}{\frac{v_1^4}{v_2}\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1} + \intd{v_2}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p)\Gamma(1 + p)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t.
 \end{equation}
 Computing this gives
 \begin{equation}
@@ -519,7 +520,7 @@ Combining the two regimes gives some quite complicated expressions. It is possib
 This can be rolled into one continuous function
 \begin{align}
 \Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 + \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 \right] + \recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{3\Gamma(3 - p)\Gamma(1 + p)}{2(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right]\right\}\,\delta t\\
- \approx {} & 6\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \bet\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
+ \approx {} & 6\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \beta\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
 \end{align}
 defining the function $\beta(w;p)$ in the last line. The resulting error (ignoring variation from $\ln qv_2^2$) is less than $3\%$.
 
@@ -541,7 +542,7 @@ Making explicit the sum over the different species, the total change in energy s
 The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared
 \begin{align}
 \tau\sub{R} = {} & \left(\frac{m_2v_2^2}{2}\right)^2\frac{\delta t}{\Delta E^2} \\
- \approx {} & \frac{v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2 \left(\sum_M m_M^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}^3\right)^4\right]^{-1/2}\right\}\right)^{-1}.
+ \approx {} & \frac{v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2} \left(\sum_M m_M^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}^3\right)^4\right]^{-1/2}\right\}\right)^{-1}.
 \end{align}
 This is the time required for stellar encounters to become effective in changing the energy of an orbit in the smooth background potential.
 
