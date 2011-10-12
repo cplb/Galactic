@@ -25,7 +25,7 @@
 \newcommand{\diff}[2]{\ensuremath{\frac{\dd {#1}}{\dd {#2}}}}
 \newcommand{\partialdiff}[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
 \newcommand{\intd}[4]{\ensuremath{\int_{#1}^{#2}{#3}\,\dd{#4}}}
-\newcommand{\recip}[1]{\ensuremath{\frac{1}{#1}}}
+\newcommand{\recip}[1]{\ensuremath{\dfrac{1}{#1}}}
 
 \newcommand{\order}[1]{\ensuremath{\mathcal{O}({#1})}}
 %\newcommand{\P}{\ensuremath{\mathrm{P}}}
@@ -58,7 +58,7 @@ black hole physics -- celestial mechanics --  Galaxy: centre -- gravitational wa
 
 \subsection{The distribution function}
 
-We wish to calculate the probability that there is an encounter between a compact object on an orbital trajectory described by eccentricity $e$ and periapse radius $r_p$ and the massive black hole (MBH) at the galactic centre. To do so we must assume a particular distribution of stars. We begin by following the work of \citet{Bahcall1976, Bahcall1977} and assuming that the distribution function (DF) within the galactic core is just a function of the orbital energy; we define the energy per unit mass of the orbit as
+We wish to calculate the probability that there is an encounter between a compact object on an orbital trajectory described by eccentricity $e$ and periapse radius $r\sub{p}$ and the massive black hole (MBH) at the galactic centre. To do so we must assume a particular distribution of stars. We begin by following the work of \citet{Bahcall1976, Bahcall1977} and assuming that the distribution function (DF) within the galactic core is just a function of the orbital energy; we define the energy per unit mass of the orbit as
 \begin{equation}
 \mathcal{E} = \frac{v^2}{2} - \frac{GM_\bullet}{r}
 \end{equation}
@@ -240,9 +240,9 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \begin{equation}
 \tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
-where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet[chapter 2]{Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citep{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kaapa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citep{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
-All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
+All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
 
 \subsubsection{Gravitational wave inspiral}
 
@@ -373,7 +373,7 @@ We are now left with just the velocity variables.
 
 An expression for $\sin^2\Phi$ can be obtained from \eqnref{Vs} and \eqnref{V2s}, after some rearrangement
 \begin{equation}
-\frac{V_g^2}{V}\sin^2\Phi = \frac{v_1^2v_2^2\sin^2\theta}{\left(v_1^2 + v_2^2 - 2v_1 v_2 \cos\theta\right)^{(3/2)}}.
+\frac{V_g^2}{V}\sin^2\Phi = \frac{v_1^2v_2^2\sin^2\theta}{\left(v_1^2 + v_2^2 - 2v_1 v_2 \cos\theta\right)^{3/2}}.
 \end{equation}
 To proceed further we must specify the form of $n(v_1,\theta,\varphi)$, if we assume isotropy
 \begin{equation}
@@ -402,11 +402,11 @@ Using \eqnref{V2s} to rearrange, and then integrating by parts gives
 J = {} & \recip{4 v_1 v_2} \intd{V_-}{V_+}{\frac{\left(V_+^2 - V^2\right)\left(V^2 - V_-^2\right)}{V^2}\ln\left(1 + q^2V^4\right)}{V} \\
  = {} & \recip{4 v_1 v_2} \left\{\left[\frac{3V_+^2V_-^2 + \left(V_+^2 + V_-^2\right)V^2 - V^4}{3V}\right]^{V_+}_{V_-} - \intd{V_-}{V_+}{\frac{3V_+^2V_-^2 + \left(V_+^2 + V_-^2\right)V^2 - V^4}{3V}\frac{4q^2V^3}{1+ q^2V^4}}{V}\right\};
 \end{align}
-the former piece still contains the logarithmic term which we know must be large. It is therefore the dominant piece of the integral and we neglect the latter,
+the former piece still contains the logarithmic term which we know must be large. It is therefore the dominant piece of the integral and we neglect the latter~\citep{Chadrasekhar1941},
 \begin{equation}
 J \simeq \recip{6 v_1 v_2} \left[\left(3V_-^2 + V_+^2\right)V_+\ln\left(1 + q^2V_+^4\right) - \left(3V_+^2 + V_-^2\right)V_-\ln\left(1 + q^2V_-^4\right)\right].
 \end{equation}
-This may be further simplified, reusing the limit of large $q$,
+This may be further simplified, reusing the limit of large $q$~\citep{Chadrasekhar1941,Chandrasekhar1941b},
 \begin{align}
 J \simeq {} & \recip{3 v_1 v_2} \left[\left(3V_-^2 + V_+^2\right)V_+\ln\left(qV_+^2\right) - \left(3V_+^2 + V_-^2\right)V_-\ln\left(qV_-^2\right)\right] \\
  \simeq {} & \frac{4}{3v_1v_2}\begin{cases}
@@ -414,18 +414,18 @@ J \simeq {} & \recip{3 v_1 v_2} \left[\left(3V_-^2 + V_+^2\right)V_+\ln\left(qV_
 \left(v_1^3 + v_2^3\right)\ln\left[q\left(v_1 + v_2\right)^2\right] - \left(v_1^3 - v_2^3\right)\ln\left[q\left(v_1 - v_2\right)^2\right] & v_1 \geq v_2
 \end{cases} \\
  \simeq {} & \frac{8}{3}\begin{cases}
-\frac{v_2^2}{v_1}\ln\left(\frac{v_1 + v_2}{v_2 - v_1}\right) + \frac{v_1^2}{v_2}\left[\ln qv_2^2 + \ln\left(1 - \frac{v_1^2}{v_2^2}\right)\right] & v_1 < v_2 \\
+\dfrac{v_2^2}{v_1}\ln\left(\dfrac{v_1 + v_2}{v_2 - v_1}\right) + \dfrac{v_1^2}{v_2}\left[\ln qv_2^2 + \ln\left(1 - \dfrac{v_1^2}{v_2^2}\right)\right] & v_1 < v_2 \\
 v_2\left(\ln qv_2^2 + \ln 4\right) & v_1 = v_2\\
-\frac{v_1^2}{v_2}\ln\left(\frac{v_1 + v_2}{v_1 - v_2}\right) + \frac{v_2^2}{v_1}\left[\ln qv_2^2 + \ln\left(\frac{v_1^2}{v_2^2} - 1\right)\right] & v_1 > v_2
+\dfrac{v_1^2}{v_2}\ln\left(\dfrac{v_1 + v_2}{v_1 - v_2}\right) + \dfrac{v_2^2}{v_1}\left[\ln qv_2^2 + \ln\left(\dfrac{v_1^2}{v_2^2} - 1\right)\right] & v_1 > v_2
 \end{cases} \\
 \approx {} & \frac{8}{3}\begin{cases}
-\frac{v_1^2}{v_2}\ln qv_2^2 & v_1 \leq v_2 \\
-\frac{v_2^2}{v_1}\ln qv_2^2 & v_1 \geq v_2
+\dfrac{v_1^2}{v_2}\ln qv_2^2 & v_1 \leq v_2 \\
+\dfrac{v_2^2}{v_1}\ln qv_2^2 & v_1 \geq v_2
 \end{cases}.
 \end{align}
 This form maintains the correct limit for $v_2 \rightarrow 0$. We are left with
 \begin{equation}
-\Delta E^2(v_1) \approx \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln qv_2^2\begin{Bmatrix}\frac{v_1^2}{v_2} & v_1 \leq v_2\\ \frac{v_2^2}{v_1} & v_1 \geq v_2 \end{Bmatrix}\,\dd v_1\delta t.
+\Delta E^2(v_1) \approx \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln qv_2^2\begin{Bmatrix}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{Bmatrix}\,\dd v_1\delta t.
 \end{equation}
 The final integral requires a specific form for the velocity distribution.
 
@@ -464,15 +464,15 @@ where $\Ei(x)$ is the exponential integral.
 The DF for bound stars is approximated as a simple power law as defined in \eqnref{Bound_DF}, it is applicable for $x < 0$:
 \begin{equation}
 f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M\begin{cases}
-\intd{-\infty}{w-1}{\frac{(-x)^{p_M}}{(w-x)^4}}{x} & w \leq 1 \\
-\intd{-\infty}{0}{\frac{(-x)^{p_M}}{(w-x)^4}}{x} & w \geq 1
+\intd{-\infty}{w-1}{\dfrac{(-x)^{p_M}}{(w-x)^4}}{x} & w \leq 1 \\
+\intd{-\infty}{0}{\dfrac{(-x)^{p_M}}{(w-x)^4}}{x} & w \geq 1
 \end{cases}.
 \end{equation}
 The integral may be evaluated in terms of the hypergeometric function ${_2F_1(a,b;c;x)}$, but for the limits needed here the results simplify to
 \begin{equation}
 f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(\frac{v^2}{2\sigma^2}\right)\begin{cases}
-3 \Beta\left(\frac{v^2}{2\sigma^2};3 - p_M, 1 + p_M\right) & \frac{v^2}{2\sigma^2} \leq 1 \\
-\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} & \frac{v^2}{2\sigma^2} \geq 1
+3 \Beta\left(\dfrac{v^2}{2\sigma^2};3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
+\dfrac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} & \dfrac{v^2}{2\sigma^2} \geq 1
 \end{cases},
 \end{equation}
 where $\Beta(x;a,b)$ is the incomplete beta function (\citealt{Olver2010}, 8.17), and $\Gamma(x)$ is the gamma function.
@@ -514,8 +514,8 @@ The hypergeometric function originates from the integral
 Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$, it is just the sum of two power laws, the relative importance of each depends upon the value of $p$. For smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the special functions:
 \begin{align}
 \Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \begin{Bmatrix}
-\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 + \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 & \frac{v_2^2}{2\sigma^2} < 1 \\
-\recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{3\Gamma(3 - p)\Gamma(1 + p)}{2(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \frac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
+\dfrac{3}{(1 + p)(2 - p)} - \dfrac{9}{5(3-p)}\dfrac{v_2^2}{2\sigma^2} + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{p(1-p)}{6(5-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
+\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{3\Gamma(3 - p)\Gamma(1 + p)}{2(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
@@ -529,20 +529,20 @@ The unbound contribution is very simple for small $v_2$, but much more complicat
 \lim_{w \rightarrow \infty}\left\{\alpha(w)\right\} = {} & \recip{2}\left\{5 + \frac{3\sqrt{\pi}}{4}\left[4\exp(1) - \Ei(1) - 4\exp(1)\erf(1)\right] + 3{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right)\right\} \\
  = {} & \Xi.
 \end{align}
-Using the two limit forms, the function
+Using the two limiting forms, the function
 \begin{equation}
-\Delta E_u^2 \approx 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}^3\right)^4\right]^{-1/2}\,\delta t,
+\Delta E_u^2 \approx 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
 \end{equation}
 reproduces the full function to better than $5\%$ (ignoring variation from $\ln qv_2^2$).
 
 Making explicit the sum over the different species, the total change in energy squared is approximately
 \begin{equation}
-\Delta E^2 \approx \sum_M 16\sqrt{2\pi}G^2m_M^2m_2^2n_\ast\sigma\ln qv_2^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}^3\right)^4\right]^{-1/2}\right\}\,\delta t.
+\Delta E^2 \approx \sum_M 16\sqrt{2\pi}G^2m_M^2m_2^2n_\ast\sigma\ln qv_2^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\,\delta t.
 \end{equation}
 The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared
 \begin{align}
 \tau\sub{R} = {} & \left(\frac{m_2v_2^2}{2}\right)^2\frac{\delta t}{\Delta E^2} \\
- \approx {} & \frac{v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2} \left(\sum_M m_M^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}^3\right)^4\right]^{-1/2}\right\}\right)^{-1}.
+ \approx {} & \frac{v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2} \left(\sum_M m_M^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\right)^{-1}.
 \end{align}
 This is the time required for stellar encounters to become effective in changing the energy of an orbit in the smooth background potential.
 
