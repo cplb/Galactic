@@ -240,7 +240,7 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \begin{equation}
 \tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
-where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citep{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
 All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
 
@@ -313,11 +313,11 @@ V^2 = {} & v_1^2 + v_2 - 2 v_1 v_2 \cos\theta,
 where $\theta$ is the angle between $\boldsymbol{v}_1$ and $\boldsymbol{v}_2$. The change in energy of during the interaction is
 \begin{align}
 \Delta E = {} & \recip{2} m_2 \left({v'_2}^2 - v_2^2\right)\\
- = {} & \frac{m_1 m_2}{m_1 + m_2}v\sub{g}V\left(\cos\Phi' - \cos\Phi\right),
+ = {} & \frac{m_1 m_2}{m_1 + m_2}V\sub{g}V\left(\cos\Phi' - \cos\Phi\right),
 \end{align}
 using a primed variables for values after the interaction, and unprimed ones for before. If we project the angle out onto the orbital plane
 \begin{equation}
-\Delta E = \frac{m_1 m_2}{m_1 + m_2}v\sub{g}V\left(\cos\phi' - \cos\phi\right)\cos i,
+\Delta E = \frac{m_1 m_2}{m_1 + m_2}V\sub{g}V\left(\cos\phi' - \cos\phi\right)\cos i,
 \end{equation}
 where $\phi$ is the angle in the plane, and $i$ is the inclination of $\boldsymbol{V}\sub{g}$ out of the plane. We define the deflection angle $\psi$ such that
 \begin{equation}
@@ -471,15 +471,15 @@ f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M\begin{
 The integral may be evaluated in terms of the hypergeometric function ${_2F_1(a,b;c;x)}$, but for the limits needed here the results simplify to
 \begin{equation}
 f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(\frac{v^2}{2\sigma^2}\right)\begin{cases}
-3 \Beta\left(\dfrac{v^2}{2\sigma^2};3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
-\dfrac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} & \dfrac{v^2}{2\sigma^2} \geq 1
+3 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
+3 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1
 \end{cases},
 \end{equation}
-where $\Beta(x;a,b)$ is the incomplete beta function (\citealt{Olver2010}, 8.17), and $\Gamma(x)$ is the gamma function.
+where $\Beta(x;a,b)$ is the incomplete beta function (\citealt{Olver2010}, 8.17), $\Beta(a,b)$ is the complete beta function, and $\Gamma(x)$ is the gamma function.
 
 The velocity space density is related to the distribution by
 \begin{equation}
-\frac{4\pi r\sub{c}^3}{3}n_M(v_1) = 4\pi v_1^2\left[f_{\mathrm{u},\,M}(v_1) + f_{\mathrm{b},\,M}(v_1)\right]
+\frac{4\pi r\sub{c}^3}{3}n_M(v_1) = 4\pi v_1^2\left[f_{\mathrm{u},\,M}(v_1) + f_{\mathrm{b},\,M}(v_1)\right].
 \end{equation}
 
 \subsection{Defining the relaxation time-scale}
@@ -488,24 +488,24 @@ Using the specific forms for the velocity space density, we can calculate the sq
 \begin{align}
 \Delta E^2 \approx {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{v_2}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
  & + \left. \intd{v_2}{\sqrt{2}\sigma}{3kv_1v_2^2\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
- & + \left. \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C\epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t,
+ & + \left. \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[3 k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p_M, 1 + p_M\right) + C\epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t,
 \end{align}
 where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals yields
 \begin{align}
 \Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \frac{v_2^2}{2\sigma^2} \left\{k\left[\frac{12}{5(1 - 2p)}\frac{v_2^2}{2\sigma^2} {_2F_1}\left(\frac{5}{2},-p;\frac{7}{2};\frac{v_2^2}{2\sigma^2}\right) \right.\right. \nonumber\\*
- & - \left.\left. \frac{9}{(2-p)(1-2p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-2}\Beta\left(\frac{v_2^2}{2\sigma^2};3-p,1-p\right) + \frac{3}{(2-p)(1+p)}\left(1 - \frac{v_2^2}{2\sigma^2}\right)^(1+p)\right] + C\right\}\,\delta t,
+ & - \left.\left. \frac{9}{(2-p)(1-2p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-2}\Beta\left(\frac{v_2^2}{2\sigma^2};3-p,1-p\right) + \frac{3}{(2-p)(1+p)}\left(1 - \frac{v_2^2}{2\sigma^2}\right)^{1+p}\right] + C\right\}\,\delta t,
 \end{align}
 assuming that $p < 1/2$. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
 
 If $v_2^2/2\sigma^2 > 1$,
 \begin{align}
 \Delta E^2 \approx {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2\left\{\intd{0}{\sqrt{2}\sigma}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
- & + \left. \intd{\sqrt{2}\sigma}{v_2}{\frac{v_1^4}{v_2}\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p_M)\Gamma(1 + p_M)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1} \right. \nonumber\\*
- & \left. + \intd{v_2}{\infty}{v_1v_2^2\left[k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\frac{\Gamma(3 - p)\Gamma(1 + p)}{2} + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t.
+ & + \left. \intd{\sqrt{2}\sigma}{v_2}{\frac{v_1^4}{v_2}\left[3k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p, 1 + p\right) + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1} \right. \nonumber\\*
+ & \left. + \intd{v_2}{\infty}{v_1v_2^2\left[3k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p_M, 1 + p_M\right) + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t.
 \end{align}
 Computing this gives
 \begin{equation}
-\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left\{k\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \frac{3\Gamma(3 - p)\Gamma(1 + p)}{2(1-2p)(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right\}\,\delta t,
+\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left\{k\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \frac{9\Beta\left(3 - p_M, 1 + p_M\right)}{(1-2p)(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right\}\,\delta t,
 \end{equation}
 where
 \begin{align}
@@ -521,19 +521,19 @@ Combining the two regimes gives some quite complicated expressions. It is possib
 \begin{align}
 \Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \begin{Bmatrix}
 \dfrac{3}{(1 + p)(2 - p)} - \dfrac{9}{5(3-p)}\dfrac{v_2^2}{2\sigma^2} + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{p(1-p)}{6(5-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
-\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{3\Gamma(3 - p)\Gamma(1 + p)}{2(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
+\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
 \Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 \right.\right. \nonumber\\*
- & + \left.\left. \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 \right] + \recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{3\Gamma(3 - p)\Gamma(1 + p)}{2(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right]\right\}\,\delta t\\
- \approx {} & 6\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \beta\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
+ & + \left.\left. \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 \right] + \recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{9 \Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right]\right\}\,\delta t\\
+ \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \beta\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
 \end{align}
 defining the function $\beta(w;p)$ in the last line. The resulting error (ignoring variation from $\ln qv_2^2$) is less than $3\%$.
 
 The unbound contribution is very simple for small $v_2$, but much more complicated for large $v_2$. In the limit of $v_2 \rightarrow \infty$, it decays as $v_2^{-1}$:
 \begin{align}
-\lim_{w \rightarrow \infty}\left\{\alpha(w)\right\} = {} & \recip{2}\left\{5 + \frac{3\sqrt{\pi}}{4}\left[4\exp(1) - \Ei(1) - 4\exp(1)\erf(1)\right] + 3{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right)\right\} \\
+\lim_{w \rightarrow \infty}\left\{\alpha(w)\right\} = {} & \recip{2}\left\{5 + 3\sqrt{\pi}\left[\exp(1) - \frac{\Ei(1)}{4} - \exp(1)\erf(1)\right] + 3{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right)\right\} \\
  = {} & \Xi.
 \end{align}
 Using the two limiting forms, the function
@@ -556,6 +556,24 @@ This is the time required for stellar encounters to become effective in changing
 \subsection{Averaged time-scale}
 
 The relaxation time-scale defined above is appropriate for a particular initial test star velocity $v_2$. This is not of much use to describe the Galactic centre or even a (non-circular) orbit where there is a range in velocity. It is necessary to calculate an averaged time-scale. Both the change in energy squared and the kinetic energy are averaged; comparing these gives the appropriate timescale. We will use two averages: over the distribution of bound velocities to give the relaxation time-scale for the system, and over a single orbit.
+
+The total number of bound stars in the core is
+\begin{equation}
+N_{\mathrm{b},\,M} = \frac{3}{3/2 - p_M}\frac{\Gamma(p_M + 1)}{\Gamma(p_M + 7/2)}N_\ast k_M.
+\end{equation}
+Using this as a normalisation constant, the probability of a bound star having a velocity in the range $v \rightarrow v + \dd v$ is given by
+\begin{align}
+4\pi v^2 p_{\mathrm{b},\,M} \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}}{N_{\mathrm{b},\,M}} \,\dd v \\
+ = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)\begin{Bmatrix}
+\Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
+\Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{Bmatrix}\,\dd v.
+\end{align}
+The mean squared velocity for bound stars in the core is then
+\begin{align}
+\overline{v^2} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}}{v} \\
+ = {} & \frac{2}{\sqrt{\pi}}\sigma^2\frac{3/2 - p_M}{1/2 - p_M}\frac{\Gamma(p_M + 7/2)}{\Gamma(1 + p_M)}\Beta\left(\frac{5}{2},1 + p_M\right).
+\end{align}
+
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
