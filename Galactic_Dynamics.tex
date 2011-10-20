@@ -425,7 +425,7 @@ v_2\left(\ln qv_2^2 + \ln 4\right) & v_1 = v_2\\
 \end{align}
 This form maintains the correct limit for $v_2 \rightarrow 0$. We are left with
 \begin{equation}
-\Delta E^2(v_1) \approx \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln qv_2^2\begin{Bmatrix}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{Bmatrix}\,\dd v_1\delta t.
+\Delta E^2(v_1) \approx \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln qv_2^2\left\{\begin{array}{ll}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{array}\right\}\,\dd v_1\delta t.
 \end{equation}
 The final integral requires a specific form for the velocity distribution.
 
@@ -475,7 +475,7 @@ f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(
 3 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1
 \end{cases},
 \end{equation}
-where $\Beta(x;a,b)$ is the incomplete beta function~\citep[8.17]{Olver2010}, $\Beta(a,b) \equive \Beta(1,a,b)$ is the complete beta function, and $\Gamma(x)$ is the gamma function.
+where $\Beta(x;a,b)$ is the incomplete beta function~\citep[8.17]{Olver2010}, $\Beta(a,b) \equiv \Beta(1,a,b)$ is the complete beta function, and $\Gamma(x)$ is the gamma function.
 
 The velocity space density is related to the distribution by
 \begin{equation}
@@ -492,9 +492,9 @@ Using the specific forms for the velocity space density, we can calculate the sq
 \end{align}
 where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals and rearranging yields
 \begin{align}
-\Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \frac{v_2^2}{2\sigma^2} \left[k \frac{3}{(2 - p)(1 + p)}{_3F_2}\left(-1-p,2-p,\frac{3}{2};3-p,\frac{5}{2};w\right) + C\right\],\delta t,
+\Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right) \left[k \frac{3}{(2 - p)(1 + p)}{_3F_2}\left(-1-p,2-p,\frac{3}{2};3-p,\frac{5}{2};w\right) + C\right]\,\delta t,
 \end{align}
-where ${_3F_2(a_1,a_2,a_3;b_1,b_2;x)$ is a generalised hypergeometric function~\citep[section 16]{Olver2010}. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
+where ${_3F_2}(a_1,a_2,a_3;b_1,b_2;x)$ is a generalised hypergeometric function~\citep[section 16]{Olver2010}. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
 
 If $v_2^2/2\sigma^2 > 1$,
 \begin{align}
@@ -518,9 +518,9 @@ The hypergeometric function originates from the integral
 
 Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$, it is just the sum of two power laws, the relative importance of each depends upon the value of $p$. For smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the hypergeometric function:
 \begin{align}
-\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \begin{Bmatrix}
+\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\begin{array}{ll}
 \dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
-\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
+\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{array}\right\}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
@@ -563,9 +563,9 @@ N_{\mathrm{b},\,M} = \frac{3}{3/2 - p_M}\frac{\Gamma(p_M + 1)}{\Gamma(p_M + 7/2)
 Using this as a normalisation constant, the probability of a bound star having a velocity in the range $v \rightarrow v + \dd v$ is given by
 \begin{align}
 4\pi v^2 p_{\mathrm{b},\,M} \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}}{N_{\mathrm{b},\,M}} \,\dd v \\
- = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)\begin{Bmatrix}
+ = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)\left\{\begin{array}{ll}
 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
-\Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{Bmatrix}\,\dd v.
+\Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{array}\right\}\,\dd v.
 \end{align}
 The mean squared velocity for bound stars in the core is then
 \begin{align}
