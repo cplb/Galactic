@@ -475,7 +475,7 @@ f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(
 3 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1
 \end{cases},
 \end{equation}
-where $\Beta(x;a,b)$ is the incomplete beta function (\citealt{Olver2010}, 8.17), $\Beta(a,b)$ is the complete beta function, and $\Gamma(x)$ is the gamma function.
+where $\Beta(x;a,b)$ is the incomplete beta function~\citep[8.17]{Olver2010}, $\Beta(a,b) \equive \Beta(1,a,b)$ is the complete beta function, and $\Gamma(x)$ is the gamma function.
 
 The velocity space density is related to the distribution by
 \begin{equation}
@@ -490,12 +490,11 @@ Using the specific forms for the velocity space density, we can calculate the sq
  & + \left. \intd{v_2}{\sqrt{2}\sigma}{3kv_1v_2^2\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
  & + \left. \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[3 k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p_M, 1 + p_M\right) + C\epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t,
 \end{align}
-where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals yields
+where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals and rearranging yields
 \begin{align}
-\Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \frac{v_2^2}{2\sigma^2} \left\{k\left[\frac{12}{5(1 - 2p)}\frac{v_2^2}{2\sigma^2} {_2F_1}\left(\frac{5}{2},-p;\frac{7}{2};\frac{v_2^2}{2\sigma^2}\right) \right.\right. \nonumber\\*
- & - \left.\left. \frac{9}{(2-p)(1-2p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-2}\Beta\left(\frac{v_2^2}{2\sigma^2};3-p,1-p\right) + \frac{3}{(2-p)(1+p)}\left(1 - \frac{v_2^2}{2\sigma^2}\right)^{1+p}\right] + C\right\}\,\delta t,
+\Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \frac{v_2^2}{2\sigma^2} \left[k \frac{3}{(2 - p)(1 + p)}{_3F_2}\left(-1-p,2-p,\frac{3}{2};3-p,\frac{5}{2};w\right) + C\right\],\delta t,
 \end{align}
-assuming that $p < 1/2$. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
+where ${_3F_2(a_1,a_2,a_3;b_1,b_2;x)$ is a generalised hypergeometric function~\citep[section 16]{Olver2010}. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
 
 If $v_2^2/2\sigma^2 > 1$,
 \begin{align}
@@ -517,15 +516,15 @@ The hypergeometric function originates from the integral
 \intd{}{w}{\frac{\exp(w')\erf\left({w'}^{1/2}\right)}{w'}}{w'} = \frac{4w^{1/2}}{\sqrt{\pi}}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right).
 \end{equation}
 
-Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$, it is just the sum of two power laws, the relative importance of each depends upon the value of $p$. For smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the special functions:
+Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$, it is just the sum of two power laws, the relative importance of each depends upon the value of $p$. For smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the hypergeometric function:
 \begin{align}
-\Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \begin{Bmatrix}
-\dfrac{3}{(1 + p)(2 - p)} - \dfrac{9}{5(3-p)}\dfrac{v_2^2}{2\sigma^2} + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{p(1-p)}{6(5-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
+\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \begin{Bmatrix}
+\dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
 \recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{Bmatrix}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
-\Delta E_b^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 \right.\right. \nonumber\\*
+\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 \right.\right. \nonumber\\*
  & + \left.\left. \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 \right] + \recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{9 \Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right]\right\}\,\delta t\\
  \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \beta\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
 \end{align}
@@ -538,7 +537,7 @@ The unbound contribution is very simple for small $v_2$, but much more complicat
 \end{align}
 Using the two limiting forms, the function
 \begin{equation}
-\Delta E_u^2 \approx 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
+\Delta E\sub{u}^2 \approx 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
 \end{equation}
 reproduces the full function to better than $5\%$ (ignoring variation from $\ln qv_2^2$).
 
@@ -609,7 +608,7 @@ This is best evaluated numerically, however it may be written in closed form as
 \tau(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
   {} & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
 \end{align}
-using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$ (\citealt{Olver2010}, 16.15.1).\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
+using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$~\citep[16.15.1]{Olver2010}.\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
 
 \subsection{Unbound orbits}\label{sec:Unbound}
 
