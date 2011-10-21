@@ -504,10 +504,12 @@ If $v_2^2/2\sigma^2 > 1$,
 \end{align}
 Computing this gives
 \begin{equation}
-\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left\{k\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \frac{9\Beta\left(3 - p_M, 1 + p_M\right)}{(1-2p)(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right\}\,\delta t,
+\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left\[k\beta\left(\frac{v_2^2}{2\sigma^2};p\right) + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right\]\,\delta t,
 \end{equation}
 where
 \begin{align}
+\beta(w;p) = {} & \begin{cases} \left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(1-2p)(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2} & p < \recip{2} \\
+\frac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases};\\ 
 \alpha(w) = {} & \recip{2}\left\{3w^{-1/2} + 5 + \left[4\exp(1) - \Ei(1) + \Ei(w)\right]\left[\frac{3\sqrt{\pi}}{4}\erf\left(w^{1/2}\right) - \frac{3}{2}w^{1/2}\exp(-w)\right] - 3\sqrt{\pi}\exp(1)\erf(1) \right. \nonumber\\*
  & + \left. 3\left[{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right) - w^{1/2}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right)\right]\right\}.
 \end{align}
@@ -516,19 +518,19 @@ The hypergeometric function originates from the integral
 \intd{}{w}{\frac{\exp(w')\erf\left({w'}^{1/2}\right)}{w'}}{w'} = \frac{4w^{1/2}}{\sqrt{\pi}}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right).
 \end{equation}
 
-Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$, it is just the sum of two power laws, the relative importance of each depends upon the value of $p$. For smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the hypergeometric function:
+Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$; for smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the hypergeometric function:
 \begin{align}
-\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\begin{array}{ll}
+\Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\begin{array}{ll}
 \dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
-\recip{1 - 2p}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right] & \dfrac{v_2^2}{2\sigma^2} > 1\end{array}\right\}\,\delta t.
+\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\beta\left(\frac{v_2^2}{2\sigma^2};p\right) & \dfrac{v_2^2}{2\sigma^2} > 1\end{array}\right\}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
-\Delta E\sub{b}^2 \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{3}{(1 + p)(2 - p)} - \frac{9}{5(3-p)}\frac{v_2^2}{2\sigma^2} + \frac{9p}{14(7-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^2 \right.\right. \nonumber\\*
- & + \left.\left. \frac{p(1-p)}{6(5-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^3 \right] + \recip{1 - 2p}\left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left[\frac{9\sqrt{\pi}\Gamma(1+p)}{2\Gamma(p + 7/2)} - \frac{9 \Beta\left(3 - p, 1 + p\right)}{(2-p)}\left(\frac{v_2^2}{2\sigma^2}\right)^{p-1/2}\right]\right\}\,\delta t\\
- \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \beta\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
+\Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left\{\left[\dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 \right]\right. \nonumber\\*
+ & + \left. \left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\beta\left(\frac{v_2^2}{2\sigma^2};p\right)\right\}\,\delta t\\
+ \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \gamma\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
 \end{align}
-defining the function $\beta(w;p)$ in the last line. The resulting error (ignoring variation from $\ln qv_2^2$) is less than $3\%$.
+defining the function $\gamma(w;p)$ in the last line. The resulting error (ignoring variation from $\ln qv_2^2$) is less than $3\%$.
 
 The unbound contribution is very simple for small $v_2$, but much more complicated for large $v_2$. In the limit of $v_2 \rightarrow \infty$, it decays as $v_2^{-1}$:
 \begin{align}
@@ -537,18 +539,18 @@ The unbound contribution is very simple for small $v_2$, but much more complicat
 \end{align}
 Using the two limiting forms, the function
 \begin{equation}
-\Delta E\sub{u}^2 \approx 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
+\Delta E\sub{u}^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 C \Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
 \end{equation}
 reproduces the full function to better than $5\%$ (ignoring variation from $\ln qv_2^2$).
 
 Making explicit the sum over the different species, the total change in energy squared is approximately
 \begin{equation}
-\Delta E^2 \approx \sum_M 16\sqrt{2\pi}G^2m_M^2m_2^2n_\ast\sigma\ln qv_2^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\,\delta t.
+\Delta E^2 \approx \sum_M \frac{16}{3}\sqrt{2\pi}G^2m_M^2m_2^2n_\ast\sigma\ln qv_2^2 \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\,\delta t.
 \end{equation}
 The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared
 \begin{align}
 \tau\sub{R} = {} & \left(\frac{m_2v_2^2}{2}\right)^2\frac{\delta t}{\Delta E^2} \\
- \approx {} & \frac{v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2} \left(\sum_M m_M^2 \left\{k_M \beta\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\frac{v_2^2}{2\sigma^2}\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\right)^{-1}.
+ \approx {} & \frac{3v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln qv_2^2} \left(\sum_M m_M^2 \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\right)^{-1}.
 \end{align}
 This is the time required for stellar encounters to become effective in changing the energy of an orbit in the smooth background potential.
 
@@ -562,17 +564,17 @@ N_{\mathrm{b},\,M} = \frac{3}{3/2 - p_M}\frac{\Gamma(p_M + 1)}{\Gamma(p_M + 7/2)
 \end{equation}
 Using this as a normalisation constant, the probability of a bound star having a velocity in the range $v \rightarrow v + \dd v$ is given by
 \begin{align}
-4\pi v^2 p_{\mathrm{b},\,M} \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}}{N_{\mathrm{b},\,M}} \,\dd v \\
+4\pi v^2 p_{\mathrm{b},\,M}(v) \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}(v)}{N_{\mathrm{b},\,M}} \,\dd v \\
  = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)\left\{\begin{array}{ll}
 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{array}\right\}\,\dd v.
 \end{align}
 The mean squared velocity for bound stars in the core is then
 \begin{align}
-\overline{v^2} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}}{v} \\
- = {} & \frac{2}{\sqrt{\pi}}\sigma^2\frac{3/2 - p_M}{1/2 - p_M}\frac{\Gamma(p_M + 7/2)}{\Gamma(1 + p_M)}\Beta\left(\frac{5}{2},1 + p_M\right).
+\overline{v^2} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}(v)}{v} \\
+ = {} & \frac{4}{\sqrt{\pi}}\sigma^2\frac{3/2 - p_M}{1/2 - p_M}\frac{\Gamma(p_M + 7/2)}{\Gamma(1 + p_M)}\Beta\left(\frac{5}{2},1 + p_M\right),
 \end{align}
-
+assuming that $p_M < 1/2$. In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off, in this case there is a maximal velocity. Will will use the speed of light $v\sub{max} = c$: this is a definite hard cut-off. In reality, the maximum velocity would be lower: it could only be reached by a parabolic orbit that grazes the event horizon. 
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
