@@ -504,12 +504,12 @@ If $v_2^2/2\sigma^2 > 1$,
 \end{align}
 Computing this gives
 \begin{equation}
-\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left\[k\beta\left(\frac{v_2^2}{2\sigma^2};p\right) + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right\]\,\delta t,
+\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln qv_2^2 \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left[k\beta\left(\frac{v_2^2}{2\sigma^2};p\right) + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right]\,\delta t,
 \end{equation}
 where
 \begin{align}
-\beta(w;p) = {} & \begin{cases} \left[\dfrac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(1-2p)(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2} & p < \recip{2} \\
-\frac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases};\\ 
+\beta(w;p) = {} & \begin{cases} \dfrac{9\sqrt{\pi}\Gamma(1+p)}{2(1-2p)\Gamma(p + 7/2)} - \dfrac{9\Beta\left(3 - p, 1 + p\right)}{(1-2p)(2-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^{p-1/2} & p < \recip{2} \\
+\dfrac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases};\\ 
 \alpha(w) = {} & \recip{2}\left\{3w^{-1/2} + 5 + \left[4\exp(1) - \Ei(1) + \Ei(w)\right]\left[\frac{3\sqrt{\pi}}{4}\erf\left(w^{1/2}\right) - \frac{3}{2}w^{1/2}\exp(-w)\right] - 3\sqrt{\pi}\exp(1)\erf(1) \right. \nonumber\\*
  & + \left. 3\left[{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right) - w^{1/2}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right)\right]\right\}.
 \end{align}
@@ -521,8 +521,8 @@ The hypergeometric function originates from the integral
 Combining the two regimes gives some quite complicated expressions. It is possible to simplify these while maintaining reasonable accuracy, for this purpose we will separate the contributions from bound and unbound stars. The bound contribution is relatively straightforward for larger $v_2$; for smaller $v_2$ we may use a series expansion in $v_2^2/2\sigma^2 < 1$ to approximate the hypergeometric function:
 \begin{align}
 \Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln qv_2^2 k \left\{\begin{array}{ll}
-\dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
-\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\beta\left(\frac{v_2^2}{2\sigma^2};p\right) & \dfrac{v_2^2}{2\sigma^2} > 1\end{array}\right\}\,\delta t.
+\dfrac{3}{(1 + p)(2 - p)}\left(\dfrac{v_2^2}{2\sigma^2}\right) - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 & \dfrac{v_2^2}{2\sigma^2} < 1 \\
+\left(\dfrac{v_2^2}{2\sigma^2}\right)^{-1/2}\beta\left(\dfrac{v_2^2}{2\sigma^2};p\right) & \dfrac{v_2^2}{2\sigma^2} > 1\end{array}\right\}\,\delta t.
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
