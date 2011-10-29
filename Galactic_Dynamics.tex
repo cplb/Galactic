@@ -240,7 +240,7 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \begin{equation}
 \tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
-where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
 All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
 
@@ -283,7 +283,9 @@ CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \section{Chandrasekhar's relaxation time-scale}\label{sec:time-scale}
 
-\citet[chapter 2]{Chandrasekhar1960} defined a relaxation time-scale for a stellar system by approximating the fluctuations in the stellar gravitational potentail as a series of two-body encounters. The time over which the squared change in energy is equal to the (initial) kinetic energy of the star is the time taken for relaxation.
+\citet[chapter 2]{Chandrasekhar1960} defined a relaxation time-scale for a stellar system by approximating the fluctuations in the stellar gravitational potentail as a series of two-body encounters. The time over which the squared change in energy is equal to the (initial) kinetic energy of the star is the time taken for relaxation. Chandrasekhar's approach has proved exceedingly successful despite the number of simplifying assumptions inherent in the model which are not strictly applicable to systems such as the Galactic centre. We will not attempt to fix these deficiencies, rather the only modification to the standard picture we shall include will be to substitute the velocity distribution: while the canonical formulation uses a simple homogeneous Gaussian distribution, we shall use a distribution derived from the distribution functions \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
+
+
 
 \subsection{Chandrasekhar's derivation of the change in energy}
 
@@ -356,7 +358,7 @@ The integral over $\psi$ is
 I(\psi_0) = {} & \intd{0}{\psi_0}{\frac{\cos^2(\phi-\psi)\sin\psi}{\cos\psi}}{\psi}\\
  = {} & \frac{\sin 2\phi}{2}\left(\psi_0 - \frac{\sin 2\psi_0}{2}\right) - \frac{\cos 2\phi}{2}\left(\frac{\cos 2\psi_0}{2}\right) - \sin^2\phi\ln(\cos\psi_0).
 \end{align}
-Naively we would think that the upper limit for the deflection limit should be $\psi_0 = \pi/2$; however, this would introduce a logarithmic divergence. In actuality there will be a physical cut-off, reflecting a finite bound for the maximum impact parameter $D_0$. This will be set by the scale of the system, beyond which scattering is negligible. While the logarithmic term is finite, it will still be large, dominating the other terms which are $\order{1}$; we shall therefore neglect the subdominant terms
+Naively we would think that the upper limit for the deflection limit should be $\psi_0 = \pi/2$; however, this would introduce a logarithmic divergence. In actuality there will be a physical cut-off, reflecting a finite bound for the maximum impact parameter $D_0$~\citep{Weinberg1986}. This will be set by the scale of the system, beyond which scattering is negligible. While the logarithmic term is finite, it will still be large, dominating the other terms which are $\order{1}$; we shall therefore neglect the subdominant terms
 \begin{equation}
 \Delta E^2(v_1,\theta,\varphi,\Theta) \simeq  4 n(v_1,\theta,\varphi)\frac{V\sub{g}^2}{V}G^2m_1^2 m_2^2\cos^2i\sin^2\phi\ln\left(\recip{\cos\psi_0}\right)\,\dd v_1\,\dd\theta\,\dd\varphi\,\dd\Theta\,\delta t.
 \end{equation}
@@ -552,7 +554,7 @@ The relaxation time-scale is the time interval $\delta t$ over which the squared
 \tau\sub{R} = {} & \left(\frac{m_2v_2^2}{2}\right)^2\frac{\delta t}{\Delta E^2} \\
  \approx {} & \frac{3v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln\left(qv_2^2\right)} \left(\sum_M m_M^2 \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\right)^{-1}.
 \end{align}
-This is the time required for stellar encounters to become effective in changing the energy of an orbit in the smooth background potential.
+This is the time required for stellar encounters to become effective in changing the energy of an orbit in the smooth background potential. The use of the squared change in energy reflects the expectation that energy changes like a random walk, and hence scales with the square-root of the time.
 
 \subsection{Averaged time-scale}
 
