@@ -130,6 +130,7 @@ We assume a black hole mass of $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$
 
 We will characterise orbits by their eccentricity $e$ and periapse radius $r\sub{p}$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $J$ per unit mass are entirely characterised by these parameters
 \begin{align}
+\label{eq:Energy_ecc}
 \mathcal{E} = {} & -\frac{GM_\bullet(1 - e)}{2r\sub{p}},\\
 J^2 = {} & GM_\bullet(1 + e)r\sub{p}.
 \end{align}
@@ -164,7 +165,7 @@ Using this, we may rewrite our velocity element as
 \begin{equation}
 \dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM}{r}\right)^2\,\dd e \,\dd r\sub{p}.
 \end{equation}
-As a consequence of our assumed spherical symmetry, the volume element can be expressed as
+As a consequence of our assumed spherical symmetry, the volume element is
 \begin{equation}
 \dd^3r = 4\pi r^2 \,\dd r.
 \end{equation}
@@ -219,7 +220,7 @@ To generate a representative sample for the orbital parameters $e$ and $r\sub{p}
 
 \subsection{The inner cut-off}
 
-From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r\sub{p}$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, however should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite cut-off, while the others use statistical arguments; they are therefore true for a typical star, and it is unlikely that a star would be found beyond the imposed limits. For these methods we will need to define a reference time-scale for relaxation, over which two-body interactions lead to significant changes in the orbital properties of the star. This is done in \secref{Relax}, with further details found in \apref{time-scale}.
+From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r\sub{p}$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the black hole than its last stable orbit. This depends upon the spin of the black hole, but is of the order of its Schwarzschild radius. Before we reach this point, however, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, but should hopefully produce reasonable estimates. We will consider three processes: tidal disruption, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite cut-off, while the others use statistical arguments; they are therefore true for a typical star, and it is unlikely that a star would be found beyond the imposed limits. For these methods we will need to define a reference time-scale for relaxation, over which two-body interactions lead to significant changes in the orbital properties of the star. This is done in \secref{Relax}, with further details found in \apref{time-scale}.
 
 \subsubsection{Tidal disruption}
 
@@ -228,13 +229,13 @@ Tidal forces from the black hole can disrupt stars. This occurs at the tidal rad
 r\sub{T} \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \label{eq:Tidal}
 \end{equation}
-where $R_M$ is the radius of the star~\citep{Hills1975, Rees1988, Kobayashi2004}. Any star on an orbit with $r\sub{p} < r\sub{T}$ will be disrupted in the course of its orbit. Parameterising orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone~\citep{Frank1976, Lightman1977} as these were not incorporated into the Fokker-Planck calculations.\footnote{The loss cone includes a region in angular momentum space that is depleted of stars because two-body scattering would allow diffusion over an orbital period to an orbit subject to tidal disruption.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term~\citep{Lightman1977, Bahcall1977}. Its effects are diluted by resonant relaxation.
+where $R_M$ is the radius of the star~\citep{Hills1975, Rees1988, Kobayashi2004}. Any star on an orbit with $r\sub{p} < r\sub{T}$ will be disrupted in the course of its orbit. Parameterising orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone~\citep{Frank1976, Lightman1977} as these were not incorporated into the Fokker-Planck calculations~\citep{Hopman2009}.\footnote{The loss cone includes a region in angular momentum space that is depleted of stars because two-body scattering would allow diffusion over an orbital period to an orbit subject to tidal disruption.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term~\citep{Lightman1977, Bahcall1977}. Its effects are diluted by resonant relaxation~\citep{Toonen2009}.
 
 Tidal disruption is most significant for MS stars since they are least dense; calculated in this way, only MS stars would be tidally disrupted outside of the MBH's event horizon~\citep{Sigurdsson1997}. The tidal radius defines the cut-off for periapsis of high eccentricity ($e \ga 1$) orbits~\citep{Lightman1977}.
 
 \subsubsection{Relaxation time-scale}\label{sec:Relax}
 
-The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The potential of the stars may be split into two components: the smooth background potential representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion.
+The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The potential of the stars may be split into two components: the smooth background potential representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion~\citep{Bekenstein1992,Moaz1993,Nelson1999}.
 
 The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen~\citep{Binney1987}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has form
 \begin{equation}
@@ -242,19 +243,28 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \end{equation}
 where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
-All these approaches yield consistent values, suggesting as a first approximation any approach could be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
+All these approaches yield consistent values, suggesting, as a first approximation, any approach should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
 
 \subsubsection{Gravitational wave inspiral}
 
-Stars orbiting about the black hole will continually emit gravitational radiation, this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as...
-
-For comparison, the total time taken for the inspiral is given in \eqnref{Bound_DF}. The characteristic time-scale is a better measure of the depletion of an orbit as it only depends upon the parameters of that orbit, and not its future evolution.
+Stars orbiting about the black hole will continually emit gravitational radiation, this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as
+\begin{equation}
+\tau\sub{GW} \simeq \mathcal{E}\langle\diff{\mathcal{E}}{T}\rangle,
+\end{equation}
+where the term in angular brackets is the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
+\begin{align}
+\tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
+ \approx {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
+\end{align}
+For comparison, the total time taken for the inspiral is given in \eqnref{Bound_inspiral}. The characteristic time-scale is a better measure of the depletion of an orbit as it only depends upon the parameters of that orbit, and not its future evolution. When comparing with the relaxation timescale we are in effect comparing rates of change, with the shorter timescale highlighting the more rapid process that will dominate the evolution.
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation; we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the relative changes in eccentricity $\Delta e / e$ and periapsis $\Delta r\sub{p} / r\sub{p}$ for an extreme mass-ratio binary are less than $\sqrt{e}\,\order{\eta}$, where $\eta = M/M_\bullet$ is small, and so are only important for very high eccentricity orbits (\apref{Unbound}). These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
 
+The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits smoothly connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the cause of a single orbit. This was necessary to calculate the orbit-averaged quantity. This is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
+
 \subsubsection{Collisions}
 
-As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. A star is unlikely to be disrupted by a single collision~\citep{Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to disrupt: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
+As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. A star is unlikely to be disrupted by a single collision~\citep{Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to pull apart: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) A v(r,e,r\sub{p})\delta t,
 \end{equation}
@@ -283,9 +293,11 @@ CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \section{Chandrasekhar's relaxation time-scale}\label{sec:time-scale}
 
-\citet[chapter 2]{Chandrasekhar1960} defined a relaxation time-scale for a stellar system by approximating the fluctuations in the stellar gravitational potentail as a series of two-body encounters. The time over which the squared change in energy is equal to the (initial) kinetic energy of the star is the time taken for relaxation. Chandrasekhar's approach has proved exceedingly successful despite the number of simplifying assumptions inherent in the model which are not strictly applicable to systems such as the Galactic centre. We will not attempt to fix these deficiencies, rather the only modification to the standard picture we shall include will be to substitute the velocity distribution: while the canonical formulation uses a simple homogeneous Gaussian distribution, we shall use a distribution derived from the distribution functions \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
+\citet[chapter 2]{Chandrasekhar1960} defined a relaxation time-scale for a stellar system by approximating the fluctuations in the stellar gravitational potential as a series of two-body encounters. The time over which the squared change in energy is equal to the (initial) kinetic energy of the star is the time taken for relaxation. This relaxation is explained through dynamical friction~\citep{Chandrasekhar1943a, Binney1987}. This can be understood intuitively as the drag induced on a star by the overdensity of field stars deflected by its passage~\citep{Mulder1983}. In the interaction between the star and its gravitational wake, energy and momentum are exchanged, accelerating some stars, decelerating others.
 
+Chandrasekhar's approach has proved exceedingly successful despite the number of simplifying assumptions inherent in the model which are not strictly applicable to systems such as the Galactic centre. We will not attempt to fix these deficiencies, rather the only modification to the standard picture we shall include will be to substitute the velocity distribution: while the canonical formulation uses a simple homogeneous Gaussian distribution, we shall use a distribution derived from the distribution functions \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
 
+Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory~\citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}. Further extensions have been produced using the tools of linear response theory and the fluctuation-dissipation theory~\citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity~\citep{Bekenstein1992,Moaz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
 
 \subsection{Chandrasekhar's derivation of the change in energy}
 
@@ -472,7 +484,7 @@ f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M\begin{
 \end{equation}
 The integral may be evaluated in terms of the hypergeometric function ${_2F_1(a,b;c;x)}$, but for the limits needed here the results simplify to
 \begin{equation}
-f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(\frac{v^2}{2\sigma^2}\right)\begin{cases}
+f_{\mathrm{b},\,M}(v) = \frac{N_\ast}{\left(2\pi\sigma^2\right)^{3/2}}k_M \left(\frac{v^2}{2\sigma^2}\right)^{p_M - 3}\begin{cases}
 3 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
 3 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1
 \end{cases},
@@ -528,11 +540,11 @@ Combining the two regimes gives some quite complicated expressions. It is possib
 \end{align}
 This can be rolled into one continuous function
 \begin{align}
-\Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) k \left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left\{\left[\dfrac{3}{(1 + p)(2 - p)}\dfrac{v_2^2}{2\sigma^2} - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 \right]\right. \nonumber\\*
+\Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) k \left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left\{\left[\dfrac{3}{(1 + p)(2 - p)}\left(\dfrac{v_2^2}{2\sigma^2}\right) - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 \right]\right. \nonumber\\*
  & + \left. \left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\beta\left(\frac{v_2^2}{2\sigma^2};p\right)\right\}\,\delta t\\
  \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) k \gamma\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
 \end{align}
-defining the function $\gamma(w;p)$ in the last line. The resulting error (ignoring variation from $\ln\left(qv_2^2\right)$) is less than $3\%$.
+defining the function $\gamma(w;p)$ in the last line. The resulting error [ignoring variation from $\ln\left(qv_2^2\right)$] is less than $3\%$.
 
 The unbound contribution is very simple for small $v_2$, but much more complicated for large $v_2$. In the limit of $v_2 \rightarrow \infty$, it decays as $v_2^{-1}$:
 \begin{align}
@@ -543,7 +555,7 @@ Using the two limiting forms, the function
 \begin{equation}
 \Delta E\sub{u}^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) C \Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
 \end{equation}
-reproduces the full function to better than $5\%$ (ignoring variation from $\ln\left(qv_2^2\right)$).
+reproduces the full function to better than $5\%$ ignoring variation from $\ln\left(qv_2^2\right)$].
 
 Making explicit the sum over the different species, the total change in energy squared is approximately
 \begin{equation}
@@ -569,25 +581,25 @@ N_{\mathrm{b},\,M} = \frac{3}{3/2 - p_M}\frac{\Gamma(p_M + 1)}{\Gamma(p_M + 7/2)
 Using this as a normalisation constant, the probability of a bound star having a velocity in the range $v \rightarrow v + \dd v$ is given by
 \begin{align}
 4\pi v^2 p_{\mathrm{b},\,M}(v) \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}(v)}{N_{\mathrm{b},\,M}} \,\dd v \\
- = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)\left\{\begin{array}{ll}
+ = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)^{p_M - 3}\left\{\begin{array}{ll}
 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{array}\right\}\,\dd v.
 \end{align}
 The mean squared velocity for bound stars in the core is then
 \begin{align}
-\overline{v^2\sub{M}} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}(v)}{v} \\
+\overline{v^2_{M}} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}(v)}{v} \\
  = {} & \frac{4}{\sqrt{\pi}}\sigma^2\frac{3/2 - p_M}{1/2 - p_M}\frac{\Gamma(p_M + 7/2)}{\Gamma(1 + p_M)}\Beta\left(\frac{5}{2},1 + p_M\right),
 \end{align}
 assuming that $p_M < 1/2$.
 
-In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off, in this case there is a maximal velocity. Will will use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we might expect the maximum velocity to be lower due to a depletion of orbits (for example because of gravitational wave inspiral). We will neglect these possible variations, since the error introduced should be small as a consequence of taking the logarithm. We also suspect that a simple Newtonian description of these orbits is imprecise; however a full relativistic description is beyond this simple analysis. For $p_M = 1/2$
+In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off; in this case there is a maximal velocity. Will will use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we might expect the maximum velocity to be lower due to a depletion of orbits (for example because of gravitational wave inspiral). We will neglect these possible variations, since the error introduced should be small as a consequence of taking the logarithm. We also suspect that a simple Newtonian description of these orbits is imprecise; however, a full relativistic description is beyond this simple analysis. For $p_M = 1/2$
 \begin{align}
-\overline{v^2\sub{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}}{2\sigma^2}\right)\right].
+\overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}}{2\sigma^2}\right)\right].
 \end{align}
 
-The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as
+The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
 \begin{equation}
-\ln\left(qv_2^2\right) = \ln \Lambda = \ln\left(\frac{M_\bullet}{M_\star}\right)
+\ln\left(q\overline{v_2^2}\right) = \ln \Lambda \simeq \ln\left(\frac{M_\bullet}{M_\star}\right).
 \end{equation}
 
 \section{Evolution of orbital parameters from gravitational wave emission}
@@ -605,24 +617,25 @@ where we have introduced
 \end{equation}
 For a circular orbit the inspiral time from initial periapsis $r\sub{p0}$ is
 \begin{equation}
-\tau\sub{c}(r\sub{p0}) = \frac{5}{256}\frac{r\sub{p0}^4}{\Theta}.
+\tau\sub{c}(r\sub{p0}) = \frac{5}{256}\frac{r\sub{p0}^4}{\zeta}.
 \end{equation}
 For an orbit of finite eccentricity ($0 < e < 1$), we can solve for the periapsis as a function of eccentricity
 \begin{equation}
 r\sub{p}(e) = \chi(1 + e)^{-1}\left(1 + \frac{121}{304}e^2\right)^{870/2299}e^{12/19},
 \end{equation}
-where $\Lambda$ is a constant fixed by the initial conditions: for an orbit with initial eccentricity $e_0$
+where $\chi$ is a constant fixed by the initial conditions: for an orbit with initial eccentricity $e_0$
 \begin{equation}
 \chi = (1 + e_0)\left(1 + \frac{121}{304}e_0^2\right)^{-870/2299}e_0^{-12/19}r\sub{p0}.
 \end{equation}
 The inspiral is complete when the eccentricity has decayed to zero. Consequently the inspiral time is~\citep{Peters1964}
 \begin{equation}
-\tau(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\chi^4}{\zeta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
+\tau\sub{insp}(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\chi^4}{\zeta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
-This is best evaluated numerically, however it may be written in closed form as
+This is best evaluated numerically, but it may be written in closed form as
 \begin{align}
-\tau(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
+\tau\sub{insp}(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
   {} & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
+\label{eq:Bound_inspiral}
 \end{align}
 using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$~\citep[16.15.1]{Olver2010}.\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
 
