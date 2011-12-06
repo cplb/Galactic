@@ -594,13 +594,14 @@ assuming that $p_M < 1/2$.
 
 In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off; in this case there is a maximal velocity. Will will use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we might expect the maximum velocity to be lower due to a depletion of orbits (for example because of gravitational wave inspiral). We will neglect these possible variations, since the error introduced should be small as a consequence of taking the logarithm. We also suspect that a simple Newtonian description of these orbits is imprecise; however, a full relativistic description is beyond this simple analysis. For $p_M = 1/2$
 \begin{align}
-\overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}}{2\sigma^2}\right)\right].
+\overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
 
 The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
 \begin{equation}
 \ln\left(q\overline{v_2^2}\right) = \ln \Lambda \simeq \ln\left(\frac{M_\bullet}{M_\star}\right).
 \end{equation}
+
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
@@ -632,29 +633,26 @@ The inspiral is complete when the eccentricity has decayed to zero. Consequently
 \tau\sub{insp}(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\chi^4}{\zeta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, but it may be written in closed form as
-\begin{align}
-\tau\sub{insp}(r\sub{p0},e_0) = {} & \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} \nonumber\\*
-  {} & \times F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
+\begin{equation}
+\tau\sub{insp}(r\sub{p0},e_0) = \tau\sub{c}(r\sub{p0})(1 + e_0)^4\left(1 + \frac{121}{304}e_0^2\right)^{-3480/2299} F_1\left(\frac{24}{19};\frac{3}{2},-\frac{1181}{2299};\frac{43}{19};e_0^2,-\frac{121}{304}e_0^2\right),
 \label{eq:Bound_inspiral}
-\end{align}
+\end{equation}
 using the Appell hypergeometric function of the first kind $F_1(\alpha;\beta,\beta';\gamma;x,y)$~\citep[16.15.1]{Olver2010}.\footnote{For small eccentricities $\tau(r\sub{p0},e_0) \simeq \tau\sub{c}(r\sub{p0})[1 + 4e_0 + (273/43)e_0^2 + \order{e_0^3}]$.}
 
 \subsection{Unbound orbits}\label{sec:Unbound}
 
 Unbound orbits only pass through periapsis once. We therefore expect that their evolution through the loss of energy and angular momentum carried away by gravitational waves to be small. Following the approach of \citet{Turner1977} we can calculate the change in the eccentricity and periapse of an unbound Keplerian binary. The change in fractional eccentricity over an orbit, approximating the orbital parameters remain constant throughout, is
-\begin{align}
-\frac{\Delta e}{e} = {} & -\frac{608}{15}\Sigma\left[\recip{(1+e)^{5/2}}\left(1 + \frac{121}{304}e^2\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber\\*
-  {} & + \left. \frac{(e - 1)^{1/2}}{e^2(1+e)^2}\left(\frac{67}{456} + \frac{1069}{912}e^2 + \frac{3}{38}e^4\right)\right],
-\end{align}
+\begin{equation}
+\frac{\Delta e}{e} = -\frac{608}{15}\Sigma\left[\recip{(1+e)^{5/2}}\left(1 + \frac{121}{304}e^2\right)\cos^{-1}\left(-\recip{e}\right) + \frac{(e - 1)^{1/2}}{e^2(1+e)^2}\left(\frac{67}{456} + \frac{1069}{912}e^2 + \frac{3}{38}e^4\right)\right],
+\end{equation}
 introducing dimensionless parameter
 \begin{equation}
 \Sigma = \frac{G^{5/2}M_\bullet M(M_\bullet+ M)}{c^5r\sub{p}^{5/2}}.
 \end{equation}
 Similarly, the fractional change in periapsis is
-\begin{align}
-\frac{\Delta r\sub{p}}{r\sub{p}} = {} & -\frac{128}{5}\Sigma\left[\recip{(1+e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right)\cos^{-1}\left(-\recip{e}\right)\right. \nonumber \\*
-  {} &  - \left. \frac{(e - 1)^{1/2}}{e(1 + e)^3}\left(\frac{67}{288} - \frac{13}{8}e + \frac{133}{576}e^2 - \frac{1}{4}e^3 - \frac{1}{8}e^4\right)\right].
-\end{align}
+\begin{equation}
+\frac{\Delta r\sub{p}}{r\sub{p}} = -\frac{128}{5}\Sigma\left[\recip{(1+e)^{7/2}}\left(1 - \frac{7}{12}e + \frac{7}{8}e^2 + \frac{47}{192}e^3\right)\cos^{-1}\left(-\recip{e}\right) - \frac{(e - 1)^{1/2}}{e(1 + e)^3}\left(\frac{67}{288} - \frac{13}{8}e + \frac{133}{576}e^2 - \frac{1}{4}e^3 - \frac{1}{8}e^4\right)\right].
+\end{equation}
 Both of these changes obtain their greatest magnitudes for large eccentricities, then
 \begin{equation}
 \frac{\Delta e}{e} \simeq \frac{\Delta r\sub{p}}{r\sub{p}} \simeq -\frac{16}{5}\Sigma e^{1/2}.
