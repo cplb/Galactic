@@ -235,7 +235,7 @@ Tidal disruption is most significant for MS stars since they are least dense; ca
 
 \subsubsection{Relaxation time-scale}\label{sec:Relax}
 
-The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The potential of the stars may be split into two components: the smooth background potential representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion~\citep{Bekenstein1992,Moaz1993,Nelson1999}.
+The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The potential of the stars may be split into two components: the smooth background potential representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion~\citep{Bekenstein1992,Maoz1993,Nelson1999}.
 
 The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen~\citep{Binney1987}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has form
 \begin{equation}
@@ -297,7 +297,7 @@ CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 Chandrasekhar's approach has proved exceedingly successful despite the number of simplifying assumptions inherent in the model which are not strictly applicable to systems such as the Galactic centre. We will not attempt to fix these deficiencies, rather the only modification to the standard picture we shall include will be to substitute the velocity distribution: while the canonical formulation uses a simple homogeneous Gaussian distribution, we shall use a distribution derived from the distribution functions \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
 
-Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory~\citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}. Further extensions have been produced using the tools of linear response theory and the fluctuation-dissipation theory~\citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity~\citep{Bekenstein1992,Moaz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
+Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory~\citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}. Further extensions have been produced using the tools of linear response theory and the fluctuation-dissipation theory~\citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity~\citep{Bekenstein1992,Maoz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
 
 \subsection{Chandrasekhar's derivation of the change in energy}
 
@@ -524,8 +524,8 @@ where
 \begin{align}
 \alpha(w) = {} & \recip{2}\left\{3w^{-1/2} + 5 + \left[4\exp(1) - \Ei(1) + \Ei(w)\right]\left[\frac{3\sqrt{\pi}}{4}\erf\left(w^{1/2}\right) - \frac{3}{2}w^{1/2}\exp(-w)\right] - 3\sqrt{\pi}\exp(1)\erf(1) \right. \nonumber\\*
  & + \left. 3\left[{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};1\right) - w^{1/2}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right)\right]\right\}; \\
-\beta(w;p) = {} & \begin{cases} \dfrac{\dfrac{3}{1/2 - p}\left[\Beta\left(\dfrac{5}{2},1+p\right) - \dfrac{3w^{p-1/2}}{2(2-p)}\Beta\left(3-p,1+p\right)\right] & p < \recip{2} \\
-\dfrac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases} \; . 
+\beta(w;p) = {} & \begin{cases} \dfrac{3}{1/2 - p}\left[\Beta\left(\dfrac{5}{2},1+p\right) - \dfrac{3w^{p-1/2}}{2(2-p)}\Beta\left(3-p,1+p\right)\right] & p < \recip{2} \\
+\dfrac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases} . 
 \end{align}
 The hypergeometric function originates from the integral
 \begin{equation}
@@ -554,13 +554,13 @@ The unbound contribution is very simple for small $v_2$, but much more complicat
 Using the two limiting forms, the function
 \begin{equation}
 \Delta E\sub{u}^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) C \Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
+\label{eq:Unbound-approx}
 \end{equation}
 reproduces the full function to better than $5\%$ ignoring variation from $\ln\left(qv_2^2\right)$].
 
 Making explicit the sum over the different species, the total change in energy squared is approximately
 \begin{equation}
 \Delta E^2 \approx \sum_M \frac{16}{3}\sqrt{2\pi}G^2m_M^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\,\delta t.
-\label{eq:Unbound_approx}
 \end{equation}
 The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared
 \begin{align}
@@ -605,21 +605,22 @@ The average of the change in energy is more involved. First we will replace the 
 We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the indices of the bound population of field stars and the distribution of test stars over which we are averaging. We will use $p_1$ and $p_2$ respectively for this calculation. The average is
 \begin{align}
 \overline{\Delta E^2\sub{b,2}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},2}(v)}{v} \\
- \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)}\left\{\intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-2} \frac{3}{(2 - p_1)(1 + p_1)}{_3F_2}\left(-1-p_1,2-p_1,\frac{3}{2};3-p_1,\frac{5}{2};\frac{v^2}{2\sigma^2}\right) \Beta\left(\frac{v^2}{2\sigma^2};3-p_2,1+p_2\right)}{v} \right. \nonumber \\* 
- {} & + \left.\intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-5/2} \beta\left(\frac{v^2}{2\sigma^2};_1p\right) \Beta\left(3-p_1,1+p_1\right)}{v} \right\}\delta t.
+ \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda\right) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)} \nonumber \\* 
+ {} & \times \left[ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-2} \frac{3}{(2 - p_1)(1 + p_1)} {_3F_2}\left(-1-p_1,2-p_1,\frac{3}{2};3-p_1,\frac{5}{2};\frac{v^2}{2\sigma^2}\right) \Beta\left(\frac{v^2}{2\sigma^2};3-p_2,1+p_2\right)}{v} \right. \nonumber \\* 
+ {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-5/2} \beta\left(\frac{v^2}{2\sigma^2};_1p\right) \Beta\left(3-p_1,1+p_1\right)}{v} \right] \delta t.
 \end{align}
 The high velocity integral can be performed without difficulty, but the low velocity piece is more formidable. Progress can be made by making a series expansion in $v^2/2\sigma^2$. Retaining terms to third order approximates the integrand to no worse than $10\%$, with good agreement across most of the integration range. The result may be condensed into a simpler form by approximating it as a quadratic in $p_1$ and $p_2$, which introduces less than $2\%$. After this manipulation
 \begin{align}
-\overline{\Delta E^2\sub{b,2}} \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)}\left\{\frac{30 + 36p_1 + 25p_1^2 - p_2\left(13 + 15p_1 + 7 p_1^2\right) + p_2^2\left(6 + 9p_1 + 8p_1^2\right)}{210} \right. \nonumner \\* 
- {} & + \left. \iota\left(p_1,p_2\right) \right\}\delta t,
+\overline{\Delta E^2\sub{b,2}} \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda\right) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)} \left[ \frac{30 + 36p_1 + 25p_1^2 - p_2\left(13 + 15p_1 + 7 p_1^2\right) + p_2^2\left(6 + 9p_1 + 8p_1^2\right)}{210} \right. \nonumber \\* 
+ {} & + \left. \vphantom{\frac{30 + 36p_1 + 25p_1^2 - p_2\left(13 + 15p_1 + 7 p_1^2\right) + p_2^2\left(6 + 9p_1 + 8p_1^2\right)}{210}} \iota \left(p_1,p_2\right) \right] \delta t,
 \end{align}
 introducing
 \begin{equation}
-\iota\left(p_1,p_2\right) = \Beta\left(3-p_2,1+p_2\right) \begin{cases} \dfrac{3}{1/2 - p}\left[\dfrac{\Beta\left(5/2,1+p\right)}{2-p_2} - \dfrac{3\Beta\left(3-p_1,1+p_1\right)}{2\left(2-p_1\right)\left(5/2 - p_1 - p_2\right)}\right] & p_1 < \recip{2} \\
+\iota\left(p_1,p_2\right) = \Beta\left(3-p_2,1+p_2\right) \begin{cases} \dfrac{3}{1/2 - p}\left[\dfrac{\Beta\left(5/2,1+p_1\right)}{2-p_2} - \dfrac{3\Beta\left(3-p_1,1+p_1\right)}{2\left(2-p_1\right)\left(5/2 - p_1 - p_2\right)}\right] & p_1 < \recip{2} \\
 \dfrac{\pi}{32}\dfrac{4 + p_2 + 12 \left(2 - p_2\right) \ln(2)}{2-p_2} & p = \recip{2} \end{cases}.
 \end{equation}
 
-To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{}
+To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{Unbound-approx}
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
