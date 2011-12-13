@@ -262,7 +262,7 @@ Unbound stars only undergo a single periapse passage and only radiate one burst 
 
 The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits smoothly connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the cause of a single orbit. This was necessary to calculate the orbit-averaged quantity. This is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
 
-\subsubsection{Collisions}
+\subsubsection{Collisions}\label{sec:Collision}
 
 As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars. A star is unlikely to be disrupted by a single collision~\citep{Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to pull apart: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
@@ -439,7 +439,7 @@ v_2\left[\ln\left(qv_2^2\right) + \ln 4\right] & v_1 = v_2\\
 \end{align}
 This form maintains the correct limit for $v_2 \rightarrow 0$. We are left with
 \begin{equation}
-\Delta E^2(v_1) \approx \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln\left(qv_2^2\right)\left\{\begin{array}{lr}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{array}\right\}\,\dd v_1\delta t.
+\Delta E^2(v_1) \simeq \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln\left(qv_2^2\right)\left\{\begin{array}{lr}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{array}\right\}\,\dd v_1\delta t.
 \end{equation}
 The final integral requires a specific form for the velocity distribution.
 
@@ -500,25 +500,25 @@ The velocity space density is related to the distribution by
 
 Using the specific forms for the velocity space density, we can calculate the squared change in energy. The functional form depends upon the velocity of the test star. If $v_2^2/2\sigma^2 < 1$, then
 \begin{align}
-\Delta E^2 \approx {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right)\left\{\intd{0}{v_2}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
+\Delta E^2 \simeq {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right)\left\{\intd{0}{v_2}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
  & + \left. \intd{v_2}{\sqrt{2}\sigma}{3kv_1v_2^2\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
  & + \left. \intd{\sqrt{2}\sigma}{\infty}{v_1v_2^2\left[3 k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p_M, 1 + p_M\right) + C\epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t,
 \end{align}
 where we have suppressed the subscript $M$ for brevity; it would be necessary to sum over all the species to get the total value. Computing the integrals and rearranging yields
 \begin{align}
-\Delta E^2 \approx {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right) \left(\frac{v_2^2}{2\sigma^2}\right) \left[k \frac{3}{(2 - p)(1 + p)}{_3F_2}\left(-1-p,2-p,\frac{3}{2};3-p,\frac{5}{2};\frac{v_2^2}{2\sigma^2}\right) + C\right]\,\delta t,
+\Delta E^2 \simeq {} & \frac{16}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right) \left(\frac{v_2^2}{2\sigma^2}\right) \left[k \frac{3}{(2 - p)(1 + p)}{_3F_2}\left(-1-p,2-p,\frac{3}{2};3-p,\frac{5}{2};\frac{v_2^2}{2\sigma^2}\right) + C\right]\,\delta t,
 \end{align}
 where ${_3F_2}(a_1,a_2,a_3;b_1,b_2;x)$ is a generalised hypergeometric function~\citep[section 16]{Olver2010}. The contribution from bound and unbound stars can be identified by the coefficients $k$ and $C$ respectively.
 
 If $v_2^2/2\sigma^2 > 1$,
 \begin{align}
-\Delta E^2 \approx {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right)\left\{\intd{0}{\sqrt{2}\sigma}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
+\Delta E^2 \simeq {} & \frac{8}{3}\sqrt{2\pi}\frac{G^2m_1^2 m_2^2n_\ast}{\sigma^3}\ln\left(qv_2^2\right)\left\{\intd{0}{\sqrt{2}\sigma}{3k\frac{v_1^4}{v_2}\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3} \Beta\left(\frac{v_1^2}{2\sigma^2};3 - p, 1 + p\right)}{v_1} \right. \nonumber\\*
  & + \left. \intd{\sqrt{2}\sigma}{v_2}{\frac{v_1^4}{v_2}\left[3k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p, 1 + p\right) + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1} \right. \nonumber\\*
  & \left. + \intd{v_2}{\infty}{v_1v_2^2\left[3k\left(\frac{v_1^2}{2\sigma^2}\right)^{p-3}\Beta\left(3 - p_M, 1 + p_M\right) + C \epsilon\left(\frac{v_1^2}{2\sigma^2}\right)\right]}{v_1}\right\}\,\delta t.
 \end{align}
 Computing this gives
 \begin{equation}
-\Delta E^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2 m_2^2n_\ast\sigma\ln\left(qv_2^2\right) \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left[k\beta\left(\frac{v_2^2}{2\sigma^2};p\right) + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right]\,\delta t,
+\Delta E^2 \simeq \frac{16}{3}\sqrt{2\pi}G^2m_1^2 m_2^2n_\ast\sigma\ln\left(qv_2^2\right) \left(\frac{v_2^2}{2\sigma^2}\right)^{-1/2} \left[k\beta\left(\frac{v_2^2}{2\sigma^2};p\right) + C\alpha\left(\frac{v_2^2}{2\sigma^2}\right)\right]\,\delta t,
 \end{equation}
 where
 \begin{align}
@@ -527,7 +527,7 @@ where
 \beta(w;p) = {} & \begin{cases} \dfrac{3}{1/2 - p}\left[\Beta\left(\dfrac{5}{2},1+p\right) - \dfrac{3w^{p-1/2}}{2(2-p)}\Beta\left(3-p,1+p\right)\right] & p < \recip{2} \\
 \dfrac{\pi}{32}\left[12 \ln(2) - 1 + 6 \ln(w)\right] & p = \recip{2} \end{cases} . 
 \end{align}
-The hypergeometric function originates from the integral
+The generalised hypergeometric function originates from the integral
 \begin{equation}
 \intd{}{w}{\frac{\exp(w')\erf\left({w'}^{1/2}\right)}{w'}}{w'} = \frac{4w^{1/2}}{\sqrt{\pi}}{_2F_2}\left(\frac{1}{2},1;\frac{3}{2},\frac{3}{2};w\right).
 \end{equation}
@@ -582,7 +582,7 @@ N_{\mathrm{b},\,M} = \frac{3}{3/2 - p_M}\frac{\Gamma(p_M + 1)}{\Gamma(p_M + 7/2)
 Using this as a normalisation constant, the probability of a bound star having a velocity in the range $v \rightarrow v + \dd v$ is given by
 \begin{align}
 4\pi v^2 p_{\mathrm{b},\,M}(v) \,\dd v = {} & 4\pi v^2 \frac{f_{\mathrm{b},\,M}(v)}{N_{\mathrm{b},\,M}} \,\dd v \\
- = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} k_M \left(\frac{v^2}{2\sigma^2}\right)^{p_M - 3}\left\{\begin{array}{lr}
+ = {} & \sqrt{\frac{2}{\pi}} \frac{v^2}{\sigma^3} \frac{\left(3/2 - p_M\right)\Gamma(p_M + 7/2)}{\Gamma(p_M + 1)} \left(\frac{v^2}{2\sigma^2}\right)^{p_M - 3}\left\{\begin{array}{lr}
 \Beta\left(\dfrac{v^2}{2\sigma^2}; 3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \leq 1 \\
 \Beta\left(3 - p_M, 1 + p_M\right) & \dfrac{v^2}{2\sigma^2} \geq 1\end{array}\right\}\,\dd v.
 \end{align}
@@ -598,29 +598,49 @@ In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarit
 \overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
 
-The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
+The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_{M'}^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
 \begin{equation}
-\ln\left(q\overline{v_2^2}\right) = \ln \Lambda \simeq \ln\left(\frac{M_\bullet}{M_\star}\right).
+\ln\left(q\overline{v_2^2}\right) = \ln \Lambda_M \simeq \ln\left(\frac{M_\bullet}{M}\right).
 \end{equation}
-We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the indices of the bound population of field stars and the distribution of test stars over which we are averaging. We will use $p_1$ and $p_2$ respectively for this calculation. The average is
+We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the the bound population of field stars and the distribution of test stars over which we are averaging. We will use $M$ and $M'$ respectively for this calculation. The average is
 \begin{align}
-\overline{\Delta E^2\sub{b,2}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},2}(v)}{v} \\
- \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda\right) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)} \nonumber \\* 
- {} & \times \left[ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-2} \frac{3}{(2 - p_1)(1 + p_1)} {_3F_2}\left(-1-p_1,2-p_1,\frac{3}{2};3-p_1,\frac{5}{2};\frac{v^2}{2\sigma^2}\right) \Beta\left(\frac{v^2}{2\sigma^2};3-p_2,1+p_2\right)}{v} \right. \nonumber \\* 
- {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_2-5/2} \beta\left(\frac{v^2}{2\sigma^2};_1p\right) \Beta\left(3-p_1,1+p_1\right)}{v} \right] \delta t.
+\overline{\Delta E^2_{\mathrm{b}\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},2}(v)}{v} \\
+ \simeq {} & \sum_M\frac{32}{3}\frac{G^2m_M^2m_{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \nonumber \\* 
+ {} & \times \left[ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2} \frac{3}{(2 - p_M)(1 + p_M)} {_3F_{M'}}\left(-1-p_M,2-p_M,\frac{3}{2};3-p_M,\frac{5}{2};\frac{v^2}{2\sigma^2}\right) \Beta\left(\frac{v^2}{2\sigma^2};3-p_{M'},1+p_{M'}\right)}{v} \right. \nonumber \\* 
+ {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-7/2} \beta\left(\frac{v^2}{2\sigma^2};p_M\right) \Beta\left(3-p_M,1+p_M\right)}{v} \right] \delta t.
 \end{align}
-The high velocity integral can be performed without difficulty, but the low velocity piece is more formidable. Progress can be made by making a series expansion in $v^2/2\sigma^2$. Retaining terms to third order approximates the integrand to no worse than $10\%$, with good agreement across most of the integration range. The result may be condensed into a simpler form by approximating it as a quadratic in $p_1$ and $p_2$, which introduces less than $2\%$. After this manipulation
+The high velocity integral can be performed without difficulty, but the low velocity piece is more formidable. Progress can be made by making a series expansion in $v^2/2\sigma^2$. Retaining terms to third order approximates the integrand to no worse than $10\%$, with good agreement across most of the integration range. The result may be condensed into a simpler form by approximating it as a quadratic in $p_M$ and $p_{M'}$, which introduces less than $2\%$ further error. After this manipulation
 \begin{align}
-\overline{\Delta E^2\sub{b,2}} \approx {} & \frac{32}{3}\frac{G^2m_1^2m_2^2n_\ast}{\sigma^2}\ln\left(\Lambda\right) k \frac{(3/2 - p_2)\Gamma(p_2 + 7/2)}{\Gamma(p_2 + 1)} \left[ \frac{30 + 36p_1 + 25p_1^2 - p_2\left(13 + 15p_1 + 7 p_1^2\right) + p_2^2\left(6 + 9p_1 + 8p_1^2\right)}{210} \right. \nonumber \\* 
- {} & + \left. \vphantom{\frac{30 + 36p_1 + 25p_1^2 - p_2\left(13 + 15p_1 + 7 p_1^2\right) + p_2^2\left(6 + 9p_1 + 8p_1^2\right)}{210}} \iota \left(p_1,p_2\right) \right] \delta t,
+\overline{\Delta E^2_{\mathrm{b}\,M'}} \approx {} & \sum_M\frac{32}{3}\frac{G^2m_M^2m_{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[ \frac{30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) + p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210} \right. \nonumber \\* 
+ {} & + \left. \vphantom{\frac{30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) + p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210}} \iota \left(p_M,p_{M'}\right) \right] \delta t,
 \end{align}
 introducing
 \begin{equation}
-\iota\left(p_1,p_2\right) = \Beta\left(3-p_2,1+p_2\right) \begin{cases} \dfrac{3}{1/2 - p}\left[\dfrac{\Beta\left(5/2,1+p_1\right)}{2-p_2} - \dfrac{3\Beta\left(3-p_1,1+p_1\right)}{2\left(2-p_1\right)\left(5/2 - p_1 - p_2\right)}\right] & p_1 < \recip{2} \\
-\dfrac{\pi}{32}\dfrac{4 + p_2 + 12 \left(2 - p_2\right) \ln(2)}{2-p_2} & p = \recip{2} \end{cases}.
+\iota\left(p_M,p_{M'}\right) = \Beta\left(3-p_{M'},1+p_{M'}\right) \begin{cases} \dfrac{3}{1/2 - p_M}\left[\dfrac{\Beta\left(5/2,1+p_M\right)}{2-p_{M'}} - \dfrac{3\Beta\left(3-p_M,1+p_M\right)}{2\left(2-p_M\right)\left(5/2 - p_M - p_{M'}\right)}\right] & p_M < \recip{2} \\
+\dfrac{\pi}{32}\dfrac{4 + p_{M'} + 12 \left(2 - p_{M'}\right) \ln(2)}{2-p_{M'}} & p_M = \recip{2} \end{cases}.
 \end{equation}
 
-To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{Unbound-approx}
+To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{Unbound-approx}. 
+\begin{align}
+\overline{\Delta E^2_{\mathrm{u}\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{u} v^2 p_{\mathrm{b},2}(v)}{v} \\
+ \approx {} & \sum_M\frac{32}{3}\frac{G^2m_M^2m_{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\{ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2}\Beta\left(\frac{v^2}{2\sigma^2};3-p_{M'},1+p_{M'}\right)}{v} \right. \nonumber \\* 
+ {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2} \Xi\left[\Xi^2 + \left(\frac{v^2}{2\sigma^2}\right)^3\right] \Beta\left(3-p_M,1+p_M\right)}{v} \right\} \delta t;
+\end{align}
+for consistency with the bound case we have continued to use the subscript $M'$. The low velocity integral is of the same form as for calculating $\overline{v^2_M}$ and can be evaluated in terms of beta functions, the high velocity integral can be evaluated in terms of the hypergeometric function~\citep[15.6.1]{Olver}
+\begin{align}
+\overline{\Delta E^2_{\mathrm{u}\,M'}} \approx {} & \sim_M\frac{32}{3}\frac{G^2m_M^2m_{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[\nu\left(p_{M'}\right) + \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_{M'}F_M}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{}{5-p_{M'}}{3};-\xi^2\right) \right] \delta t,
+\end{align}
+where
+\begin{equation}
+\nu(p) = \begin{cases} \recip{1/2 - p}\left[\Beta\left(\dfrac{5}{2},1+p\right) - \Beta\left(3-p,1+p\right)\right] & p < \recip{2} \\
+\dfrac{\pi}{96}\left[12 \ln(2) - 5\right]
+\end{cases} \; .
+\end{equation}
+The total relaxation time for a species is
+\begin{equation}
+\overline{\tau_{\mathrm{R,\,M'}}} = \left(\frac{m_{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b}\,M'}} + \overline{\Delta E^2_{\mathrm{u}\,M'}}}.
+\end{equation}
+The relaxation timescale for MS stars will be used in determining the collisional cutoff as described in \secref{Collision}.
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
