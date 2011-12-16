@@ -32,8 +32,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Galactic Dynamics]{Galactic Dynamics}
-\author[C. P. L. Berry and J. R. Gair]{C. P. L. Berry$^{1}$\thanks{E-mail:
-cplb2@cam.ac.uk}  and J. R. Gair$^{1}$\\
+\author[C.\ P.\ L.\ Berry and J.\ R.\ Gair]{C.\ P.\ L.\ Berry$^{1}$\thanks{E-mail:
+cplb2@cam.ac.uk}  and J.\ R.\ Gair$^{1}$\\
 $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA}
 
 \begin{document}
@@ -249,7 +249,7 @@ All these approaches yield consistent values, suggesting, as a first approximati
 
 Stars orbiting about the black hole will continually emit gravitational radiation, this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as
 \begin{equation}
-\tau\sub{GW} \simeq \mathcal{E}\langle\diff{\mathcal{E}}{T}\rangle,
+\tau\sub{GW} \simeq \mathcal{E}\left\langle\diff{\mathcal{E}}{t}\right\rangle,
 \end{equation}
 where the term in angular brackets is the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
 \begin{align}
@@ -260,7 +260,7 @@ For comparison, the total time taken for the inspiral is given in \eqnref{Bound_
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation; we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the relative changes in eccentricity $\Delta e / e$ and periapsis $\Delta r\sub{p} / r\sub{p}$ for an extreme mass-ratio binary are less than $\sqrt{e}\,\order{\eta}$, where $\eta = M/M_\bullet$ is small, and so are only important for very high eccentricity orbits (\apref{Unbound}). These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
 
-The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits smoothly connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the cause of a single orbit. This was necessary to calculate the orbit-averaged quantity. This is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
+The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the cause of a single orbit. This was necessary to calculate the orbit-averaged quantity. This is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
 
 \subsubsection{Collisions}\label{sec:Collision}
 
@@ -344,7 +344,7 @@ hence
 
 We now need to calculate the encounter rate. This requires us to know number of field stars per unit volume and per volume space element. We will make the simplifying assumption that the density of stars is uniform. This is not the case for the Galactic centre; however, we will approximate it as so in order to make the problem tractable. It may seem especially bad for treatment of compact objects very close to the central MBH, inside the radius where main sequence stars would be tidally disrupted; however, it must be remembered that it is small angle deflections, rather than large deflections from close collisions, that are most important for relaxation. Using an averaged value, the number of stars is
 \begin{equation}
-\dd N = n(v_1, \theta, \phi)\,\dd v_1 \,\dd \theta \,\dd \varphi \,\dd^3r,
+\dd N = n(v_1, \theta, \varphi)\,\dd v_1 \,\dd \theta \,\dd \varphi \,\dd^3r,
 \end{equation}
 using spherical polar coordinates for velocity space. Using $D$ as the impact parameter for the encounter and $\Theta$ for the angle between the fundamental plane (containing $\boldsymbol{v}_1$ ans $\boldsymbol{v}_2$) and the the orbital plane, the number of events in time interval $\delta t$ is
 \begin{equation}
@@ -598,20 +598,20 @@ In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarit
 \overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
 
-The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_{M'}^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
+The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
 \begin{equation}
 \ln\left(q\overline{v_2^2}\right) = \ln \Lambda_M \simeq \ln\left(\frac{M_\bullet}{M}\right).
 \end{equation}
-We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the the bound population of field stars and the distribution of test stars over which we are averaging. We will use $M$ and $M'$ respectively for this calculation. The average is
+We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the the bound population of field stars and the distribution of test stars over which we are averaging. We will use $M$ and $M'$ respectively as subscripts for this calculation.\footnote{For masses $m_M \equiv M$, $m_{M'} \equiv M'$.} The average is
 \begin{align}
-\overline{\Delta E^2_{\mathrm{b},\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},2}(v)}{v} \\
+\overline{\Delta E^2_{\mathrm{b},\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},\,M'}(v)}{v} \\
  \simeq {} & \sum_M\frac{32}{3}\frac{G^2M^2{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \nonumber \\* 
  {} & \times \left[ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2} \frac{3}{(2 - p_M)(1 + p_M)} {_3F_2}\left(-1-p_M,2-p_M,\frac{3}{2};3-p_M,\frac{5}{2};\frac{v^2}{2\sigma^2}\right) \Beta\left(\frac{v^2}{2\sigma^2};3-p_{M'},1+p_{M'}\right)}{v} \right. \nonumber \\* 
  {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-7/2} \beta\left(\frac{v^2}{2\sigma^2};p_M\right) \Beta\left(3-p_M,1+p_M\right)}{v} \right] \delta t.
 \end{align}
 The high velocity integral can be performed without difficulty, but the low velocity piece is more formidable. Progress can be made by making a series expansion in $v^2/2\sigma^2$. Retaining terms to third order approximates the integrand to no worse than $10\%$, with good agreement across most of the integration range. The result may be condensed into a simpler form by approximating it as a quadratic in $p_M$ and $p_{M'}$, which introduces less than $2\%$ further error. After this manipulation
 \begin{align}
-\overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{32}{3}\frac{G^2M^2{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\{ \recip{210}\left[30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) \right. \right. \nonumber \\* 
+\overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{32}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\{ \recip{210}\left[30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) \right. \right. \nonumber \\* 
  {} + & \left. \left. p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)\right]  \vphantom{\recip{210}} + \iota \left(p_M,p_{M'}\right) \right\} \delta t,
 \end{align}
 introducing
@@ -622,14 +622,14 @@ introducing
 
 To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{Unbound-approx}. 
 \begin{align}
-\overline{\Delta E^2_{\mathrm{u},\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{u} v^2 p_{\mathrm{b},2}(v)}{v} \\
+\overline{\Delta E^2_{\mathrm{u},\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{u} v^2 p_{\mathrm{b},\,M'}(v)}{v} \\
  \approx {} & \sum_M\frac{32}{3}\frac{G^2M^2{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\{ \intd{0}{\sqrt{2}\sigma}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2}\Beta\left(\frac{v^2}{2\sigma^2};3-p_{M'},1+p_{M'}\right)}{v} \right. \nonumber \\* 
- {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2} \Xi\left[\Xi^2 + \left(\frac{v^2}{2\sigma^2}\right)^3\right] \Beta\left(3-p_M,1+p_M\right)}{v} \right\} \delta t;
+ {} & + \left. \intd{\sqrt{2}\sigma}{\infty}{v^2\left(\frac{v^2}{2\sigma^2}\right)^{p_{M'}-2} \Xi\left[\Xi^2 + \left(\frac{v^2}{2\sigma^2}\right)^3\right]^{-1/2} \Beta\left(3-p_M,1+p_M\right)}{v} \right\} \delta t;
 \end{align}
 for consistency with the bound case we have continued to use the subscript $M'$. The low velocity integral is of the same form as for calculating $\overline{v^2_M}$ and can be evaluated in terms of beta functions, the high velocity integral can be evaluated in terms of the hypergeometric function~\citep[15.6.1]{Olver2010}
 \begin{align}
-\overline{\Delta E^2_{\mathrm{u},\,M'}} \approx {} & \sum_M\frac{32}{3}\frac{G^2M^2{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[\nu\left(p_{M'}\right) \right. \nonumber \\
-  & + \left. \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\xi^2\right) \right] \delta t,
+\overline{\Delta E^2_{\mathrm{u},\,M'}} \approx {} & \sum_M\frac{32}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[\nu\left(p_{M'}\right) \vphantom{\recip{2}} \right. \nonumber \\
+  & + \left. \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right) \right] \delta t,
 \end{align}
 where
 \begin{equation}
@@ -638,10 +638,60 @@ where
 \end{cases} \; .
 \end{equation}
 The total relaxation time for a species is
-\begin{equation}
-\overline{\tau_{\mathrm{R,\,M'}}} = \left(\frac{{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b},\,M'}} + \overline{\Delta E^2_{\mathrm{u},\,M'}}}.
-\end{equation}
+\begin{align}
+\overline{\tau_{\mathrm{R,\,M'}}} = {} & \left(\frac{{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b},\,M'}} + \overline{\Delta E^2_{\mathrm{u},\,M'}}} \\
+ \approx {} & \frac{3}{128}{\Gamma(p_{M'} + 1)}\frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}\frac{\overline{v_{M'}^2}^2}{G^2n_\ast\sigma\ln\left(\Lambda_{M'}\right)} \left\{\sum_M k_M M^2 \left[ \frac{30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) + p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210} + \iota \left(p_M,p_{M'}\right)\right] +C_M M^2 \left[\nu\left(p_{M'}\right) + \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right)\right]\right\}^{-1}.
+\end{align}
 The relaxation timescale for MS stars will be used in determining the collisional cutoff as described in \secref{Collision}.
+
+\subsection{Orbital average}
+
+Defining a relaxation timescale for an individual orbit gives an indication of how important two body interactions are for the evolution of the orbit. It is useful for comparison with other timescales to determine which process is dominant. We calculate the timescale for an orbit, parameterised by $e$ and $r\sub{p}$, by averaging over one period.\footnote{We only consider bound orbits. The orbital relaxation timescale will be compared against the gravitational wave timescale. We argue that the evolution of unbound orbits due to gravitational wave emission is negligible, so we do not need a relaxation timescale for unbound orbits.}  Two body scattering will mean that a star will not remain on the same orbit for an entire period. The timescale is an estimate of the average rate of change in energy for stars instantaneously following that orbit. If the timescale is much longer than the orbital period it is safe to assume that dynamical friction plays a small role over an orbit and that it is safe to approximate the orbital elements as constant over the orbit. If the timescale is much shorter than the period we expect that a star would be scattered from that orbit before it has chance to complete a cycle.
+
+As for the system relaxation timescale, we calculate the orbital timescale by averaging the velocity squared and the squared change in energy. The mean squared velocity is [cf.\ \eqnref{Energy_ecc}]
+\begin{equation}
+\left\langle v^2\left(e,r\sub{p}\right)\right\rangle = \frac{GM_\bullet(1 - e)}{r\sub{p}}.
+\end{equation}
+The orbital average is calculated according to
+\begin{equation}
+\left\langel X\right\rangel = \recip{T}\intd{0}{T}{X(t)}{t},
+\end{equation}
+where $T$ is the orbital period
+\begin{equation}
+T = 2\pi\sqrt{\frac{r\sub{p}^3}{GM_\bullet(1-e)^{3}}.
+\end{equation}
+ This can be rewritten as
+\begin{equation}
+\left\langel X\right\rangel = \frac{2}{T}\intd{0}{\pi}{\frac{X(\vartheta)}{\dot{\vartheta}}}{\vartheta}
+\end{equation}
+with orbital phase angle $\vartheta$. Here
+\begin{equation}
+\dot{\vartheta} = \sqrt{\frac{GM_\bullet}{r\sub{p}^3(1+e)^3}}(1 + e \cos\vartheta)^2.
+\end{equation}
+In terms of the orbital phase the velocity is
+\begin{equation}
+v(\vartheta) = \sqrt{\frac{GM_\bullet}{r\sub{p}(1+e)}\left(1 + e^2 + 2e\cos\vartheta\right)}.
+\end{equation}
+Substituting in the approximate expressions for the squared change in energy
+\begin{align}
+\left\langel\Delta E^2_{\mathrm{b},\,M'}\right\rangel = {} & \frac{\left(1-e^2\right)^{3/2}}{\pi}\intd{0}{\pi}{\frac{\Delta E^2_{\mathrm{b},\,M'}}{(1 + e \cos\vartheta)^2}}{\vartheta} \\
+ \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_M'\right)k_M\intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2}\gamma\left(\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right);p_M\right)}{\vartheta}\delta t,
+\end{align}
+and
+\begin{align}
+\left\langel\Delta E^2_{\mathrm{u},\,M'}\right\rangel = {} & \frac{\left(1-e^2\right)^{3/2}}{\pi}\intd{0}{\pi}{\frac{\Delta E^2_{\mathrm{u},\,M'}}{(1 + e \cos\vartheta)^2}}{\vartheta} \\
+ \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_M'\right)C_M\intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}\delta t.
+\end{align}
+Despite our best efforts, we have been unsuccessful at obtaining analytic forms for these two integrals, and therefore compute them numerically. We will define
+\begin{align}
+I\sub{b}(e,\rho,p) = {} & \intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2}\gamma\left(\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right);p\right)}{\vartheta} \\
+I\sub{u}(e,\rho) = {} & intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}.
+\end{align}
+The orbital relaxation timescale is then
+\begin{align}
+\left\langle\tau\sub{R\,M'}(e,\,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}})^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
+ \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^3(1 + e)^{3/2}\ln\left(\Lambda_M'\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}}\right)\right]^{-1}.
+\end{align}
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
