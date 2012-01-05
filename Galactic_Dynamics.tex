@@ -150,7 +150,7 @@ J^2 = {} & r^2 v_\perp^2.
 If we combine these with our earlier expressions in terms of $e$ and $r\sub{p}$ we find
 \begin{align}
 v_\perp^2 = {} & \frac{GM_\bullet(1 + e)r\sub{p}}{r^2}, \nonumber \\*
-v_r^2 = {} & GM\left[\frac{2}{r} - \frac{(1 - e)}{r\sub{p}} - \frac{(1 + e)r\sub{p}}{r^2}\right].
+v_r^2 = {} & GM_\bullet\left[\frac{2}{r} - \frac{(1 - e)}{r\sub{p}} - \frac{(1 + e)r\sub{p}}{r^2}\right].
 \end{align}
 From the latter we can verify that the turning points of an orbit occur at
 \begin{equation}
@@ -159,11 +159,11 @@ r = r\sub{p}, \: \frac{1+e}{1-e}r\sub{p};
 the periapse is the only turning point for orbits with $e > 1$. Since we now have expressions for $\{v_r, v_\perp\}$ in terms of $\{e, r\sub{p}\}$ we can calculate the Jacobian
 \begin{align}
 \left|\frac{\partial(v_r, v_\perp)}{\partial(e, r\sub{p})}\right| = {} & \partialdiff{v_r}{e}\partialdiff{v_\perp}{r\sub{p}} - \partialdiff{v_r}{r\sub{p}}\partialdiff{v_\perp}{e} \\
- = {} & \recip{2v_rv_\perp}\frac{e}{r\sub{p}}\left(\frac{GM}{r}\right)^2.
+ = {} & \recip{2v_rv_\perp}\frac{e}{r\sub{p}}\left(\frac{GM_\bullet}{r}\right)^2.
 \end{align}
 Using this, we may rewrite our velocity element as
 \begin{equation}
-\dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM}{r}\right)^2\,\dd e \,\dd r\sub{p}.
+\dd^3v \rightarrow \frac{\pi e}{v_rr\sub{p}}\left(\frac{GM_\bullet}{r}\right)^2\,\dd e \,\dd r\sub{p}.
 \end{equation}
 As a consequence of our assumed spherical symmetry, the volume element is
 \begin{equation}
@@ -171,11 +171,11 @@ As a consequence of our assumed spherical symmetry, the volume element is
 \end{equation}
 Thus, the phase space volume element can be expressed as
 \begin{equation}
-\dd^3r\dd^3v = \frac{4\pi^2(GM)^2e}{v_rr\sub{p}}\,\dd r\,\dd e \,\dd r\sub{p}.
+\dd^3r\dd^3v = \frac{4\pi^2(GM_\bullet)^2e}{v_rr\sub{p}}\,\dd r\,\dd e \,\dd r\sub{p}.
 \end{equation}
 The number of stars in an element $\dd r\,\dd e\,\dd r\sub{p}$ is
 \begin{equation}
-n(r, e, r\sub{p}) = \frac{4\pi^2(GM)^2e}{v_rr\sub{p}}f(\mathcal{E}).
+n(r, e, r\sub{p}) = \frac{4\pi^2(GM_\bullet)^2e}{v_rr\sub{p}}f(\mathcal{E}).
 \end{equation}
 
 From this, we can construct the expected number of stars to be on orbits defined by $\{e, r\sub{p}\}$. We will define this locally, allowing it to vary with position. The number of stars found in a small radius range $\delta r$ with given orbital properties can be calculated by multiplying the total number of stars with these properties by the relative amount of time they spend in that range
@@ -189,14 +189,14 @@ where $N(e, r\sub{p}; r)$ is the total number of stars with orbits given by $\{e
 where the factor of $2$ is included to account for both inwards and outwards motion. Hence
 \begin{align}
 N(e, r\sub{p}; r) = {} & \recip{2} v_r P n(r, e, r\sub{p})\\
- = {} & \frac{2\pi^2(GM)^2 e P}{r\sub{p}}f(\mathcal{E}).
+ = {} & \frac{2\pi^2(GM_\bullet)^2 e P}{r\sub{p}}f(\mathcal{E}).
 \end{align}
 The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we may define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion.
 
 If a burst of radiation is emitted each time a star passes through periapse, then the event rate for burst emission from orbits with parameters $\{e, r\sub{p}\}$, is given by
 \begin{align}
 \Gamma(e, r\sub{p}) = {} & \frac{N(e, r\sub{p})}{P(e, r\sub{p})}\\
- = {} & \frac{2\pi^2(GM)^2 e}{r\sub{p}}f(\mathcal{E}).
+ = {} & \frac{2\pi^2(GM_\bullet)^2 e}{r\sub{p}}f(\mathcal{E}).
 \label{eq:Gamma}
 \end{align}
 The orbital period drops out from the calculation, so we do not have to worry about an appropriate definition for unbound orbits.
@@ -543,6 +543,7 @@ This can be rolled into one continuous function
 \Delta E\sub{b}^2 \approx {} & \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) k \left[1 + \left(\frac{v_2^2}{2\sigma^2}\right)^4\right]^{-1}\left\{\left[\dfrac{3}{(1 + p)(2 - p)}\left(\dfrac{v_2^2}{2\sigma^2}\right) - \dfrac{9}{5(3-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^2 + \dfrac{9p}{14(7-p)}\left(\dfrac{v_2^2}{2\sigma^2}\right)^3 \right]\right. \nonumber\\*
  & + \left. \left(\frac{v_2^2}{2\sigma^2}\right)^{7/2}\beta\left(\frac{v_2^2}{2\sigma^2};p\right)\right\}\,\delta t\\
  \approx {} & 16\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) k \gamma\left(\frac{v_2^2}{2\sigma^2};p\right)\,\delta t,
+\label{eq:Bound-approx}
 \end{align}
 defining the function $\gamma(w;p)$ in the last line. The resulting error [ignoring variation from $\ln\left(qv_2^2\right)$] is less than $3\%$.
 
@@ -628,8 +629,8 @@ To calculate the unbound component we will use the exact form for the low veloci
 \end{align}
 for consistency with the bound case we have continued to use the subscript $M'$. The low velocity integral is of the same form as for calculating $\overline{v^2_M}$ and can be evaluated in terms of beta functions, the high velocity integral can be evaluated in terms of the hypergeometric function~\citep[15.6.1]{Olver2010}
 \begin{align}
-\overline{\Delta E^2_{\mathrm{u},\,M'}} \approx {} & \sum_M\frac{32}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[\nu\left(p_{M'}\right) \vphantom{\recip{2}} \right. \nonumber \\
-  & + \left. \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right) \right] \delta t,
+\overline{\Delta E^2_{\mathrm{u},\,M'}} \approx {} & \sum_M\frac{32}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) C_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \nonumber \\
+  & \times \left[\nu\left(p_{M'}\right) + \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right) \right] \delta t,
 \end{align}
 where
 \begin{equation}
@@ -666,24 +667,24 @@ T = 2\pi\sqrt{\frac{r\sub{p}^3}{GM_\bullet(1-e)^{3}}}.
 \begin{equation}
 \left\langle X\right\rangle = \frac{2}{T}\intd{0}{\pi}{\frac{X(\vartheta)}{\dot{\vartheta}}}{\vartheta}
 \end{equation}
-with orbital phase angle $\vartheta$. Here
+with orbital phase angle $\vartheta$; here
 \begin{equation}
 \dot{\vartheta} = \sqrt{\frac{GM_\bullet}{r\sub{p}^3(1+e)^3}}(1 + e \cos\vartheta)^2.
 \end{equation}
-In terms of the orbital phase the velocity is
+In terms of the orbital phase, the velocity is
 \begin{equation}
 v(\vartheta) = \sqrt{\frac{GM_\bullet}{r\sub{p}(1+e)}\left(1 + e^2 + 2e\cos\vartheta\right)}.
 \end{equation}
-Substituting in the approximate expressions for the squared change in energy
+Substituting in the approximate expressions for the squared change in energy, \eqnref{Bound-approx} and \eqnref{Unbound-approx},
 \begin{align}
 \left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle = {} & \frac{\left(1-e^2\right)^{3/2}}{\pi}\intd{0}{\pi}{\frac{\Delta E^2_{\mathrm{b},\,M'}}{(1 + e \cos\vartheta)^2}}{\vartheta} \\
- \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_M'\right)k_M \nonumber \\*
+ \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_{M'}\right)k_M \nonumber \\*
  & \times {} \intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2} \gamma\left(\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right);p_M\right)}{\vartheta}\,\delta t,
 \end{align}
 and
 \begin{align}
 \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle = {} & \frac{\left(1-e^2\right)^{3/2}}{\pi}\intd{0}{\pi}{\frac{\Delta E^2_{\mathrm{u},\,M'}}{(1 + e \cos\vartheta)^2}}{\vartheta} \\
- \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_M'\right)C_M \nonumber \\*
+ \approx {} & \sum_M \frac{16}{3}\sqrt{\frac{2}{\pi}}G^2 M^2{M'}^2n_\ast\sigma\left(1-e^2\right)^{3/2}\ln\left(\Lambda_{M'}\right)C_M \nonumber \\*
  & \times {} \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{r\sub{c}}{2(1+e)r\sub{p}}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}\,\delta t.
 \end{align}
 Despite our best efforts, we have been unsuccessful at obtaining analytic forms for these two integrals, and therefore compute them numerically. We will define
@@ -694,7 +695,7 @@ I\sub{u}(e,\rho) = {} & \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\
 The orbital relaxation timescale is then
 \begin{align}
 \left\langle\tau\sub{R\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
- \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^3(1 + e)^{3/2}\ln\left(\Lambda_M'\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}}\right)\right]^{-1}.
+ \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}}\right)\right]^{-1}.
 \end{align}
 
 \section{Evolution of orbital parameters from gravitational wave emission}
