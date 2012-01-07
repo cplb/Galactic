@@ -250,7 +250,7 @@ All these approaches yield consistent values, suggesting, as a first approximati
 Stars orbiting about the black hole will continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as
 \begin{equation}
 \tau\sub{GW} \simeq \mathcal{E}\left\langle\diff{t}{\mathcal{E}}\right\rangle,
-\label{eg:tGW-def}
+\label{eq:tGW-def}
 \end{equation}
 where the term in angular brackets is the reciprocal of the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
 \begin{align}
@@ -690,13 +690,13 @@ and
 \end{align}
 Despite our best efforts, we have been unsuccessful at obtaining analytic forms for these two integrals, and therefore compute them numerically. We will define
 \begin{align}
-I\sub{b}(e,\rho,p) = {} & \intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2}\gamma\left(\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right);p\right)}{\vartheta} \\
-I\sub{u}(e,\rho) = {} & \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}.
+I\sub{b}(e,\varrho,p) = {} & \intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2}\gamma\left(\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right);p\right)}{\vartheta} \\
+I\sub{u}(e,\varrho,\Xi) = {} & \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}.
 \end{align}
 The orbital relaxation timescale is then
 \begin{align}
 \left\langle\tau\sub{R\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
- \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}}\right)\right]^{-1}.
+ \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}},\Xi\right)\right]^{-1}.
 \end{align}
 This timescale is defined similarly to the inspiral timescale \eqnref{tGW-def}; a comparison between the two can therefore determine whether gravitational wave inspiral or scattering takes place over a shorter timescale, and so if we may expect an orbit, on average, to be depopulated.
 
