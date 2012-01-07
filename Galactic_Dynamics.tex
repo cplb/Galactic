@@ -95,7 +95,7 @@ For bound orbits the DF can be approximated as a power law~\citep{Peebles1972}
 f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma^2}\right)^{p_M},\quad\mathcal{E} < 0.
 \label{eq:Bound_DF}
 \end{equation}
-The exponent $p_M$ varies depending upon the mass of the object, determining mass segregation. For a system with a single mass component, \citet{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor a two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as, although it will change slightly with $p$, variation is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
+The exponent $p_M$ varies depending upon the mass of the object, determining mass segregation. For a system with a single mass component, \citet{Bahcall1976} find that $p = 1/4$. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor of two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as, although it will change slightly with $p$, variation is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
 
 \subsection{Model parameters}
 
@@ -241,17 +241,18 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \begin{equation}
 \tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
 \end{equation}
-where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically, this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
-All these approaches yield consistent values, suggesting, as a first approximation, any approach should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepencies in the numerical prefactor that result from the simplifying approximations of this approach.
+All these approaches yield consistent values, suggesting, as a first approximation, any approach should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. This will at least make the model self-consistent. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. The derivation of the relaxation timescale along with a discussion of its short-comings are included in \apref{time-scale}. We will defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation can be complicated.
 
 \subsubsection{Gravitational wave inspiral}
 
-Stars orbiting about the black hole will continually emit gravitational radiation, this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as
+Stars orbiting about the black hole will continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy: we will assume that an orbit is depleted of stars if the characteristic inspiral time-scale is shorter than the relaxation time-scale. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral timescale as
 \begin{equation}
 \tau\sub{GW} \simeq \mathcal{E}\left\langle\diff{t}{\mathcal{E}}\right\rangle,
+\label{eg:tGW-def}
 \end{equation}
-where the term in angular brackets is the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
+where the term in angular brackets is the reciprocal of the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
 \begin{align}
 \tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
  \approx {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
@@ -590,11 +591,11 @@ Using this as a normalisation constant, the probability of a bound star having a
 The mean squared velocity for bound stars in the core is then
 \begin{align}
 \overline{v^2_{M}} = {} & 4\pi\intd{0}{\infty}{v^4 p_{\mathrm{b},\,M}(v)}{v} \\
- = {} & \frac{4}{\sqrt{\pi}}\sigma^2\frac{3/2 - p_M}{1/2 - p_M}\frac{\Gamma(p_M + 7/2)}{\Gamma(1 + p_M)}\Beta\left(\frac{5}{2},1 + p_M\right),
+ = {} & 3\sigma^2\frac{3/2 - p_M}{1/2 - p_M},
 \end{align}
 assuming that $p_M < 1/2$.
 
-In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off; in this case there is a maximal velocity. Will will use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we might expect the maximum velocity to be lower due to a depletion of orbits (for example because of gravitational wave inspiral). We will neglect these possible variations, since the error introduced should be small as a consequence of taking the logarithm. We also suspect that a simple Newtonian description of these orbits is imprecise; however, a full relativistic description is beyond this simple analysis. For $p_M = 1/2$
+In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarithmic divergence. This is not a concern, just as with the divergence encountered in \secref{time-scale}, it reflects there being a physical cut-off; in this case there is a maximal velocity. We will use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we might expect the maximum velocity to be lower due to a depletion of orbits (for example because of gravitational wave inspiral). We will neglect these possible variations, since the error introduced should be small as a consequence of taking the logarithm. We also suspect that a simple Newtonian description of these orbits is imprecise; however, a full relativistic description is beyond this simple analysis. For $p_M = 1/2$
 \begin{align}
 \overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
@@ -603,7 +604,7 @@ The average of the change in energy is more involved. First we will replace the 
 \begin{equation}
 \ln\left(q\overline{v_2^2}\right) = \ln \Lambda_M \simeq \ln\left(\frac{M_\bullet}{M}\right).
 \end{equation}
-We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the the bound population of field stars and the distribution of test stars over which we are averaging. We will use $M$ and $M'$ respectively as subscripts for this calculation.\footnote{For masses $m_M \equiv M$, $m_{M'} \equiv M'$.} The average is
+We will calculate the averages for the bound and unbound contributions individually. In calculating the bound component we must distinguish between the the bound population of field stars and the distribution of test stars over which we are averaging. We will use $M$ and $M'$ respectively as subscripts for this calculation.\footnote{For masses: $m_M \equiv M$, $m_{M'} \equiv M'$.} The average is
 \begin{align}
 \overline{\Delta E^2_{\mathrm{b},\,M'}} = {} & 4\pi\intd{0}{\infty}{\Delta E^2\sub{b} v^2 p_{\mathrm{b},\,M'}(v)}{v} \\
  \simeq {} & \sum_M\frac{32}{3}\frac{G^2M^2{M'}^2n_\ast}{\sigma^2}\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \nonumber \\* 
@@ -618,7 +619,7 @@ The high velocity integral can be performed without difficulty, but the low velo
 introducing
 \begin{equation}
 \iota\left(p_M,p_{M'}\right) = \Beta\left(3-p_{M'},1+p_{M'}\right) \begin{cases} \dfrac{3}{1/2 - p_M}\left[\dfrac{\Beta\left(5/2,1+p_M\right)}{2-p_{M'}} - \dfrac{3\Beta\left(3-p_M,1+p_M\right)}{2\left(2-p_M\right)\left(5/2 - p_M - p_{M'}\right)}\right] & p_M < \recip{2} \\
-\dfrac{\pi}{32}\dfrac{4 + p_{M'} + 12 \left(2 - p_{M'}\right) \ln(2)}{2-p_{M'}} & p_M = \recip{2} \end{cases}.
+\dfrac{\pi}{32}\dfrac{4 + p_{M'} + 12 \left(2 - p_{M'}\right) \ln(2)}{\left(2-p_{M'}\right)^2} & p_M = \recip{2} \end{cases}.
 \end{equation}
 
 To calculate the unbound component we will use the exact form for the low velocity component and the approximate form of \eqnref{Unbound-approx}. 
@@ -647,7 +648,7 @@ The total relaxation time for a species is
 \end{align}
 The relaxation timescale for MS stars will be used in determining the collisional cutoff as described in \secref{Collision}.
 
-\subsection{Orbital average}
+\subsubsection{Orbital average}
 
 Defining a relaxation timescale for an individual orbit gives an indication of how important two body interactions are for the evolution of the orbit. It is useful for comparison with other timescales to determine which process is dominant. We calculate the timescale for an orbit, parameterised by $e$ and $r\sub{p}$, by averaging over one period.\footnote{We only consider bound orbits. The orbital relaxation timescale will be compared against the gravitational wave timescale. We argue that the evolution of unbound orbits due to gravitational wave emission is negligible, so we do not need a relaxation timescale for unbound orbits.}  Two body scattering will mean that a star will not remain on the same orbit for an entire period. The timescale is an estimate of the average rate of change in energy for stars instantaneously following that orbit. If the timescale is much longer than the orbital period it is safe to assume that dynamical friction plays a small role over an orbit and that it is safe to approximate the orbital elements as constant over the orbit. If the timescale is much shorter than the period we expect that a star would be scattered from that orbit before it has chance to complete a cycle.
 
@@ -697,6 +698,17 @@ The orbital relaxation timescale is then
 \left\langle\tau\sub{R\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
  \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}}\right)\right]^{-1}.
 \end{align}
+This timescale is defined similarly to the inspiral timescale \eqnref{tGW-def}; a comparison between the two can therefore determine whether gravitational wave inspiral or scattering takes place over a shorter timescale, and so if we may expect an orbit, on average, to be depopulated.
+
+\subsection{Discussion of applicability}
+
+In deriving the relaxation timescales it has been necessary to make a number of approximations, both mathematical and physical. The mathematical approximations have been to simplify function forms and make the computations easier. We have been careful to ensure that the inaccuracies introduced are of the order of a few percent, and thus should be subdominant to the errors inherent from the physical assumptions and uncertainties in astronomical quantities. The physical approximations are more important. There are two key approximations that may limit the validity of the results.
+
+First, it was assumed that the density of stars was uniform. This was a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is certainly not the case that density in the Galactic centre is uniform. However, this approximation is not as bad as it first may seem. As a star travels about the MBH on its orbit it moves through regions of different densities. It therefore samples a range of different density-impact parameter distributions. At a given radius stars will be travelling in a variety of directions meaning that again there will be a selection of different density-impact parameter distributions. Since we are only concerned with averaged timescales, we may hope that this is sufficient to partially smear out changes in the density. To incorporate the complexity of the proper density distribution would require numerical evaluation of the distribution, and then numerical computation of the integrals. This would greatly obfuscate the analysis.
+
+Second, we have only considered changes in energy. Changes in angular momentum could be more important. Resonant relaxation enhances the rate of angular momentum diffusion relative to energy diffusion~\citep{Rauch1996,Rauch1998,Gurkan2007}.
+
+The optimal resolution would to be to perform a full $N$-body simulation of the Galactic centre. This would dispense with all the complications of considering relaxation timescales and estimates for cut-off radii. Unfortunately such a task still remains computationally challenging at the present time.
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
