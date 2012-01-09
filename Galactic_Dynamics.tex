@@ -239,9 +239,9 @@ The motion of a star is determined not only by the dominant influence of the cen
 
 The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen~\citep{Binney1987}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has form
 \begin{equation}
-\tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star\rho_\star\ln\Lambda},
+\tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star^2 n_\star\ln\Lambda},
 \end{equation}
-where $\rho_\star$ is the mass density, the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
 All these approaches yield consistent values, suggesting, as a first approximation, any approach should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. This will at least make the model self-consistent. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. The derivation of the relaxation timescale along with a discussion of its short-comings are included in \apref{time-scale}. We will defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation can be complicated.
 
@@ -254,8 +254,8 @@ Stars orbiting about the black hole will continually emit gravitational radiatio
 \end{equation}
 where the term in angular brackets is the reciprocal of the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and \citet{Peters1963}
 \begin{align}
-\tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
- \approx {} & \frac{5}{64}\frac{c^5r\sub{p}}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
+\tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
+ \approx {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
 \end{align}
 For comparison, the total time taken for the inspiral is given in \eqnref{Bound_inspiral}. The characteristic time-scale is a better measure of the depletion of an orbit as it only depends upon the parameters of that orbit, and not its future evolution. When comparing with the relaxation timescale we are in effect comparing rates of change, with the shorter timescale highlighting the more rapid process that will dominate the evolution.
 
@@ -641,7 +641,7 @@ where
 \end{equation}
 The total relaxation time for a species is
 \begin{align}
-\overline{\tau_{\mathrm{R,\,M'}}} = {} & \left(\frac{{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b},\,M'}} + \overline{\Delta E^2_{\mathrm{u},\,M'}}} \\
+\overline{\tau_{\mathrm{R,}\,M'}} = {} & \left(\frac{{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b},\,M'}} + \overline{\Delta E^2_{\mathrm{u},\,M'}}} \\
  \approx {} & \frac{3}{128}\frac{\Gamma(p_{M'} + 1)}{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}\frac{\overline{v_{M'}^2}^2}{G^2n_\ast\sigma\ln\left(\Lambda_{M'}\right)} \nonumber \\* 
   & \times {} \left\{\sum_M k_M M^2 \left[ \frac{30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) + p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210} + \iota \left(p_M,p_{M'}\right)\right] \right. \nonumber \\*
   & + \left. \vphantom{ \left[ \frac{p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210}\right]} C_M M^2 \left[\nu\left(p_{M'}\right) + \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right)\right]\right\}^{-1}.
@@ -706,7 +706,27 @@ In deriving the relaxation timescales it has been necessary to make a number of 
 
 First, it was assumed that the density of stars was uniform. This was a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is certainly not the case that density in the Galactic centre is uniform. However, this approximation is not as bad as it first may seem. As a star travels about the MBH on its orbit it moves through regions of different densities. It therefore samples a range of different density-impact parameter distributions. At a given radius stars will be travelling in a variety of directions meaning that again there will be a selection of different density-impact parameter distributions. Since we are only concerned with averaged timescales, we may hope that this is sufficient to partially smear out changes in the density. To incorporate the complexity of the proper density distribution would require numerical evaluation of the distribution, and then numerical computation of the integrals. This would greatly obfuscate the analysis.
 
-Second, we have only considered changes in energy. Changes in angular momentum could be more important. Resonant relaxation enhances the rate of angular momentum diffusion relative to energy diffusion~\citep{Rauch1996,Rauch1998,Gurkan2007}.
+Second, we have only considered changes in energy; changes in angular momentum could be more important because of resonant relaxation. Resonant relaxation enhances the rate of angular momentum diffusion relative to energy diffusion~\citep{Rauch1996,Rauch1998,Gurkan2007}.
+
+
+Under the usual two-body relaxation process, both the energy E and
+angular momentum L of stellar orbits diffuse (i.e. random-walk)
+slowly through phase space because of the mutual gravitational
+interactions with other stars in the cluster; on average, therefore, the
+variations in E and L, DE and DL, grow with time ~t1=2, and the
+energy and angular momentum relaxation times coincide, tE , tL.
+As discussed in detail by RT96, resonant relaxation is a process by
+which angular momentum relaxation can be dramatically enhanced
+in clusters whose mean potential contains ‘resonant’ structure
+(energy relaxation is not affected). It operates most effectively in
+nearly Keplerian star clusters, whose resonant structure consists
+of spherical symmetry and equality of the radial and azimuthal
+orbital frequencies. In this case, the changes in both the vector
+and scalar angular momenta grow approximately linearly with
+time – systematically faster than a random walk – and hence the
+angular momentum relaxation time is much shorter than the
+energy relaxation time: tL ptE (possibly by several orders of
+magnitude).
 
 The optimal resolution would to be to perform a full $N$-body simulation of the Galactic centre. This would dispense with all the complications of considering relaxation timescales and estimates for cut-off radii. Unfortunately such a task still remains computationally challenging at the present time.
 
