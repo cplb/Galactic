@@ -191,7 +191,7 @@ where the factor of $2$ is included to account for both inwards and outwards mot
 N(e, r\sub{p}; r) = {} & \recip{2} v_r P n(r, e, r\sub{p})\\
  = {} & \frac{2\pi^2(GM_\bullet)^2 e P}{r\sub{p}}f(\mathcal{E}).
 \end{align}
-The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we may define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion.
+The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we may define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion [see \citet{Bahcall1976}, equation (9)].
 
 If a burst of radiation is emitted each time a star passes through periapse, then the event rate for burst emission from orbits with parameters $\{e, r\sub{p}\}$, is given by
 \begin{align}
@@ -239,7 +239,7 @@ The motion of a star is determined not only by the dominant influence of the cen
 
 The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen~\citep{Binney1987}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has form
 \begin{equation}
-\tau\sub{R} \simeq \kappa\frac{\sigma^3}{GM_\star^2 n_\star\ln\Lambda},
+\tau\sub{R} \simeq \kappa\frac{\sigma^3}{G^2M_\star^2 n_\star\ln\Lambda},
 \end{equation}
 where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
@@ -600,6 +600,11 @@ In the case $p_M = 1/2$ the integral no longer converges, we encounter a logarit
 \begin{align}
 \overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
+Using a typical value of $\sigma = 10^5\units{m\,s^{-1}}$
+\begin{equation}
+\overline{v^2_{M}} \simeq 43\sigma^2.
+\end{equation}
+The mean squared velocity is an order of magnitude greater than for a Maxwellian distribution.
 
 The average of the change in energy is more involved. First we will replace the term $\ln\left(qv_2^2\right)$ in $\Delta E^2$ by a suitable average so that it may be moved outside the integral~\citep[chapter 2]{Chandrasekhar1960}. We will assume that it may be replaced by the Coulomb logarithm, which can be approximated as~\citep{Bahcall1976}
 \begin{equation}
@@ -657,7 +662,7 @@ As for the system relaxation timescale, we calculate the orbital timescale by av
 \begin{equation}
 \left\langle v^2\left(e,r\sub{p}\right)\right\rangle = \frac{GM_\bullet(1 - e)}{r\sub{p}}.
 \end{equation}
-The orbital average is calculated according to
+The orbital average is calculated according to~\citep[section 2.2b]{Spitzer1987}
 \begin{equation}
 \left\langle X\right\rangle = \recip{T}\intd{0}{T}{X(t)}{t},
 \end{equation}
