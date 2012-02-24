@@ -97,6 +97,8 @@ f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal
 \end{equation}
 The exponent $p_M$ varies depending upon the mass of the object, determining mass segregation. For a system with a single mass component $p = 1/4$ \citet{Bahcall1976, Young1977}. The normalisation constant $k_M$ reflects the relative abundances of the different species.\footnote{For a single mass population ($p = 1/4$) $k = 2 C$ gives a fit correct to within a factor of two~\citep{Bahcall1976,Keshet2009}, we will assume this holds for the dominant species of stars as, although it will change slightly with $p$, variation is small compared to errors introduced by fitting a simple power law~\citep{Hopman2006, Alexander2009}.}
 
+These cusp profiles should exist if the system has had sufficient time to become gravitationally relaxed. There is current debate about whether this may be the case, both for the Galactic centre and galaxies in general. This is discussed further in \apref{tauGC}. For concreteness, we will assume that a cusp has formed. If a cusp has not formed, we expect there to be a shallower core profile, with fewer objects passing close to the MBH. Our results are therefore an upper bound on possible event rates~\citep{Merritt2010a}. 
+
 \subsection{Model parameters}\label{sec:GC-Param}
 
 We will be using the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alexander2009}. This includes four stellar species: main sequence stars (MS), white dwarfs (WD), neutron stars (NS), and black holes (BH). Their properties are summarised in \tabref{HA}. The behaviour of the Fokker-Planck model has been verified by $N$-body simulations~\citep{Preto2010}.
@@ -724,9 +726,9 @@ Diffusion of energy remains unchanged, there could therefore be several orders o
 
 The optimal resolution would to be to perform a full $N$-body simulation of the Galactic centre. This would dispense with all the complications of considering relaxation time-scales and estimates for cut-off radii. Unfortunately such a task still remains computationally challenging at the present time [see, for example~\citet{Li2012}].
 
-\subsection{Time-scales for the Galactic centre}
+\subsection{Time-scales for the Galactic centre}\label{sec:tauGC}
 
-Evaluating the formulae for average relaxtion time-scales with values appropriate for the Glacatic centre (\secref{GC_Param}) provides some insight. Comparison of the system relaxation time-scales with thatevaluated using a Maxwellian distribution [\eqnref{tauMaxwell}, using $\kappa = 0.34$] shows a broad consistancy:
+Evaluating the formulae for average relaxation time-scales with values appropriate for the Galactic centre (\secref{GC_Param}) provides some insight. Comparison of the system relaxation time-scales with that evaluated using a Maxwellian distribution [\eqnref{tauMaxwell}, using $\kappa = 0.34$] shows a broad consistency:
 \begin{equation}
 overline{\tau\sub{R}} \simeq 3.15 \tau\sub{R}\super{Max}.
 \end{equation}
@@ -734,13 +736,13 @@ This is reassuring since the standard Maxwellian approximation has been successf
 \begin{equation}
 \overline{\tau\sub{R,\,MS}} \simeq 2.62 \tau\sub{R}\super{Max};\quad \overline{\tau\sub{R,\,WD}} \simeq 2.53 \tau\sub{R}\super{Max}; \overline{\tau\sub{R,\,NS}} \simeq 3.28 \tau\sub{R}\super{Max}.
 \end{equation}
-Again there is good agreement.\footnote{\citet*{Freitag2006a} found that using a consistent velocity distribution for the population of stars (from an $\eta$-model) instead of relying on the Maxwellian approximation made neglible change to the dynamical friction timescale. They did not consider a cusp as severe as $p = 0.5$.} For black holes
+Again there is good agreement.\footnote{\citet*{Freitag2006a} found that using a consistent velocity distribution for the population of stars (from an $\eta$-model) instead of relying on the Maxwellian approximation made negligible change to the dynamical friction timescale. They did not consider a cusp as severe as $p = 0.5$.} For black holes
 \begin{equation}
 \overline{\tau\sub{R,\,BH}} \simeq 75.2 \tau\sub{R}\super{Max}.
 \end{equation}
 This time-scale is much larger on account of the higher mean-squared velocity.
 
-The time-scales for the lighter components are of the order of the Hubble time. The BH time-scale is much longer. This may indicate that the BH population is not fully relaxed: we may expect that there has not been sufficient time for objects to diffuse onto the most tightly bound orbits. If this were the case, the mean-squared velocity of the population would be lower. Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \simeq (M_\star/M')\overline{\tau_{\marthrm{R},\,M'}}$~\citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars. The existance of a cusp is a subject of debate. We cannot add further evidence t osettle the matter. However, for concreteness, we have assumed that a cusp has formed in our calculations.
+The time-scales for the lighter components are of the order of the Hubble time. The BH time-scale is much longer. This may indicate that the BH population is not fully relaxed: we may expect that there has not been sufficient time for objects to diffuse onto the most tightly bound orbits. If this were the case, the mean-squared velocity of the population would be lower. Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \simeq (M_\star/M')\overline{\tau_{\marthrm{R},\,M'}}$~\citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars. The existence of a cusp is a subject of debate. We cannot add further evidence to settle the matter. However, for definiteness, we have assumed that a cusp has formed in our calculations.
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
