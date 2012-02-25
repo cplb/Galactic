@@ -268,7 +268,7 @@ The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the tw
 
 \subsubsection{Collisions}\label{sec:Collision}
 
-As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars~\citep{Cohn1978}. A star is unlikely to be disrupted by a single collision~\citep{Murphy1991,Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2006}. We shall ignore the possibility of disruption for the other species since they are harder to pull apart: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
+As a consequence of the higher densities in the galactic core, stars may undergo a large number of close encounters with other stars~\citep{Cohn1978}. A star is unlikely to be disrupted by a single collision~\citep{Murphy1991,Freitag2005}, rather it takes $20$--$30$ grazing collisions to disrupt a MS star~\citep{Freitag2005}. We shall ignore the possibility of disruption for the other species since they are harder to pull apart: as a consequence of smaller cross-sectional areas, none of the other species would undergo 30 collisions with a periapsis greater than the cut-off implied by gravitational wave inspiral for bound orbits, or the MBH's event horizon for unbound orbits. The number of collisions a star will undergo in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) A v(r,e,r\sub{p})\delta t,
 \end{equation}
@@ -707,7 +707,7 @@ I\sub{u}(e,\varrho,\Xi) = {} & \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}
 \end{align}
 The orbital relaxation time-scale is then
 \begin{align}
-\left\langle\tau_{\marthrm{R},\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
+\left\langle\tau_{\mathrm{R},\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
  \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}},\Xi\right)\right]^{-1}.
 \end{align}
 This time-scale is defined similarly to the inspiral time-scale \eqnref{tGW-def}; a comparison between the two can therefore determine whether gravitational wave inspiral or scattering takes place over a shorter time-scale, and so if we may expect an orbit, on average, to be depopulated.
@@ -728,7 +728,7 @@ The optimal resolution would to be to perform a full $N$-body simulation of the 
 
 \subsection{Time-scales for the Galactic centre}\label{sec:tauGC}
 
-Evaluating the formulae for average relaxation time-scales with values appropriate for the Galactic centre (\secref{GC_Param}) provides some insight. Comparison of the system relaxation time-scales with that evaluated using a Maxwellian distribution [\eqnref{tauMaxwell}, using $\kappa = 0.34$] shows a broad consistency:
+Evaluating the formulae for average relaxation time-scales with values appropriate for the Galactic centre (\secref{GC-Param}) provides some insight. Comparison of the system relaxation time-scales with that evaluated using a Maxwellian distribution [\eqnref{tauMaxwell}, using $\kappa = 0.34$] shows a broad consistency:
 \begin{equation}
 overline{\tau\sub{R}} \simeq 3.15 \tau\sub{R}\super{Max}.
 \end{equation}
@@ -736,13 +736,13 @@ This is reassuring since the standard Maxwellian approximation has been successf
 \begin{equation}
 \overline{\tau\sub{R,\,MS}} \simeq 2.62 \tau\sub{R}\super{Max};\quad \overline{\tau\sub{R,\,WD}} \simeq 2.53 \tau\sub{R}\super{Max}; \overline{\tau\sub{R,\,NS}} \simeq 3.28 \tau\sub{R}\super{Max}.
 \end{equation}
-Again there is good agreement.\footnote{\citet*{Freitag2006a} found that using a consistent velocity distribution for the population of stars (from an $\eta$-model) instead of relying on the Maxwellian approximation made negligible change to the dynamical friction timescale. They did not consider a cusp as severe as $p = 0.5$.} For black holes
+Again there is good agreement.\footnote{\citet*{Freitag2006} found that using a consistent velocity distribution for the population of stars (from an $\eta$-model) instead of relying on the Maxwellian approximation made negligible change to the dynamical friction timescale. They did not consider a cusp as severe as $p = 0.5$.} For black holes
 \begin{equation}
 \overline{\tau\sub{R,\,BH}} \simeq 75.2 \tau\sub{R}\super{Max}.
 \end{equation}
 This time-scale is much larger on account of the higher mean-squared velocity.
 
-The time-scales for the lighter components are of the order of the Hubble time. The BH time-scale is much longer. This may indicate that the BH population is not fully relaxed: we may expect that there has not been sufficient time for objects to diffuse onto the most tightly bound orbits. If this were the case, the mean-squared velocity of the population would be lower. Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \simeq (M_\star/M')\overline{\tau_{\marthrm{R},\,M'}}$~\citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars. The existence of a cusp is a subject of debate. We cannot add further evidence to settle the matter. However, for definiteness, we have assumed that a cusp has formed in our calculations.
+The time-scales for the lighter components are of the order of the Hubble time. The BH time-scale is much longer. This may indicate that the BH population is not fully relaxed: we may expect that there has not been sufficient time for objects to diffuse onto the most tightly bound orbits. If this were the case, the mean-squared velocity of the population would be lower. Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \simeq (M_\star/M')\overline{\tau_{\mathrm{R},\,M'}}$~\citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars. The existence of a cusp is a subject of debate. We cannot add further evidence to settle the matter. However, for definiteness, we have assumed that a cusp has formed in our calculations.
 
 \section{Evolution of orbital parameters from gravitational wave emission}
 
