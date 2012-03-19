@@ -255,7 +255,7 @@ Two-body interactions lead to diffusion in both energy and angular momentum. Whe
 \end{equation}
 We may define another angular momentum relaxation time-scale as the time taken for the angular momentum to change by order of itself~\citep{Merritt2011}
 \begin{align}
-\tau_{J} = {} & \left[\frac{J}{J\sub{max}(\mathcal{E})}]^2\tau\sub{R} \\
+\tau_{J} = {} & \left[\frac{J}{J\sub{max}(\mathcal{E})}\right]^2\tau\sub{R} \\
  = {} & \left(1 - e^2\right) \tau\sub{R}.
 \label{eq:J-time}
 \end{align}
@@ -263,7 +263,7 @@ This can be much shorter than the energy relaxation time-scale: diffusion in ang
 
 \subsubsection{Gravitational wave inspiral}\label{sec:GW-in}
 
-Stars orbiting about the black hole shall continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral time-scale as~\citep{MiraldaEscude2000, Merritt20011}
+Stars orbiting about the black hole shall continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral time-scale as~\citep{MiraldaEscude2000, Merritt2011}
 \begin{equation}
 \tau\sub{GW} \simeq \mathcal{E}\left\langle\diff{t}{\mathcal{E}}\right\rangle,
 \label{eq:tGW-def}
@@ -277,7 +277,7 @@ For comparison, the total time taken for the inspiral, if undisturbed, is given 
 
 The time-scale associated with changes in angular momentum is~\citep{Peters1964}
 \begin{align}
-\tau_{\mathm{GW},\, J} \simeq {} & \mathcal{J}\left\langle\diff{t}{\mathcal{J}}\right\rangle
+\tau_{\mathrm{GW},\, J} \simeq {} & J\left\langle\diff{t}{J}\right\rangle
  \simeq {} & \frac{5}{32}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{5/2}}{(1-e)^{3/2}}\left(1+\frac{7}{8}e^2\right)^{-1} \\
  \approx {} & \frac{5}{32}\frac{c^5r\sub{p}^4}{G^3MM_\bullet^2}\frac{(1+e)^{5/2}}{(1-e)^{3/2}}\left(1+\frac{7}{8}e^2\right)^{-1}.
 \end{align}
@@ -681,7 +681,7 @@ The total relaxation time for a species is
 Combining these to form an average for the entire system gives
 \begin{equation}
 \overline{\tau_{\mathrm{R,}}} = \frac{\sum_{M'}N_{b,\,M'}\overline{\tau_{\mathrm{R,}\,M'}}}{\sum_{M}N_{b,\,M}}.
-\label{system-relax}
+\label{eq:system-relax}
 \end{equation}
 The relaxation time-scale for MS stars will be used in determining the collisional cut-off as described in \secref{Collision}.
 
@@ -734,7 +734,7 @@ The orbital relaxation time-scale is then
 \begin{align}
 \left\langle\tau_{\mathrm{R},\,M'}\left(e,r\sub{p}\right)\right\rangle = {} & \left(\frac{GM_\bullet(1 - e)M'}{2r\sub{p}}\right)^2\frac{\delta t}{\left\langle\Delta E^2_{\mathrm{b},\,M'}\right\rangle + \left\langle\Delta E^2_{\mathrm{u},\,M'}\right\rangle} \\
  \approx {} & \frac{3}{64}\sqrt{\frac{\pi}{2}} \frac{M_\bullet^2(1 - e)^{1/2}}{n_\ast \sigma r\sub{p}^2(1 + e)^{3/2}\ln\left(\Lambda_{M'}\right)} \left[\sum_M k_M M^2 I\sub{b}\left(e,\frac{r\sub{p}}{r\sub{c}},p_M\right) + C_M M^2 I\sub{u}\left(e,\frac{r\sub{p}}{r\sub{c}},\Xi\right)\right]^{-1}.
-\label{orbital-relax}
+\label{eq:orbital-relax}
 \end{align}
 This time-scale is defined similarly to the inspiral time-scale \eqnref{tGW-def}.
 
@@ -778,7 +778,7 @@ The long BH time-scale also inevitably includes an artifact of our approximation
 
 Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \approx (M_\star/M')\overline{\tau_{\mathrm{R},\,M'}}$~\citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars~\citep{Gualandris2012}. Fortunately, observations of the thick disc indicate that there has not been a major merger in the last $10^{10}\units{yr}$~\citep{Wyse2008}.
 
-The existence of a cusp is a subject of debate. \citet{Preto2010} conducted $N$-body simulations to investigate the effects of strong mass segregation~\citep{Alexander2009, Keshet2009} and found that cusps formed in a fraction of a (Maxwellian) relaxation time~\citep{Amaro-Sesane2011}. \citet{Gualandris2012} conducted similar computations and found that cores are likely to persist for the dominant stellar popular; intriguingly, cusp formation amongst BHs is quicker, but still takes at least a (Maxwellian) relaxation time. In any case, the time taken to form a cusp depends upon the initial configuration of stars, and so will depend upon the Galaxy's history. The true level of relaxation in the Galactic centre is uncertain. We cannot add further evidence to settle the matter. For definiteness, we have assumed that a cusp has formed in our calculations.
+The existence of a cusp is a subject of debate. \citet{Preto2010} conducted $N$-body simulations to investigate the effects of strong mass segregation~\citep{Alexander2009, Keshet2009} and found that cusps formed in a fraction of a (Maxwellian) relaxation time~\citep{Amaro-Seoane2011}. \citet{Gualandris2012} conducted similar computations and found that cores are likely to persist for the dominant stellar popular; intriguingly, cusp formation amongst BHs is quicker, but still takes at least a (Maxwellian) relaxation time. In any case, the time taken to form a cusp depends upon the initial configuration of stars, and so will depend upon the Galaxy's history. The true level of relaxation in the Galactic centre is uncertain. We cannot add further evidence to settle the matter. For definiteness, we have assumed that a cusp has formed in our calculations.
 
 Despite the long relaxation time-scale, some of the most weakly bound orbits have even longer orbital periods. This only effects orbits with $1 - e < 10^{-3}$. These form a fringe at the edge of region accurately described by the Fokker-Planck cusp solution~\citep{Spitzer1972}.
 
