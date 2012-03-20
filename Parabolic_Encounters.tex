@@ -39,22 +39,21 @@
 \newcommand{\Ibar}{{\declareslashed{}{\text{-}}{0.04}{-0.2}{I}\slashed{I}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Observing the Galaxy's MBH with GW bursts]{Observing the Galaxy's massive black hole with gravitational wave bursts}
-\author[C.\ P.\ L.\ Berry and J.\ R.\ Gair]{C.\ P.\ L.\ Berry$^{1}$\thanks{E-mail:
-cplb2@cam.ac.uk}  and J.\ R.\ Gair$^{1}$\\
+\author[C.\ P.\ L.\ Berry and J.\ R.\ Gair]{C.\ P.\ L.\ Berry$^{1}$\thanks{E-mail: cplb2@cam.ac.uk}  and J.\ R.\ Gair$^{1}$\\
 $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA}
 
 \begin{document}
 
 \date{\today}
 
-\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2011}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2012}
 
 \maketitle
 
 \label{firstpage}
 
 \begin{abstract}
-An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a solar mass compact object on a highly eccentric orbit about a much more massive object, such as a $10^6 M_\odot$ black hole, passes through periapsis. EMRBs are a relatively unexplored means of probing the spacetime of the massive black hole in the Galaxy's core. We conduct a preliminary investigation of the properties of EMRBs and how they could allow us to constrain the massive black hole's parameters, such as its spin. To do so we construct an approximate numerical kludge waveform. We go beyond the standard quadrupole approximation and include the next order terms. These waveforms are estimated to be accurate to a few percent for the majority of orbits. We present power law fits to sketch out the dependence of the signal-to-noise ratio, albeit approximately. We attempt to quantify parameter uncertainties using Fisher matrix analysis. However we find that the linear signal approximation does not hold for these signals. It is therefore necessary to perform a Monte Carlo experiment.+An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a solar mass compact object on a highly eccentric orbit about a much more massive object, such as a $10^6 M_\odot$ black hole, passes through periapsis. EMRBs are a relatively unexplored means of probing the spacetime of the massive black hole in the Galaxy's core. WE conduct a preliminary investigation of the properties of EMRBs and how they could allow us to constrain the massive black hole's parameters, such as its spin. To do so we construct an approximate numerical kludge waveform. We go beyond the standard quadrupole approximation and include the next order terms. These waveforms are estimated to be accurate to a few percent for the majority of orbits. We present power law fits to sketch out the dependence of the signal-to-noise ratio, albeit approximately. We attempt to quantify parameter uncertainties using Fisher matrix analysis. However we find that the linear signal approximation does not hold for these signals. It is therefore necessary to perform a Monte Carlo experiment.
+An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a solar mass compact object on a highly eccentric orbit about a much more massive object, such as a $10^6 M_\odot$ black hole, passes through periapsis. EMRBs are a relatively unexplored means of probing the spacetime of the massive black hole in the Galaxy's core. We conduct a preliminary investigation of the properties of EMRBs and how they could allow us to constrain the massive black hole's parameters, such as its spin. We use approximate numerical kludge waveform incorporating current quadrupole and mass octopole terms. These waveforms are estimated to be accurate to a few percent for the majority of orbits. We present power law fits to sketch out the dependence of the signal-to-noise ratio, albeit approximately. We attempt to quantify parameter uncertainties using Fisher matrix analysis. However we find that the linear signal approximation does not hold for these signals. It is therefore necessary to perform a Monte Carlo experiment.
 \end{abstract}
 
 \begin{keywords}
@@ -89,7 +88,7 @@ The spins of MBHs in active galactic nuclei have been inferred using X-ray obser
 
 While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the spin of the Galaxy's MBH, it is desirable to have an independent observation, a direct measurement.
 
-An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the Laser Interferometer Space Antenna (LISA) or the revised New Gravitational-Wave Observatory (NGO), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Amaro-Seoane2012a}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA/NGO frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
+An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the Laser Interferometer Space Antenna (LISA) or the revised New Gravitational-Wave Observatory (NGO), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA/NGO frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
 
 Studies of these systems have usually focused upon when the orbit completes multiple cycles, allowing a high signal-to-noise ratio to be accumulated. Here, we will investigate high eccentricity orbits. These are the initial bursting orbits from which an EMRI may evolve. The event rate for the detection of such EMRBs with LISA has been estimated to be as high as $15\units{yr^{-1}}$ \citep*{Rubbo2006}, although this has been revised downwards to the order of $1\units{yr^{-1}}$ \citep*{Hopman2007}. Even if only a single burst is detected during a mission, this is still an exciting possibility since the information carried by the GW should give an unparalleled probe of the structure of spacetime of the GC. Exactly what can be inferred will depend upon the orbit. 
 
@@ -255,7 +254,7 @@ P_{ij} = \delta_{ij} - n_in_j.
 
 \section{Detection with LISA}\label{sec:Detector}
 
-The classic LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. NGO has a similar design, but only has two arms and will trail closer behind the Earth. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
+The classic LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. NGO has a similar design, but only has two arms \citep{Jennrich2011}. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.35\textwidth]{BH_SS.eps}
@@ -263,11 +262,11 @@ The classic LISA design is a three arm, space-borne laser interferometer \citep{
    \label{fig:BH_SS}
 \end{center}
 \end{figure}
-The currently envisioned LISA mission geometry is shown in \figref{SS_LISA}.
+The mission geometry for LISA/NGO is shown in \figref{SS_LISA}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.27\textwidth]{SS_LISA.eps}
-    \caption{The relationship between the detector coordinates $x\sub{d}^i$ and the ecliptic coordinates of the SS $x_\odot^i$ \citep{Bender1998}.}
+    \caption{The relationship between the detector coordinates $x\sub{d}^i$ and the ecliptic coordinates of the SS $x_\odot^i$ \citep{Bender1998, Jennrich2011}.}
    \label{fig:SS_LISA}
 \end{center}
 \end{figure}
@@ -360,23 +359,21 @@ LISA's noise has two sources: instrumental noise and confusion noise, primarily 
 
 There is one remaining complication regarding signal analysis: since we are Fourier transforming a finite signal we encounter spectral leakage; a contribution from large amplitude spectral components leaks into surrounding components (sidelobes), obscuring and distorting the spectrum at these frequencies \citep{Harris1978}. This is an inherent problem with finite signals; it will be as much of a problem when analysing signals from LISA as it is computing waveforms here. To mitigate, but unfortunately not eliminate, these effects, the time-domain signal can be multiplied by a window function. These are discussed in detail in \apref{window}. We have adopted the Nuttall four-term window with continuous first derivative \citep{Nuttall1981} for the results presented here.
 
-\section{Parameter estimation and waveforms}\label{sec:Parameters}
+\section{Waveforms and detectability}\label{sec:Waveforms}
 
 \subsection{Model parameters}
 
 The shape of the waveform depends on a number of parameters: those defining the MBH; those defining the companion object on its orbit, and those defining the LISA detector. Let us define $\boldsymbol{\lambda} = \left\{\lambda^1, \lambda^2, \ldots, \lambda^N\right\}$ as the set of $N$ parameters which specify the GW. For our model, the input parameters are:
 \begin{enumerate}
 \item[(1)] The MBH's mass $M_\bullet$. This is currently well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, with the best estimate being $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$. However this depends upon the galactic centre distance $R_0$ being accurately known. If the uncertainty in this is included $M_\bullet = (3.95 \pm 0.06|\sub{stat} \pm 0.18|_{R_0, \, \mathrm{stat}} \pm  0.31|_{R_0, \, \mathrm{sys}}) \times 10^6 M_\odot (R_0 / 8\units{kpc})^{2.19}$, where the errors are statistical, independent of $R_0$; statistical from the determination of $R_0$, and systematic from $R_0$ respectively.
-\item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}). To simplify the numerics, we use the parameter $q = \tanh^{-1} a_\ast$ in the code.
-\item[(4)] The orientation angle $\Psi$.
-\item[(5)] The SS-GC distance $R_0$. As for $M_\bullet$, this is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. We use the logarithm of $R_0$ in place of $R_0$.
-\item[(6, 7)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999, Yusef-Zadeh1999}. This will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}.
-\item[(8)] The angular momentum of the orbit about the MBH's spin axis $L_z$.
-\item[(9)] The Carter constant for the orbit $Q$.
-\item[(10)] The mass of the orbiting particle $\mu$. This will depend upon the type of object: whether it is an MS star, WD, NS or BH.
-\item[(11--13)] The initial position of the particle $(r_0, \theta_0, \phi_0)$. For specific values of $Q$ and $L_z$ there is a definite upper limit on $\theta_0$ given by \eqnref{theta_0}.
-\item[(14, 15)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$. We will assume that the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}, however this choice does not qualitatively influence our results.\\
-\end{enumerate}%\end{longtable}\end{center}
+\item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}).
+\item[(3,4)] The orientation angles for the black hole spin $\Theta_\bullet$ and $\Phi_\bullet$.
+\item[(5)] The ratio of the SS-GC distance $R_0$ and the compact object mass $\mu$, which we will denote as $\zeta = R_0/\mu$. These two parameters are degenerate, $\zeta$ scales the amplitude of the waveform, so they cannot be inferred separately. The distance, like $M_\bullet$, is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. The mass of the orbiting particle depends upon the type of object: whether it is an MS star, WD, NS or BH. Since we will not know the compact object mass precisely, we will not be able to infer anything more about the distance to the GC.
+\item[(6, 7)] The angular momentum of the compact object. This can be described using either $\{L_z, Q\}$ or $\{L_\infy, \iota\}$. We will employ the latter, as the total angular momentum and inclination as less tightly correlated. Assuming spherical symmetry, we $\cos \iota$ expect be uniformly distributed.
+\item[(8--11)]         The initial position of the particle $(r_0, \theta_0, \phi_0)$. For specific values of $Q$ and $L_z$ there is a definite upper limit on $\theta_0$ given by \eqnref{theta_0}.
+\item[(12,13)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999, Yusef-Zadeh1999}. They will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}. Since the position is already known to high accuracy, so we will treat it as fixed and will not try to infer it: an EMRB can only give weak constraints on source position.
+\item[(14, 15)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$. We will assume that the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}; this choice does not qualitatively influence our results. The orbital position should be known, so this need not be inferred.\\
+\end{enumerate}
 The azimuthal angle $\Phi$ is omitted, since it arbitrarily defines the orientation of the MBH's $x$- and $y$-axes. We shall define it to be zero without loss of generality. We have a $15$-dimensional parameter space. However, for a given signal arrival time the orbital parameters of LISA will be known; we will not try to infer these.
 
 \subsection{Waveforms}
@@ -403,7 +400,7 @@ The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Us
 \end{figure}
 The difference from the coordinate systems is only apparent for orbits with very small periapses when the MBH has a high spin. The difference is largely confined to the higher frequency components, which are most sensitive to the parts of the trajectory closer to the MBH: the change in flat-space radius for the same Boyer-Lindquist radial coordinate causes a slight shift in the shape of the spectrum. Enforcing the same flat-space periapse radius gives worse agreement across the spectrum.
 
-Since the deviation in the two waveforms is only apparent for small periapses, when the kludge approximation is least applicable, we conclude that the choice of coordinates is unimportant. The potential error of order $10\%$ is less than that inherent in the NK approximation (see \secref{Energy}). Without an accurate waveform template to compare against, we do not know if there is a preferable choice of coordinates. We shall continue using oblate-spheroidal coordinates for the rest of this work.
+Since the deviation in the two waveforms is only apparent for small periapses, when the kludge approximation is least applicable, we conclude that the choice of coordinates is unimportant. The potential error of order $10\%$ is less than that inherent in the NK approximation (see \secref{Energy}). Without an accurate waveform template to compare against, we do not know if there is a preferable choice of coordinates. We shall continue using spherical coordinates for the rest of this work.
 
 \subsection{Inference and Fisher matrices}
 
@@ -448,7 +445,7 @@ If the prior were approximately Gaussian with variance-covariance matrix $\bolds
 \end{equation}
 From this the inverse Fisher matrix $\boldsymbol{\Gamma}^{-1}$ is an upper bound on the size of the posterior covariance matrix.\footnote{It may also be shown to be the Cram\'{e}r-Rao bound on the error covariance of an unbiased estimator \citep{Cutler1994, Vallisneri2008}. Thus it represents the frequentist error: the lower bound on the covariance for an unbiased parameter estimator $\boldsymbol{\lambda}\sub{est}$ calculated from an infinite set of experiments with the same signal $\boldsymbol{h}(t)$ but different realisations of the noise $\boldsymbol{n}(t)$.}
 
-To understand what we can from parabolic encounters alone, we will look at the inverse Fisher matrix elements. If these are small then we expect we would be able to precisely determine a parameter, whereas if they are large we would not be able to learn much more than we already know from our prior.
+
 
 \section{Results}\label{sec:Results}
 
@@ -674,7 +671,7 @@ Comparing the total energy fluxes, ratios of the various energies are plotted in
   \begin{center}
    \subfigure[Versus periapsis]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_peri}} \quad
    \subfigure[Versus amount of rotation]{\includegraphics[width=0.45\textwidth]{Fig_Energy_ratio_orbit}}
-    \caption{Ratios of energies as a function of periapsis $r\sub{p}$ and $2\pi$ divided by the total angle of rotation in one orbit $\Delta\phi$ ($2\pi/\Delta\phi = 1$ for a Keplerian orbit). The solid line shows the ratio of the numerical kludge and Martel energies $E\sub{NK}/E\sub{M}$; the dashed line shows the ratio of the NK energy calculated using only the mass quadrupole term and the Martel energy $E\sub{NK(Q)}/E\sub{M}$; the dot-dashed line shows the ratio of the quadrupole and quadrupole-octupole NK energies $E\sub{NK(Q)}/E\sub{NK}$, and the dotted line shows the ratio of the Peters and Mathews and quadrupole NK energies $E\sub{PM}/E\sub{NK(Q)}$. Compare with figure 4 of \citet{Gair2005}.}
+    \caption{Ratios of energies as a function of periapsis $r\sub{p}$ and $2\pi$ divided by the total angle of rotation in one orbit $\Delta\phi$ ($2\pi/\Delta\phi = 1$ for a Keplerian orbit). The solid line shows the ratio of the numerical kludge and Martel energies $E\sub{NK}/E\sub{M}$; the dashed line shows the ratio of the NK energy calculated using only the mass quadrupole term and the Martel energy $E\sub{NK(Q)}/E\sub{M}$; the dot-dashed line shows the ratio of the quadrupole and quadrupole-octupole NK energies $E\sub{NK(Q)}/E\sub{NK}$, and the dotted line shows the ratio of the Peters and Mathews and quadrupole NK energies $E\sub{PM}/E\sub{NK(Q)}$. The spots show the mapping between the two abscissa scales. Compare with figure 4 of \citet{Gair2005}.}
     \label{fig:Energy_ratio}
   \end{center}
 \end{figure*}
