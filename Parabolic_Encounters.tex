@@ -257,8 +257,8 @@ P_{ij} = \delta_{ij} - n_in_j.
 The classic LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. NGO has a similar design, but only has two arms \citep{Jennrich2011}. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}
 \begin{center}
- \includegraphics[width=0.35\textwidth]{BH_SS.eps}
-    \caption{The relationship between the MBH's coordinate system $x_\bullet^i$ and the SS coordinate system $x_\odot^i$. The MBH's spin axis is aligned with the $z_\bullet$-axis.}
+ \includegraphics[width=0.35\textwidth]{BH_SS_angles.eps}
+    \caption{The relationship between the MBH's coordinate system $x_\bullet^i$ and the SS coordinate system $x_\odot^i$. The MBH's spin axis is aligned with the $z_\bullet$-axis. The orientation of the MBH's $x$- and $y$-axes is arbitrary. We choose $x_\bullet$ to be orthogonal to the direction the SS.}
    \label{fig:BH_SS}
 \end{center}
 \end{figure}
@@ -369,12 +369,12 @@ The shape of the waveform depends on a number of parameters: those defining the 
 \item[(2)] The spin parameter $a_\ast$. Naively this could be anywhere in the range $|a_\ast| < 1$; however it is possible to place an upper bound by contemplating spin-up mechanisms. Considering the torque from radiation emitted by an accretion disc, and swallowed by the BH, it can be shown that $|a_\ast| \lesssim 0.998$ \citep{Thorne1974}. Magnetohydrodynamical simulations of accretion discs produce a smaller maximum value of $|a_\ast| \sim 0.95$ \citep{Gammie2004}. The actual spin value could be much lower than this upper bound depending upon the MBH's evolution (as discussed in \secref{Intro}).
 \item[(3,4)] The orientation angles for the black hole spin $\Theta_\bullet$ and $\Phi_\bullet$.
 \item[(5)] The ratio of the SS-GC distance $R_0$ and the compact object mass $\mu$, which we will denote as $\zeta = R_0/\mu$. These two parameters are degenerate, $\zeta$ scales the amplitude of the waveform, so they cannot be inferred separately. The distance, like $M_\bullet$, is constrained by stellar orbits, the best estimate being \citep{Gillessen2009} $R_0 = 8.33 \pm 0.35\units{kpc}$. The mass of the orbiting particle depends upon the type of object: whether it is an MS star, WD, NS or BH. Since we will not know the compact object mass precisely, we will not be able to infer anything more about the distance to the GC.
-\item[(6, 7)] The angular momentum of the compact object. This can be described using either $\{L_z, Q\}$ or $\{L_\infy, \iota\}$. We will employ the latter, as the total angular momentum and inclination as less tightly correlated. Assuming spherical symmetry, we $\cos \iota$ expect be uniformly distributed.
-\item[(8--11)]         The initial position of the particle $(r_0, \theta_0, \phi_0)$. For specific values of $Q$ and $L_z$ there is a definite upper limit on $\theta_0$ given by \eqnref{theta_0}.
-\item[(12,13)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999, Yusef-Zadeh1999}. They will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}. Since the position is already known to high accuracy, so we will treat it as fixed and will not try to infer it: an EMRB can only give weak constraints on source position.
+\item[(6, 7)] The angular momentum of the compact object. This can be described using either $\{L_z, Q\}$ or $\{L_\infty, \iota\}$. We will employ the latter, as the total angular momentum and inclination as less tightly correlated. Assuming spherical symmetry, we $\cos \iota$ expect be uniformly distributed.
+\item[(8--11)] A set of coordinates to specify the trajectory. These could be positions at an arbitrary time. We use the angular phases at periapse, $\phi\sub{p}$ and $\chi\sub{p}$ (which determines $\theta\sub{p}$), as well as the time of periapse $t\sub{p}$.
+\item[(12, 13)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999, Yusef-Zadeh1999}. They will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}. Since the position is already known to high accuracy, so we will treat it as fixed and will not try to infer it: an EMRB can only give weak constraints on source position.
 \item[(14, 15)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$. We will assume that the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}; this choice does not qualitatively influence our results. The orbital position should be known, so this need not be inferred.\\
 \end{enumerate}
-The azimuthal angle $\Phi$ is omitted, since it arbitrarily defines the orientation of the MBH's $x$- and $y$-axes. We shall define it to be zero without loss of generality. We have a $15$-dimensional parameter space. However, for a given signal arrival time the orbital parameters of LISA will be known; we will not try to infer these.
+We therefore have an $15$ dimensional parameter space, of which we are interested in inferring $11$ parameters.
 
 \subsection{Waveforms}
 
@@ -401,6 +401,8 @@ The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Us
 The difference from the coordinate systems is only apparent for orbits with very small periapses when the MBH has a high spin. The difference is largely confined to the higher frequency components, which are most sensitive to the parts of the trajectory closer to the MBH: the change in flat-space radius for the same Boyer-Lindquist radial coordinate causes a slight shift in the shape of the spectrum. Enforcing the same flat-space periapse radius gives worse agreement across the spectrum.
 
 Since the deviation in the two waveforms is only apparent for small periapses, when the kludge approximation is least applicable, we conclude that the choice of coordinates is unimportant. The potential error of order $10\%$ is less than that inherent in the NK approximation (see \secref{Energy}). Without an accurate waveform template to compare against, we do not know if there is a preferable choice of coordinates. We shall continue using spherical coordinates for the rest of this work.
+
+\section{Parameter estimation}
 
 \subsection{Inference and Fisher matrices}
 
@@ -445,8 +447,6 @@ If the prior were approximately Gaussian with variance-covariance matrix $\bolds
 \end{equation}
 From this the inverse Fisher matrix $\boldsymbol{\Gamma}^{-1}$ is an upper bound on the size of the posterior covariance matrix.\footnote{It may also be shown to be the Cram\'{e}r-Rao bound on the error covariance of an unbiased estimator \citep{Cutler1994, Vallisneri2008}. Thus it represents the frequentist error: the lower bound on the covariance for an unbiased parameter estimator $\boldsymbol{\lambda}\sub{est}$ calculated from an infinite set of experiments with the same signal $\boldsymbol{h}(t)$ but different realisations of the noise $\boldsymbol{n}(t)$.}
 
-
-
 \section{Results}\label{sec:Results}
 
 \subsection{Data set}
@@ -483,40 +483,6 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points. The SNR shows no clear correlation with the other parameters; the mass-scaling successfully removes any dependence upon $\mu$. However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
 The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread. Some uncertainties show a dependence upon the MBH spin or the orbital inclination.
-\begin{figure*}
-  \begin{center}
-   \subfigure[MBH mass $M_\bullet$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_1}} \quad
-   \subfigure[MBH spin $a_\ast$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_2}} \\
-   \subfigure[Propagation angle $\Theta$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_3}} \quad
-   \subfigure[Orientation angle $\Psi$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_4}} \\
-   \subfigure[Distance $\ln R_0$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_5}} \quad
-   \subfigure[MBH direction $\overline{\Theta}$]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_6}}
-   \caption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
-   \label{fig:sigmas}
-  \end{center}
-\end{figure*}
-\begin{figure*}
-\setcounter{subfigure}{6}
-  \begin{center}
-   \subfigure[MBH direction $\overline{\Phi}$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_7}} \quad
-   \subfigure[Orbital angular momentum $L_z$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_8}} \\
-   \subfigure[Carter constant $Q$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_9}} \quad
-   \subfigure[CO mass $\mu$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_10}} \\
-   \subfigure[Initial position $x_0$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_11}} \quad
-   \subfigure[Initial position $y_0$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_12}} \\
-   \contcaption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
-    \label{fig:sigmas}
-  \end{center}
-\end{figure*}
-\begin{figure}
-\setcounter{subfigure}{12}
-  \begin{center}
-	\subfigure[Initial position $z_0$.]{\includegraphics[width=0.45\textwidth]{Fig_SNR_sigma_13}} \\
-	\contcaption{Mass-normalised parameter uncertainties and SNR. The points represent the entire set of data. The lines are maximum likelihood fits to the values obtained by averaging over each set of intrinsic parameters. See \tabref{lines} for best fit parameters.}
-    \label{fig:sigmas}
-  \end{center}
-    \setcounter{subfigure}{0}
-\end{figure}
 
 The uncertainty for the majority of parameters seem to be reasonably well described by a simple power-law. This is fitted, as for the SNR-periapsis relation, using maximum likelihood, assuming that $\ln \rho$ and $\ln \sigma_a$ have independent Gaussian distributions with standard deviations derived from the scatter of points. This is not the case: since we are only interested in quantifying the general trend to give a broad estimate of the behaviour, we shall not be concerned by the error introduced here.\footnote{A basic least-squares fit yields similar results.} The fitted parameters are given in \tabref{lines}.
 \begin{table*}
