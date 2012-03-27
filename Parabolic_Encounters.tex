@@ -591,7 +591,7 @@ and $\Delta \boldsymbol{h}$ is the corresponding change in the waveform
 \end{equation}
 The $1\sigma$ surface is defined from the inverse of the Fisher matrix. If higher order terms are indeed negligible, then the maximum-mismatch criterion should be small. We check this by picking a random selection of points on the $1\sigma$ surface, and evaluating $|\ln r|$. If this is smaller than a fiducial value, say $|\ln r| = 0.1$ over the majority, say $90\%$, of the surface we may consider the LSA to be sufficiently justified.
 
-We calculated Fisher matrices for a wide range of orbits and checked the maximum-mismatch criterion. We found that for the overwhelming majority of orbits the test failed: the LSA is not appropriate. This behaviour was seen even for orbits with $\rho \sim 10^3$--$10^4$.\footnote{In this study, to increase $\rho$ we must reduce the periapse distance, this also reduces the region where the LSA is valid as parameter dependences become more non-linear. If we had the luxury of increasing $\rho$ by moving the GC closer, things could be different.} Higher order terms are important, and cannot be neglected.
+We calculated Fisher matrices for a wide range of orbits and checked the maximum-mismatch criterion. We found that for the overwhelming majority of orbits the test failed: the LSA is not appropriate. This behaviour was seen even for orbits with $\rho \sim 10^3$--$10^4$.\footnote{In this study, to increase $\rho$ we must reduce the periapse distance, this also reduces the region where the LSA is valid as parameter dependencies become more non-linear. If we had the luxury of increasing $\rho$ by moving the GC closer, things could be different.} Higher order terms are important, and cannot be neglected.
 
 EMRBs have a short duration and accordingly are not the most informative of signals. Therefore, the $1\sigma$ surface as defined by considering only the LSA terms is large. Taking such a large step in parameter space moves the signal beyond the region of linear changes.
 
@@ -601,7 +601,48 @@ As we cannot be confident in Fisher matrix results, we opted to abandon this app
 
 \subsection{Markov chain Monte Carlo methods}
 
+Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional parameter spaces~\citep[chapter 29]{MacKay2003}. A chain of $N$ samples is constructed, and the distribution of points approximates the posterior. This becomes asymptotically exact as $N \rightarrow \infty$.
 
+
+
+Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the distribution.
+
+One approach to define the proposal distribution is to use the previous results in the chain, to refine the proposal by learning from these points. Such approaches are known as adaptive MCMC algorithms. Updating the proposal from previous points means that the chain is no longer truly Markovian. Care must be taken to ensure that ergodicity is preserved. We will avoid this technicalities by completing two separate MCMC runs: the first will will be adaptive, and we use this only to define a proposal distribution, the second uses the distribution from the first but keeps it fixed. By only using samples from the second run, we guarantee that the chain is Markovian, but we can still enjoy the benefits of a tailor made proposal distribution.
+
+
+
+
+Markov chain Monte Carlo (MCMC) methods (which include random walk Monte Carlo methods) are a class of algorithms for sampling from probability distributions based on constructing a Markov chain that has the desired distribution as its equilibrium distribution. The state of the chain after a large number of steps is then used as a sample of the desired distribution. The quality of the sample improves as a function of the number of steps.
+
+Usually it is not hard to construct a Markov chain with the desired properties. The more difficult problem is to determine how many steps are needed to converge to the stationary distribution within an acceptable error. A good chain will have rapid mixing—the stationary distribution is reached quickly starting from an arbitrary position—described further under Markov chain mixing time.
+
+Typical use of MCMC sampling can only approximate the target distribution, as there is always some residual effect of the starting position. More sophisticated MCMC-based algorithms such as coupling from the past can produce exact samples, at the cost of additional computation and an unbounded (though finite in expectation) running time.
+
+The most common application of these algorithms is numerically calculating multi-dimensional integrals. In these methods, an ensemble of "walkers" moves around randomly. At each point where the walker steps, the integrand value at that point is counted towards the integral. The walker then may make a number of tentative steps around the area, looking for a place with reasonably high contribution to the integral to move into next. Random walk methods are a kind of random simulation or Monte Carlo method. However, whereas the random samples of the integrand used in a conventional Monte Carlo integration are statistically independent, those used in MCMC are correlated. A Markov chain is constructed in such a way as to have the integrand as its equilibrium distribution. Surprisingly, this is often easy to do.
+
+
+MCMC algorithms such as the Metropolis-Hastings algorithm (Metropolis et al., 1953; Hastings, 1970) are extremely widely used in statistical inference, to sample from complicated
+high-dimensional distributions. Tuning of associated parameters such as proposal variances is crucial to achieve eﬃcient mixing, but can also be very difficult.
+
+
+To compute the posterior on the model parameters, we use Markov Chain Monte Carlo (MCMC) techniques since they provide an efficient way to explore the full parameter space. An initial point, −→x0, is drawn from the prior distribution and then at each subsequent iteration, i, a new point, −→y , is drawn from a proposal distribution, q(−→y |−→x ) (uniform in all cases, covering the range of parameter investigation). The Metropolis-Hastings ratio is then evaluated,
+R =
+(−→y )L(D|−→y ,H)q(−→xi |−→y )
+(−→xi )L(D|−→xi ,H)q(−→y |−→xi )
+A random sample is drawn from a uniform distribution, u ∈ U[0, 1], and if u < R the move to the new point is accepted, so that we set x−−i+→1 = →−y . If u > R, the move is rejected and we set x−−i+→1 = →−xi . If R > 1 the move is always accepted, however if R < 1 there is still a chance that the move will be accepted.
+
+
+MCMC methods were first introduced in the 1950s (Metropolis et al. 1953) to sample an unknown probability distribution efficiently and are described in detail in Neal (1993) and in Gilks, Richardson & Spiegelhalter (1995). Instead of calculating the probabilitydensity at sites on a regular grid spanning the entire parameter space, one draws samples sequentially according to a probabilistic algorithm. The sequence of states visited forms a Markov Chain distributed according to the probability distribution to be explored. Rather than scaling exponentially with the number of parameters varied, the time needed to sample a distribution grows approximately linearly with dimension.
+
+All MCMC algorithms share the property that asymptotically the distribution of states visited by the chain is identical to the underlying distribution.
+
+
+
+
+
+The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the majority of orbits it is not possible to place constraints on all the parameters, and the posteriors are far from Gaussian as assumed in the LSA.
+
+It is possible to place good constraints from the most relativistic orbits. These provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
 \section{Results}\label{sec:Results}
 
@@ -626,7 +667,7 @@ This should be proportional to $\mu^{-1}$. We will denote the mass-normalised qu
 \hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}; \quad \hat{\sigma}_a = \mu\sigma_a.
 \end{equation}
 
-We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes (\citealt{Mackay2003}, sections 22.1, 23.3). Using median values yields results that are quantitatively similar.}
+We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes \citep[sections 22.1, 23.3]{Mackay2003}. Using median values yields results that are quantitatively similar.}
 
 There exists a correlation between the periapse radius and SNR, as shown in \figref{SNR}.
 \begin{figure}
@@ -733,7 +774,7 @@ A natural continuation of this work would be to consider EMRBs from other MBHs. 
 
 \section*{Acknowledgments}
 
-The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices, and are grateful to Dave Green for helpful suggestions regarding apodization. They would also like to thank Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society.
+The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices; they would like to thank Stephen Taylor for useful discussions on adaptive MCMC methods and Dave Green for helpful suggestions regarding apodization. They are also grateful to Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \bibliographystyle{mn2e}
 \bibliography{Parabolic}
