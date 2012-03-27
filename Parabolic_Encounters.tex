@@ -601,42 +601,15 @@ As we cannot be confident in Fisher matrix results, we opted to abandon this app
 
 \subsection{Markov chain Monte Carlo methods}
 
-Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional parameter spaces~\citep[chapter 29]{MacKay2003}. A chain of $N$ samples is constructed, and the distribution of points approximates the posterior. This becomes asymptotically exact as $N \rightarrow \infty$.
+Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{lambda}_i$ a new point $\boldsymbol{lambda}^\ast$ is drawn and accepted with probability
+\begin{equation}
+R = \min\left\{\frac{\mathcal{L}(\boldsymbol{lambda}^\ast)Q(\boldsymbol{lambda}^\ast)}{\mathcal{L}(\boldsymbol{lambda}_i)Q(\boldsymbol{lambda}_i)}, 1\right\},
+\end{equation}
+setting $\boldsymbol{lambda}_{i + 1} = \boldsymbol{lambda}^\ast$, where is the \mathcal{L} likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{lambda}_{i + 1} = \boldsymbol{lambda}_i$.
 
-
-
-Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the distribution.
+Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the target distribution: ideally they would be identical.
 
 One approach to define the proposal distribution is to use the previous results in the chain, to refine the proposal by learning from these points. Such approaches are known as adaptive MCMC algorithms. Updating the proposal from previous points means that the chain is no longer truly Markovian. Care must be taken to ensure that ergodicity is preserved. We will avoid this technicalities by completing two separate MCMC runs: the first will will be adaptive, and we use this only to define a proposal distribution, the second uses the distribution from the first but keeps it fixed. By only using samples from the second run, we guarantee that the chain is Markovian, but we can still enjoy the benefits of a tailor made proposal distribution.
-
-
-
-
-Markov chain Monte Carlo (MCMC) methods (which include random walk Monte Carlo methods) are a class of algorithms for sampling from probability distributions based on constructing a Markov chain that has the desired distribution as its equilibrium distribution. The state of the chain after a large number of steps is then used as a sample of the desired distribution. The quality of the sample improves as a function of the number of steps.
-
-Usually it is not hard to construct a Markov chain with the desired properties. The more difficult problem is to determine how many steps are needed to converge to the stationary distribution within an acceptable error. A good chain will have rapid mixing—the stationary distribution is reached quickly starting from an arbitrary position—described further under Markov chain mixing time.
-
-Typical use of MCMC sampling can only approximate the target distribution, as there is always some residual effect of the starting position. More sophisticated MCMC-based algorithms such as coupling from the past can produce exact samples, at the cost of additional computation and an unbounded (though finite in expectation) running time.
-
-The most common application of these algorithms is numerically calculating multi-dimensional integrals. In these methods, an ensemble of "walkers" moves around randomly. At each point where the walker steps, the integrand value at that point is counted towards the integral. The walker then may make a number of tentative steps around the area, looking for a place with reasonably high contribution to the integral to move into next. Random walk methods are a kind of random simulation or Monte Carlo method. However, whereas the random samples of the integrand used in a conventional Monte Carlo integration are statistically independent, those used in MCMC are correlated. A Markov chain is constructed in such a way as to have the integrand as its equilibrium distribution. Surprisingly, this is often easy to do.
-
-
-MCMC algorithms such as the Metropolis-Hastings algorithm (Metropolis et al., 1953; Hastings, 1970) are extremely widely used in statistical inference, to sample from complicated
-high-dimensional distributions. Tuning of associated parameters such as proposal variances is crucial to achieve eﬃcient mixing, but can also be very difficult.
-
-
-To compute the posterior on the model parameters, we use Markov Chain Monte Carlo (MCMC) techniques since they provide an efficient way to explore the full parameter space. An initial point, −→x0, is drawn from the prior distribution and then at each subsequent iteration, i, a new point, −→y , is drawn from a proposal distribution, q(−→y |−→x ) (uniform in all cases, covering the range of parameter investigation). The Metropolis-Hastings ratio is then evaluated,
-R =
-(−→y )L(D|−→y ,H)q(−→xi |−→y )
-(−→xi )L(D|−→xi ,H)q(−→y |−→xi )
-A random sample is drawn from a uniform distribution, u ∈ U[0, 1], and if u < R the move to the new point is accepted, so that we set x−−i+→1 = →−y . If u > R, the move is rejected and we set x−−i+→1 = →−xi . If R > 1 the move is always accepted, however if R < 1 there is still a chance that the move will be accepted.
-
-
-MCMC methods were first introduced in the 1950s (Metropolis et al. 1953) to sample an unknown probability distribution efficiently and are described in detail in Neal (1993) and in Gilks, Richardson & Spiegelhalter (1995). Instead of calculating the probabilitydensity at sites on a regular grid spanning the entire parameter space, one draws samples sequentially according to a probabilistic algorithm. The sequence of states visited forms a Markov Chain distributed according to the probability distribution to be explored. Rather than scaling exponentially with the number of parameters varied, the time needed to sample a distribution grows approximately linearly with dimension.
-
-All MCMC algorithms share the property that asymptotically the distribution of states visited by the chain is identical to the underlying distribution.
-
-
 
 
 
