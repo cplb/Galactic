@@ -579,7 +579,7 @@ From this the inverse Fisher matrix $\boldsymbol{\Gamma}^{-1}$ is an upper bound
 
 The Fisher matrix gives a quick way of estimating the range of posterior. It is widely used because of this. However, it is only appropriate when the approximation of \eqnref{LSA} holds. This is known as the linearised-signal approximation (LSA) where higher order derivatives are neglected. To test the validity of this \citet{Vallisneri2008} recommends use of the maximum-mismatch criterion
 \begin{equation}
-\ln r = -\recip{2}\innerprod{\Delta\lambda^a\partial_a\boldsymbol{h}\sub{ML} - \Delta\bodsymbol{h}}{\Delta\lambda^b\partial_b\boldsymbol{h}\sub{ML} - \Delta\bodsymbol{h}}.
+\ln r = -\recip{2}\innerprod{\Delta\lambda^a\partial_a\boldsymbol{h}\sub{ML} - \Delta\boldsymbol{h}}{\Delta\lambda^b\partial_b\boldsymbol{h}\sub{ML} - \Delta\boldsymbol{h}}.
 \end{equation}
 Here $\Delta \boldsymbol{\lambda}$ is the displacement to some point on the $1\sigma$ surface
 \begin{equation}
@@ -589,7 +589,7 @@ and $\Delta \boldsymbol{h}$ is the corresponding change in the waveform
 \begin{equation}
 \Delta \boldsymbol{h} = \boldsymbol{h}(\boldsymbol{\lambda}\sub{1\sigma}) - \boldsymbol{h}(\boldsymbol{\lambda}\sub{ML}).
 \end{equation}
-The $1\sigma$ surface is defined from the inverse of the Fisher matrix. If higher order terms are indeed negligible, then the maximum-mismatch criterion should be small. We check this by picking a random selection of points on the $1\sigma$ surface, and evaluating $|\ln r|$. If this is smaller than a fiducial value, say $|\lon r| = 0.1$ over the majority, say $90\%$, of the surface we may consider the LSA to be sufficiently justified.
+The $1\sigma$ surface is defined from the inverse of the Fisher matrix. If higher order terms are indeed negligible, then the maximum-mismatch criterion should be small. We check this by picking a random selection of points on the $1\sigma$ surface, and evaluating $|\ln r|$. If this is smaller than a fiducial value, say $|\ln r| = 0.1$ over the majority, say $90\%$, of the surface we may consider the LSA to be sufficiently justified.
 
 We calculated Fisher matrices for a wide range of orbits and checked the maximum-mismatch criterion. We found that for the overwhelming majority of orbits the test failed: the LSA is not appropriate. This behaviour was seen even for orbits with $\rho \sim 10^3$--$10^4$.\footnote{In this study, to increase $\rho$ we must reduce the periapse distance, this also reduces the region where the LSA is valid as parameter dependences become more non-linear. If we had the luxury of increasing $\rho$ by moving the GC closer, things could be different.} Higher order terms are important, and cannot be neglected.
 
