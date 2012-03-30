@@ -601,13 +601,13 @@ As we cannot be confident in Fisher matrix results, we opted to abandon this app
 
 \subsection{Markov chain Monte Carlo methods}
 
-Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{lambda}_i$ a new point $\boldsymbol{lambda}^\ast$ is drawn and accepted with probability
+Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{lambda}_n$ a new point $\boldsymbol{lambda}^\ast$ is drawn and accepted with probability
 \begin{equation}
-R = \min\left\{\frac{\mathcal{L}(\boldsymbol{lambda}^\ast)Q(\boldsymbol{lambda}^\ast)}{\mathcal{L}(\boldsymbol{lambda}_i)Q(\boldsymbol{lambda}_i)}, 1\right\},
+a = \min\left\{\frac{\mathcal{L}(\boldsymbol{lambda}^\ast)Q(\boldsymbol{lambda}_n;\,\boldsymbol{lambda}^\ast)}{\mathcal{L}(\boldsymbol{lambda}_n)Q(\boldsymbol{lambda}_n;\,\boldsymbol{lambda}^\ast)}, 1\right\},
 \end{equation}
-setting $\boldsymbol{lambda}_{i + 1} = \boldsymbol{lambda}^\ast$, where is the \mathcal{L} likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{lambda}_{i + 1} = \boldsymbol{lambda}_i$.
+setting $\boldsymbol{lambda}_{n + 1} = \boldsymbol{lambda}^\ast$, where is the \mathcal{L} likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{lambda}_{n + 1} = \boldsymbol{lambda}_n$.
 
-Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the target distribution: ideally they would be identical.
+Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the target distribution.
 
 One approach to define the proposal distribution is to use the previous results in the chain, to refine the proposal by learning from these points. Such approaches are known as adaptive MCMC algorithms. Updating the proposal from previous points means that the chain is no longer truly Markovian. Care must be taken to ensure that ergodicity is preserved. We will avoid this technicalities by completing two separate MCMC runs: the first will will be adaptive, and we use this only to define a proposal distribution, the second uses the distribution from the first but keeps it fixed. By only using samples from the second run, we guarantee that the chain is Markovian, but we can still enjoy the benefits of a tailor made proposal distribution.
 
@@ -723,6 +723,12 @@ Of paramount interest are the MBH mass and spin. The current uncertainty in the 
 
 The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast = 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
+\section{Extra-galactic sources}
+
+We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH. Higher masses correspond to lower frequency bursts, which are harder to detect.
+
+Checking our nearest neighbours, we find that bursts from Andromeda (M31) are not detectable. This is because of the large mass of the MBH $M\sub{M31} = (1.4^{+0.9}_{-0.3}) \times 10^8 M_\odot$ \citep{Bender2005}. However, its companion M32 is more promising. It has a lighter MBH $M\sub{M32} = (2.5 \pm 0.5) \times 10^6 M_\odot$ \citep{Verolme2002}. We find that bursts can be detected if the periapse is smaller than $r\sub{p} \simeq X r\sub{g} \simeq X\untis{pc}$. These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+
 \section{Discussion}\label{sec:End}
 
 We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. This assumes that the orbits are parabolic and employs a numerical kludge approximation. The two coordinate schemes for a NK presented here yield almost indistinguishable results. We conclude that either is a valid choice for this purpose. There may be differences of order $10\%$ when the spin is large and the periapse is small ($r\sub{p} \sim 2r\sub{S}$).
@@ -743,7 +749,7 @@ Some consideration should also be given to methods of fitting a waveform to an o
 
 A better estimate of the information that could be extracted from EMRBs could be obtained by doing a full Bayesian analysis: considering the shape of the posterior recovered from a large sample of possible signals. This would be computationally expensive, and would only be worth exploring if the event rate proved promising.
 
-A natural continuation of this work would be to consider EMRBs from other MBHs. LISA should be able to detect EMRBs originating from the Virgo cluster \citep{Rubbo2006}, however the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. It would be interesting to check what we could expect to infer about MBHs in other galaxies from GWs. This will depend strongly upon the MBHs' masses: higher masses correspond to lower frequency bursts, which are harder to detect. Only signals originating from lighter MBHs, comparable or less than the Galaxy's MBH, are likely to be seen.
+A natural continuation of this work would be to consider EMRBs from other MBHs. Only signals originating from lighter MBHs, comparable or less than the Galaxy's MBH, are likely to be seen. This leaves M32 as the only real candidate given currently envisioned sensitivity.
 
 \section*{Acknowledgments}
 
