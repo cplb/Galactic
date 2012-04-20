@@ -415,13 +415,13 @@ These bursts were calculated for a $1 M_\odot$. From \eqnref{octupole} we see th
 
 The spin of the MBH and the orbital inclination were randomly chosen, and the periapse distance was set so that the distribution would be uniform in log-space (up to the point of the inner-most stable orbit). For each set of these extrinsic parameters, the periapse position, orientation of the MBH, and orbital position of detector were varied: five random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution) were used for at each point.
 
-We take the mean of $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and detector orientation).\footnote{The logarithm is a better quantity to work with since the SNR is a positive-definite quantity that may be distributed over a range of magnitudes (\citealt{Mackay2003}, sections 22.1, 23.3). Using median values yields results that are quantitatively similar.}
+We take the mean of $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and detector orientation).\footnote{The logarithm is a better quantity to work with since the SNR is a positive-definite quantity that may be distributed over a range of magnitudes (\citealt{MacKay2003}, sections 22.1, 23.3). Using median values yields results that are quantitatively similar.}
 
 There exists a correlation between the periapse radius and SNR, as shown in \figref{SNR}.
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\hat{\rho}/M_\odot^{-1}\right) = -2.77\log(r\sub{p}/r\sub{g}) + 4.05$. This is fitted to orbits with $r\sub{p} > 9r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.70$.}
+    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\hat{\rho}/M_\odot^{-1}\right) = -2.77\log(r\sub{p}/r\sub{g}) + 4.05$. This is fitted to orbits with $r\sub{p} > 9 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.70$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
@@ -608,11 +608,11 @@ As we cannot be confident in Fisher matrix results, we opted to abandon this app
 
 \subsection{Markov chain Monte Carlo methods}
 
-Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{lambda}_n$ a new point $\boldsymbol{lambda}^\ast$ is drawn and accepted with probability
+Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{\lambda}_n$ a new point $\boldsymbol{\lambda}^\ast$ is drawn and accepted with probability
 \begin{equation}
-a = \min\left\{\frac{\mathcal{L}(\boldsymbol{lambda}^\ast)Q(\boldsymbol{lambda}_n;\,\boldsymbol{lambda}^\ast)}{\mathcal{L}(\boldsymbol{lambda}_n)Q(\boldsymbol{lambda}_n;\,\boldsymbol{lambda}^\ast)}, 1\right\},
+a = \min\left\{\frac{\mathcal{L}(\boldsymbol{\lambda}^\ast)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}{\mathcal{L}(\boldsymbol{\lambda}_n)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}, 1\right\},
 \end{equation}
-setting $\boldsymbol{lambda}_{n + 1} = \boldsymbol{lambda}^\ast$, where is the \mathcal{L} likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{lambda}_{n + 1} = \boldsymbol{lambda}_n$.
+setting $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}^\ast$, where is the $\mathcal{L}$ likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}_n$.
 
 Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the target distribution.
 
@@ -647,13 +647,13 @@ This should be proportional to $\mu^{-1}$. We will denote the mass-normalised qu
 \hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}; \quad \hat{\sigma}_a = \mu\sigma_a.
 \end{equation}
 
-We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes \citep[sections 22.1, 23.3]{Mackay2003}. Using median values yields results that are quantitatively similar.}
+We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes \citep[sections 22.1, 23.3]{MacKay2003}. Using median values yields results that are quantitatively similar.}
 
 There exists a correlation between the periapse radius and SNR, as shown in \figref{SNR}.
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.60\log(r\sub{p}/r\sub{g}) + 4.73$. This is fitted to orbits with $r\sub{p} > 9 r\sub{g}$has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
+    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.60\log(r\sub{p}/r\sub{g}) + 4.73$. This is fitted to orbits with $r\sub{p} > 9 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.64$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
@@ -734,9 +734,9 @@ The spin is less well known. To obtain an uncertainty of $0.1$ would require $\r
 
 We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH. Higher masses correspond to lower frequency bursts, which are harder to detect.
 
-Checking our nearest neighbours, we find that bursts from Andromeda (M31) are not detectable. This is because of the large mass of the MBH $M\sub{M31} = (1.4^{+0.9}_{-0.3}) \times 10^8 M_\odot$ \citep{Bender2005}. However, its companion M32 is more promising. It has a lighter MBH $M\sub{M32} = (2.5 \pm 0.5) \times 10^6 M_\odot$ \citep{Verolme2002}. We find that bursts can be detected if the periapse is smaller than $r\sub{p} \simeq X r\sub{g} \simeq X\untis{pc}$. These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+Checking our nearest neighbours, we find that bursts from Andromeda (M31) are not detectable. This is because of the large mass of the MBH $M\sub{M31} = (1.4^{+0.9}_{-0.3}) \times 10^8 M_\odot$ \citep{Bender2005}. However, its companion M32 is more promising. It has a lighter MBH $M\sub{M32} = (2.5 \pm 0.5) \times 10^6 M_\odot$ \citep{Verolme2002}. We find that bursts can be detected if the periapse is smaller than $r\sub{p} \simeq X r\sub{g} \simeq X\units{pc}$. These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
 
-Triangulum (M33) is believed not to have an MBH. \citet{Merrit2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \time 10^3 M_\odot$, \citet{GEbhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to see one would confirm the existence of a previously invisible MBH.
+Triangulum (M33) is believed not to have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \time 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to see one would confirm the existence of a previously invisible MBH.
 
 \section{Discussion}\label{sec:End}
 
