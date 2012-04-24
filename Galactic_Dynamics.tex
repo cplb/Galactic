@@ -71,11 +71,11 @@ Close to the centre of the galactic core dynamics shall be dominated by the infl
 r\sub{c} = \frac{GM_\bullet}{\sigma^2}
 \label{eq:r_c}
 \end{equation}
-where $\sigma^2$ is the line-of-sight velocity dispersion. We will assume that the mass of stars enclosed within the radius is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$ \citep{Bahcall1976}. We will define a reference number density from the enclosed mass as
+where $\sigma^2$ is the line-of-sight velocity dispersion. We shall assume that the mass of stars enclosed within the radius is greater than the black hole mass, which is much greater than the mass of a typical star $M_\star$ \citep{Bahcall1976}. We shall define a reference number density from the enclosed mass as
 \begin{equation}
 m_\star(r\sub{c}) = \frac{4\pi r\sub{c}^3}{3}n_\star M_\star.
 \end{equation}
-Within the core, the distribution function can be calculated using the approximation of Fokker-Planck formalism. The population of bound stars is evolved numerically until a steady state is reached: the unbound stars form a reservoir with an assumed Maxwellian distribution. Denoting a species of star by its mass $M$:
+Within the core, the distribution function can be calculated using the approximation of Fokker-Planck formalism. The population of bound stars is evolved numerically until a steady state is reached: the unbound stars form a reservoir with an assumed Maxwellian distribution. Denoting a species of star by its mass $M$,
 \begin{equation}
 f_M(\mathcal{E}) = \frac{C_M n_\star}{(2\pi\sigma_M^2)^{3/2}} \exp\left(-\frac{\mathcal{E}}{\sigma_M^2}\right),\quad\mathcal{E} > 0,
 \label{eq:Unbound_DF}
@@ -90,7 +90,7 @@ However, if the unbound stellar population has reached equilibrium by violent re
 \end{equation}
 and we have equipartition of energy per unit mass \citep{Lynden-Bell1967}. This will be assumed here following \citet{Alexander2009} and \citet{O'Leary2009}. The steady-state distribution function is largely insensitive to this choice \citep{Bahcall1977, Alexander2009}.
 
-For bound orbits the DF can be approximated as a power law \citep{Peebles1972}
+For bound orbits, the DF can be approximated as a power law \citep{Peebles1972}
 \begin{equation}
 f_M(\mathcal{E}) = \frac{k_M n_\star}{(2\pi\sigma^2)^{3/2}}\left(-\frac{\mathcal{E}}{\sigma^2}\right)^{p_M},\quad\mathcal{E} < 0.
 \label{eq:Bound_DF}
@@ -101,7 +101,7 @@ These cusp profiles should exist if the system has had sufficient time to become
 
 \subsection{Model parameters}\label{sec:GC-Param}
 
-We will be using the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alexander2009}. This includes four stellar species: main sequence stars (MS), white dwarfs (WD), neutron stars (NS), and black holes (BH). Their properties are summarised in \tabref{HA}. The behaviour of the Fokker-Planck model has been verified by $N$-body simulations \citep{Baumgardt2004,Preto2010}.
+We shall use the Fokker-Planck model of \citet{Hopman2006, Hopman2006a, Alexander2009}. This includes four stellar species: main sequence (MS) stars, white dwarfs (WDs), neutron stars (NSs), and black holes (BHs). Their properties are summarised in \tabref{HA}. The behaviour of the Fokker-Planck model has been verified by $N$-body simulations \citep{Baumgardt2004,Preto2010}.
 \begin{table}
 \begin{minipage}{\columnwidth}
  \centering
@@ -158,7 +158,7 @@ From the latter we can verify that the turning points of an orbit occur at
 \begin{equation}
 r = r\sub{p}, \: \frac{1+e}{1-e}r\sub{p};
 \end{equation}
-the periapse is the only turning point for orbits with $e > 1$. Since we now have expressions for $\{v_r, v_\perp\}$ in terms of $\{e, r\sub{p}\}$ we can calculate the Jacobian
+the periapse is the only turning point for orbits with $e > 1$. Since we now have expressions for $\{v_r, v_\perp\}$ in terms of $\{e, r\sub{p}\}$, we can calculate the Jacobian
 \begin{align}
 \left|\frac{\partial(v_r, v_\perp)}{\partial(e, r\sub{p})}\right| = {} & \partialdiff{v_r}{e}\partialdiff{v_\perp}{r\sub{p}} - \partialdiff{v_r}{r\sub{p}}\partialdiff{v_\perp}{e} \\
  = {} & \recip{2v_rv_\perp}\frac{e}{r\sub{p}}\left(\frac{GM_\bullet}{r}\right)^2.
@@ -190,10 +190,10 @@ where $N(e, r\sub{p}; r)$ is the total number of stars with orbits given by $\{e
 \end{equation}
 where the factor of $2$ is included to account for both inwards and outwards motion. Hence
 \begin{align}
-N(e, r\sub{p}; r) = {} & \recip{2} v_r P n(r, e, r\sub{p})\\
- = {} & \frac{2\pi^2(GM_\bullet)^2 e P}{r\sub{p}}f(\mathcal{E}).
+N(e, r\sub{p}; r) = {} & \recip{2} v_r P(e, r\sub{p}) n(r, e, r\sub{p})\\
+ = {} & \frac{2\pi^2(GM_\bullet)^2 e P(e, r\sub{p})}{r\sub{p}}f(\mathcal{E}).
 \end{align}
-The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we may define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion [see \citet{Bahcall1976}, equation (9)].
+The right hand side of this equation is independent of position, subject to the constraint that the radius is in the allowed range for the orbit $r\sub{p} \leq r \leq (1+e)r\sub{p}/(1-e)$, and so we can define $N(e, r\sub{p}) \equiv N(e, r\sub{p}; r)$. This is a consequence of the distribution function being dependent only upon a constant of the motion [see \citet{Bahcall1976}, equation (9)].
 
 If a burst of radiation is emitted each time a star passes through periapse, then the event rate for burst emission from orbits with parameters $\{e, r\sub{p}\}$, is given by
 \begin{align}
@@ -226,7 +226,7 @@ From \eqnref{Gamma} we see that the event rate is highly sensitive to the smalle
 
 \subsubsection{Tidal disruption}
 
-Tidal forces from the black hole can disrupt stars. This occurs at the tidal radius
+Tidal forces from the MBH can disrupt stars. This occurs at the tidal radius
 \begin{equation}
 r\sub{T} \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \label{eq:Tidal}
@@ -244,9 +244,9 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \tau\sub{R}\super{Max} \simeq \kappa\frac{\sigma^3}{G^2M_\star^2 n_\star\ln\Lambda},
 \label{eq:tauMaxwell}
 \end{equation}
-where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, describing fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
+where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$ \citep{Bahcall1976}, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, treating fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 8.3.4]{Binney1987} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
-All these approaches yield consistent values, suggesting, as a first approximation, any should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. This will at least make the model self-consistent. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. The derivation of the relaxation time-scale along with a discussion of its short-comings are included in \apref{time-scale}. A average time-scale for the entire system is defined in \eqnref{system-relax}, and an average for an orbit is defined in \eqnref{orbital-relax}. We will defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation can be complicated.
+All these approaches yield consistent values, suggesting, as a first approximation, any should be valid. We will follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. This will at least make the model self-consistent. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. The derivation of the relaxation time-scale along with a discussion of its short-comings are included in \apref{time-scale}. An average time-scale for the entire system is defined in \eqnref{system-relax}, and an average for an orbit is defined in \eqnref{orbital-relax}. We will defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation can be complicated.
 
 Two-body interactions lead to diffusion in both energy and angular momentum. When considering a single (bound) orbit, over a relaxation time-scale the energy changes by order of itself while the angular momentum changes by the angular momentum of a circular orbit with that energy $J\sub{circ}(\mathcal{E})$ \citep{Lightman1977, Rauch1996, Hopman2005}:\footnote{The circular orbit angular momentum is the maximum value for orbits of that energy.}
 \begin{equation}
@@ -263,31 +263,32 @@ This can be much shorter than the energy relaxation time-scale: diffusion in ang
 
 \subsubsection{Gravitational wave inspiral}\label{sec:GW-in}
 
-Stars orbiting about the black hole shall continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963,Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral time-scale as \citep{MiraldaEscude2000, Merritt2011}
+Stars orbiting about the black hole shall continually emit gravitational radiation; this carries away energy and angular momentum, causing the stars to inspiral. Using the analysis of \citet{Peters1963} and \cite\{Peters1964} for Keplerian binaries it is possible to define a characteristic inspiral time-scale from the rate of change of energy. For consistency with the definition of the relaxation time-scale, we will define the characteristic inspiral time-scale as \citep{MiraldaEscude2000, Merritt2011}
 \begin{equation}
 \tau\sub{GW} \simeq \mathcal{E}\left\langle\diff{t}{\mathcal{E}}\right\rangle,
 \label{eq:tGW-def}
 \end{equation}
 where the term in angular brackets is the reciprocal of the orbit-averaged rate of energy radiation. Using \eqnref{Energy_ecc} and equation (16) of \citet{Peters1963}
 \begin{align}
-\tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
+\tau\sub{GW} \simeq {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M_\bullet\right)}\frac{(1+e)^{7/2}}{(1-e)^{1/2}} \nonumber \\*
+ {} & \times {} \left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
  \approx {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
 \end{align}
 For comparison, the total time taken for the inspiral, if undisturbed, is given in \eqnref{Bound_inspiral}. The characteristic time-scale is a better measure of the depletion of an orbit as it only depends upon the parameters of that orbit, and not its future evolution.
 
 The time-scale associated with changes in angular momentum is \citep{Peters1964}
 \begin{align}
-\tau_{\mathrm{GW},\, J} \simeq {} & J\left\langle\diff{t}{J}\right\rangle
- \simeq {} & \frac{5}{32}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M\bullet\right)}\frac{(1+e)^{5/2}}{(1-e)^{3/2}}\left(1+\frac{7}{8}e^2\right)^{-1} \\
+\tau_{\mathrm{GW},\, J} \simeq {} & J\left\langle\diff{t}{J}\right\rangle \\
+ \simeq {} & \frac{5}{32}\frac{c^5r\sub{p}^4}{G^3MM_\bullet\left(M + M_\bullet\right)}\frac{(1+e)^{5/2}}{(1-e)^{3/2}}\left(1+\frac{7}{8}e^2\right)^{-1} \\
  \approx {} & \frac{5}{32}\frac{c^5r\sub{p}^4}{G^3MM_\bullet^2}\frac{(1+e)^{5/2}}{(1-e)^{3/2}}\left(1+\frac{7}{8}e^2\right)^{-1}.
 \end{align}
 This is always greater than the energy time-scale; hence, we will only consider changes in energy from gravitational wave emission as important for evolution of the system \citep{Hopman2005}.
 
 Unbound stars only undergo a single periapse passage and only radiate one burst of radiation; we shall therefore neglect any evolution in their orbital parameters.\footnote{Using the analysis of \citet{Turner1977} it is possible to show that the relative changes in eccentricity $\Delta e / e$ and periapsis $\Delta r\sub{p} / r\sub{p}$ for an extreme mass-ratio binary are less than $\sqrt{e}\,\order{\eta}$, where $\eta = M/M_\bullet$ is small, and so are only important for very high eccentricity orbits (\apref{Unbound}). These are very high energy, and exponentially rare because of the Boltzmann factor in \eqnref{Unbound_DF}.}
 
-The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the cause of a single orbit. This was necessary to calculate the orbit-averaged quantity. It is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
+The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the two regimes. The rate of change of energy goes to zero as a consequence of the assumption that the orbital parameters do not change over the course of a single orbit. This was necessary to calculate the orbit-averaged quantity. It is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
 
-When comparing with the relaxation time-scale we are in effect comparing rates of change, with the shorter time-scale highlighting the more rapid process that will dominate the evolution \citep{Amaro-Seoane2007}. We shall therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau\sub{J}$ \citep{Merritt2011}. Orbits with inspiral time-scales shorter than orbital relaxation time-scales shall become depleted by gravitational wave emission faster than they are replenished by scattering. The cusp will not extend to these orbits. These orbits are not totally depopulated as an object may pass through during its inspiral from a greater periapse and eccentricity. However, the density of stars does fall off exponentially inside the cut-off.
+When comparing with the relaxation time-scale we are in effect comparing rates of change, with the shorter time-scale highlighting the more rapid process that will dominate the evolution \citep{Amaro-Seoane2007}. We shall therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau\sub{J}$ \citep{Merritt2011}. Orbits with inspiral time-scales shorter than orbital relaxation time-scales shall become depleted by gravitational wave emission faster than they are replenished by scattering. The cusp will not extend to these orbits. These orbits are not totally depopulated as an object may pass through during its inspiral from a greater periapse and eccentricity. The net effect is that the distributions of MS stars, WDs and NSs are relatively unchanged from their cusp states, but the BH population is significantly depleted.
 
 \subsubsection{Collisions}\label{sec:Collision}
 
@@ -646,7 +647,7 @@ We will calculate the averages for the bound and unbound contributions individua
 The high velocity integral can be performed without difficulty, but the low velocity piece is more formidable. Progress can be made by making a series expansion in $v^2/2\sigma^2$. Retaining terms to third order approximates the integrand to no worse than $10\%$, with good agreement across most of the integration range. The result may be condensed into a simpler form by approximating it as a quadratic in $p_M$ and $p_{M'}$, which introduces less than $2\%$ further error. After this manipulation
 \begin{align}
 \overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{2^{11/2}}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\{ \recip{210}\left[30 + 36p_M + 25p_M^2 - p_{M'}\left(13 + 15p_M + 7 p_M^2\right) \right. \right. \nonumber \\* 
- {} + & \left. \left. p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)\right]  \vphantom{\recip{210}} + \iota \left(p_M,p_{M'}\right) \right\} \delta t,
+ {} & + \left. \left. p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)\right]  \vphantom{\recip{210}} + \iota \left(p_M,p_{M'}\right) \right\} \delta t,
 \end{align}
 introducing
 \begin{equation}
@@ -680,7 +681,7 @@ The total relaxation time for a species is
 \end{align}
 Combining these to form an average for the entire system gives
 \begin{equation}
-\overline{\tau_{\mathrm{R,}}} = \frac{\sum_{M'}N_{b,\,M'}\overline{\tau_{\mathrm{R,}\,M'}}}{\sum_{M}N_{b,\,M}}.
+\overline{\tau_{\mathrm{R,}}} = \frac{\sum_{M'}N_{\mathrm{b,}\,M'}\overline{\tau_{\mathrm{R,}\,M'}}}{\sum_{M}N_{\mathrm{b,}\,M}}.
 \label{eq:system-relax}
 \end{equation}
 The relaxation time-scale for MS stars will be used in determining the collisional cut-off as described in \secref{Collision}.
@@ -764,7 +765,7 @@ This is reassuring since the standard Maxwellian approximation has been successf
 
 If we look at the timescales for each species in turn
 \begin{equation}
-\overline{\tau\sub{R,\,MS}} \simeq 1.7 \tau\sub{R}\super{Max};\quad \overline{\tau\sub{R,\,WD}} \simeq 1.6 \tau\sub{R}\super{Max}; \overline{\tau\sub{R,\,NS}} \simeq 2.1 \tau\sub{R}\super{Max}.
+\overline{\tau\sub{R,\,MS}} \simeq 1.7 \tau\sub{R}\super{Max};\quad \overline{\tau\sub{R,\,WD}} \simeq 1.6 \tau\sub{R}\super{Max};\quad \overline{\tau\sub{R,\,NS}} \simeq 2.1 \tau\sub{R}\super{Max}.
 \end{equation}
 Again there is good agreement.\footnote{\citet*{Freitag2006} found that using a consistent velocity distribution for the population of stars (from an $\eta$-model) instead of relying on the Maxwellian approximation made negligible change to the dynamical friction timescale. They did not consider a cusp as severe as $p = 0.5$.} For black holes
 \begin{equation}
