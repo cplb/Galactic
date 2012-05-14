@@ -231,7 +231,7 @@ Tidal forces from the MBH can disrupt stars. This occurs at the tidal radius
 r\sub{T} \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \label{eq:Tidal}
 \end{equation}
-where $R_M$ is the radius of the star \citep{Hills1975, Rees1988, Kobayashi2004}. Any star on an orbit with $r\sub{p} < r\sub{T}$ shall be disrupted in the course of its orbit. Parameterising orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone \citep{Frank1976, Lightman1977, Cohn1978} as these were not incorporated into the Fokker-Planck calculations \citep{Hopman2009}.\footnote{The loss cone is a region in velocity space where orbits are depleted because stars are disrupted more rapidly than they can be replenished by two-body scattering.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term \citep{Lightman1977, Bahcall1977, Cohn1978}. Its effects are diluted by resonant relaxation \citep{Hopman2007,Toonen2009,Merritt2011}. Furthermore, the loss cone could be refilled by the wandering of the MBH because of perturbations from the inhomogeneities in the stellar potential \citep{Sigurdsson1997,Chatterjee2002,Merritt2007}.
+where $R_M$ is the radius of the star \citep{Hills1975, Rees1988, Kobayashi2004}.\footnote{See \citet{Kesden2012} for a general relativistic treatment.} Any star on an orbit with $r\sub{p} < r\sub{T}$ shall be disrupted in the course of its orbit. Parameterising orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone \citep{Frank1976, Lightman1977, Cohn1978} as these were not incorporated into the Fokker-Planck calculations \citep{Hopman2009}.\footnote{The loss cone is a region in velocity space where orbits are depleted because stars are disrupted more rapidly than they can be replenished by two-body scattering.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term \citep{Lightman1977, Bahcall1977, Cohn1978}. Its effects are diluted by resonant relaxation \citep{Hopman2007,Toonen2009,Merritt2011}. Furthermore, the loss cone could be refilled by the wandering of the MBH because of perturbations from the inhomogeneities in the stellar potential \citep{Sigurdsson1997,Chatterjee2002,Merritt2007}.
 
 Tidal disruption is most significant for MS stars since they are least dense; calculated in this way, only MS stars would be tidally disrupted outside of the MBH's event horizon \citep{Sigurdsson1997}. The tidal radius defines the cut-off for periapsis of high eccentricity ($e \ga 1$) orbits \citep{Lightman1977}.
 
@@ -310,7 +310,7 @@ assuming that the stars in the reservoir external to the core are unlikely to un
 
 
 \section*{Acknowledgments}
-The authors are grateful for useful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. CPLB is supported by STFC. JRG is supported by the Royal Society.
+The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \bibliographystyle{mn2e}
 \bibliography{Galactic}
@@ -747,11 +747,13 @@ In deriving the relaxation time-scales it has been necessary to make a number of
 
 First, it was assumed that the density of stars was uniform. This was a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is certainly not the case that density in the Galactic centre is uniform. However, this approximation is not as bad as it first may seem. As a star travels about the MBH on its orbit it moves through regions of different densities. It therefore samples a range of different density-impact parameter distributions. At a given radius stars will be travelling in a variety of directions meaning that again there will be a selection of different density-impact parameter distributions. Since we are only concerned with averaged time-scales, we may hope that this is sufficient to partially smear out changes in the density. To incorporate the complexity of the proper density distribution would require numerical evaluation of the distribution, and then numerical computation of the integrals. This would greatly obfuscate the analysis.
 
-Second, we have only considered changes in energy; changes in angular momentum could be more important because of resonant relaxation which enhances angular momentum (both scalar and vector) diffusion \citep{Rauch1996,Rauch1998,Gurkan2007,Eilon2009}. This occurs in systems where the radial and azimuthal frequencies are commensurate. Orbits precess slowly leading to large torques between the orbits. These torques cause the angular momentum to change linearly with time over a coherence time-scale set by the drift in orbits. Over longer time periods, the change in angular momentum again proceeds as a random walk, increasing with the square-root of time, as for non-resonant relaxation; however, it is still enhanced because of the change in the basic step size.
+Second, we have only considered transfer of energy; transfer of angular momentum could be more important because of resonant relaxation which enhances angular momentum (both scalar and vector) diffusion \citep{Rauch1996,Rauch1998,Gurkan2007,Eilon2009}. This occurs in systems where the radial and azimuthal frequencies are commensurate. Orbits precess slowly leading to large torques between the orbits. These torques cause the angular momentum to change linearly with time over a coherence time-scale set by the drift in orbits. Over longer time periods, the change in angular momentum again proceeds as a random walk, increasing with the square-root of time, as for non-resonant relaxation; however, it is still enhanced because of the change in the basic step size.
 
 Resonant relaxation is important in systems with (nearly) Keplerian potentials, but is quenched when relativistic precession becomes significant: inside the Schwarzschild barrier \citep{Merritt2011}. It is therefore less likely to be of concern for the orbits significantly influenced by gravitational wave emission \citep{Sigurdsson1997}.
 
 Diffusion of energy remains unchanged; there could therefore be several orders of magnitude difference in the two relaxation time-scales. While the enhanced angular momentum diffusion will be of significance to the evolution of the system, the energy relaxation time-scale should still be of relevance. It sets the time-scale for non-resonant relaxation [see \eqnref{diffuse-relax}], and defines the time for the system to reach a steady-state since diffusion of energy is the limiting process.
+
+We have still considered the role played by angular momentum diffusion, assuming non-resonant relaxation, by defining the angular momentum relaxation time-scale $\tau_\mathcal{J}$ in \secref{GW-in} from the energy relaxation time-scale. This should be sufficient for our level of accuracy.
 
 The optimal resolution would to be to perform a full $N$-body simulation of the Galactic centre. This would dispense with all the complications of considering relaxation time-scales and estimates for cut-off radii. Unfortunately such a task still remains computationally challenging at the present time [see, for example \citet{Li2012}].
 
@@ -843,7 +845,7 @@ Both of these changes obtain their greatest magnitudes for large eccentricities,
 \end{equation}
 For extreme mass-ratio binaries, as is the case here, the mass-ratio is a small quantity
 \begin{equation}
-\eta = M/M_\bullet \ll 1.
+\eta = \frac{M}{M_\bullet} \ll 1.
 \end{equation}
 The smallest possible periapsis is of order of the Schwarzschild radius of the MBH, such that 
 \begin{equation}

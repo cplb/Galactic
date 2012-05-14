@@ -425,11 +425,11 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points due to variation in the intrinsic parameters. A power law appears to be a good fit only for orbits with larger periapses. At smaller periapses, corresponding to more extreme relativistic orbits, the relationship adopts a more complicated shape that cannot be well approximated by a simple power law. We only used orbits with periapses larger than a cut-off $r\sub{p} > r\sub{cut}$ for the fit. We chose $r\sub{cut} = 2(1 + \sqrt{2})^2 r\sub{g} \simeq 11.66 r\sub{g}$ as a cut-off; this is twice the largest value for the innermost non-plunging equatorial orbit (corresponding to a retrograde orbit about a maximally spinning MBH). This choice is arbitray, but should exclude the most severe relativistic effects. Changing the cut-off within a plausible region alters the fit coefficients in the last significant figure. since we are only inerested in a rough trend, we shall be concerned by this.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points due to variation in the intrinsic parameters. A power law appears to be a good fit only for orbits with larger periapses. Smaller periapses correspond to higher frequencies: the change in the trend reflect the change of the noise curve as we go from approximately power law behaviour into the bucket of the curve. We fit a pwer law to orbits with a characteristic frequency of ?.\footnote{The power law exponent $-2.bit$ is not consistent with $-13/4$ as predicted by the approximate model of \citet{Hopman}.} Changing the cut-off within a plausible region alters the fit coefficients in the last significant figure. Since we are only inerested in a rough trend, we shall be concerned by this.
 
 The SNR shows no clear correlation with the other parameters (excluding the mass $\mu$). However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
-Setting a detection threshold of $\rho = X$, a $1 M_\odot$ ($10 M_\odot$) object would be expected to be detectable if the the periapse distance is less than $X r\sub{g}$ ($X r\sub{g}$).
+Setting a detection threshold of $\rho = 10$, a $1 M_\odot$ ($10 M_\odot$) object would be expected to be detectable if the the periapse distance is less than $27 r\sub{g}$ ($65 r\sub{g}$).
 
 \section{Energy spectra}\label{sec:Energy}
 
@@ -732,7 +732,7 @@ Checking our nearest neighbours, we find that bursts from Andromeda (M31) are no
     \label{fig:SNR-M32}
   \end{center}
 \end{figure}
-We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts can be detected if the periapse is smaller than $r\sub{p} \simeq X r\sub{g} \simeq X\units{pc}$. These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$). These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
 
 Triangulum (M33) is believed not to have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \time 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to detect one would confirm the existence of a previously invisible MBH.
 
@@ -746,7 +746,7 @@ The signal-to-noise ratio of bursts is well correlated with the periapsis. Excep
 \begin{equation}
 \log\left(\hat{\rho}/M_\odot^{-1}\right) = -2.64\log(r\sub{p}/r\sub{g}) + 4.78.
 \end{equation}
-Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < X r\sub{g}$ ($r\sub{p} < X r\sub{g}$).
+Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or  $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
 
 Using the NK waveforms we conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. However, we find that the LSA does not hold for these burst signals over a wide range of SNR. This demonstrates the necessity of checking the LSA before quoting the results of a Fisher matrix analysis~\citep{Vallisneri2008}.
 
@@ -760,7 +760,7 @@ Some consideration should also be given to methods of fitting a waveform to an o
 
 A better estimate of the information that could be extracted from EMRBs could be obtained by doing a full Bayesian analysis: considering the shape of the posterior recovered from a large sample of possible signals. This would be computationally expensive, and would only be worth exploring if the event rate proved promising.
 
-While we have only considered bursts from our own galaxy in detail, it should be possible to observe bursts from other nearby galaxies if their MBH is of the appropriate mass. This leaves M32 as the only viable known candidate. For a $10 M_\odot$ BH, bursts should be detectable for periapses $r\sub{p} \lesssim X r\sub{g}$, corresponding to $X \times 10^{11}\units{m}$ or $X \times 10^{-5}\units{pc}$. This is a small region of parameter space, so we conclude that extra-galactic bursts shall be rare.
+While we have only considered bursts from our own galaxy in detail, it should be possible to observe bursts from other nearby galaxies if their MBH is of the appropriate mass. This leaves M32 as the only viable known candidate. For a $1 M_\odot$ ($10 M_\odot$) object, bursts should be detectable for periapses $r\sub{p} \lesssim 7 r\sub{g}$ ($r\sub{p} \lesssim 13 r\sub{g}$), corresponding to $2.6 \times 10^{10}\units{m}$ ($4.9 \times 10^{10}\units{m}$) or $8.4 \times 10^{-7}\units{pc}$ ($1.6 \times 10^{-6}\units{pc}$). This is a small region of parameter space, so we conclude that extra-galactic bursts shall be rare.
 
 \section*{Acknowledgments}
 
