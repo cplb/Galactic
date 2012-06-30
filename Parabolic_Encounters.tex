@@ -62,7 +62,7 @@ black hole physics -- Galaxy: centre -- gravitational waves -- methods: data ana
 
 \section{Background and introduction}\label{sec:Intro}
 
-Many, if not all, galactic nuclei have harboured a massive black hole (MBH) during their evolution \citep{Lynden-Bell1971, Soltan1982, Rees1984}. Observations have shown there exist well-defined correlations between the MBHs' masses and the properties of their host galaxies, such as bulge luminosity, mass, velocity dispersion and light concentration \citep{Kormendy1995, Magorrian1998, Ferrarese2000, Gebhardt2000, Graham2001, Tremaine2002, Marconi2003, Haring2004, Graham2007, Graham2011}. These suggest coeval evolution of the MBH and galaxy \citep{Jahnke2011}, possibly with feedback mechanisms coupling the two \citep{Haiman2004, Volonteri2009}. The MBH and the surrounding spheroidal galaxy share a common history, such that the growth of one can inform us about the growth of the other.
+Many, if not all, galactic nuclei have harboured a massive black hole (MBH) during their evolution \citep{Lynden-Bell1971, Soltan1982, Rees1984}. Observations have shown there exist well-defined correlations between the MBHs' masses and the properties of their host galaxies, such as bulge luminosity, mass, velocity dispersion and light concentration \citep{Kormendy1995, Magorrian1998, Ferrarese2000, Gebhardt2000, Graham2001, Tremaine2002, Marconi2003, Haring2004, Graham2007, Graham2011}. These suggest coeval evolution of the MBH and galaxy \citep{Peng2007, Jahnke2011}, possibly with feedback mechanisms coupling the two \citep{Haiman2004, Volonteri2009}. The MBH and the surrounding spheroidal galaxy share a common history, such that the growth of one can inform us about the growth of the other.
 
 The best opportunity to study MBHs comes from the compact object in our own galactic centre (GC), which is coincident with Sagittarius A* (Sgr A*). This is identified as an MBH of mass $M_\bullet = 4.31 \times 10^6 M_\odot$ at a distance of only $R_0 = 8.33\units{kpc}$ \citep{Gillessen2009}.
 
@@ -328,7 +328,7 @@ The functional form of the noise spectral density $S_n(f)$ for LISA is discussed
 
 The properties of the noise allow us to define a natural inner product and associated distance on the space of signals \citep{Cutler1994}
 \begin{equation}
-\innerprod{\boldsymbol{g}}{\boldsymbol{k}} = 2\intd{0}{\infty}{\frac{\tilde{g}_A^*(f)\tilde{k}_A(f) + \tilde{g}_A(f)\tilde{k}_A^*(f)}{S_n(f)}}{f}.
+\innerprod{\boldsymbol{g}}{\boldsymbol{k}} = 2\intd{0}{\infty}{\frac{\tilde{g}_A^\ast(f)\tilde{k}_A(f) + \tilde{g}_A(f)\tilde{k}_A^\ast(f)}{S_n(f)}}{f}.
 \label{eq:inner}
 \end{equation}
 Using this definition, the signal-to-noise ratio is approximately
@@ -376,7 +376,7 @@ The shape of the waveform depends on a number of parameters: those defining the 
 \item[(11, 12)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within ten Schwarzschild radii of the MBH \citep{Reid2003,Doeleman2008}. At the epoch J2000.0 $\overline{\Theta} = {95.607669}^{\circ}$, $\overline{\Phi} = {266.851760}^{\circ}$ \citep{Reid1999, Yusef-Zadeh1999}. They will change with time due to the rotation of the SS about the GC, the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the galaxy \citep{Reid1999, Backer1999, Reid2003}. Since the position is already known to high accuracy, so we will treat it as fixed and will not try to infer it: an EMRB can only give weak constraints on source position.
 \item[(13, 14)] The orbital position of the LISA satellites given by $\overline{\phi}$ and $\varphi$. We will assume that the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}; this choice does not qualitatively influence our results. The orbital position should be known, so this need not be inferred.\\
 \end{enumerate}
-We therefore have an $14$ dimensional parameter space, of which we are interested in inferring $10$ parameters.
+We therefore have an $14$ dimensional parameter space, of which we are interested in inferring $d = 10$ parameters.
 
 \subsection{Waveforms}
 
@@ -421,11 +421,11 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.64\log(r\sub{p}/r\sub{g}) + 4.78$. This is fitted to orbits with $r\sub{p} >  11.66 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.47$.}
+    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.69\log(r\sub{p}/r\sub{g}) + 4.88$. This is fitted to orbits with $r\sub{p} >  13.0 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.77$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points due to variation in the intrinsic parameters. A power law appears to be a good fit only for orbits with larger periapses. Smaller periapses correspond to higher frequencies: the change in the trend reflect the change of the noise curve as we go from approximately power law behaviour into the bucket of the curve. We fit a pwer law to orbits with a characteristic frequency of ?.\footnote{The power law exponent $-2.bit$ is not consistent with $-13/4$ as predicted by the approximate model of \citet{Hopman}.} Changing the cut-off within a plausible region alters the fit coefficients in the last significant figure. Since we are only inerested in a rough trend, we shall be concerned by this.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of points due to variation in the intrinsic parameters. A power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change in the noise curve as we go from approximately power law behaviour into the bucket of the curve. We fit a power law to orbits with a characteristic frequency of $\sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is not consistent with $-13/4$ as predicted by the approximate model of \citet{Hopman}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$. Since we are only interested in a rough trend, we shall not be concerned by this.
 
 The SNR shows no clear correlation with the other parameters (excluding the mass $\mu$). However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
@@ -547,6 +547,7 @@ p(\boldsymbol{\lambda}|\boldsymbol{s}(t)) = \frac{p(\boldsymbol{s}(t)|\boldsymbo
 Here $p(\boldsymbol{s}(t)|\boldsymbol{\lambda})$ is the likelihood of the parameters, $p(\boldsymbol{\lambda})$ is the prior probability distribution for the parameters, and $p(\boldsymbol{s}(t)) = \intd{}{}{p(\boldsymbol{s}(t)|\boldsymbol{\lambda})}{^N \lambda}$ is, for our purposes, a normalising constant and may be ignored. The likelihood function depends upon the realization of noise. A particular set of parameters $\boldsymbol{\lambda}_0$ defines a waveform $\boldsymbol{h}_0(t) = \boldsymbol{h}(t; \boldsymbol{\lambda}_0)$, the probability that we observe signal $\boldsymbol{s}(t)$ for this GW is given by \eqnref{sig_prob}, so the likelihood is
 \begin{equation}
 p(\boldsymbol{s}(t)|\boldsymbol{\lambda}_0) \propto \exp\left[-\recip{2}\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_0}\right].
+\label{eq:likelihood}
 \end{equation}
 If we were to define this as a probability distribution for the parameters $\boldsymbol{\lambda}$, then the modal values would be the maximum-likelihood parameters $\boldsymbol{\lambda}\sub{ML}$. The waveform $\boldsymbol{h}(t; \boldsymbol{\lambda}\sub{ML})$ would be the signal closest to $\boldsymbol{s}(t)$ in the space of all signals, where distance is defined using the inner product \eqnref{inner} \citep{Cutler1994}.
 
@@ -610,15 +611,25 @@ As we cannot be confident in Fisher matrix results, we opted to abandon this app
 
 Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for sampling an unknown probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples. The distribution of points visited by the chain maps out the underlying distribution; this becomes asymptotically exact as $N \rightarrow \infty$. Samples are added sequentially, if the current state is $\boldsymbol{\lambda}_n$ a new point $\boldsymbol{\lambda}^\ast$ is drawn and accepted with probability
 \begin{equation}
-a = \min\left\{\frac{\mathcal{L}(\boldsymbol{\lambda}^\ast)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}{\mathcal{L}(\boldsymbol{\lambda}_n)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}, 1\right\},
+a = \min\left\{\frac{\pi(\boldsymbol{\lambda}^\ast)\mathcal{L}(\boldsymbol{\lambda}^\ast)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}{\pi(\boldsymbol{\lambda}_n)\mathcal{L}(\boldsymbol{\lambda}_n)Q(\boldsymbol{\lambda}_n;\,\boldsymbol{\lambda}^\ast)}, 1\right\},
 \end{equation}
-setting $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}^\ast$, where is the $\mathcal{L}$ likelihood, calculated in our case from \eqnref{}, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}_n$.
+setting $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}^\ast$, where is the $\mathcal{L}(\boldsymbol{\lambda})$ likelihood, calculated in our case from \eqnref{likelihood}; $\pi(\boldsymbol{\lambda})$ is the prior probability, and $Q$ is a proposal distribution. If the move is not accepted we set $\boldsymbol{\lambda}_{n + 1} = \boldsymbol{\lambda}_n$. This is the Metropolis-Hastings algorithm~\citep{Metropolis1953,Hastings1970}.
 
-Simply waiting long enough will yield an exact posterior. However, we are impatient, and it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This is difficult to define, since we do not know ahead of time the shape of the target distribution.
+Simply waiting long enough will yield an exact posterior. However, it is desirable for the MCMC to converge quickly. This requires a suitable choice for the proposal distribution. This can be difficult to define, since we do not know ahead of time the shape of the target distribution.
 
-One approach to define the proposal distribution is to use the previous results in the chain, to refine the proposal by learning from these points. Such approaches are known as adaptive MCMC algorithms. Updating the proposal from previous points means that the chain is no longer truly Markovian. Care must be taken to ensure that ergodicity is preserved. We will avoid this technicalities by completing two separate MCMC runs: the first will will be adaptive, and we use this only to define a proposal distribution, the second uses the distribution from the first but keeps it fixed. By only using samples from the second run, we guarantee that the chain is Markovian, but we can still enjoy the benefits of a tailor made proposal distribution.
+One approach to define the proposal distribution is to use the previous results in the chain, to refine the proposal by learning from these points. Such approaches are known as adaptive methods. Updating the proposal from previous points means that the chain is no longer truly Markovian. Care must be taken to ensure that ergodicity is preserved and convergence obtained~\citep{Roberts2007,Andrieu2008}. To avoid this complication, we follow the suggestion of \citet{Haario1999}, and use the adapting method as a burn in phase. We have an initial phase where the proposal is updated based upon the accepted points. After this we fix the proposal and proceed as for a standard MCMC. By only using samples from the second run, we guarantee that the chain is Markovian and ergodic, whilst still enjoying the benefits of a tailor-made proposal distribution. After only a finite number of samples we cannot assess the optimality of the proposal~\citep{Andrieu2008}; however, the method is still effective .
 
+To tune the proposal, we use an approach based upon the adaptive Metropolis (AM) algorithm~\citep{Haario2001}. The proposal is taken to be a multivariate normal distribution centred upon the current point, the covariance of which is taken to be
+\begin{equation}
+\boldsymbol{C} = s \left(\boldsymbol{V}_n + \varepsilon\boldsymbol{C}_0\right),
+\end{equation}
+where $\boldsymbol{V}_n$ is the covariance of the accepted points $\{\boldsymbol{\lambda}_1,\ldots,\boldsymbol{\lambda}_1}$, $s$ is a scaling factor that controls the step size, $\varepsilon > 0$ is a small parameter and $\boldsymbol{C}_0$ is a constant matrix included to ensure ergodicity. The adaptation is run in three phases. The first is just to get to get the chain moving. For this we set $\boldsymbol{C}_0\super{init}$ to be equal to the identity. This finishes after $50000$ accepted points.
 
+For the second phase, we begin the chain again, using the covariance from the initial phase $\boldsymbol{C}\super{init}$ for $\boldsymbol{C}_0\super{main}$. This is the main adaptation phase and lasts until $450000$ points have been accepted.
+
+In the final phase we restart the chain at the true parameter values. We no longer update the shape of the covariance ($\boldsymbol{V}_n$ remains constant), but we adjust the step size so as to tune the acceptance rate. This takes just $220$ points.
+
+We aim for an acceptance rate of $0.234$, this is optimal for a random walk Metropolis algorithm with a high-dimensional target distribution~\citep{Gelman1996,Roberts1997,Roberts2001,Bedard2007}, although the optimal rate may be lower when the parameters are not independent and identically distributed~\citep{Bedard2007,Bedard2008,Bedard2008a}. In practise, the final acceptance rate is (almost always) lower than the target rate as the use of a multivariate Gaussian for the proposal distribution is rarely a good fit at the edges of the posterior. Consequently, the precise choice for the target acceptance rate is unimportant as long as it is of the correct magnitude. Final rates are typically within a factor of $2$ of the target value. As an initial choice, we set $s = 2.38^2/d$, which would be the optimal choice if $\boldsymbol{C}$ was the true target covariance for a high dimensional target of independent and identically distributed parameters~\citep{Gelman1995,Roberts1997,Roberts2001,Haario2001}.
 
 The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the majority of orbits it is not possible to place constraints on all the parameters, and the posteriors are far from Gaussian as assumed in the LSA.
 
@@ -728,11 +739,11 @@ Checking our nearest neighbours, we find that bursts from Andromeda (M31) are no
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR_M32}
-    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object about the MBH of M32. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.41\log(r\sub{p}/r\sub{g}) + 2.71$. This is fitted to orbits with $r\sub{p} > 11.66 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.02$.}
+    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object about the MBH of M32. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.65\log(r\sub{p}/r\sub{g}) + 3.05$. This is fitted to orbits with $r\sub{p} > 18.8 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.30$.}
     \label{fig:SNR-M32}
   \end{center}
 \end{figure}
-We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$). These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+The fit is again done for orbits with $\sqrt{GM\sub{M32}/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$ to avoid the bucket of the noise curve. We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$). These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
 
 Triangulum (M33) is believed not to have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \time 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to detect one would confirm the existence of a previously invisible MBH.
 
@@ -742,9 +753,9 @@ We have outlined an approximate method of generating gravitational waveforms for
 
 The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms for large periapses, indicating that they have the correct weak-field form. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses the exact geodesics of the Kerr spacetime. Comparisons with energy fluxes from black hole perturbation theory indicate that typical waveform accuracy may be of order $5\%$, but this is worse for orbits with small periapses, and may be $\sim 20\%$. These errors are much greater than the differences resulting from the use of the alternative coordinate systems.
 
-The signal-to-noise ratio of bursts is well correlated with the periapsis. Except for the closest orbits ($r\sub{p} \lesssim 7 r\sub{g}$), the SNR (per unit mass) may be described as having a power-law dependence of
+The signal-to-noise ratio of bursts is well correlated with the periapsis. Except for the closest orbits ($r\sub{p} \lesssim 7 r\sub{g}$), the SNR (per unit mass) may be reasonably described as having a power-law dependence of
 \begin{equation}
-\log\left(\hat{\rho}/M_\odot^{-1}\right) = -2.64\log(r\sub{p}/r\sub{g}) + 4.78.
+\log\left(\hat{\rho}/M_\odot^{-1}\right) \simeq -2.7\log(r\sub{p}/r\sub{g}) + 4.9.
 \end{equation}
 Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or  $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
 
@@ -760,11 +771,15 @@ Some consideration should also be given to methods of fitting a waveform to an o
 
 A better estimate of the information that could be extracted from EMRBs could be obtained by doing a full Bayesian analysis: considering the shape of the posterior recovered from a large sample of possible signals. This would be computationally expensive, and would only be worth exploring if the event rate proved promising.
 
-While we have only considered bursts from our own galaxy in detail, it should be possible to observe bursts from other nearby galaxies if their MBH is of the appropriate mass. This leaves M32 as the only viable known candidate. For a $1 M_\odot$ ($10 M_\odot$) object, bursts should be detectable for periapses $r\sub{p} \lesssim 7 r\sub{g}$ ($r\sub{p} \lesssim 13 r\sub{g}$), corresponding to $2.6 \times 10^{10}\units{m}$ ($4.9 \times 10^{10}\units{m}$) or $8.4 \times 10^{-7}\units{pc}$ ($1.6 \times 10^{-6}\units{pc}$). This is a small region of parameter space, so we conclude that extra-galactic bursts shall be rare.
+While we have only considered bursts from our own galaxy in detail, it should be possible to observe bursts from other nearby galaxies if their MBH is of the appropriate mass. This leaves M32 as the only viable known candidate. The SNR shows a similar dependence upon periapsis as for the Galactic Centre, and may be described by a power-law of
+\begin{equation}
+\log\left(\hat{\rho}/M_\odot^{-1}\right) \simeq -2.7\log(r\sub{p}/r\sub{g}) + 3.1,
+\end{equation}
+for orbits with $r\sub{p} \gtrsim 10 r\sub{g}$. For a $1 M_\odot$ ($10 M_\odot$) object, bursts should be detectable for periapses $r\sub{p} \lesssim 7 r\sub{g}$ ($r\sub{p} \lesssim 14 r\sub{g}$), corresponding to $2.6 \times 10^{10}\units{m}$ ($4.9 \times 10^{10}\units{m}$) or $8.4 \times 10^{-7}\units{pc}$ ($1.6 \times 10^{-6}\units{pc}$). This is a small region of parameter space, so we conclude that extra-galactic bursts shall be rare.
 
 \section*{Acknowledgments}
 
-The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices; they would like to thank Stephen Taylor for useful discussions on adaptive MCMC methods and Dave Green for helpful suggestions regarding apodization. They are also grateful to Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society.
+The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices; they would like to thank Stephen Taylor for useful discussions on adaptive MCMC methods and Dave Green for helpful suggestions regarding apodization. They are also grateful to Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society. The MCMC simulations were performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (\url{http://www.hpc.cam.ac.uk/}), provided by Dell Inc. using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England. 
 
 \bibliographystyle{mn2e}
 \bibliography{Parabolic}
