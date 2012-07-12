@@ -14,7 +14,7 @@
 %%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%
 \newcommand{\eqnref}[1]{(\ref{eq:#1})}
 \newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
-\newcommand{\Figref}[1]{Figure~\ref{fig:#1}}
+\newcthree ommand{\Figref}[1]{Figure~\ref{fig:#1}}
 \newcommand{\tabref}[1]{Table~\ref{tab:#1}}
 \newcommand{\secref}[1]{Sec.~\ref{sec:#1}}
 \newcommand{\Secref}[1]{Section~\ref{sec:#1}}
@@ -88,7 +88,7 @@ The spins of MBHs in active galactic nuclei have been inferred using X-ray obser
 
 While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the spin of the Galaxy's MBH, it is desirable to have an independent observation, a direct measurement.
 
-An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the Laser Interferometer Space Antenna (LISA) or the revised New Gravitational-Wave Observatory (NGO), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}. The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA/NGO frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
+An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the Laser Interferometer Space Antenna (LISA) or the evolved Laser Interferometer Space Antenna (eLISA), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}.\footnote{The revised eLISA concept shares the same descoped design as the New Gravitational-wave Observatory (NGO) submitted to the European Space Agency for thier L1 mission selection.} The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit will evolve, becoming more circular, and it will begin to continuously emit significant gravitational radiation in the LISA/eLISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
 
 Studies of these systems have usually focused upon when the orbit completes multiple cycles, allowing a high signal-to-noise ratio (SNR) to be accumulated. Here, we will investigate high eccentricity orbits. These are the initial bursting orbits from which an EMRI may evolve. The event rate for the detection of such EMRBs with LISA has been estimated to be as high as $15\units{yr^{-1}}$ \citep*{Rubbo2006}, although this has been revised downwards to the order of $1\units{yr^{-1}}$ \citep*{Hopman2007}. Even if only a single burst is detected during a mission, this is still an exciting possibility since the information carried by the GW should give an unparalleled probe of the structure of spacetime of the GC. Exactly what can be inferred will depend upon the orbit. 
 
@@ -256,7 +256,7 @@ P_{ij} = \delta_{ij} - n_in_j.
 
 \section{Detection with LISA}\label{sec:Detector}
 
-The classic LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. NGO has a similar design, but only has two arms \citep{Jennrich2011}. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
+The classic LISA design is a three arm, space-borne laser interferometer \citep{Bender1998, Danzmann2003}. The three arms form an equilateral triangle that rotates as the system's centre of mass follows a circular, heliocentric orbit, trailing $20^{\circ}$ behind the Earth. eLISA has a similar design, but only has two arms \citep{Jennrich2011}. To describe the detector configuration, and to transform from the MBH coordinate system to those of the detector, we will find it useful to define three coordinate systems: those of the BH at the GC $x_\bullet^i$; ecliptic coordinates centred at the solar system (SS) barycentre $x_\odot^i$, and coordinates that co-rotate with the detector $x\sub{d}^i$. The MBH's coordinate system and the SS coordinate system are depicted in \figref{BH_SS}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.35\textwidth]{BH_SS_angles.eps}
@@ -264,7 +264,7 @@ The classic LISA design is a three arm, space-borne laser interferometer \citep{
    \label{fig:BH_SS}
 \end{center}
 \end{figure}
-The mission geometry for LISA/NGO is shown in \figref{SS_LISA}.
+The mission geometry for LISA/eLISA is shown in \figref{SS_LISA}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.27\textwidth]{SS_LISA.eps}
@@ -306,7 +306,7 @@ where $t\sub{AU}$ is the light travel-time for the detector's orbital radius. Th
 
 \subsection{Frequency domain formalism}
 
-Having constructed the GW $\boldsymbol{h}(t)$ that will be incident upon the detector, we may now consider how to analyse the waveform and extract the information it contains. We begin with a brief overview of the basic components of signal analysis used for GWs, with application to LISA in particular. This fixes notation. A more complete discussion of the material can be found in the work of \citet{Finn1992}, and \citet{Cutler1994}. Adaption for NGO requires a substitution of the noise distribution, and the removal of the sum over detectors, since it will only have one.
+Having constructed the GW $\boldsymbol{h}(t)$ that will be incident upon the detector, we may now consider how to analyse the waveform and extract the information it contains. We begin with a brief overview of the basic components of signal analysis used for GWs, with application to LISA in particular. This fixes notation. A more complete discussion of the material can be found in the work of \citet{Finn1992}, and \citet{Cutler1994}. Adaption for eLISA requires a substitution of the noise distribution, and the removal of the sum over detectors, since it will only have one.
 
 The measured strain $\boldsymbol{s}(t)$ will be the combination of the signal and the detector noise
 \begin{equation}
@@ -348,11 +348,11 @@ p(\boldsymbol{s}(t)|\boldsymbol{h}(t)) \propto \exp\left[-\recip{2}\innerprod{\b
 
 \subsection{Noise curve}\label{sec:Noise}
 
-LISA's noise has two sources: instrumental noise and confusion noise, primarily from white dwarf binaries. The latter may be divided into contributions from galactic and extragalactic binaries. In this work we use the noise model of \citet{Barack2004}. The shape of the noise curve can be seen in \figref{Noise}. The instrumental noise dominates at both high and low frequencies. The confusion noise is important at intermediate frequencies, and is responsible for the cusp around $f = 10^{-3}\units{Hz}$. NGO shares the same sources of noise, but is less affected by confusion. Its sensitivity regime is shifted t ohigher frequencies because of a shorter arm length.
+LISA's noise has two sources: instrumental noise and confusion noise, primarily from white dwarf binaries. The latter may be divided into contributions from galactic and extragalactic binaries. In this work we use the noise model of \citet{Barack2004}. The shape of the noise curve can be seen in \figref{Noise}. The instrumental noise dominates at both high and low frequencies. The confusion noise is important at intermediate frequencies, and is responsible for the cusp around $f = 10^{-3}\units{Hz}$. eLISA shares the same sources of noise, but is less affected by confusion. Its sensitivity regime is shifted t ohigher frequencies because of a shorter arm length.
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.45\textwidth]{Fig_Noise}
-\caption{The detector noise curves. The solid line indicates the analytic approximation of \citet{Barack2004} used in this work. For comparison, the dashed line is from the online LISA sensitivity curve generator (\url{http://www.srl.caltech.edu/~shane/sensitivity/}; \citealt*{Larson2000, Larson2002}). For parabolic encounters we are most interested in the low-frequency region where the two curves are the same. The dot-dashed line shows the NGO noise curve.}
+\caption{The detector noise curves. The solid line indicates the analytic approximation of \citet{Barack2004} used in this work. For comparison, the dashed line is from the online LISA sensitivity curve generator (\url{http://www.srl.caltech.edu/~shane/sensitivity/}; \citealt*{Larson2000, Larson2002}). For parabolic encounters we are most interested in the low-frequency region where the two curves are the same. The dot-dashed line shows the eLISA noise curve.}
 \label{fig:Noise}
 \end{center}
 \end{figure}
@@ -421,7 +421,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR}
-    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.69\log(r\sub{p}/r\sub{g}) + 4.88$. This is fitted to orbits with $r\sub{p} >  13.0 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.77$.}
+    \caption{Mass-normalised SNR as a function of periapse radius. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log(\hat{\rho}/M_\odot^{-1}) = -2.69\log(r\sub{p}/r\sub{g}) + 4.88$. This is fitted to orbits with $r\sub{p} >  13.0 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.73$.}
     \label{fig:SNR}
   \end{center}
 \end{figure}
@@ -623,17 +623,19 @@ To tune the proposal, we use an approach based upon the adaptive Metropolis (AM)
 \begin{equation}
 \boldsymbol{C} = s \left(\boldsymbol{V}_n + \varepsilon\boldsymbol{C}_0\right),
 \end{equation}
-where $\boldsymbol{V}_n$ is the covariance of the accepted points $\{\boldsymbol{\lambda}_1,\ldots,\boldsymbol{\lambda}_1\}$, $s$ is a scaling factor that controls the step size, $\varepsilon > 0$ is a small parameter and $\boldsymbol{C}_0$ is a constant matrix included to ensure ergodicity. The adaptation is run in three phases. The first is just to get to get the chain moving. For this we set $\boldsymbol{C}_0\super{init}$ to be equal to the identity. This finishes after $50000$ accepted points.
+where $\boldsymbol{V}_n$ is the covariance of the accepted points $\{\boldsymbol{\lambda}_1,\ldots,\boldsymbol{\lambda}_1\}$, $s$ is a scaling factor that controls the step size, $\varepsilon$ is a small positive constant, typically taken to be $0.0025$, and $\boldsymbol{C}_0$ is a constant matrix included to ensure ergodicity. Our adaptation is run in three phases. The initial phase is just to get to get the chain moving. For this we set $\boldsymbol{C}_0\super{init} = \boldsymbol{I}_d$, where $\boldsymbol{I}_d$ is the identity. This finishes after $50000$ accepted points.
 
-For the second phase, we begin the chain again, using the covariance from the initial phase $\boldsymbol{C}\super{init}$ for $\boldsymbol{C}_0\super{main}$. This is the main adaptation phase and lasts until $450000$ points have been accepted.
+For the second phase, we continue now using the proposal covariance from the initial phase $\boldsymbol{C}\super{init}$ for $\boldsymbol{C}_0\super{main}$. We reset the covariance of the accepted points $\boldsymbol{V}_n\super{init}$ so that it only includes points from this phase. This is the main adaptation phase and lasts until $450000$ points have been accepted.
 
-In the final phase we restart the chain at the true parameter values. We no longer update the shape of the covariance ($\boldsymbol{V}_n$ remains constant), but we adjust the step size so as to tune the acceptance rate. This takes just $220$ points.
+In the final phase we restart the chain at the true parameter values. We no longer update the shape of the covariance ($\boldsymbol{V}_n$ remains fixed), but we adjust the step size $s$ so as to tune the acceptance rate.
 
-We aim for an acceptance rate of $0.234$, this is optimal for a random walk Metropolis algorithm with a high-dimensional target distribution~\citep{Gelman1996,Roberts1997,Roberts2001,Bedard2007}, although the optimal rate may be lower when the parameters are not independent and identically distributed~\citep{Bedard2007,Bedard2008,Bedard2008a}. In practise, the final acceptance rate is (almost always) lower than the target rate as the use of a multivariate Gaussian for the proposal distribution is rarely a good fit at the edges of the posterior. Consequently, the precise choice for the target acceptance rate is unimportant as long as it is of the correct magnitude. Final rates are typically within a factor of $2$ of the target value. As an initial choice, we set $s = 2.38^2/d$, which would be the optimal choice if $\boldsymbol{C}$ was the true target covariance for a high dimensional target of independent and identically distributed parameters~\citep{Gelman1996,Roberts1997,Roberts2001,Haario2001}.
+Throughout the adapting phases, we update the step size $s$ after ever $100$ trial points (whether or not they are accepted). When updating the covariance $\boldsymbol{V}_n$, this is done after every $1000$ trial points.
+
+We aimed for an acceptance rate of $0.234$; this is optimal for a random walk Metropolis algorithm with some specific high-dimensional target distributions~\citep{Gelman1996,Roberts1997,Roberts2001,Bedard2007}. However, in many cases we found better convergence when aiming for a lower acceptance rate, say $0.1$. This is not unexpected: the optimal rate may be lower than $0.234$ when the parameters are not independent and identically distributed~\citep{Bedard2007,Bedard2008,Bedard2008a}. In practise, the final acceptance rate is (almost always) lower than the target rate as the use of a multivariate Gaussian for the proposal distribution is rarely a good fit at the edges of the posterior. Consequently, the precise choice for the target acceptance rate is unimportant as long as it is of the correct magnitude. Final rates are typically within a factor of $2$ of the target value. As an initial choice, we set $s = 2.38^2/d$, which would be the optimal choice if $\boldsymbol{C}$ was the true target covariance for a high dimensional target of independent and identically distributed parameters~\citep{Gelman1996,Roberts1997,Roberts2001,Haario2001}. Reasonably good results may be obtained by fixing $s$ at this value, and not adjusting to fine tune the acceptance rate.
 
 The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the majority of orbits it is not possible to place constraints on all the parameters, and the posteriors are far from Gaussian as assumed in the LSA.
 
-It is possible to place good constraints from the most relativistic orbits. These provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
+It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
 \section{Results}\label{sec:Results}
 
@@ -739,7 +741,7 @@ Checking our nearest neighbours, we find that bursts from Andromeda (M31) are no
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR_M32}
-    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object about the MBH of M32. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.65\log(r\sub{p}/r\sub{g}) + 3.05$. This is fitted to orbits with $r\sub{p} > 18.8 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.30$.}
+    \caption{Signal-to-noise ratio as a function of periapse radius for a $\mu = 1 M_\odot$ compact object about the MBH of M32. The plotted points are the values obtained by averaging over each set of intrinsic parameters. The best fit line is $\log\left(\rho\right) = -2.65\log(r\sub{p}/r\sub{g}) + 3.05$. This is fitted to orbits with $r\sub{p} > 18.8 r\sub{g}$ and has a reduced chi-squared value of $\chi^2/\nu = 1.26$.}
     \label{fig:SNR-M32}
   \end{center}
 \end{figure}
@@ -757,7 +759,7 @@ The signal-to-noise ratio of bursts is well correlated with the periapsis. Excep
 \begin{equation}
 \log\left(\hat{\rho}/M_\odot^{-1}\right) \simeq -2.7\log(r\sub{p}/r\sub{g}) + 4.9.
 \end{equation}
-Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or  $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
+Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
 
 Using the NK waveforms we conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. However, we find that the LSA does not hold for these burst signals over a wide range of SNR. This demonstrates the necessity of checking the LSA before quoting the results of a Fisher matrix analysis~\citep{Vallisneri2008}.
 
