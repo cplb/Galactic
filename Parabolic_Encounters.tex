@@ -382,7 +382,7 @@ We therefore have an $14$ dimensional parameter space, of which we are intereste
 
 \subsection{Waveforms}
 
-\Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these assume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other parameters are specified in the captions. 
+\Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these assume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other parameters are specified in the captions. Radii are given in terms of the gravitational radius $r\sub{g} = GM_\bullet / c^2$.
 \begin{figure}
   \begin{center}
    \subfigure[{Waveform for $a_\ast = 0.9$, $r\sub{p} = 3.5 r\sub{g}$ and $\iota = 0.05$, with $\Theta = \pi/2$, $\Psi = \pi/4$. The SNR for the oblate-spheroidal kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{ob}] = 15600$, for the spherical polar kludge it is $\rho[\boldsymbol{h}\sub{sph}] = 14100$.}]{\label{fig:Orbit_11} \includegraphics[width=0.45\textwidth]{Fig_h_11}} \\
@@ -427,7 +427,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $\sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $f^\ast = \sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
 
 The SNR shows no clear correlation with the other parameters (excluding the mass $\mu$). However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
@@ -637,91 +637,21 @@ We initially aimed for an acceptance rate of $0.234$; this is optimal for a rand
 
 To assess the convergence of the MCMC we check the trace plot for proper mixing, that the one- and two-dimensional posterior plots fill out to a smooth distribution, and that the distribution widths tend towards consistent values.
 
-The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the majority of orbits it is not possible to place constraints on all the parameters, and the posteriors are far from Gaussian as assumed in the LSA.
-
-It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
-
 \section{Results}\label{sec:Results}
 
 \subsection{Data set}
 
-To investigate the properties of EMRBs, waveforms were computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $M_\bullet = 4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates and a distance of $R_0 = 8.33~\mathrm{kpc}$.
- 
-Four different spin values were chosen $a_\star = 0, 0.3, 0.6, 0.9$. Waveforms were calculated for two different compact objects, one of mass $1.4 M_\odot$ as appropriate for a neutron star, one of mass $10 M_\odot$ represented a black hole. For each spin and mass, orbits with three different inclinations $\iota = \pi/12, \pi/4, 5\pi/12$ were calculated, each for both prograde and retrograde rotation.
+To investigate the properties of EMRBs, waveforms were computed for a range of different orbits. In each case the massive black hole was assumed to have a mass of $M_\bullet = 4.31 \times 10^6 M_\odot$, and to be at the J2000.0 coordinates and a distance of $R_0 = 8.33~\mathrm{kpc}$; the CO was chosen to be $10 M_\odot$, as the most promising candidates for EMRBs would be BHs.
 
-Waveforms were computed for orbits with periapses uniformly separated in logarithmic space between $8 r\sub{g}$ and $100 r\sub{g}$, where $r\sub{g} = GM_\bullet / c^2$ corresponds to a gravitational radius. For an initial run, six different radii were chosen. For a subsequent run, 20 different radii were randomly chosen for each spin, mass, inclination and sense of rotation.
+Orbits where chosen with periapses uniformly distributed in logarithmic space between the MBH's event horizon and $16 r\sub{g}$. The other parameters were chosen randomly from appropriate uniform distributions. 
 
-In addition to this, the initial position, orientation of the MBH, and orbital position of LISA were varied: for each combination of MBH spin, compact object mass, inclination, rotation sense and periapsis, 20 random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution over the permitted range) were used for the initial run, and 10 were used for the second run. The initial position was chosen such that the initial distance from the MBH was $1570 r\sub{g}$
+The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the many orbits the posteriors are far from Gaussian as assumed in the LSA.
 
-\subsection{Inverse Fisher matrices and SNR}
+These results do not incorporate any priors (save to keep them within realistic ranges). we have not folded in the existing information we have, for example, about the MBH's mass. Therefore, the resulting distributions characterise what we could learn from EMRB's alone.
 
-From \eqnref{octupole} we see that the amplitude of the waveform is proportional to the compact object mass $\mu$. Consequently we expect there to be a proportionality between the SNR and the mass, from \eqnref{SNR}, $\rho[\boldsymbol{h}] \propto \mu$, and there to be an inverse proportionality between the elements of the variance-covariance matrix and the mass, from \eqnref{Fisher} and \eqnref{InvFisher}, $\Sigma_{ab} \propto \mu^{-2}$. We shall consider mass-scale values to give results independent of the compact object's mass. This allows an easier combination of results from the computations for an NS and for a BH. From the variance-covariance matrix we can define the uncertainty for a particular parameter
-\begin{equation}
-\sigma_a = \sqrt{\Sigma_{aa}} \qquad \mathrm{(no\ summation)}.
-\end{equation}
-This should be proportional to $\mu^{-1}$. We denote the mass-normalised quantities
-\begin{equation}
-\hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}; \quad \hat{\sigma}_a = \mu\sigma_a.
-\end{equation}
+It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
-We take the mean of $\ln \sigma_a$ and $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and LISA orientation).\footnote{The logarithm is a better quantity to work with since both are positive-definite quantities that may be distributed over a range of magnitudes \citep[sections 22.1, 23.3]{MacKay2003}. Using median values yields results that are quantitatively similar.}
-
-The parameter uncertainties are well correlated with the SNR. The uncertainties are plotted against SNR in \figref{sigmas}. We have now plotted the entire data set, and not just the averaged points, to give an indication of the spread. Some uncertainties show a dependence upon the MBH spin or the orbital inclination.
-
-The uncertainty for the majority of parameters seem to be reasonably well described by a simple power-law. This is fitted, as for the SNR-periapsis relation, using maximum likelihood, assuming that $\ln \rho$ and $\ln \sigma_a$ have independent Gaussian distributions with standard deviations derived from the scatter of points. This is not the case: since we are only interested in quantifying the general trend to give a broad estimate of the behaviour, we shall not be concerned by the error introduced here.\footnote{A basic least-squares fit yields similar results.} The fitted parameters are given in \tabref{lines}.
-\begin{table*}
-\begin{minipage}{0.65\textwidth}
- \centering
- \caption{Best fit parameters for power-laws of the form $\log(\Xi) = A\log\left(\hat{\rho}/M_\odot^{-1}\right) + B$. For broken power-laws a pair of values for $A$ and $B$ are given. The reduced chi-squared value $\chi^2/\nu$ was not used for fitting, as the standard deviation included in the likelihood varies with $A$, but is included as a goodness-of-fit statistic.}
- \label{tab:lines}
- \begin{tabular}{@{} l l D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{2.2} D{.}{.}{1.2} @{}}
- \hline
- \multicolumn{1}{c}{$\Xi$} & Extrinsic parameter & \multicolumn{1}{c}{$A_1$} & \multicolumn{1}{c}{$B_1$} & \multicolumn{1}{c}{$A_2$} & \multicolumn{1}{c}{$B_2$} & \multicolumn{1}{c}{$\chi^2/\nu$} \\
- \hline
- $\hat{\sigma}_{M_\bullet}/\left(10^6 M_\odot^2\right)$ & \multicolumn{1}{c}{--} & -1.05 & -1.46 & -0.76 & -1.56 & 0.29 \\
- $\hat{\sigma}_{a_\ast}/M_\odot$ & $a_\ast = 0.0$ & -1.28 & 0.91 & -2.08 & 1.66 & 2.06 \\
-  & $a_\ast = 0.3$ & -1.29 & 0.88 & -2.21 & 1.97 & 1.70 \\
-  & $a_\ast = 0.6$ & -1.16 & 0.80 & -2.06 & 1.81 & 1.46 \\
-  & $a_\ast = 0.9$ & -1.00 & 0.36 & -1.64 & 1.42 & 0.85 \\
- $\hat{\sigma}_\Theta/M_\odot$ & \multicolumn{1}{c}{--} & -0.79 & -0.55 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.30 \\
- $\hat{\sigma}_\Psi/M_\odot$ & \multicolumn{1}{c}{--} & -0.92 & 0.01 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.73 \\
- $\hat{\sigma}_{\ln R_0}/M_\odot$ & \multicolumn{1}{c}{--} & -1.01 & -0.94 & -0.62 & -1.24 & 0.46  \\
- $\hat{\sigma}_{\overline{\Theta}}/M_\odot$ & \multicolumn{1}{c}{--} & -0.99 & 0.11 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.75  \\
- $\hat{\sigma}_{\overline{\Phi}}/M_\odot$ & \multicolumn{1}{c}{--} &  -0.99 & 0.11 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.75 \\
- $\hat{\sigma}_{L_z}/\left(G M_\bullet c^{-1} M_\odot\right)$ & $\iota = \pi/12$ & -1.01 & 17.54 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 5.39 \\
-  & $\iota = \pi/4$ & -1.06 & 17.60 & -0.90 & 17.55 & 1.12 \\
-  & $\iota = 5\pi/12$ & -0.98 & 17.26 & -0.68 & 16.90 & 0.23 \\
- $\hat{\sigma}_Q/\left(G^2 M_\bullet^2 c^{-2}M_\odot\right)$ & $\iota = \pi/12$ & -1.35 & 36.17 & -0.98 & 35.87 & 0.26 \\
-  & $\iota = \pi/4$ & -1.27 & 36.93 & -1.01 & 36.75 & 0.25 \\
-  & $\iota = 5\pi/12$ & -1.11 & 36.88 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.06 \\
- $\hat{\sigma}_\mu/(\mu M_\odot)$ & \multicolumn{1}{c}{--} & -0.97 & 0.30 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.60 \\
- $\hat{\sigma}_{x_0}/\left(r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.97 & 1.42 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.11 \\
- $\hat{\sigma}_{y_0}/\left(r_\mathrm{S} M_\odot\right)$ & \multicolumn{1}{c}{--} & -0.96 & 1.42 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 1.08 \\
- $\hat{\sigma}_{z_0}/\left(r_\mathrm{S} M_\odot\right)$  & $\iota = \pi/12$ & -0.94 & 1.89 & -0.72 & 1.70 & 0.27 \\
-  & $\iota = \pi/4$ & -0.80 & 1.72 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.41 \\
-  & $\iota = 5\pi/12$ & -0.77 & 1.43 & \multicolumn{1}{c}{--} & \multicolumn{1}{c}{--} & 0.70 \\
- \hline
- \end{tabular}
-\end{minipage}
-\end{table*}
-
-For small SNRs, the Fisher matrix is no longer an appropriate estimate for the inverse covariance matrix; this only hold in the limit of high SNR~\cite{Vallisneri2008}. Therefore we should not expect these results to hold for low SNRs. However, we are unlikely to detect these signals in practise, so this is not a significant concern.
-
-The uncertainty in the MBH mass and in the GC distance show a clear kink, and are better fit by a broken power-law. Above the break, higher SNRs give diminished returns. A broken power-law does not improve the fit of any of the other uncertainties which only depend upon the SNR.
-
-The fits for $x_0$ and $y_0$, and for $\overline{\Theta}$ and $\overline{\Phi}$ are practically identical. In both cases the variables are physically similar.
-
-Unsurprisingly, the uncertainty in the spin depends upon the spin parameter. Larger values of $a_\ast$ give smaller uncertainties: at the same periapse radius a larger spin parameter would have a greater impact on the spacetime, and thus the orbit. However, $\sigma_a$ is not well approximated by a power law for small periapses (large SNR), as is evident from the large spread in values. We have fitted a broken law in lieu of a better model: the piece for lower SNR gives a reasonable indication of the behaviour, however, the other piece is not to be trusted. The break gives an indication of where the simple power law approximation is no longer applicable. The complicated behaviour reflects the intricate dependence of the shape of the trajectory, which determines the waveform, upon the orbital parameters, including the initial position, as well as the background spacetime. There is more scatter for smaller $a_\ast$, perhaps reflecting that a small change in a small spin parameter has a greater impact on the trajectory than a small change in a large spin parameter.
-
-The orbital inclination influences $\sigma_{L_z}$, $\sigma_Q$ and $\sigma_{z_0}$. The first two are easily understood, since the inclination determines the value of the two components of angular momenta for a given $r\sub{p}$. The dependence in $\sigma_{z_0}$ can be explained by considering motion out of the equatorial plane: this is determined by the inclination, which sets the momentum out of the plane, and the initial position, which specifies the trajectory.
-
-The uncertainties in $L_z$ and $Q$ show opposite dependencies upon $\iota$. This antagonistic behaviour occurs because a low inclination means small $Q$ and large $L_z$ relative to $L_\infty$, while a high inclination means the reverse. Both quantities have smaller uncertainties when they are smaller themselves, suggesting we may be measuring something akin to fractional changes in the angular momenta: this cannot be exactly the case, since $Q$ can be zero, and $L_z$ may be negative. There is a larger spread in the uncertainties at small periapses when the quantities are larger. This again reflects the fact that these orbits may have complicated shapes that can vary significantly with a change in the orbital parameters; when either $L_z$ or $Q$ is the dominant component of $L_\infty$, it plays the more significant role in determining the trajectory, and changing the other has only a small impact. This large scatter means that a power-law is not a good fit for these inclinations at high SNR, and we must be cautious extrapolating results.
-
-A broken power-law better fits $\hat{\sigma}_{L_z}$ for $\iota = 5\pi/12$ and $\pi/4$, and $\hat{\sigma}_Q$ for $\iota = \pi/12$ and $\pi/4$. In both cases the change in gradient for the $\iota = \pi/4$ case is slight.
-
-The uncertainty in $z_0$ is smaller for larger inclinations, as then we have greater motion out of the equatorial plane. A broken power-law is a better fit for both $\iota = \pi/12$.
-
-Only the spin and inclination appear to influence the SNR-uncertainty relations. The mass-normalisation removes any dependence of mass, however we have considered $\hat{\sigma}_\mu/\mu$ to ensure this. There is no obvious dependence upon the sense of rotation; we would expect this to most influence $\sigma_a$ for orbits with very small periapses, since it is the spin that induces a difference between orbits of opposite senses and this effect is only noticeable close to the MBH. Since there is significant scatter in values of $\sigma_a$ for small periapses, it is unsurprising that we have not noticed any dependence upon the rotation sense, if it were present.
+By the time a space-bourne GW detector finally flies, we may well have much better constraints on some of the parameters.
 
 \subsection{Comparison with existing results}
 
@@ -739,7 +669,7 @@ The spin is less well known. To obtain an uncertainty of $0.1$ would require $\r
 
 \section{Extra-galactic sources}
 
-We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH. Higher masses correspond to lower frequency bursts, which are harder to detect.
+We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH; higher masses correspond to lower frequency bursts, which are harder to detect.
 
 Checking our nearest neighbours, we find that bursts from Andromeda (M31) are not detectable. This is because of the large mass of the MBH $M\sub{M31} = (1.4^{+0.9}_{-0.3}) \times 10^8 M_\odot$ \citep{Bender2005}. However, its companion M32 is more promising. It has a lighter MBH $M\sub{M32} = (2.5 \pm 0.5) \times 10^6 M_\odot$ \citep{Verolme2002}. The trend between the periapse radius and SNR is shown in \figref{SNR-M32}.
 \begin{figure}
@@ -749,9 +679,11 @@ Checking our nearest neighbours, we find that bursts from Andromeda (M31) are no
     \label{fig:SNR-M32}
   \end{center}
 \end{figure}
-The fit is again done for orbits with $\sqrt{GM\sub{M32}/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$ to avoid the bucket of the noise curve. We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$). These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+The fit is again done for orbits with $f^\ast = \sqrt{GM\sub{M32}/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$ to avoid the bucket of the noise curve. We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$).
 
-Triangulum (M33) is believed not to have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \time 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to detect one would confirm the existence of a previously invisible MBH.
+These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+
+Triangulum (M33) is believed to not have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \times 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to detect one would confirm the existence of a previously invisible MBH.
 
 \section{Discussion}\label{sec:End}
 
@@ -765,17 +697,15 @@ The signal-to-noise ratio of bursts is well correlated with the periapsis. Excep
 \end{equation}
 Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
 
-Using the NK waveforms we conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. However, we find that the LSA does not hold for these burst signals over a wide range of SNR. This demonstrates the necessity of checking the LSA before quoting the results of a Fisher matrix analysis~\citep{Vallisneri2008}.
+Using the NK waveforms we conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. However, we found that the LSA does not hold for these burst signals over a wide range of SNR. This demonstrates the necessity of checking the LSA before quoting the results of a Fisher matrix analysis~\citep{Vallisneri2008}.
 
 
 
 Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. From our investigation it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} = X r\sub{g}$. This translates to a distance of $X \times 10^{11}\units{m}$ or $X \times 10^{-5}\units{pc}$. 
 
-Before we can quote results for how accurately we can determine the various parameters, we must consider the probability of each orbit. This will be the subject of a companion paper, building upon the earlier results of \citet{Rubbo2006} and \citet{Hopman2007}, who only considered approximate forms for the SNR, rather than using waveforms. Using a model for the galactic centre it is possible to define distributions for angular momenta $L_\infty$, for a species of mass $\mu$. With these it is possible to estimate the event rate, and define an expectation value for the elements of the variance-covariance matrix $\boldsymbol{\Sigma}$. This would describe how much information, on average, we could hope to obtain from EMRB observations.
+Before we can quote results for how accurately we can determine the various parameters, we must consider the probability of each orbit. This will be the subject of a companion paper, building upon the earlier results of \citet{Rubbo2006} and \citet{Hopman2007}, who only considered approximate forms for the SNR, rather than using waveforms. Using a model for the nuclear star cluster of the GC it is possible to define distributions for angular momenta $L_\infty$, for a species of mass $\mu$. With these it is possible to estimate the event rate. This would allow us to estimate how much information, on average, we could hope to obtain from EMRB observations.
 
-Some consideration should also be given to methods of fitting a waveform to an observed signal. Given an input signal, what is the best algorithm for finding the optimal set of parameters to characterise the observed waveform? It shall be necessary to check if there are degenerate combinations of parameters that produce similar waveforms; a first step would to be to consider the off-diagonal terms of the inverse Fisher matrix, which give parameter correlations. For example there is a large degeneracy between the GC distance and the compact object mass, fortunately this can be mitigated through the use of prior knowledge of $R_0$. However, if there are degenerate regions sufficiently distinct in parameter space we would not be aware of them by only considering the region immediately about the ML point and a Fisher matrix analysis is insufficient. In this work we have assumed that we can correctly identify the waveform's parameters. We do not intend to use NK waveforms to actually identify real GWs: more accurate methods should be employed for that; the point of this study would be to identify potential pitfalls that could be encountered when using accurate waveforms.
-
-A better estimate of the information that could be extracted from EMRBs could be obtained by doing a full Bayesian analysis: considering the shape of the posterior recovered from a large sample of possible signals. This would be computationally expensive, and would only be worth exploring if the event rate proved promising.
+Some consideration should also be given to methods of fitting a waveform to an observed signal. Given a noisy data stream, how could EMRBs be extracted? The parabolic spectrum has a characteristic profile, suggesting that matched filtering could be possible. Complications could arise in fitting parameters to a waveform: we have seen that there exist complicated degeneracies between parameters. These issues would warrant further investigation should the event rate be high enough.
 
 While we have only considered bursts from our own galaxy in detail, it should be possible to observe bursts from other nearby galaxies if their MBH is of the appropriate mass. This leaves M32 as the only viable known candidate. The SNR shows a similar dependence upon periapsis as for the Galactic Centre, and may be described by a power-law of
 \begin{equation}
@@ -785,7 +715,7 @@ for orbits with $r\sub{p} \gtrsim 10 r\sub{g}$. For a $1 M_\odot$ ($10 M_\odot$)
 
 \section*{Acknowledgments}
 
-The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices; they would like to thank Stephen Taylor for useful discussions on adaptive MCMC methods and Dave Green for helpful suggestions regarding apodization. They are also grateful to Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society. The MCMC simulations were performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (\url{http://www.hpc.cam.ac.uk/}), provided by Dell Inc. using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England. 
+The authors are indebted to Michele Vallisneri for useful discussions on the proper use of Fisher matrices; they would like to thank Stephen Taylor for useful discussions on adaptive MCMC methods and Dave Green for helpful suggestions regarding apodization. They are also grateful to Donald Lynden-Bell for useful suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society. The MCMC simulations were performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (\url{http://www.hpc.cam.ac.uk/}), provided by Dell Inc.\ using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England. 
 
 \bibliographystyle{mn2e}
 \bibliography{Parabolic}
