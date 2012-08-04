@@ -427,7 +427,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $f^\ast = \sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $f_\ast = \sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
 
 The SNR shows no clear correlation with the other parameters (excluding the mass $\mu$). However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
@@ -679,9 +679,23 @@ Checking our nearest neighbours, we find that bursts from Andromeda (M31) are no
     \label{fig:SNR-M32}
   \end{center}
 \end{figure}
-The fit is again done for orbits with $f^\ast = \sqrt{GM\sub{M32}/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$ to avoid the bucket of the noise curve. We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$).
+The fit is again done for orbits with $f_\ast = \sqrt{GM\sub{M32}/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$ to avoid the bucket of the noise curve. Bursts for a $1 M_\odot$ ($10 M_\odot$) can be detected if the periapse is smaller than $7 r\sub{g}$ ($13 r\sub{g}$).
 
-These galaxies are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
+We see that the general behaviour is the same as for the GC, but there are differences because of the position. Bursts from the two MBHs can be compared using the their characteristic frequencies $f_\ast$ and scaled SNR
+\begin{equation}
+\rho_\ast = \rho \left(\frac{\mu}{M_\odot}\right)^{-1}\left(\frac{R}{\mathrm{kpc}}\right)\left(\frac{M}{10^6 M_\odot}\right)^{-2/3},
+\end{equation}
+where $R$ and $M$ are the appropriate distances and masses for the two MBHs. These scalings can be determined from the quadrupole piece of \eqnref{octopole} assuming a characteristic length scale set by $r\sub{p}$. \Figref{SNR-scaling} shows the trend for both galaxies.
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.45\textwidth]{Fig_SNR_scaled}
+    \caption{Scaled signal-to-noise ratio as a function of characteristic frequency.}
+    \label{fig:SNR-scaling}
+  \end{center}
+\end{figure}
+The difference in sky position causes a minor offset between the curves, but this is largely averaged out by the motion of the the detector.
+
+M31 and M32 are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
 
 Triangulum (M33) is believed to not have an MBH. \citet{Merritt2001} use dynamical constraints to place an upper bound on the mass of a central BH of $M\sub{M33} < 3 \times 10^3 M_\odot$, \citet{Gebhardt2001} find a bound of $M\sub{M33} < 1.5 \times 10^3 M_\odot$. Observations of the ultra-luminous nuclear X-ray source (ULX) closest to the centre of M33 yield a best estimate of $M\sub{ULX} \sim \order{10} M_\odot$ for the source object's mass \citep{Foschini2004, Weng2009}. This is consistent with there being no MBH; the ULX originates from a stellar mass BH that is coincidentally located close to the core of the galaxy. Consequently, we do not expect to see any bursts from M33: to detect one would confirm the existence of a previously invisible MBH.
 
