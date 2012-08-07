@@ -53,7 +53,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a solar mass compact object on a highly eccentric orbit about a much more massive object, such as a $10^6 M_\odot$ black hole, passes through periapsis. EMRBs are a relatively unexplored means of probing the spacetime of the massive black hole in the Galaxy's core. We conduct a preliminary investigation of the properties of EMRBs and how they could allow us to constrain the massive black hole's parameters, such as its spin. We find that EMRBs should be detectable if their periapse distance is less than ... for a $10 M_\odot$ orbiting object: the signal-to-noise ratio scales approximately as ... . For periapses smaller than ... EMRBs can informative, and provide constraints on both the massive black hole's mass and spin. Closer orbits provide better constraints, with the best giving accuracies of better than one part in $10^4$ for both mass and spin magnitude.
+An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a solar mass compact object on a highly eccentric orbit about a much more massive object, such as a $10^6 M_\odot$ black hole, passes through periapsis. EMRBs are a relatively unexplored means of probing the spacetime of the massive black hole in the Galaxy's core. We conduct a preliminary investigation of the properties of EMRBs and how they could allow us to constrain the massive black hole's parameters, such as its spin. We find that EMRBs should be detectable if their periapse distance is less than $65 r\sub{g}$ for a $\mu = 10 M_\odot$ orbiting object, where $r\sub{g} = GM_\bullet/c^2$ is the gravitational radius. The signal-to-noise ratio scales approximately as $\log(\rho) \simeq -2.7\log(r\sub{p}/r\sub{g}) + \log(\mu/M_\odot) + 4.9$. For periapses smaller than ... EMRBs can informative, and provide constraints on both the massive black hole's mass and spin. Closer orbits provide better constraints, with the best giving accuracies of better than one part in $10^4$ for both the mass and spin parameter.
 \end{abstract}
 
 \begin{keywords}
@@ -88,7 +88,7 @@ The spins of MBHs in active galactic nuclei have been inferred using X-ray obser
 
 While we can use the spin of other BHs as a prior, to inform us of what we should expect to measure for the spin of the Galaxy's MBH, it is desirable to have an independent observation, a direct measurement.
 
-An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the {\textit Laser Interferometer Space Antenna} (LISA) or the {\textit evolved Laser Interferometer Space Antenna} (eLISA), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}.\footnote{The revised eLISA concept shares the same descoped design as the {\textit New Gravitational-wave Observatory} (NGO) submitted to the European Space Agency for thier L1 mission selection.} The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit shall evolve, becoming more circular, and it shall begin to continuously emit significant gravitational radiation in the LISA/eLISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
+An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the {\textit Laser Interferometer Space Antenna} (LISA) or the {\textit evolved Laser Interferometer Space Antenna} (eLISA), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}.\footnote{The revised eLISA concept shares the same descoped design as the {\textit New Gravitational-wave Observatory} (NGO) submitted to the European Space Agency for their L1 mission selection.} The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005}; as they orbit, the GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are known as extreme mass-ratio bursts (EMRBs; \citealt{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit shall evolve, becoming more circular, and it shall begin to continuously emit significant gravitational radiation in the LISA/eLISA frequency range. The resulting signals are known as extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
 
 Studies of these systems have usually focused upon when the orbit completes multiple cycles, allowing a high signal-to-noise ratio (SNR) to be accumulated. Here, we investigate high eccentricity orbits. These are the initial bursting orbits from which an EMRI may evolve. The event rate for the detection of such EMRBs with LISA has been estimated to be as high as $15\units{yr^{-1}}$ \citep*{Rubbo2006}, although this has been subsequently revised downwards to the order of $1\units{yr^{-1}}$ \citep*{Hopman2007}. Even if only a single burst is detected during a mission, this is still an exciting possibility since the information carried by the GW should give an unparalleled probe of the structure of spacetime of the GC. Exactly what can be inferred depends upon the orbit. 
 
@@ -96,11 +96,10 @@ We make the simplifying assumption that all these orbits are marginally bound, o
 
 In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit such that they may be held constant. We use this to construct an approximate numerical kludge waveform \citep{Babak2007}.
 
-This paper is organised as follows. In \secref{Geodesic} we discuss the construction of the geodesic orbits, in \secref{Kludge} we explain how to construct a numerical kludge waveform from this trajectory. In \secref{Detector} we establish what the LISA detectors would measure, and in \secref{Signal} and \secref{Parameters} how the signal would be analysed to extract the information encoded, and how this can be used to infer parameters. Results obtained using our waveform model to estimate the accuracy to which parameters could be measured are presented in \secref{Results}. We give fiducial power-law fits for SNR as a function of periapse radius, and parameter uncertainty as a function of SNR, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens when the periapses approaches the last non-plunging orbit. We conclude in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
+This paper is organised as follows. We being in \secref{Geodesic} with the construction of the geodesic orbits, these trajectories are used in the construction of NK waveforms as explained in \secref{Kludge}. In \secref{Detector} we establish what the LISA detectors would measure, and in \secref{Signal} how the signal would be analysed. This includes a brief mention of window functions, which is expanded in \apref{window}, where we also present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range. In \secref{Waveforms} we look at the our NK waveforms. We give fiducial power-law fits for SNR as a function of periapse radius, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens when the periapses approaches the last non-plunging orbit. We explain how to extract the information from the bursts in \secref{Estimation}. Results estimating the accuracy to which parameters could be measured are presented in \secref{Results}. We briefly mention the possibility of detecting bursts from extra-galactic sources in \seref{Extragal}, before concluding in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
 
 There are currently no confirmed space-borne detector missions. We shall use the classic LISA design for this study. This is done from historical affection in lieu of a definite alternative. Should funding for a space-borne detector be secured in the future it is hoped that it shall have comparable sensitivity to LISA, and that studies using the LISA design shall be a sensible benchmark for comparison.
 
-An appendix is included on the use of window functions to reduce spectral leakage when analysing waveforms. In this we present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range.
 
 Throughout this work we adopt a metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet are used for the output of the two LISA detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ are where noted, but in general factors of $G$ and $c$ are retained.
 
@@ -382,19 +381,17 @@ We therefore have an $14$ dimensional parameter space, of which we are intereste
 
 \subsection{Waveforms}
 
-\Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these assume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other parameters are specified in the captions. Radii are given in terms of the gravitational radius $r\sub{g} = GM_\bullet / c^2$.
+\Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these assume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other orbital parameters are specified in the captions. Radii are given in terms of the gravitational radius $r\sub{g} = GM_\bullet / c^2$.
 \begin{figure}
   \begin{center}
-   \subfigure[{Waveform for $a_\ast = 0.9$, $r\sub{p} = 3.5 r\sub{g}$ and $\iota = 0.05$, with $\Theta = \pi/2$, $\Psi = \pi/4$. The SNR for the oblate-spheroidal kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{ob}] = 15600$, for the spherical polar kludge it is $\rho[\boldsymbol{h}\sub{sph}] = 14100$.}]{\label{fig:Orbit_11} \includegraphics[width=0.45\textwidth]{Fig_h_11}} \\
-   \subfigure[{Waveform for $a_\ast = 0.5$, $r\sub{p} = 20 r\sub{g}$ and $\iota = 1.5$, with $\Theta = 0$ and $\Psi = 0$. The SNRs are $\rho[\boldsymbol{h}\sub{sph}] = 97.3$ and $\rho[\boldsymbol{h}\sub{ob}] = 97.1$.}]{\label{fig:Orbit_12} \includegraphics[width=0.45\textwidth]{Fig_h_12}} \\
-   \subfigure[{Waveform for $a_\ast = 0.3$, $r\sub{p} = 50 r\sub{g}$ and $\iota = 0$, with $\Theta = \pi/3$ and $\Psi = \pi/6$. The SNRs are $\rho\left[\boldsymbol{h}\sub{ob}\right] = 10.7$ and $\rho\left[\boldsymbol{h}\sub{sph}\right] = 10.7$ (agreement to $0.01 \%$).}]{\label{fig:Orbit_13} \includegraphics[width=0.45\textwidth]{Fig_h_13}} 
-\caption{Example burst waveforms from the galactic centre. The strain $\widetilde{h}\sub{I}(f)$ is indicated by the solid line, $\widetilde{h}\sub{II}(f)$ by the dot-dashed line, and the noise curve by the dashed line. The kludge has been formulated using oblate-spheroidal coordinates.}
-\label{fig:Examples}
+   \subfigure[{Waveform for $a_\ast \simeq 0.12$, $r\sub{p} \simeq 15.6 r\sub{g}$ and $\iota \simeq 2.1$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 451$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 451$ (agreement to $0.01\%$).}]{\label{fig:Orbit_233} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_233}} \\
+   \subfigure[{Waveform for $a_\ast \simeq 0.48$, $r\sub{p} \simeq 8.8 r\sub{g}$ and $\iota \simeq 2.0$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 2300$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 2310$.}]{\label{fig:Orbit_254} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_254}} \\
+   \subfigure[{Waveform for $a_\ast \simeq 0.74$, $r\sub{p} \simeq 3.2 r\sub{g}$ and $\iota \simeq 1.2$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 70600$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 74900$.}]{\label{fig:Orbit_135} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_135}}  
+\caption{Example burst waveforms from the galactic centre. The strain $\widetilde{h}\sub{I}(f)$ is indicated by the solid line, $\widetilde{h}\sub{II}(f)$ by the dot-dashed line, and the noise curve by the dashed line. The kludge has been formulated using spherical coordinates coordinates.}
   \end{center}
 \end{figure}
-% The orbits specified in figures \ref{fig:Orbit_1}, \ref{fig:Orbit_2} and \ref{fig:Orbit_6} all loop once about the MBH --- they are the simplest zoom-whirl orbits. The others, including the orbits of \figref{Energy}, are simpler trajectories that are recognisable as parabolic in shape. There is a clear distinction between the two types of orbit, as the loops introduce higher frequency harmonics.
 
-The plotted waveforms use the oblate-spheroidal coordinate system for the NK. Using spherical polars makes a small difference: on the scale shown here the only discernible difference would be in \figref{Orbit_11}; in the other cases the difference is entirely negligible except in the high-frequency tail, which is not of physical significance. The fractional difference for the orbit of \figref{Orbit_11} is shown in \figref{Oblate_sphere}.
+The plotted waveforms use the spherical polar coordinate system for the NK. Using oblate-spheroidal coordinates makes a small difference: on the scale shown here the only discernible difference would be in \figref{Orbit_135}; the maximum difference in the waveform (outside the high-frequency tail) is $\sim 10\%$. In the other cases the difference is entirely negligible (except in the high-frequency tail, which is not of physical significance). This behaviour is typical, for the closest orbits, with the most extreme spin parameters, the maximum difference in the waveforms may be $\sim30\%$, but only across a small region.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.45\textwidth]{Fig_ob_sph_11}
@@ -540,7 +537,7 @@ Error in the NK energy compared with the time-domain black hole perturbation the
 
 From the level of agreement we may be confident that the NK waveforms are a reasonable approximation. The difference in energy flux is only greater than $10\%$ for very strong fields $r\sub{p} \simeq 4 r\sub{g}$; since this is dependent on the square of the waveform, typical accuracy in the waveform may be $\sim 5\%$ \citep{Gair2005,Tanaka1993}. This is more significant than the variation in waveforms we generally found using the two alternative coordinate systems for the NK (in this case the two coincide because $a_\ast = 0$).
 
-\section{Parameter estimation}
+\section{Parameter estimation}\label{sec:Estimation}
 
 Having detected a GW signal $\boldsymbol{s}(t)$, we are interested in what we can learn about the source. We have an inference problem that can be solved by appropriate application of Bayes' Theorem (\citealt{Jaynes2003}, chapter 4): the probability distribution for our parameters given that we have detected the signal $\boldsymbol{s}(t)$ is given by the posterior
 \begin{equation}
@@ -553,7 +550,7 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}_0) \propto \exp\left[-\recip{2}\innerpr
 \end{equation}
 If we were to define this as a probability distribution for the parameters $\boldsymbol{\lambda}$, then the modal values should be the maximum-likelihood parameters $\boldsymbol{\lambda}\sub{ML}$. The waveform $\boldsymbol{h}(t; \boldsymbol{\lambda}\sub{ML})$ is the signal closest to $\boldsymbol{s}(t)$ in the space of all signals, where distance is defined using the inner product \eqnref{inner} \citep{Cutler1994}.
 
-\subsection{Fisher matirces}
+\subsection{Fisher matrices}
 
 In the limit of a high SNR, we may approximate this as \citep{Vallisneri2008}
 \begin{equation}
@@ -647,17 +644,63 @@ Orbits where chosen with periapses uniformly distributed in logarithmic space be
 
 The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the many orbits the posteriors are far from Gaussian as assumed in the LSA.
 
-These results do not incorporate any priors (save to keep them within realistic ranges). we have not folded in the existing information we have, for example, about the MBH's mass. Therefore, the resulting distributions characterise what we could learn from EMRB's alone.
+These results do not incorporate any priors (save to keep them within realistic ranges). We have not folded in the existing information we have, for example, about the MBH's mass. Therefore, the resulting distributions characterise what we could learn from EMRB's alone. By the time a space-bourne GW detector finally flies, we may well have much better constraints on some of the parameters.
 
 It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
-By the time a space-bourne GW detector finally flies, we may well have much better constraints on some of the parameters.
+Characteristic distribution widths are shown in \fegref{sigmas}. Plotted are the standard deviation $\sigma\sub{SD}$; a scaled $50$-percentile range $\sigma_{50} = W_{50}/1.34898$, where $W_{50}$ is the range that contains the median $50\%$ of points, and a scaled $95$-percentile range $\sigma_{95} = W_{95}/3.919928$, where $W_{59}$ is the $95\%$ range. The scaled ranges are such that all three widths are equal for a normal distribution. Filled circles are used for runs that appear to have converged. Open circles for those yet to converge, but which appear to be approaching an equilibrium state; widths are should be accurate to within a factor of a few.
+\begin{figure*}
+\begin{center}
+\subfigure[MBH mass $M_\bullet$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_1}} \quad
+\subfigure[MBH mass $M_\bullet$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_1}} \\
+\subfigure[MBH spin $a_\ast$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_2}} \quad
+\subfigure[MBH spin $a_\ast$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_2}} \\
+\subfigure[Orientation angle $\Theta\sub{K}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_8}} \quad
+\subfigure[Orientation angle $\Theta\sub{K}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_8}}
+\caption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
+\label{fig:sigmas}
+\end{center}
+\end{figure*}
+\begin{figure*}
+\setcounter{subfigure}{6}
+\begin{center}
+\subfigure[Orientation angle $\Phi\sub{K}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_9}} \quad
+\subfigure[Orientation angle $\Phi\sub{K}$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_9}} \\
+\subfigure[Scaled distance $\zeta$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_10}} \quad
+\subfigure[Scaled distance $\zeta$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_10}} \\
+\subfigure[Angular momentum $L_\infty$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_3}} \quad
+\subfigure[Angular momentum $L_\infty$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_3}}
+\contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
+\end{center}
+\end{figure*}
+\begin{figure}
+\setcounter{subfigure}{12}
+\begin{center}
+\subfigure[Orbital inclination $\iota$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_4}} \quad
+\subfigure[Orientation angle $\iota$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_4}} \\
+\subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_7}} \quad
+\subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_7}} \\
+\subfigure[Periapse polar phase $\chi\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
+\subfigure[Periapse polar phase $\chi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_5}
+\contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
+\end{center}
+\setcounter{subfigure}{18}
+\begin{center}
+\subfigure[Periapse time $t\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
+\subfigure[Periapse time $t\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_5}
+\contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
+\end{center}
+\setcounter{subfigure}{0}
+\end{figure}
+For guidance, dashed lines are included to indicate our current knowledge. This corresponds to the current measurement uncertainty for $M_\bullet$, and uniform priors for $a_\ast$, $\Phi\sub{K}$, $\phi\sub{p}$, $\chi\sub{p}$, $cos\Theta\sub{K}$ and $\cos\iota$. We have no expectations on for the width of the MBH mass distribution with respect to the current value; however, we would expect that the recovered distributions for the other parameters are narrower than for the case of complete ignorance. This may not be the case if the distribution is multimodal: in this event using the width is an inadequate description of the distribution.
+
+Comparing our MCMC results with Fisher matrix estimates, we see there can be a significant difference. The majority of parameters give results consistent to within an order of magnitude. The best agreement is for $t\sub{p}$, which is largely uncorrelated with the other parameters. The widths for $M_\bullet$, $a_\ast$, $L_\infty$ and $\iota$ show more severe differences; these parameters show the tightest degeneracies. The two methods do show signs of slowly converging with increasing SNR, as expected.
 
 \subsection{Comparison with existing results}
 
 Having quantified the accuracy with which we could hope to infer parameters from an EMRB waveform, we can now compare these results with existing measurements, to see if it is possible to learn anything new.
 
-We have no {\it a priori} knowledge about the CO, or its orbit, so anything we can deduce about its initial position, angular momentum or mass would be new. Measurements of the mass are only useful if $\sigma_\mu/\mu$ is less than 1. From our power law, this would occur for a $1.4 M_\odot$ ($10 M_\odot$) object when $\rho \simeq 2.00$ ($1.88$). Since we would only expect to detect signals with SNRs of order of a few, we conclude that any detectable signal gives us some constraint on the compact object's mass. An uncertainty of $10\%$ would be possible for $\rho \simeq 21.7$ ($20.2$).
+We have no {\it a priori} knowledge about the CO or its orbit, so anything we can deduce about its initial position, angular momentum or mass would be new. Measurements of the mass are only useful if $\sigma_\mu/\mu$ is less than 1. From our power law, this would occur for a $1.4 M_\odot$ ($10 M_\odot$) object when $\rho \simeq 2.00$ ($1.88$). Since we would only expect to detect signals with SNRs of order of a few, we conclude that any detectable signal gives us some constraint on the compact object's mass. An uncertainty of $10\%$ would be possible for $\rho \simeq 21.7$ ($20.2$).
 
 Similarly, we have no information on the orientation of the MBH, so any measurement for which $\sigma_\Theta$ or $\sigma_\Psi$ is less than $2\pi$ would be of interest. This happens for very low SNR for both angles, so again a detection would allow us to infer something new. An uncertainty of $\pi/72 = 5\deg$ corresponds to $\rho \simeq 9.78$ ($5.76$) for $\Theta$ and $\rho \simeq 29.6$ ($25.1$) for $\Psi$.
 
@@ -667,7 +710,7 @@ Of paramount interest are the MBH mass and spin. The current uncertainty in the 
 
 The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast = 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
-\section{Extra-galactic sources}
+\section{Extra-galactic sources}\laebl{sec:Extragal}
 
 We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH; higher masses correspond to lower frequency bursts, which are harder to detect.
 
@@ -693,7 +736,7 @@ where $R$ and $M$ are the appropriate distances and masses for the two MBHs. The
     \label{fig:SNR-scaling}
   \end{center}
 \end{figure}
-The difference in sky position causes a minor offset between the curves, but this is largely averaged out by the motion of the the detector.
+The difference in sky position is largely washed out through the motion of the the detector.
 
 M31 and M32 are at a distance of $770\units{kpc}$ \citep{Karachentsev2004}. It therefore seems unlikely that bursts could be observed from the Virgo cluster at a distance of $R\sub{Virgo} \approx 16.5\units{Mpc}$ \citep{Mei2007}.
 
@@ -715,7 +758,7 @@ Using the NK waveforms we conducted a trial investigation, using Fisher matrix a
 
 
 
-Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the black hole. From our investigation it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} = X r\sub{g}$. This translates to a distance of $X \times 10^{11}\units{m}$ or $X \times 10^{-5}\units{pc}$. 
+Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the MBH. From our investigation it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} \simeq X r\sub{g}$ for a $10 M_\odot$ CO. This translates to a distance of $X \times 10^{11}\units{m}$ or $X \times 10^{-5}\units{pc}$. 
 
 Before we can quote results for how accurately we can determine the various parameters, we must consider the probability of each orbit. This will be the subject of a companion paper, building upon the earlier results of \citet{Rubbo2006} and \citet{Hopman2007}, who only considered approximate forms for the SNR, rather than using waveforms. Using a model for the nuclear star cluster of the GC it is possible to define distributions for angular momenta $L_\infty$, for a species of mass $\mu$. With these it is possible to estimate the event rate. This would allow us to estimate how much information, on average, we could hope to obtain from EMRB observations.
 

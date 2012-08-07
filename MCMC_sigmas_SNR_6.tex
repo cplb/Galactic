@@ -2,12 +2,12 @@
 % into LaTeX documents using the packages graphicx, color and psfrag.
 % It is accompanied by a postscript file. A sample LaTeX file is:
 %    \documentclass{article}\usepackage{graphicx,color,psfrag}
-%    \begin{document}\input{SNR_M32}\end{document}
+%    \begin{document}\input{MCMC_sigmas_SNR_6}\end{document}
 % See http://www.mathworks.de/matlabcentral/fileexchange/loadFile.do?objectId=4638
 % for recent versions of laprint.m.
 %
 % created by:           LaPrint version 3.16 (13.9.2004)
-% created on:           11-Jun-2012 14:46:11
+% created on:           07-Aug-2012 16:41:46
 % eps bounding box:     15 cm x 11.25 cm
 % comment:              
 %
@@ -15,13 +15,15 @@
 \psfragscanon%
 %
 % text strings:
-\psfrag{s03}[t][t]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$r_\mathrm{p}/r_\mathrm{g}$}\end{tabular}}%
-\psfrag{s04}[b][b]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$\hat{\rho}/M_\odot^{-1}$}\end{tabular}}%
+\psfrag{s03}[t][t]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$\rho$}\end{tabular}}%
+\psfrag{s04}[b][b]{\color[rgb]{0,0,0}\setlength{\tabcolsep}{0pt}\begin{tabular}{c}{\Large$\sigma_{t_\mathrm{p}}/\mathrm{s}$}\end{tabular}}%
 %
 % xticklabels:
-\psfrag{x01}[t][t]{$1$}%
-\psfrag{x02}[t][t]{$10$}%
-\psfrag{x03}[t][t]{$100$}%
+\psfrag{x01}[t][t]{$10^{2}$}%
+\psfrag{x02}[t][t]{$10^{3}$}%
+\psfrag{x03}[t][t]{$10^{4}$}%
+\psfrag{x04}[t][t]{$10^{5}$}%
+\psfrag{x05}[t][t]{$10^{6}$}%
 %
 % yticklabels:
 \psfrag{v01}[r][r]{$10^{-3}$}%
@@ -30,10 +32,9 @@
 \psfrag{v04}[r][r]{$10^{0}$}%
 \psfrag{v05}[r][r]{$10^{1}$}%
 \psfrag{v06}[r][r]{$10^{2}$}%
-\psfrag{v07}[r][r]{$10^{3}$}%
 %
 % Figure:
-\resizebox{12cm}{!}{\includegraphics{SNR_M32.eps}}%
+\resizebox{12cm}{!}{\includegraphics{MCMC_sigmas_SNR_6.eps}}%
 \end{psfrags}%
 %
-% End SNR_M32.tex
+% End MCMC_sigmas_SNR_6.tex
