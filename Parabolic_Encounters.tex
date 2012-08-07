@@ -96,7 +96,7 @@ We make the simplifying assumption that all these orbits are marginally bound, o
 
 In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit such that they may be held constant. We use this to construct an approximate numerical kludge waveform \citep{Babak2007}.
 
-This paper is organised as follows. We being in \secref{Geodesic} with the construction of the geodesic orbits, these trajectories are used in the construction of NK waveforms as explained in \secref{Kludge}. In \secref{Detector} we establish what the LISA detectors would measure, and in \secref{Signal} how the signal would be analysed. This includes a brief mention of window functions, which is expanded in \apref{window}, where we also present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range. In \secref{Waveforms} we look at the our NK waveforms. We give fiducial power-law fits for SNR as a function of periapse radius, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens when the periapses approaches the last non-plunging orbit. We explain how to extract the information from the bursts in \secref{Estimation}. Results estimating the accuracy to which parameters could be measured are presented in \secref{Results}. We briefly mention the possibility of detecting bursts from extra-galactic sources in \seref{Extragal}, before concluding in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
+This paper is organised as follows. We being in \secref{Geodesic} with the construction of the geodesic orbits, these trajectories are used in the construction of NK waveforms as explained in \secref{Kludge}. In \secref{Detector} we establish what the LISA detectors would measure, and in \secref{Signal} how the signal would be analysed. This includes a brief mention of window functions, which is expanded in \apref{window}, where we also present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range. In \secref{Waveforms} we look at the our NK waveforms. We give fiducial power-law fits for SNR as a function of periapse radius, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens when the periapses approaches the last non-plunging orbit. We explain how to extract the information from the bursts in \secref{Estimation}. Results estimating the accuracy to which parameters could be measured are presented in \secref{Results}. We briefly mention the possibility of detecting bursts from extra-galactic sources in \secref{Extragal}, before concluding in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
 
 There are currently no confirmed space-borne detector missions. We shall use the classic LISA design for this study. This is done from historical affection in lieu of a definite alternative. Should funding for a space-borne detector be secured in the future it is hoped that it shall have comparable sensitivity to LISA, and that studies using the LISA design shall be a sensible benchmark for comparison.
 
@@ -384,9 +384,10 @@ We therefore have an $14$ dimensional parameter space, of which we are intereste
 \Figref{Examples} show example waveforms to demonstrate some of the possible variations in the signal. All these assume the standard mass and position for the MBH as well as a $\mu = 10 M_\odot$ orbiting CO; other orbital parameters are specified in the captions. Radii are given in terms of the gravitational radius $r\sub{g} = GM_\bullet / c^2$.
 \begin{figure}
   \begin{center}
-   \subfigure[{Waveform for $a_\ast \simeq 0.12$, $r\sub{p} \simeq 15.6 r\sub{g}$ and $\iota \simeq 2.1$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 451$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 451$ (agreement to $0.01\%$).}]{\label{fig:Orbit_233} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_233}} \\
-   \subfigure[{Waveform for $a_\ast \simeq 0.48$, $r\sub{p} \simeq 8.8 r\sub{g}$ and $\iota \simeq 2.0$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 2300$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 2310$.}]{\label{fig:Orbit_254} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_254}} \\
-   \subfigure[{Waveform for $a_\ast \simeq 0.74$, $r\sub{p} \simeq 3.2 r\sub{g}$ and $\iota \simeq 1.2$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 70600$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 74900$.}]{\label{fig:Orbit_135} \includegraphics[width=0.45\textwidth]{Fig_new_h_sph_135}}  
+   \subfigure[{Waveform for $a_\ast \simeq 0.12$, $r\sub{p} \simeq 15.6 r\sub{g}$ and $\iota \simeq 2.1$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 451$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 451$ (agreement to $0.01\%$).}]{\label{fig:Orbit_233} \includegraphics[width=0.45\textwidth]{Fig_new_sph_h_233}} \\
+   \subfigure[{Waveform for $a_\ast \simeq 0.48$, $r\sub{p} \simeq 8.8 r\sub{g}$ and $\iota \simeq 2.0$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 2300$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 2310$.}]{\label{fig:Orbit_254} \includegraphics[width=0.45\textwidth]{Fig_new_sph_h_254}} \\
+   \subfigure[{Waveform for $a_\ast \simeq 0.74$, $r\sub{p} \simeq 3.2 r\sub{g}$ and $\iota \simeq 1.2$. The SNR for the spherical polar kludge waveform (plotted) is $\rho[\boldsymbol{h}\sub{sph}] \simeq 70600$, for the oblate-spheroidal kludge it is $\rho[\boldsymbol{h}\sub{ob}] \simeq 74900$.}]{\label{fig:Orbit_135} \includegraphics[width=0.45\textwidth]{Fig_new_sph_h_135}}  
+\label{fig:Examples}
 \caption{Example burst waveforms from the galactic centre. The strain $\widetilde{h}\sub{I}(f)$ is indicated by the solid line, $\widetilde{h}\sub{II}(f)$ by the dot-dashed line, and the noise curve by the dashed line. The kludge has been formulated using spherical coordinates coordinates.}
   \end{center}
 \end{figure}
@@ -648,14 +649,14 @@ These results do not incorporate any priors (save to keep them within realistic 
 
 It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
-Characteristic distribution widths are shown in \fegref{sigmas}. Plotted are the standard deviation $\sigma\sub{SD}$; a scaled $50$-percentile range $\sigma_{50} = W_{50}/1.34898$, where $W_{50}$ is the range that contains the median $50\%$ of points, and a scaled $95$-percentile range $\sigma_{95} = W_{95}/3.919928$, where $W_{59}$ is the $95\%$ range. The scaled ranges are such that all three widths are equal for a normal distribution. Filled circles are used for runs that appear to have converged. Open circles for those yet to converge, but which appear to be approaching an equilibrium state; widths are should be accurate to within a factor of a few.
+Characteristic distribution widths are shown in \figref{sigmas}. Plotted are the standard deviation $\sigma\sub{SD}$; a scaled $50$-percentile range $\sigma_{50} = W_{50}/1.34898$, where $W_{50}$ is the range that contains the median $50\%$ of points, and a scaled $95$-percentile range $\sigma_{95} = W_{95}/3.919928$, where $W_{59}$ is the $95\%$ range. The scaled ranges are such that all three widths are equal for a normal distribution. Filled circles are used for runs that appear to have converged. Open circles for those yet to converge, but which appear to be approaching an equilibrium state; widths are should be accurate to within a factor of a few.
 \begin{figure*}
 \begin{center}
-\subfigure[MBH mass $M_\bullet$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_1}} \quad
+\subfigure[MBH mass $M_\bullet$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_1}} \quad
 \subfigure[MBH mass $M_\bullet$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_1}} \\
-\subfigure[MBH spin $a_\ast$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_2}} \quad
+\subfigure[MBH spin $a_\ast$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_2}} \quad
 \subfigure[MBH spin $a_\ast$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_2}} \\
-\subfigure[Orientation angle $\Theta\sub{K}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_8}} \quad
+\subfigure[Orientation angle $\Theta\sub{K}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_8}} \quad
 \subfigure[Orientation angle $\Theta\sub{K}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_8}}
 \caption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
 \label{fig:sigmas}
@@ -664,34 +665,36 @@ Characteristic distribution widths are shown in \fegref{sigmas}. Plotted are the
 \begin{figure*}
 \setcounter{subfigure}{6}
 \begin{center}
-\subfigure[Orientation angle $\Phi\sub{K}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_9}} \quad
+\subfigure[Orientation angle $\Phi\sub{K}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_9}} \quad
 \subfigure[Orientation angle $\Phi\sub{K}$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_9}} \\
-\subfigure[Scaled distance $\zeta$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_10}} \quad
+\subfigure[Scaled distance $\zeta$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_10}} \quad
 \subfigure[Scaled distance $\zeta$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_10}} \\
-\subfigure[Angular momentum $L_\infty$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_3}} \quad
-\subfigure[Angular momentum $L_\infty$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_3}}
+\subfigure[Angular momentum $L_\infty$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_3}} \quad
+\subfigure[Angular momentum $L_\infty$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_3}} \\
 \contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
 \end{center}
 \end{figure*}
-\begin{figure}
+\begin{figure*}
 \setcounter{subfigure}{12}
 \begin{center}
-\subfigure[Orbital inclination $\iota$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_4}} \quad
+\subfigure[Orbital inclination $\iota$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_4}} \quad
 \subfigure[Orientation angle $\iota$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_4}} \\
-\subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_7}} \quad
+\subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_7}} \quad
 \subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_7}} \\
-\subfigure[Periapse polar phase $\chi\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
-\subfigure[Periapse polar phase $\chi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_5}
+\subfigure[Periapse polar phase $\chi\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
+\subfigure[Periapse polar phase $\chi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_5}} \\
 \contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
 \end{center}
+\end{figure*}
+\begin{figure*}
 \setcounter{subfigure}{18}
 \begin{center}
-\subfigure[Periapse time $t\sub{p}$ versus periapsis.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
-\subfigure[Periapse time $t\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_5}
+\subfigure[Periapse time $t\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_6}} \quad
+\subfigure[Periapse time $t\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_6}} \\
 \contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
 \end{center}
 \setcounter{subfigure}{0}
-\end{figure}
+\end{figure*}
 For guidance, dashed lines are included to indicate our current knowledge. This corresponds to the current measurement uncertainty for $M_\bullet$, and uniform priors for $a_\ast$, $\Phi\sub{K}$, $\phi\sub{p}$, $\chi\sub{p}$, $cos\Theta\sub{K}$ and $\cos\iota$. We have no expectations on for the width of the MBH mass distribution with respect to the current value; however, we would expect that the recovered distributions for the other parameters are narrower than for the case of complete ignorance. This may not be the case if the distribution is multimodal: in this event using the width is an inadequate description of the distribution.
 
 Comparing our MCMC results with Fisher matrix estimates, we see there can be a significant difference. The majority of parameters give results consistent to within an order of magnitude. The best agreement is for $t\sub{p}$, which is largely uncorrelated with the other parameters. The widths for $M_\bullet$, $a_\ast$, $L_\infty$ and $\iota$ show more severe differences; these parameters show the tightest degeneracies. The two methods do show signs of slowly converging with increasing SNR, as expected.
@@ -710,7 +713,7 @@ Of paramount interest are the MBH mass and spin. The current uncertainty in the 
 
 The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast = 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
-\section{Extra-galactic sources}\laebl{sec:Extragal}
+\section{Extra-galactic sources}\label{sec:Extragal}
 
 We have so far only been concerned with properties of bursts from our own galaxy. This is the best source for bursts because of its proximity. A natural continuation is to consider EMRBs from other MBHs. \citet{Rubbo2006} suggested that LISA should be able to detect EMRBs originating from the Virgo cluster, although the detectable rate may be only $10^{-4}\units{yr^{-1}}$ per galaxy \citep{Hopman2007}. Detectability depends upon the mass of the MBH; higher masses correspond to lower frequency bursts, which are harder to detect.
 
@@ -728,7 +731,7 @@ We see that the general behaviour is the same as for the GC, but there are diffe
 \begin{equation}
 \rho_\ast = \rho \left(\frac{\mu}{M_\odot}\right)^{-1}\left(\frac{R}{\mathrm{kpc}}\right)\left(\frac{M}{10^6 M_\odot}\right)^{-2/3},
 \end{equation}
-where $R$ and $M$ are the appropriate distances and masses for the two MBHs. These scalings can be determined from the quadrupole piece of \eqnref{octopole} assuming a characteristic length scale set by $r\sub{p}$. \Figref{SNR-scaling} shows the trend for both galaxies.
+where $R$ and $M$ are the appropriate distances and masses for the two MBHs. These scalings can be determined from the quadrupole piece of \eqnref{octupole} assuming a characteristic length scale set by $r\sub{p}$. \Figref{SNR-scaling} shows the trend for both galaxies.
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.45\textwidth]{Fig_SNR_scaled}
