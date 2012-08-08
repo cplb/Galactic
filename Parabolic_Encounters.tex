@@ -392,17 +392,19 @@ We therefore have an $14$ dimensional parameter space, of which we are intereste
   \end{center}
 \end{figure}
 
-The plotted waveforms use the spherical polar coordinate system for the NK. Using oblate-spheroidal coordinates makes a small difference: on the scale shown here the only discernible difference would be in \figref{Orbit_135}; the maximum difference in the waveform (outside the high-frequency tail) is $\sim 10\%$. In the other cases the difference is entirely negligible (except in the high-frequency tail, which is not of physical significance). This behaviour is typical, for the closest orbits, with the most extreme spin parameters, the maximum difference in the waveforms may be $\sim30\%$, but only across a small region.
+The plotted waveforms use the spherical polar coordinate system for the NK. Using oblate-spheroidal coordinates makes a small difference: on the scale shown here the only discernible difference would be in \figref{Orbit_135}; the maximum difference in the waveform (outside the high-frequency tail) is $\sim 10\%$. In the other cases the difference is entirely negligible (except in the high-frequency tail, which is not of physical significance). This behaviour is typical, for the closest orbits, with the most extreme spin parameters, the maximum difference in the waveforms may be $\sim30\%$. The difference is largely confined to the higher frequency components, which are most sensitive to the parts of the trajectory closer to the MBH: the change in flat-space radius for the same Boyer-Lindquist radial coordinate causes a slight shift in the shape of the spectrum. Enforcing the same flat-space periapse radius gives worse agreement across the spectrum.
+
+To examine the effect of the coordinate choice, we compare SNRs calculated using the alternative schemes for a selection of orbits. The MBH parameters were fixed as for the GC, the orbital parameters were chosen such and that periapse distance was drawn form a logarithmic distributiin (down to the inner-most stable orbit), and other parameters were drawn from appropriate uniform distributions. The ratio of the two SNRs is shown in \figref{Oblate_sphere}.
 \begin{figure}
 \begin{center}
- \includegraphics[width=0.45\textwidth]{Fig_ob_sph_11}
+ \includegraphics[width=0.45\textwidth]{Fig_SNR_ratio}
  \label{fig:Oblate_sphere}
- \caption{Comparison of waveforms generated using oblate-spheroidal and spherical polar coordinates for the numerical kludge. Both $\widetilde{h}\sub{I}(f)$ and $\widetilde{h}\sub{II}(f)$ show the same behaviour. The effects of numerical noise are seen at high-frequencies.}
+ \caption{Ratio of SNR for a waveform calculated using spherical polars coordinates to that for a waveform using oblate-spheroidal coordinates.}
    \end{center}
 \end{figure}
-The difference from the coordinate systems is only apparent for orbits with very small periapses when the MBH has a high spin. The difference is largely confined to the higher frequency components, which are most sensitive to the parts of the trajectory closer to the MBH: the change in flat-space radius for the same Boyer-Lindquist radial coordinate causes a slight shift in the shape of the spectrum. Enforcing the same flat-space periapse radius gives worse agreement across the spectrum.
+The difference from the coordinate systems is only apparent for orbits with very small periapses. There is agreement to $10\%$ down to $r\sub{p} \simeq 4 r\sub{g}$; the maximal difference may be expected to be $\sim 20\%$, this is for periapses that are only obtainable for high spin values.
 
-Since the deviation in the two waveforms is only apparent for small periapses, when the kludge approximation is least applicable, we conclude that the choice of coordinates is unimportant. The potential error of order $10\%$ is less than that inherent in the NK approximation (see \secref{Energy}). Without an accurate waveform template to compare against, we do not know if there is a preferable choice of coordinates. We adopt spherical coordinates for the rest of this work.
+Since the deviation in the two waveforms is only apparent for small periapses, when the kludge approximation is least applicable, we conclude that the choice of coordinates is unimportant. The potential error of order $10\%$ is no greater than that inherent in the NK approximation (see \secref{Energy}). Without an accurate waveform template to compare against, we do not know if there is a preferable choice of coordinates. We adopt spherical coordinates for the rest of this work for easier comparison with existing work.
 
 \subsection{Signal-to-noise ratios}
 
@@ -413,7 +415,7 @@ These bursts were calculated for a $1 M_\odot$ CO. From \eqnref{octupole}, the a
 \hat{\rho}[\boldsymbol{h}] = \frac{\rho[\boldsymbol{h}]}{\mu}.
 \end{equation}
 
-The spin of the MBH and the orbital inclination were randomly chosen, and the periapse distance was set so that the distribution would be uniform in log-space (up to the point of the inner-most stable orbit). For each set of these extrinsic parameters, the periapse position, orientation of the MBH, and orbital position of detector were varied: five random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution) were used for at each point.
+The spin of the MBH and the orbital inclination were randomly chosen, and the periapse distance was set so that the distribution would be uniform in log-space (down to the point of the inner-most stable orbit). For each set of these extrinsic parameters, the periapse position, orientation of the MBH, and orbital position of detector were varied: five random combinations of these intrinsic parameters (each being drawn from a separate uniform distribution) were used for at each point.
 
 We take the mean of $\ln \rho$ for each set of randomised intrinsic parameters (starting position, MBH orientation and detector orientation).\footnote{The logarithm is a better quantity to work with since the SNR is a positive-definite quantity that may be distributed over a range of magnitudes (\citealt{MacKay2003}, sections 22.1, 23.3). Using median values yields results that are quantitatively similar.}
 
@@ -425,7 +427,7 @@ There exists a correlation between the periapse radius and SNR, as shown in \fig
     \label{fig:SNR}
   \end{center}
 \end{figure}
-Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line. This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $f_\ast = \sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
+Closer orbits produce louder bursts. To reflect this relationship, we have fitted a simple fiducial power law, as indicated by the straight line.\footnote{Using oblate-spheroidal coordinates instead of spherical polars gives a fit consistent to with $0.1\%$ as we have excluded the closest orbits.} This was done by maximising the likelihood, assuming that $\ln \rho$ has a Gaussian distribution with standard deviation derived from the scatter of from variation in the intrinsic parameters. The power law appears to be a good fit only for orbits with larger periapses. The shape of the curve is predominately determined by the shape of the noise curve. The change in the trend reflects the change as we go from approximately power law behaviour into the bucket of the curve. Hence, we fit a power law to orbits with a characteristic frequency of $f_\ast = \sqrt{GM_\bullet/r\sub{p}} < 1 \times 10^{-3}\units{Hz}$, so as to avoid spilling over into the bucket.\footnote{The power law exponent $-2.7$ is inconsistent with $-13/4$ as predicted by the approximate model of \citet{Hopman2007}.} Changing the cut-off within a plausible region alters the fit coefficients by around $0.1$.
 
 The SNR shows no clear correlation with the other parameters (excluding the mass $\mu$). However, the SNR is sensitive to the intrinsic parameters, in particular the initial position (as this determines the subsequent trajectory), and may vary by an order of magnitude.
 
@@ -649,6 +651,8 @@ These results do not incorporate any priors (save to keep them within realistic 
 
 It is possible to place good constraints from the closest orbits. These can provide sufficient information to give beautifully behaved posteriors although significant correlation between parameters persists.
 
+\subsection{Distribution widths}
+
 Characteristic distribution widths are shown in \figref{sigmas}. Plotted are the standard deviation $\sigma\sub{SD}$; a scaled $50$-percentile range $\sigma_{50} = W_{50}/1.34898$, where $W_{50}$ is the range that contains the median $50\%$ of points, and a scaled $95$-percentile range $\sigma_{95} = W_{95}/3.919928$, where $W_{59}$ is the $95\%$ range. The scaled ranges are such that all three widths are equal for a normal distribution. Filled circles are used for runs that appear to have converged. Open circles for those yet to converge, but which appear to be approaching an equilibrium state; widths are should be accurate to within a factor of a few.
 \begin{figure*}
 \begin{center}
@@ -666,7 +670,7 @@ Characteristic distribution widths are shown in \figref{sigmas}. Plotted are the
 \setcounter{subfigure}{6}
 \begin{center}
 \subfigure[Orientation angle $\Phi\sub{K}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_9}} \quad
-\subfigure[Orientation angle $\Phi\sub{K}$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_9}} \\
+\subfigure[Orientation angle $\Phi\sub{K}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_9}} \\
 \subfigure[Scaled distance $\zeta$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_10}} \quad
 \subfigure[Scaled distance $\zeta$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_10}} \\
 \subfigure[Angular momentum $L_\infty$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_3}} \quad
@@ -678,7 +682,7 @@ Characteristic distribution widths are shown in \figref{sigmas}. Plotted are the
 \setcounter{subfigure}{12}
 \begin{center}
 \subfigure[Orbital inclination $\iota$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_4}} \quad
-\subfigure[Orientation angle $\iota$ SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_4}} \\
+\subfigure[Orbital inclination $\iota$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_4}} \\
 \subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_7}} \quad
 \subfigure[Periapse azimuthal phase $\phi\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_7}} \\
 \subfigure[Periapse polar phase $\chi\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_5}} \quad
@@ -691,17 +695,36 @@ Characteristic distribution widths are shown in \figref{sigmas}. Plotted are the
 \begin{center}
 \subfigure[Periapse time $t\sub{p}$ versus periapsis.]{\includegraphics[width=0.44\textwidth]{Fig_MCMC_sigmas_rp_6}} \quad
 \subfigure[Periapse time $t\sub{p}$ versus SNR.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_SNR_6}} \\
-\contcaption{Distribution widths as functions of periapse $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
+\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ and SNR $\rho$. Blue is used for the standard deviation, red is the scaled $50$-percentile range and green is the scaled $95$-percentile range: all three coincide for a normal distribution. Filled circles are used for converged runs, open circles for those yet to converge. The dashed line indicates the current uncertainty for $M_\bullet$, and the standard deviation for an uninformative prior for other parameters.}
 \end{center}
 \setcounter{subfigure}{0}
 \end{figure*}
-For guidance, dashed lines are included to indicate our current knowledge. This corresponds to the current measurement uncertainty for $M_\bullet$, and uniform priors for $a_\ast$, $\Phi\sub{K}$, $\phi\sub{p}$, $\chi\sub{p}$, $cos\Theta\sub{K}$ and $\cos\iota$. We have no expectations on for the width of the MBH mass distribution with respect to the current value; however, we would expect that the recovered distributions for the other parameters are narrower than for the case of complete ignorance. This may not be the case if the distribution is multimodal: in this event using the width is an inadequate description of the distribution.
+For guidance, dashed lines are included to indicate our current knowledge. This corresponds to the current measurement uncertainty for $M_\bullet$, and uniform priors for $a_\ast$, $\Phi\sub{K}$, $\phi\sub{p}$, $\chi\sub{p}$, $cos\Theta\sub{K}$ and $\cos\iota$. We have no expectations for the width of the MBH mass distribution with respect to the current value; however, we would expect that the recovered distributions for the other parameters are narrower than for the case of complete ignorance. This may not be the case if the distribution is multimodal: in this event using the width is an inadequate description of the distribution. Only a few unconverged runs exceed these limits, and some cases may be multimodal.
+
+The widths show a general trend of decreasing with decreasing periapsis or increasing SNR, but there is a large degree of scatter. There does not appear to be a strong dependence upon any single input parameter, with the exception of the spin. The widths for $\iota$, $\Theta\sub{K}$, $\Phi\sub{K}$, $\phi\sub{p}$ and $\chi\sub{p}$ all increase for smaller spin magnitudes. The dependence is shown in \figref{sigmas-spin}
+\begin{figure*}
+\begin{center}
+\subfigure[MBH spin $a_\ast$.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_2}} \quad
+\subfigure[Orientation angle $\Theta\sub{K}$.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_8}} \\
+\subfigure[Orientation angle $\Phi\sub{K}$.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_9}} \quad
+\subfigure[Orbital inclination $\iota$.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_4}} \\
+\subfigure[Periapse azimuthal phase $\phi\sub{p}$]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_7}} \quad
+\subfigure[Periapse polar phase $\chi\sub{p}$.]{\includegraphics[width=0.45\textwidth]{Fig_MCMC_sigmas_rp_spin_9}}
+\caption{Parameter standard deviations as functions of periapsis $r\sub{p}$ showing dependence (or lack thereof) upon the spin magnitude $|a_ast|$.}
+\label{fig:sigmas-spin}
+\end{center}
+\end{figure*}
+These parameters are all defined with reference to the coordinate system established by the direction of the spin axis: for $a_\ast = 0$, there would be ambiguity in defining them. Therefore, it makes sense that they can be more accurately determined for larger spin magnitudes. The width for $a_\ast$, however, shows no clear correlation.
 
 Comparing our MCMC results with Fisher matrix estimates, we see there can be a significant difference. The majority of parameters give results consistent to within an order of magnitude. The best agreement is for $t\sub{p}$, which is largely uncorrelated with the other parameters. The widths for $M_\bullet$, $a_\ast$, $L_\infty$ and $\iota$ show more severe differences; these parameters show the tightest degeneracies. The two methods do show signs of slowly converging with increasing SNR, as expected.
 
-\subsection{Comparison with existing results}
+\subsection{Learning potential}
 
-Having quantified the accuracy with which we could hope to infer parameters from an EMRB waveform, we can now compare these results with existing measurements, to see if it is possible to learn anything new.
+Having quantified the accuracy with which we could infer parameters from an EMRB waveform, we can now consider if it is possible to learn anything new.
+
+Of paramount interest are the MBH mass and spin. The current uncertainty in the mass is $\sigma_{M_\bullet} = 0.36 \times 10^6 M_\odot$. There are few runs amongst our data set that are not better than this: it appears that orbits of a $\mu = 10 M_\odot$ CO with periapses $r\sub{p} \lesssim 13 r\sub{g}$ should be able to match our current observational constraints. However, the EMRB is an independent measurement. Accuracy of $1\%$ could be possible if $r\sub{p} \lesssim 8 r\sub{g}$.
+
+The spin is less well understood. To obtain an uncertainty of $0.1$, comparable to that achieved in X-ray measurements of active galactic nuclei, it appears that the periapsis needs to be $r\sub{p} \lesssim 11 r\sub{g}$. For smaller periapses, the uncertainty can be much smaller, indicating that an EMRB could be an excellent probe.
 
 We have no {\it a priori} knowledge about the CO or its orbit, so anything we can deduce about its initial position, angular momentum or mass would be new. Measurements of the mass are only useful if $\sigma_\mu/\mu$ is less than 1. From our power law, this would occur for a $1.4 M_\odot$ ($10 M_\odot$) object when $\rho \simeq 2.00$ ($1.88$). Since we would only expect to detect signals with SNRs of order of a few, we conclude that any detectable signal gives us some constraint on the compact object's mass. An uncertainty of $10\%$ would be possible for $\rho \simeq 21.7$ ($20.2$).
 
@@ -709,9 +732,6 @@ Similarly, we have no information on the orientation of the MBH, so any measurem
 
 We have existing measurements for the position of the MBH. The current constraints on $\overline{\Theta}$ and $\overline{\Phi}$ cannot be matched by observing EMRBs. The uncertainty in $\ln R_0$ based on existing measurements is $\sigma_{\ln R_0}^0\simeq 0.042$. This could be bettered by an EMRB with $\rho \simeq 2.68$ ($2.75$).
 
-Of paramount interest are the MBH mass and spin. The current uncertainty in the mass is $\sigma_{M_\bullet}^0 = 0.36 \times 10^6 M_\odot$. This can be equalled for very low SNR, $\rho \simeq 0.11$ ($0.12$), so any detection should be able to improve measurement for $M_\bullet$. A $0.1\%$ accuracy could be obtained for $\rho \approx 10.4$ ($8.11$).
-
-The spin is less well known. To obtain an uncertainty of $0.1$ would require $\rho \sim 23$ ($\simeq 51.1$) for $a_\ast = 0.0$; $\rho \sim 27$ ($\simeq 47.9$) for $a_\ast = 0.3$; $\rho \sim 28$ ($\simeq 48.3$) for $a_\ast = 0.6$, and $\rho \simeq 23.1$ ($\simeq 23.0$) for $a_\ast = 0.9$. We have used $\sim$ to denote values obtained using the higher SNR piece of the power-law, these values are much less accurate because of the large degree of scatter.
 
 \section{Extra-galactic sources}\label{sec:Extragal}
 
@@ -747,9 +767,9 @@ Triangulum (M33) is believed to not have an MBH. \citet{Merritt2001} use dynamic
 
 \section{Discussion}\label{sec:End}
 
-We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. This assumes that the orbits are parabolic and employs a numerical kludge approximation. The two coordinate schemes for a NK presented here yield almost indistinguishable results. We conclude that either is a valid choice for this purpose. There may be differences of order $10\%$ when the spin is large and the periapse is small ($r\sub{p} \sim 4 r\sub{g}$).
+We have outlined an approximate method of generating gravitational waveforms for EMRBs originating at the GC. This assumes that the orbits are parabolic and employs a numerical kludge approximation. The two coordinate schemes for a NK presented here yield almost indistinguishable results. We conclude that either is a valid choice for this purpose. There may be differences when the spin is large and the periapse is small: $\sim 10\%$ for $r\sub{p} \simeq 4 r\sub{g}$, $\sim 20\%$ for $r\sub{p} \simeq 2 r\sub{g}$.
 
-The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms for large periapses, indicating that they have the correct weak-field form. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses the exact geodesics of the Kerr spacetime. Comparisons with energy fluxes from black hole perturbation theory indicate that typical waveform accuracy may be of order $5\%$, but this is worse for orbits with small periapses, and may be $\sim 20\%$. These errors are much greater than the differences resulting from the use of the alternative coordinate systems.
+The waveforms created appear to be consistent with results obtained using Peters and Mathews waveforms for large periapses, indicating that they have the correct weak-field form. The NK approach should be superior to that of Peters and Mathews in the strong-field regime as it uses the exact geodesics of the Kerr spacetime. Comparisons with energy fluxes from black hole perturbation theory indicate that typical waveform accuracy may be of order $5\%$, but this is worse for orbits with small periapses, and may be $\sim 20\%$. These errors are greater than the differences resulting from the use of the alternative coordinate systems.
 
 The signal-to-noise ratio of bursts is well correlated with the periapsis. Except for the closest orbits ($r\sub{p} \lesssim 7 r\sub{g}$), the SNR (per unit mass) may be reasonably described as having a power-law dependence of
 \begin{equation}
