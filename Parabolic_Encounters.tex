@@ -645,7 +645,33 @@ To investigate the properties of EMRBs, waveforms were computed for a range of d
 
 Orbits were chosen with periapses uniformly distributed in logarithmic space between the MBH's event horizon and $16 r\sub{g}$. The other parameters were chosen randomly from appropriate uniform distributions. 
 
-The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the many orbits the posteriors are far from Gaussian as assumed in the LSA.
+The results of the MCMC runs illustrate why the Fisher matrix approach was insufficient. There are strong and complex parameter dependencies. For the many orbits the posteriors are far from Gaussian as assumed in the LSA. Some example results are shown in \figref{MCMC-1}, \ref{fig:MCMC-32} and \ref{fig:MCMC-3}.
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=\textwidth]{Fig_MCMC_327_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These distributions are fairly cromulent. Angular momentum is in units of $L_\bullet = GM_\bullet c^{-1}$. The input orbit has $\rho = 916$ and $r_\sub{p} = 8.54 r_\sub{g}$.}
+\label{fig:MCMC-1}
+\end{center}
+\end{figure*}
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=\textwidth]{Fig_MCMC_53_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These distributions show definite non-gaussianity. The input orbit has $\rho = 1790$ and $r_\sub{p} = 9.86 r_\sub{g}$.}
+\label{fig:MCMC-1}
+\end{center}
+\end{figure*}
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=\textwidth]{Fig_MCMC_181_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These distributions show complicated degeneracies. The input orbit has $\rho = 590$ and $r_\sub{p} = 11.60 r_\sub{g}$.}
+\label{fig:MCMC-1}
+\end{center}
+\end{figure*}
+The first is fairly well-behaved. It is almost Gaussian, but we see some asymmetries and imperfections. There are also strong degeneracies, indicated by needle-like distributions. This is a fairly standard example: there are runs which are closer to being Gaussian (especially at higher SNR), and equally there are tighter degeneracies.
+
+The second shows banana-like degeneracies. These are not uncommon. There are varying degrees of curvature. We see that the more complicated shape makes it harder for the MCMC to converge, so the final distribution is not as smooth as for the first example. The curving degeneracies also bias the one dimensional marginalisations away from the true values.
+
+The third shows more intricate behaviour. This is more rare, but indicates the variety of shapes that is obtainable. Again we see that the convergence is more difficult, so the distributions are rougher around the edges; there is also some biasing due to the curving degeneracies.
 
 These results do not incorporate any priors (save to keep them within realistic ranges). We have not folded in the existing information we have, for example, about the MBH's mass. Therefore, the resulting distributions characterise what we could learn from EMRB's alone. By the time a space-borne GW detector finally flies, we may well have much better constraints on some of the parameters.
 
@@ -716,7 +742,9 @@ The widths show a general trend of decreasing with decreasing periapsis or incre
 \end{figure*}
 These parameters are all defined with reference to the coordinate system established by the direction of the spin axis: for $a_\ast = 0$, there would be ambiguity in defining them. Therefore, it makes sense that they can be more accurately determined for larger spin magnitudes. The width for $a_\ast$, however, shows no clear correlation.
 
-Comparing our MCMC results with Fisher matrix estimates, we see there can be a significant difference. The majority of parameters give results consistent to within an order of magnitude. The best agreement is for $t\sub{p}$, which is largely uncorrelated with the other parameters. The widths for $M_\bullet$, $a_\ast$, $L_\infty$ and $\iota$ show more severe differences; these parameters show the tightest degeneracies. The two methods do show signs of slowly converging with increasing SNR, as expected.
+Comparing our MCMC results with Fisher matrix estimates, we see there can be a significant difference. The majority of parameters give results consistent to within an order (or two) of magnitude. The best agreement is for $t\sub{p}$, which is largely uncorrelated with the other parameters. The widths for $M_\bullet$, $a_\ast$, $L_\infty$ and $\iota$ show more severe differences; these parameters show the tightest degeneracies. The two methods do show signs of slowly converging with increasing SNR, as expected.
+
+As a consistency check, to verify that the mismatch between the Fisher matrix and MCMC results is a consequence of parameter correlations, we calculated one-dimensional Fisher matrices, only varying the MBH mass, and compared these to widths computed from MCMCs only sampling in mass. These were found to be in good agreement. The majority ($\sim 62\%$) have standard deviations consistent to within a factor of two. Approximately $4\%$ differed by more than an order of magnitude: these were exactly the orbits that failed to fulfill the maximum-mismatch criterion.
 
 \subsection{Learning potential}
 
@@ -773,7 +801,6 @@ The signal-to-noise ratio of bursts is well correlated with the periapsis. Excep
 Signals should be detectable for a $1 M_\odot$ ($10 M_\odot$) object if the periapse is $r\sub{p} < 27 r\sub{g}$ ($r\sub{p} < 65 r\sub{g}$), corresponding to a physical scale of $1.7 \times 10^{11}\units{m}$ ($4.1 \times 10^{11}\units{m}$) or $5.6 \times 10^{-6}\units{pc}$ ($1.3 \times 10^{-5}\units{pc}$).
 
 Using the NK waveforms we conducted a trial investigation, using Fisher matrix analysis, into how accurately we could infer parameters of the galactic centre's MBH should such an EMRB be observed. However, we found that the LSA does not hold for these burst signals over a wide range of SNR. This demonstrates the necessity of checking the LSA before quoting the results of a Fisher matrix analysis~\citep{Vallisneri2008}.
-
 
 
 Potentially, it is possible to determine very precisely the key parameters defining the MBH's mass and spin, if the orbit gets close enough to the MBH. From our investigation it appears that we can achieve good results from a single EMRB with periapsis of $r\sub{p} \simeq 10 r\sub{g}$ for a $10 M_\odot$ CO. This translates to a distance of $6 \times 10^{10}\units{m}$ or $2 \times 10^{-6}\units{pc}$. Orbits closer than this would be even better, and place stricter constraints. The best orbits yield uncertainties of almost one part in $10^5$ for the MBH mass and spin, far exceeding existing techniques. Conversely, orbits with $r\sub{p} \gtrsim 20 r\sub{g}$ are unlikely to provide any useful information.
