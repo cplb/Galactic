@@ -416,7 +416,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="0"
      inkscape:zoom="0.70710678"
-     inkscape:cx="1267.4368"
+     inkscape:cx="1046.8195"
      inkscape:cy="-1186.2411"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -446,7 +446,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -488,7 +488,7 @@
        id="path2856"
        inkscape:connector-type="polyline" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);display:inline"
+       style="fill:none;stroke:#000000;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);display:inline"
        d="M 380.79895,2332.1633 500.64139,2212.3208"
        id="path2856-4"
        inkscape:connector-type="polyline" />
@@ -691,7 +691,7 @@
        transform="matrix(0.50087167,-1.4012387,1.5365886,1.4559901,-2879.7593,350.19186)"
        sodipodi:open="true" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);display:inline"
+       style="fill:none;stroke:#000000;stroke-width:2.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart);display:inline"
        d="M 1020.0402,1939.2704 930,2132.3622"
        id="path2856-9"
        inkscape:connector-type="polyline" />
@@ -707,7 +707,7 @@
          x="878.00781"
          y="2058.6582">£</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:7.6, 3.8, 1.9, 3.8;stroke-dashoffset:0;marker-start:url(#Arrow1Lstart);display:inline"
+       style="fill:none;stroke:#000000;stroke-width:2.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:8.4,4.2,2.1,4.2;stroke-dashoffset:0;marker-start:url(#Arrow1Lstart);display:inline"
        d="m 930,1919.309 0,213.0532"
        id="path2856-1"
        inkscape:connector-type="polyline" />
@@ -735,7 +735,7 @@
          y="1934.022"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:LMMathSymbols10;-inkscape-font-specification:LMMathSymbols10">¤</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.89999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:7.5999999, 3.79999995, 1.89999998, 3.79999995;stroke-dashoffset:0;marker-start:url(#Arrow1Lstart);display:inline"
+       style="fill:none;stroke:#000000;stroke-width:2.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:9.2,4.6,2.3,4.6;stroke-dashoffset:0;marker-start:url(#Arrow1Lstart);display:inline"
        d="M 810.15756,2252.2047 930,2132.3622"
        id="path2856-4-1"
        inkscape:connector-type="polyline" />
