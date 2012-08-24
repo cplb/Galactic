@@ -5,10 +5,6 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{Alexander \& Hopman(2009)}]{Alexander2009}
-Alexander, T., \& Hopman, C. 2009, The Astrophysical Journal, 697, 1861.
-  \urlprefix\url{http://stacks.iop.org/0004-637X/697/i=2/a=1861}
-
 \bibitem[{Amaro-Seoane et~al.(2012)Amaro-Seoane, Aoudia, Babak, Binetruy,
   Berti, Bohe, Caprini, Colpi, Cornish, Danzmann, Dufaux, Gair, Jennrich,
   Jetzer, Klein, Lang, Lobo, Littenberg, McWilliams, Nelemans, Petiteau,
@@ -20,73 +16,33 @@ Amaro-Seoane, P., Aoudia, S., Babak, S., Binetruy, P., Berti, E., Bohe, A.,
   T., McWilliams, S.~T., Nelemans, G., Petiteau, A., Porter, E.~K., Schutz,
   B.~F., Sesana, A., Stebbins, R., Sumner, T., Vallisneri, M., Vitale, S.,
   Volonteri, M., \& Ward, H. 2012, Classical and Quantum Gravity, 29, 124016.
-  \eprint{1202.0839},
-  \urlprefix\url{http://stacks.iop.org/0264-9381/29/i=12/a=124016?key=crossref%
-.4e517133c72b0340ee27d32c5ee1c2e2}
+  \eprint{1202.0839}
 
 \bibitem[{Amaro-Seoane et~al.(2007)Amaro-Seoane, Gair, Freitag, Miller, Mandel,
   Cutler, \& Babak}]{Amaro-Seoane2007}
 Amaro-Seoane, P., Gair, J.~R., Freitag, M., Miller, M.~C., Mandel, I., Cutler,
-  C.~J., \& Babak, S. 2007, Classical and Quantum Gravity, 24, R113.
-  \urlprefix\url{http://stacks.iop.org/0264-9381/24/i=17/a=R01}
+  C.~J., \& Babak, S. 2007, Classical and Quantum Gravity, 24, R113
 
 \bibitem[{Babak et~al.(2007)Babak, Fang, Gair, Glampedakis, \&
   Hughes}]{Babak2007}
 Babak, S., Fang, H., Gair, J., Glampedakis, K., \& Hughes, S. 2007, Physical
-  Review D, 75, 024005. \urlprefix\url{http://arxiv.org/abs/gr-qc/0607007}
-
-\bibitem[{Bahcall \& Wolf(1977)}]{Bahcall1977}
-Bahcall, J.~N., \& Wolf, R.~A. 1977, The Astrophysical Journal, 216, 883.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/1977ApJ...216..883B}
+  Review D, 75, 024005
 
 \bibitem[{Barack(2009)}]{Barack2009}
-Barack, L. 2009, Classical and Quantum Gravity, 26, 213001. \eprint{0908.1664},
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2009CQGra..26u3001B}
+Barack, L. 2009, Classical and Quantum Gravity, 26, 213001. \eprint{0908.1664}
 
 \bibitem[{Bekenstein(1973)}]{Bekenstein1973}
-Bekenstein, J.~D. 1973, The Astrophysical Journal, 183, 657.
-  \urlprefix\url{http://adsabs.harvard.edu/doi/10.1086/152255}
-
-\bibitem[{Bender et~al.(1998)Bender, Brillet, Ciufolini, Cruise, Cutler,
-  Danzmann, Fidecaro, Folkner, Hough, McNamara, Peterseim, Robertson,
-  Rodrigues, R\"{u}diger, Sandford, Sch\"{a}fer, Schilling, Schutz, Speake,
-  Stebbins, Sumner, Touboul, Vinet, Vitale, Ward, \& Winkler}]{Bender1998}
-Bender, P., Brillet, A., Ciufolini, I., Cruise, A.~M., Cutler, C., Danzmann,
-  K., Fidecaro, F., Folkner, W.~M., Hough, J., McNamara, P., Peterseim, M.,
-  Robertson, D., Rodrigues, M., R\"{u}diger, A., Sandford, M., Sch\"{a}fer, G.,
-  Schilling, R., Schutz, B., Speake, C., Stebbins, R.~T., Sumner, T., Touboul,
-  P., Vinet, J., Vitale, S., Ward, H., \& Winkler, W. 1998, {LISA Pre-Phase A
-  Report}, Tech. rep., Max-Planck-Institut f\"{u}r Quantenoptik, Garching
-
-\bibitem[{Berti et~al.(2007)Berti, Cardoso, Gonzalez, Sperhake, Hannam, Husa,
-  \& Br{\"u}gmann}]{Berti2007}
-Berti, E., Cardoso, V., Gonzalez, J.~A., Sperhake, U., Hannam, M., Husa, S., \&
-  Br{\"u}gmann, B. 2007, Physical Review D, 76, 064034.
-  \urlprefix\url{http://prd.aps.org/abstract/PRD/v76/i6/e064034}
-
-\bibitem[{Berti \& Volonteri(2008)}]{Berti2008}
-Berti, E., \& Volonteri, M. 2008, The Astrophysical Journal, 684, 822.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2008ApJ...684..822B}
+Bekenstein, J.~D. 1973, The Astrophysical Journal, 183, 657
 
 \bibitem[{Boyer \& Lindquist(1967)}]{Boyer1967}
-Boyer, R.~H., \& Lindquist, R.~W. 1967, Journal of Mathematical Physics, 8,
-  265. \urlprefix\url{http://jmp.aip.org/jmapaq/v8/i2/p265_s1}
-
-\bibitem[{Carter(1971)}]{Carter1971}
-Carter, B. 1971, Physical Review Letters, 26, 331.
-  \urlprefix\url{http://prl.aps.org/abstract/PRL/v26/i6/p331_1}
+Boyer, R.~H., \& Lindquist, R.~W. 1967, Journal of Mathematical Physics, 8, 265
 
 \bibitem[{Chandrasekhar(1998)}]{Chandrasekhar1998}
 Chandrasekhar, S. 1998, {The Mathematical Theory of Black Holes}, Oxford
   Classic Texts in the Physical Sciences (Oxford: Oxford University Press)
 
-\bibitem[{Cutler \& Flanagan(1994)}]{Cutler1994}
-Cutler, C., \& Flanagan, E.~E. 1994, Physical Review D, 49, 2658.
-  \urlprefix\url{http://prd.aps.org/abstract/PRD/v49/i6/p2658_1}
-
 \bibitem[{Danzmann \& R\"{u}diger(2003)}]{Danzmann2003}
-Danzmann, K., \& R\"{u}diger, A. 2003, Classical and Quantum Gravity, 20, S1.
-  \urlprefix\url{http://stacks.iop.org/0264-9381/20/i=10/a=301}
+Danzmann, K., \& R\"{u}diger, A. 2003, Classical and Quantum Gravity, 20, S1
 
 \bibitem[{Doeleman et~al.(2008)Doeleman, Weintroub, Rogers, Plambeck, Freund,
   Tilanus, Friberg, Ziurys, Moran, Corey, Young, Smythe, Titus, Marrone,
@@ -97,253 +53,93 @@ Doeleman, S.~S., Weintroub, J., Rogers, A. E.~E., Plambeck, R., Freund, R.,
   Young, K.~H., Smythe, D.~L., Titus, M., Marrone, D.~P., Cappallo, R.~J.,
   Bock, D. C.-J., Bower, G.~C., Chamberlin, R., Davis, G.~R., Krichbaum, T.~P.,
   Lamb, J., Maness, H., Niell, A.~E., Roy, A., Strittmatter, P., Werthimer, D.,
-  Whitney, A.~R., \& Woody, D. 2008, Nature, 455, 78.
-  \urlprefix\url{http://arxiv.org/abs/0809.2442}
-
-\bibitem[{Ferrarese \& Merritt(2000)}]{Ferrarese2000}
-Ferrarese, L., \& Merritt, D. 2000, The Astrophysical Journal, 539, L9.
-  \urlprefix\url{http://stacks.iop.org/1538-4357/539/i=1/a=L9}
+  Whitney, A.~R., \& Woody, D. 2008, Nature, 455, 78
 
 \bibitem[{Gair et~al.(2005)Gair, Kennefick, \& Larson}]{Gair2005}
 Gair, J.~R., Kennefick, D.~J., \& Larson, S.~L. 2005, Physical Review D, 72,
-  084009. \urlprefix\url{http://arxiv.org/abs/gr-qc/0508049}
-
-\bibitem[{Gammie et~al.(2004)Gammie, Shapiro, \& McKinney}]{Gammie2004}
-Gammie, C.~F., Shapiro, S.~L., \& McKinney, J.~C. 2004, The Astrophysical
-  Journal, 602, 312.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2004ApJ...602..312G}
-
-\bibitem[{Gebhardt et~al.(2000)Gebhardt, Bender, Bower, Dressler, Faber,
-  Filippenko, Green, Grillmair, Ho, Kormendy, Lauer, Magorrian, Pinkney,
-  Richstone, \& Tremaine}]{Gebhardt2000}
-Gebhardt, K., Bender, R., Bower, G., Dressler, A., Faber, S.~M., Filippenko,
-  A.~V., Green, R., Grillmair, C., Ho, L.~C., Kormendy, J., Lauer, T.~R.,
-  Magorrian, J., Pinkney, J., Richstone, D., \& Tremaine, S. 2000, The
-  Astrophysical Journal, 539, L13.
-  \urlprefix\url{http://stacks.iop.org/1538-4357/539/i=1/a=L13}
+  084009
 
 \bibitem[{Ghez et~al.(2008)Ghez, Salim, Weinberg, Lu, Do, Dunn, Matthews,
   Morris, Yelda, Becklin, Kremenek, Milosavljevic, \& Naiman}]{Ghez2008}
 Ghez, A.~M., Salim, S., Weinberg, N.~N., Lu, J.~R., Do, T., Dunn, J.~K.,
   Matthews, K., Morris, M.~R., Yelda, S., Becklin, E.~E., Kremenek, T.,
-  Milosavljevic, M., \& Naiman, J. 2008, The Astrophysical Journal, 689, 1044.
-  \urlprefix\url{http://stacks.iop.org/0004-637X/689/i=2/a=1044}
+  Milosavljevic, M., \& Naiman, J. 2008, The Astrophysical Journal, 689, 1044
 
 \bibitem[{Gillessen et~al.(2009)Gillessen, Eisenhauer, Trippe, Alexander,
   Genzel, Martins, \& Ott}]{Gillessen2009}
 Gillessen, S., Eisenhauer, F., Trippe, S., Alexander, T., Genzel, R., Martins,
-  F., \& Ott, T. 2009, The Astrophysical Journal, 692, 1075.
-  \urlprefix\url{http://arxiv.org/abs/0810.4674}
+  F., \& Ott, T. 2009, The Astrophysical Journal, 692, 1075
 
 \bibitem[{Glampedakis(2005)}]{Glampedakis2005}
-Glampedakis, K. 2005, Classical and Quantum Gravity, 22, S605.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2005CQGra..22S.605G}
-
-\bibitem[{Glampedakis \& Kennefick(2002)}]{Glampedakis2002a}
-Glampedakis, K., \& Kennefick, D. 2002, Physical Review D, 66, 044002.
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.66.044002}
-
-\bibitem[{Gonz{\'a}lez et~al.(2007)Gonz{\'a}lez, Sperhake, Br{\"u}gmann,
-  Hannam, \& Husa}]{Gonzalez2007}
-Gonz{\'a}lez, J.~A., Sperhake, U., Br{\"u}gmann, B., Hannam, M., \& Husa, S.
-  2007, Physical Review Letters, 98, 091101.
-  \urlprefix\url{http://prl.aps.org/abstract/PRL/v98/i9/e091101}
-
-\bibitem[{Graham(2007)}]{Graham2007}
-Graham, A.~W. 2007, Monthly Notices of the Royal Astronomical Society, 379,
-  711. \urlprefix\url{http://adsabs.harvard.edu/abs/2007MNRAS.379..711G}
-
-\bibitem[{Graham et~al.(2001)Graham, Erwin, Caon, \& Trujillo}]{Graham2001}
-Graham, A.~W., Erwin, P., Caon, N., \& Trujillo, I. 2001, The Astrophysical
-  Journal, 563, L11.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2001ApJ...563L..11G}
+Glampedakis, K. 2005, Classical and Quantum Gravity, 22, S605
 
 \bibitem[{Graham et~al.(2011)Graham, Onken, Athanassoula, \&
   Combes}]{Graham2011}
 Graham, A.~W., Onken, C.~A., Athanassoula, E., \& Combes, F. 2011, Monthly
-  Notices of the Royal Astronomical Society, 412, 2211.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2011MNRAS.412.2211G}
-
-\bibitem[{Haiman \& Quataert(2004)}]{Haiman2004}
-Haiman, Z., \& Quataert, E. 2004, {The Formation and Evolution of the First
-  Massive Black Holes} (Dordrecht: Kluwer Academic Publishers), chap.~5,
-  Astrophysics and Space Science Library, 147. \eprint{0403225},
-  \urlprefix\url{http://arxiv.org/abs/astro-ph/0403225}
-
-\bibitem[{H{\"a}ring \& Rix(2004)}]{Haring2004}
-H{\"a}ring, N., \& Rix, H.-W. 2004, The Astrophysical Journal, 604, L89.
-  \urlprefix\url{http://stacks.iop.org/1538-4357/604/i=2/a=L89}
-
-\bibitem[{Hawking(1972)}]{Hawking1972}
-Hawking, S.~W. 1972, Communications in Mathematical Physics, 25, 152.
-  \urlprefix\url{http://www.springerlink.com/content/w5018k0032435281}
-
-\bibitem[{Hobson et~al.(2006)Hobson, Efstathiou, \& Lasenby}]{Hobson2006}
-Hobson, M.~P., Efstathiou, G., \& Lasenby, A. 2006, {General Relativity: An
-  Introduction for Physicists} (Cambridge: Cambridge University Press)
+  Notices of the Royal Astronomical Society, 412, 2211
 
 \bibitem[{Hopman et~al.(2007)Hopman, Freitag, \& Larson}]{Hopman2007}
 Hopman, C., Freitag, M., \& Larson, S.~L. 2007, Monthly Notices of the Royal
-  Astronomical Society, 378, 129.
-  \urlprefix\url{http://www.blackwell-synergy.com/doi/abs/10.1111/j.1365-2966.%
-2007.11758.x}
-
-\bibitem[{Hughes \& Blandford(2003)}]{Hughes2003}
-Hughes, S.~A., \& Blandford, R.~D. 2003, The Astrophysical Journal, 585, L101.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2003ApJ...585L.101H}
-
-\bibitem[{Israel(1967)}]{Israel1967}
-Israel, W. 1967, Physical Review, 164, 1776.
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRev.164.1776}
-
-\bibitem[{Israel(1968)}]{Israel1968}
---- 1968, Communications in Mathematical Physics, 8, 245.
-  \urlprefix\url{http://www.springerlink.com/content/j414u67684rv167k}
+  Astronomical Society, 378, 129
 
 \bibitem[{Jahnke \& Macci\`{o}(2011)}]{Jahnke2011}
 Jahnke, K., \& Macci\`{o}, A.~V. 2011, The Astrophysical Journal, 734, 92.
-  \eprint{1006.0482},
-  \urlprefix\url{http://stacks.iop.org/0004-637X/734/i=2/a=92?key=crossref.296%
-e1352f57a3338d09967e6b01495f4}
-
-\bibitem[{Jennrich et~al.(2011)Jennrich, Binetruy, Colpi, Danzmann, Jetzer,
-  Lobo, Nelemans, Schutz, Stebbins, Sumner, Vitale, \& Ward}]{Jennrich2011}
-Jennrich, O., Binetruy, P., Colpi, M., Danzmann, K., Jetzer, P., Lobo, A.,
-  Nelemans, G., Schutz, B., Stebbins, R., Sumner, T., Vitale, S., \& Ward, H.
-  2011, {NGO Revealing a hidden Universe: opening a new chapter of discovery},
-  Tech. rep., European Space Agency
-
-\bibitem[{King \& Pringle(2006)}]{King2006}
-King, A.~R., \& Pringle, J.~E. 2006, Monthly Notices of the Royal Astronomical
-  Society: Letters, 373, L90.
-  \urlprefix\url{http://www.blackwell-synergy.com/doi/abs/10.1111/j.1745-3933.%
-2006.00249.x}
-
-\bibitem[{King et~al.(2008)King, Pringle, \& Hofmann}]{King2008}
-King, A.~R., Pringle, J.~E., \& Hofmann, J.~A. 2008, Monthly Notices of the
-  Royal Astronomical Society, 385, 1621.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2008MNRAS.385.1621K}
+  \eprint{1006.0482}
 
 \bibitem[{Kormendy \& Richstone(1995)}]{Kormendy1995}
 Kormendy, J., \& Richstone, D. 1995, Annual Review of Astronomy and
-  Astrophysics, 33, 581.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/1995ARA%26A..33..581K}
+  Astrophysics, 33, 581
 
 \bibitem[{Lynden-Bell \& Rees(1971)}]{Lynden-Bell1971}
 Lynden-Bell, D., \& Rees, M.~J. 1971, Monthly Notices of the Royal Astronomical
-  Society, 152, 461.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/1971MNRAS.152..461L}
-
-\bibitem[{MacKay(2003)}]{MacKay2003}
-MacKay, D. J.~C. 2003, {Information Theory, Inference and Learning Algorithms}
-  (Cambridge: Cambridge University Press).
-  \urlprefix\url{http://www.amazon.com/Information-Theory-Inference-Learning-A%
-lgorithms/dp/0521642981}
+  Society, 152, 461
 
 \bibitem[{Magorrian et~al.(1998)Magorrian, Tremaine, Richstone, Bender, Bower,
   Dressler, Faber, Gebhardt, Green, Grillmair, Kormendy, \&
   Lauer}]{Magorrian1998}
 Magorrian, J., Tremaine, S., Richstone, D., Bender, R., Bower, G., Dressler,
   A., Faber, S.~M., Gebhardt, K., Green, R., Grillmair, C., Kormendy, J., \&
-  Lauer, T. 1998, The Astronomical Journal, 115, 2285.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/1998AJ....115.2285M}
-
-\bibitem[{Malbon et~al.(2007)Malbon, Baugh, Frenk, \& Lacey}]{Malbon2007}
-Malbon, R.~K., Baugh, C.~M., Frenk, C.~S., \& Lacey, C.~G. 2007, Monthly
-  Notices of the Royal Astronomical Society, 382, 1394. \eprint{0607424},
-  \urlprefix\url{http://doi.wiley.com/10.1111/j.1365-2966.2007.12317.x}
-
-\bibitem[{Marconi \& Hunt(2003)}]{Marconi2003}
-Marconi, A., \& Hunt, L.~K. 2003, The Astrophysical Journal, 589, L21.
-  \urlprefix\url{http://stacks.iop.org/1538-4357/589/i=1/a=L21}
+  Lauer, T. 1998, The Astronomical Journal, 115, 2285
 
 \bibitem[{Peng(2007)}]{Peng2007}
-Peng, C.~Y. 2007, The Astrophysical Journal, 671, 1098.
-  \urlprefix\url{http://iopscience.iop.org/0004-637X/671/2/1098}
+Peng, C.~Y. 2007, The Astrophysical Journal, 671, 1098
 
 \bibitem[{Press(1977)}]{Press1977}
-Press, W. 1977, Physical Review D, 15, 965.
-  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.15.965}
+Press, W. 1977, Physical Review D, 15, 965
 
 \bibitem[{Rees(1984)}]{Rees1984}
-Rees, M.~J. 1984, Annual Review of Astronomy and Astrophysics, 22, 471.
-  \urlprefix\url{http://arjournals.annualreviews.org/doi/abs/10.1146/annurev.a%
-a.22.090184.002351}
+Rees, M.~J. 1984, Annual Review of Astronomy and Astrophysics, 22, 471
 
 \bibitem[{Reid et~al.(2003)Reid, Menten, Genzel, Ott, Sch\"{o}del, \&
   Brunthaler}]{Reid2003}
 Reid, M.~J., Menten, K.~M., Genzel, R., Ott, T., Sch\"{o}del, R., \&
-  Brunthaler, A. 2003, Astronomische Nachrichten, 324, 505.
-  \urlprefix\url{http://www3.interscience.wiley.com/journal/106559416/abstract}
+  Brunthaler, A. 2003, Astronomische Nachrichten, 324, 505
 
 \bibitem[{Reid et~al.(1999)Reid, Readhead, Vermeulen, \& Treuhaft}]{Reid1999}
 Reid, M.~J., Readhead, A. C.~S., Vermeulen, R.~C., \& Treuhaft, R.~N. 1999, The
-  Astrophysical Journal, 524, 816.
-  \urlprefix\url{http://stacks.iop.org/0004-637X/524/i=2/a=816}
-
-\bibitem[{Robinson(1975)}]{Robinson1975}
-Robinson, D. 1975, Physical Review Letters, 34, 905.
-  \urlprefix\url{http://prl.aps.org/abstract/PRL/v34/i14/p905_1}
+  Astrophysical Journal, 524, 816
 
 \bibitem[{Rubbo et~al.(2006)Rubbo, Holley-Bockelmann, \& Finn}]{Rubbo2006}
 Rubbo, L.~J., Holley-Bockelmann, K., \& Finn, L.~S. 2006, The Astrophysical
-  Journal, 649, L25.
-  \urlprefix\url{http://stacks.iop.org/1538-4357/649/i=1/a=L25}
+  Journal, 649, L25
 
 \bibitem[{Ruffini \& Sasaki(1981)}]{Ruffini1981}
-Ruffini, R., \& Sasaki, M. 1981, Progress of Theoretical Physics, 66, 1627.
-  \urlprefix\url{http://ptp.ipap.jp/link?PTP/66/1627/}
+Ruffini, R., \& Sasaki, M. 1981, Progress of Theoretical Physics, 66, 1627
 
 \bibitem[{Sathyaprakash \& Schutz(2009)}]{Sathyaprakash2009}
-Sathyaprakash, B., \& Schutz, B.~F. 2009, Living Reviews in Relativity, 12.
-  \urlprefix\url{http://www.livingreviews.org/lrr-2009-2/}
-
-\bibitem[{So{\l}tan(1982)}]{Soltan1982}
-So{\l}tan, A. 1982, Monthly Notices of the Royal Astronomical Society, 200,
-  115. \urlprefix\url{http://adsabs.harvard.edu/abs/1982MNRAS.200..115S}
-
-\bibitem[{Tremaine et~al.(2002)Tremaine, Gebhardt, Bender, Bower, Dressler,
-  Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer, Magorrian, Pinkney,
-  \& Richstone}]{Tremaine2002}
-Tremaine, S., Gebhardt, K., Bender, R., Bower, G., Dressler, A., Faber, S.~M.,
-  Filippenko, A.~V., Green, R., Grillmair, C., Ho, L.~C., Kormendy, J., Lauer,
-  T.~R., Magorrian, J., Pinkney, J., \& Richstone, D. 2002, The Astrophysical
-  Journal, 574, 740.
-  \urlprefix\url{http://stacks.iop.org/0004-637X/574/i=2/a=740}
-
-\bibitem[{Vallisneri(2008)}]{Vallisneri2008}
-Vallisneri, M. 2008, Physical Review D, 77, 042001.
-  \urlprefix\url{http://arxiv.org/abs/gr-qc/0703086}
+Sathyaprakash, B., \& Schutz, B.~F. 2009, Living Reviews in Relativity, 12
 
 \bibitem[{Volonteri(2010)}]{Volonteri2010}
-Volonteri, M. 2010, The Astronomy and Astrophysics Review, 18, 279.
-  \urlprefix\url{http://www.springerlink.com/content/ch3146041167p225/}
-
-\bibitem[{Volonteri et~al.(2005)Volonteri, Madau, Quataert, \&
-  Rees}]{Volonteri2005}
-Volonteri, M., Madau, P., Quataert, E., \& Rees, M.~J. 2005, The Astrophysical
-  Journal, 620, 69.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2005ApJ...620...69V}
-
-\bibitem[{Volonteri \& Natarajan(2009)}]{Volonteri2009}
-Volonteri, M., \& Natarajan, P. 2009, Monthly Notices of the Royal Astronomical
-  Society, 400, 1911.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2009MNRAS.400.1911V}
-
-\bibitem[{Yu \& Tremaine(2002)}]{Yu2002}
-Yu, Q., \& Tremaine, S. 2002, Monthly Notices of the Royal Astronomical
-  Society, 335, 965.
-  \urlprefix\url{http://adsabs.harvard.edu/abs/2002MNRAS.335..965Y}
+Volonteri, M. 2010, The Astronomy and Astrophysics Review, 18, 279
 
 \bibitem[{Yunes et~al.(2008)Yunes, Sopuerta, Rubbo, \&
   Holley-Bockelmann}]{Yunes2008}
 Yunes, N., Sopuerta, C.~F., Rubbo, L.~J., \& Holley-Bockelmann, K. 2008, The
-  Astrophysical Journal, 675, 604. \eprint{0704.2612},
-  \urlprefix\url{http://arxiv.org/abs/0704.2612}
+  Astrophysical Journal, 675, 604. \eprint{0704.2612}
 
 \bibitem[{Yusef-Zadeh et~al.(1999)Yusef-Zadeh, Choate, \&
   Cotton}]{Yusef-Zadeh1999}
 Yusef-Zadeh, F., Choate, D., \& Cotton, W. 1999, The Astrophysical Journal,
-  518, L33. \urlprefix\url{http://adsabs.harvard.edu/abs/1999ApJ...518L..33Y}
+  518, L33
 
 \end{thebibliography}
