@@ -35,9 +35,10 @@ Baumgardt H.,  Makino J.,    Ebisuzaki T.,  2004, The Astrophysical Journal,
 Bekenstein J.~D.,  Maoz E.,  1992, The Astrophysical Journal, 390, 79
 
 \bibitem[\protect\citeauthoryear{Binney \& Tremaine}{Binney \&
-  Tremaine}{1987}]{Binney1987}
-Binney J.,  Tremaine S.,  1987, {Galactic Dynamics}, first edn.
-Princeton University Press, Princeton
+  Tremaine}{2008}]{Binney2008}
+Binney J.,  Tremaine S.,  2008, {Galactic Dynamics}, second edn.
+Princeton Series in Astrophysics, Princeton University Press, Princeton, New
+  Jersey
 
 \bibitem[\protect\citeauthoryear{Chandrasekhar}{Chandrasekhar}{1941a}]{Chandra%
 sekhar1941a}
@@ -144,6 +145,14 @@ Hopman C.,  Alexander T.,  2006b, The Astrophysical Journal, 645, L133
 Hopman C.,  Freitag M.,    Larson S.~L.,  2007, Monthly Notices of the Royal
   Astronomical Society, 378, 129
 
+\bibitem[\protect\citeauthoryear{Just, Khan, Berczik, Ernst \& Spurzem}{Just
+  et~al.}{2011}]{Just2011}
+Just A.,  Khan F.~M.,  Berczik P.,  Ernst A.,    Spurzem R.,  2011, Monthly
+  Notices of the Royal Astronomical Society, 411, 653
+
+\bibitem[\protect\citeauthoryear{Kesden}{Kesden}{2012}]{Kesden2012}
+Kesden M.,  2012, Physical Review D, 85, 024037(9)
+
 \bibitem[\protect\citeauthoryear{Keshet, Hopman \& Alexander}{Keshet
   et~al.}{2009}]{Keshet2009}
 Keshet U.,  Hopman C.,    Alexander T.,  2009, The Astrophysical Journal, 698,
@@ -161,7 +170,8 @@ Course of Theoretical Physics, Pergamon Press, London
 
 \bibitem[\protect\citeauthoryear{Li, Liu, Berczik, Chen \& Spurzem}{Li
   et~al.}{2012}]{Li2012}
-Li S.,  Liu F.~K.,  Berczik P.,  Chen X.,    Spurzem R.,  2012, p.~38
+Li S.,  Liu F.~K.,  Berczik P.,  Chen X.,    Spurzem R.,  2012, The
+  Astrophysical Journal, 748, 65
 
 \bibitem[\protect\citeauthoryear{Lightman \& Shapiro}{Lightman \&
   Shapiro}{1977}]{Lightman1977}
@@ -298,7 +308,8 @@ Tremaine S.,  Gebhardt K.,  Bender R.,  Bower G.,  Dressler A.,  Faber S.~M.,
 
 \bibitem[\protect\citeauthoryear{Tremaine \& Weinberg}{Tremaine \&
   Weinberg}{1984}]{Tremaine1984}
-Tremaine S.,  Weinberg M.,  1984, Royal Astronomical Society, 209, 729
+Tremaine S.,  Weinberg M.,  1984, Monthly Notices of the Royal Astronomical
+  Society, 209, 729
 
 \bibitem[\protect\citeauthoryear{Turner}{Turner}{1977}]{Turner1977}
 Turner M.,  1977, The Astrophysical Journal, 216, 610
