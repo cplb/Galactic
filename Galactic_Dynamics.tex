@@ -40,7 +40,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 
 \date{\today}
 
-\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2011}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2012}
 
 \maketitle
 
@@ -55,6 +55,28 @@ black hole physics -- celestial mechanics -- Galaxy: centre -- gravitational wav
 \end{keywords}
 
 \section{Introduction}
+
+The most compelling evidence for the existence of astrophysical black holes (BHs) come from the measurement of stellar orbits at the centre of the Galaxy. The stars are found to orbit an object of mass $M_\bullet \simeq 4 \times 10^6 M_\odot$ coincident with the compact radio source Sagittarius A\ast \citep{Reid2004, Ghez2008, Gillessen2009}. This is the nearest member of a population massive black holes (MBHs; \citeal{Volonteri2010}) that are believed to occupy the centre of galaxies \citep{Lynden-Bell1969, Lynden-Bell1971, Rees1984, Ferrarese2005}. The Galactic Centre is an ideal laboratory for investigating the properties of an MBH and its surrounding nuclear star cluster \citep{Genzel2010}.
+
+One means of investigating the properties of MBHs is through gravitational waves (GWs). A stellar mass compact object (CO), such as a main sequence (MS) star, white dwarf (WD), neutron star or stellar mass BH, emits gravitational radiation as it orbits the MBH. On account of the extreme-mass-ratio between the two bodies, we can approximate the CO as moving in the background spacetime of the MBH.
+
+A space-borne detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}. There are currently no funded space-borne detector missions. However, the European Space Agency's \textit{LISA Pathfinder} will launch in 2014 and demonstrate the key technologies required for successful space-borne mission \citep{Anza2004, Antonucci2012}.
+
+The gravitational waveforms emitted from these extreme-mass-ratio systems have been much studied \citep{Glampedakis2005, Barack2009}. The GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The primary focus has been upon the later stages of the orbital evolution, immediately preceding plunge. By this stage, the orbit has circularised and emits continuously within the detector's frequency band. These signals are extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}). EMRIs can be observed over many orbits, allowing exquisitely high signal-to-noise ratios (SNRs) to accumulate. This makes them excellent probes of the background spacetime.
+
+EMRIs evolve form more eccentric orbits. These initial orbits may be the results of scattering from two-body encounters. Rather than emitting a continuously detectable signal, highly eccentric orbits only emit significant radiation in a burst around the point of closest approach to the MBH. These are extreme mass-ratio bursts (EMRBs; \citealt*{Rubbo2006}).
+
+EMRBs are much shorter in duration than EMRIs. This means they do not accumulate as high SNRs, or produce as detailed maps of the spacetime. They are therefore less valued prizes. However, they may still be an interesting signal. As an object inspirals it emits many bursts before eventually settling into a low eccentricity EMRI. Some obejcts will be scattered by two-body encounters and never reach the EMRI phase \citep{Alexander2003}. Thus, there are many EMRBs per EMRI, although this does not necessarily translate to there being more detectable EMRBs that EMRIs.
+
+For EMRBs to be a useful astronomical signal we require three things: that the bursts contain sufficient information to improve our knowledge of their source systems; that their event rate is sufficiently high that we could expect to observe them over a mission life time, and that the signals can be successfully extracted from the data stream.
+
+We have previous addressed the first concern: EMRBs can give good constraints on the key parameters describing the Galaxy's MBH if the periapse distance is $r\sub{p} \lesssim 10 r\sub{g}$, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius. This would allow us to improve upon the current uncertainty in the mass measurement of $8\%$ \citep{Gillessen2009}. In addition, we could also measure the spin magnitude to a precision of $0.1$.
+
+The second concern shall be the subject of this work. Previously, the best estimate for the event rate was \citet*{Hopman2007}. They estimated that the event rate for \textit{LISA} was $\sim 1\units{yr^{-1}}$. We follow a similar approach, but significantly, we improve the calculation of SNR by using numerical kludge waveforms. In addition to this, we extend the analysis by not only considering the number of events that would be detectable, but also how many would be informative.
+
+\section{Waveforms and parameter uncertainties}
+
+
 
 \section{Event rates}
 
@@ -225,6 +247,14 @@ To generate a representative sample for the orbital parameters $e$ and $r\sub{p}
 
 From \eqnref{Gamma} we see that the event rate is highly sensitive to the smallest value of the periapsis. The inner cut-off for $r\sub{p}$ could result from a number of different physical causes. Ultimately the orbits cannot encroach closer to the MBH than its last stable orbit. This depends upon the spin of the MBH, but is of the order of its Schwarzschild radius. Before we reach this point, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, but should hopefully produce reasonable estimates. We consider three processes: tidal disruption by the MBH, gravitational wave inspiral and collisional disruption. Tidal disruption imposes a definite (albeit approximate) cut-off, while the others use statistical arguments; they are therefore true for a typical star, and it is unlikely that a star would be found beyond the imposed limits. For these methods, we will need to define a reference time-scale for relaxation, over which two-body interactions lead to significant changes in the orbital properties of the star. This is done in \secref{Relax}, with further details found in \apref{time-scale}.
 
+The calculated inner cut-offs for the four stellar species are shown in \figref{Cuts}.
+\begin{figure*}
+\begin{center}
+   %\subfigure[{Main sequence stars.}]{\includegraphics[width=0.45\textwidth]{}}
+\caption{Inner cut-off radii for the Galactic Centre as a function of eccentricity.\label{fig:Cuts}}
+  \end{center}
+\end{figure}
+
 \subsubsection{Tidal disruption}
 
 Tidal forces from the MBH can disrupt stars. This occurs at the tidal radius
@@ -328,11 +358,11 @@ The authors are grateful for insightful discussions with Sverre Aarseth. The aut
 
 Chandrasekhar's approach has proved exceedingly successful despite the number of simplifying assumptions inherent in the model which are not strictly applicable to systems such as the Galactic centre. We will not attempt to fix these deficiencies, rather, the only modification to the standard picture shall be to substitute the velocity distribution: while the canonical formulation uses a simple homogeneous Gaussian distribution, we use a distribution derived from the distribution functions \eqnref{Unbound_DF} and \eqnref{Bound_DF}.
 
-Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory \citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}; further extensions have been produced using the tools of linear response theory and the fluctuation-dissipation theory \citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity \citep{Bekenstein1992,Maoz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
+Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory \citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}; modelling energy transfer as anomalous dispersion, which adds higher order moments to the transfer probability \citep{Bar-Or2012}, or using the tools of linear response theory and the fluctuation-dissipation theory \citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity \citep{Bekenstein1992,Maoz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
 
 \subsection{Chandrasekhar's derivation of the change in energy}\label{sec:Chandra}
 
-We consider the interaction of a field star, denoted by 1, with a test star, 2; the centre of gravity and relative velocities are
+We consider the interaction of a field star, denoted by 1, with a test star, 2; the centre-of-gravity and relative velocities are
 \begin{subequations}
 \begin{align}
 \boldsymbol{V}\sub{g} = {} & \recip{m_1 + m_2}\left(m_1 \boldsymbol{v}_1 + m_2 \boldsymbol{v}_2\right);\\
@@ -445,7 +475,7 @@ q = \frac{D_0}{G\left(m_1+m_2\right)}.
 Using \eqnref{V2s} to rearrange, and then integrating by parts gives
 \begin{align}
 J = {} & \recip{4 v_1 v_2} \intd{V_-}{V_+}{\frac{\left(V_+^2 - V^2\right)\left(V^2 - V_-^2\right)}{V^2}\ln\left(1 + q^2V^4\right)}{V} \\
- = {} & \recip{4 v_1 v_2} \left\{\left[\frac{3V_+^2V_-^2 + \left(V_+^2 + V_-^2\right)V^2 - V^4}{3V}\right]^{V_+}_{V_-} - \intd{V_-}{V_+}{\frac{3V_+^2V_-^2 + \left(V_+^2 + V_-^2\right)V^2 - V^4}{3V}\frac{4q^2V^3}{1+ q^2V^4}}{V}\right\};
+ = {} & \recip{4 v_1 v_2} \left\{\left[\frac{3V_+^2V_-^2 + 3\left(V_+^2 + V_-^2\right)V^2 - V^4}{3V} \ln\left(1 + q^2V^4\right)\right]^{V_+}_{V_-} - \intd{V_-}{V_+}{\frac{3V_+^2V_-^2 + 3\left(V_+^2 + V_-^2\right)V^2 - V^4}{3V}\frac{4q^2V^3}{1+ q^2V^4}}{V}\right\};
 \end{align}
 the former piece still contains the logarithmic term which we know must be large. It is therefore the dominant piece of the integral and we neglect the latter \citep{Chandrasekhar1941},
 \begin{equation}
@@ -594,7 +624,7 @@ Making explicit the sum over the different species, the total change in energy s
 \begin{equation}
 \Delta E^2 \approx \sum_M \frac{16}{3}\sqrt{2\pi}G^2 M^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\,\delta t.
 \end{equation}
-The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared
+The relaxation time-scale is the time interval $\delta t$ over which the squared change in energy becomes equal to the kinetic energy of the test star squared \citep{Bar-Or2012}
 \begin{align}
 \tau\sub{R} = {} & \left(\frac{m_2v_2^2}{2}\right)^2\frac{\delta t}{\Delta E^2} \\
  \approx {} & \frac{3v_2^4}{16\sqrt{2\pi}G^2n_\ast\sigma\ln\left(qv_2^2\right)} \left(\sum_M M^2 \left\{k_M \gamma\left(\frac{v_2^2}{2\sigma^2};p_M\right) + C_M\Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\right\}\right)^{-1}.
@@ -747,7 +777,7 @@ Diffusion in angular momentum proceeds over a shorter time, as defined by \eqnre
 
 In deriving the relaxation time-scales it has been necessary to make a number of approximations, both mathematical and physical. The mathematical approximations have been to simplify functional forms and make the computations easier. We have been careful to ensure that the inaccuracies introduced are of the order of a few percent, and thus should be subdominant to the errors inherent from the physical assumptions and uncertainties in astronomical quantities. The physical approximations are more important. There are two key approximations that may limit the validity of the results.
 
-First, it was assumed that the density of stars was uniform. This was a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is certainly not the case that density in the Galactic centre is uniform. However, this approximation is not as bad as it first may seem. As a star travels about the MBH on its orbit it moves through regions of different densities. It therefore samples a range of different density-impact parameter distributions. At a given radius stars will be travelling in a variety of directions meaning that again there will be a selection of different density-impact parameter distributions. Since we are only concerned with averaged time-scales, we may hope that this is sufficient to partially smear out changes in the density~\citep[cf. ][]{Just2011}. To incorporate the complexity of the proper density distribution would require numerical evaluation of the distribution, and then numerical computation of the integrals. This would greatly obfuscate the analysis.
+First, it was assumed that the density of stars was uniform. This was a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is certainly not the case that density in the Galactic centre is uniform. However, this approximation is not as bad as it first may seem. As a star travels about the MBH on its orbit it moves through regions of different densities. It therefore samples a range of different density-impact parameter distributions. At a given radius stars will be travelling in a variety of directions meaning that again there will be a selection of different density-impact parameter distributions. Since we are only concerned with averaged time-scales, we may hope that this is sufficient to partially smear out changes in the density \citep[cf. ][]{Just2011}. To incorporate the complexity of the proper density distribution would require numerical evaluation of the distribution, and then numerical computation of the integrals. This would greatly obfuscate the analysis.
 
 Second, we have only considered transfer of energy; transfer of angular momentum could be more important because of resonant relaxation which enhances angular momentum (both scalar and vector) diffusion \citep{Rauch1996,Rauch1998,Gurkan2007,Eilon2009}. This occurs in systems where the radial and azimuthal frequencies are commensurate. Orbits precess slowly leading to large torques between the orbits. These torques cause the angular momentum to change linearly with time over a coherence time-scale set by the drift in orbits. Over longer time periods, the change in angular momentum again proceeds as a random walk, increasing with the square-root of time, as for non-resonant relaxation; however, it is still enhanced because of the change in the basic step size.
 
@@ -781,7 +811,7 @@ The time-scales for the lighter components are of the order of the Hubble time. 
 
 The long BH time-scale also inevitably includes an artifact of our approximation that the system is homogeneous: in reality the BHs, being more tightly clustered towards the centre, will pass through regions with greater density (both because of higher number density and a greater average object mass). Therefore, we may expect the true relaxation time-scale to be reduced.
 
-Formation of the cusp should proceed on a dynamical friction time-scale. This is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \approx (M_\star/M')\overline{\tau_{\mathrm{R},\,M'}}$ \citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars \citep{Gualandris2012}. Fortunately, observations of the thick disc indicate that there has not been a major merger in the last $10^{10}\units{yr}$ \citep{Wyse2008}.
+Formation of the cusp can occur over shorter time than the relaxation time-scale \citep{Bar-Or2012}. It should proceed on a dynamical friction time-scale; this is shorter than the relaxation time-scale by a factor $\tau\sub{DF} \approx (M_\star/M')\overline{\tau_{\mathrm{R},\,M'}}$ \citep[section 3.4]{Spitzer1987}. This does reduce the difference between the different species, but does not make it obvious that the cusp will have had sufficient time to form, especially if there has been a major merger in the Galaxy's history which would have disrupted the central distribution of stars \citep{Gualandris2012}. Fortunately, observations of the thick disc indicate that there has not been a major merger in the last $10^{10}\units{yr}$ \citep{Wyse2008}.
 
 The existence of a cusp is a subject of debate. \citet{Preto2010} conducted $N$-body simulations to investigate the effects of strong mass segregation \citep{Alexander2009, Keshet2009} and found that cusps formed in a fraction of a (Maxwellian) relaxation time \citep{Amaro-Seoane2011}. \citet{Gualandris2012} conducted similar computations and found that cores are likely to persist for the dominant stellar popular; intriguingly, cusp formation amongst BHs is quicker, but still takes at least a (Maxwellian) relaxation time. In any case, the time taken to form a cusp depends upon the initial configuration of stars, and so will depend upon the Galaxy's history. The true level of relaxation in the Galactic centre is uncertain. We cannot add further evidence to settle the matter. For definiteness, we have assumed that a cusp has formed in our calculations.
 
