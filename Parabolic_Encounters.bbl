@@ -1,8 +1,11 @@
-\begin{thebibliography}{132}
+\begin{thebibliography}{120}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander \& Hopman(2009)}]{Alexander2009}
 Alexander T., Hopman C., 2009, The Astrophysical Journal, 697, 1861
+
+\bibitem[{Amaro-Seoane(2012)}]{Amaro-Seoane2012c}
+Amaro-Seoane P., 2012, 160
 
 \bibitem[{Amaro-Seoane {et~al}\mbox{.}(2012)Amaro-Seoane, Aoudia, Babak,
   Binetruy, Berti, Bohe, Caprini, Colpi, Cornish, Danzmann, Dufaux, Gair,
@@ -50,11 +53,6 @@ B{\'e}dard M., 2008{\natexlab{b}}, Stochastic Processes and their Applications,
 \bibitem[{Bekenstein(1973)}]{Bekenstein1973}
 Bekenstein J.~D., 1973, The Astrophysical Journal, 183, 657
 
-\bibitem[{B{\'e}langer {et~al}\mbox{.}(2006)B{\'e}langer, Terrier, de~Jager,
-  Goldwurm, \& Melia}]{Belanger2006}
-B{\'e}langer G., Terrier R., de~Jager O.~C., Goldwurm A., Melia F., 2006,
-  Journal of Physics: Conference Series, 54, 420
-
 \bibitem[{Bender {et~al}\mbox{.}(1998)Bender, Brillet, Ciufolini, Cruise,
   Cutler, Danzmann, Fidecaro, Folkner, Hough, McNamara, Peterseim, Robertson,
   Rodrigues, R\"{u}diger, Sandford, Sch\"{a}fer, Schilling, Schutz, Speake,
@@ -89,9 +87,6 @@ Burko L.~M., Khanna G., 2007, EPL, 78, 60005
 
 \bibitem[{Carter(1968)}]{Carter1968}
 Carter B., 1968, Physical Review, 174, 1559
-
-\bibitem[{Carter(1971)}]{Carter1971}
-Carter B., 1971, Physical Review Letters, 26, 331
 
 \bibitem[{Chandrasekhar(1998)}]{Chandrasekhar1998}
 Chandrasekhar S., 1998, {The Mathematical Theory of Black Holes}, Oxford
@@ -129,9 +124,6 @@ Doeleman S.~S. {et~al.}, 2008, Nature, 455, 78
 \bibitem[{Drasco \& Hughes(2004)}]{Drasco2004}
 Drasco S., Hughes S., 2004, Physical Review D, 69, 044015
 
-\bibitem[{Ferrarese \& Merritt(2000)}]{Ferrarese2000}
-Ferrarese L., Merritt D., 2000, The Astrophysical Journal, 539, L9
-
 \bibitem[{Finn(1992)}]{Finn1992}
 Finn L.~S., 1992, Physical Review D, 46, 5236
 
@@ -140,6 +132,9 @@ Finn L.~S., 1992, Physical Review D, 46, 5236
 Foschini L., Rodriguez J., Fuchs Y., Ho L.~C., Dadina M., {Di Cocco} G.,
   Courvoisier T. J.-L., Malaguti G., 2004, Astronomy and Astrophysics, 416, 529
 
+\bibitem[{Freitag(2003)}]{Freitag2003}
+Freitag M., 2003, The Astrophysical Journal, 583, L21
+
 \bibitem[{Gair {et~al}\mbox{.}(2005)Gair, Kennefick, \& Larson}]{Gair2005}
 Gair J.~R., Kennefick D.~J., Larson S.~L., 2005, Physical Review D, 72, 084009
 
@@ -147,11 +142,6 @@ Gair J.~R., Kennefick D.~J., Larson S.~L., 2005, Physical Review D, 72, 084009
   McKinney}]{Gammie2004}
 Gammie C.~F., Shapiro S.~L., McKinney J.~C., 2004, The Astrophysical Journal,
   602, 312
-
-\bibitem[{Gebhardt {et~al}\mbox{.}(2000)Gebhardt, Bender, Bower, Dressler,
-  Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer, Magorrian, Pinkney,
-  Richstone, \& Tremaine}]{Gebhardt2000}
-Gebhardt K. {et~al.}, 2000, The Astrophysical Journal, 539, L13
 
 \bibitem[{Gebhardt {et~al}\mbox{.}(2001)Gebhardt, Lauer, Kormendy, Pinkney,
   Bower, Green, Gull, Hutchings, Kaiser, Nelson, Richstone, \&
@@ -193,9 +183,6 @@ Glampedakis K., Kennefick D., 2002, Physical Review D, 66, 044002
 Gonz{\'a}lez J.~A., Sperhake U., Br{\"u}gmann B., Hannam M., Husa S., 2007,
   Physical Review Letters, 98, 091101
 
-\bibitem[{Graham(2007)}]{Graham2007}
-Graham A.~W., 2007, Monthly Notices of the Royal Astronomical Society, 379, 711
-
 \bibitem[{Graham {et~al}\mbox{.}(2001)Graham, Erwin, Caon, \&
   Trujillo}]{Graham2001}
 Graham A.~W., Erwin P., Caon N., Trujillo I., 2001, The Astrophysical Journal,
@@ -227,17 +214,11 @@ Haiman Z., Quataert E., 2004, {The Formation and Evolution of the First Massive
 Hamaus N., Paumard T., M{\"u}ller T., Gillessen S., Eisenhauer F., Trippe S.,
   Genzel R., 2009, The Astrophysical Journal, 692, 902
 
-\bibitem[{H{\"a}ring \& Rix(2004)}]{Haring2004}
-H{\"a}ring N., Rix H.-W., 2004, The Astrophysical Journal, 604, L89
-
 \bibitem[{Harris(1978)}]{Harris1978}
 Harris F., 1978, Proceedings of the IEEE, 66, 51
 
 \bibitem[{Hastings(1970)}]{Hastings1970}
 Hastings W.~K., 1970, Biometrika, 57, 97
-
-\bibitem[{Hawking(1972)}]{Hawking1972}
-Hawking S.~W., 1972, Communications in Mathematical Physics, 25, 152
 
 \bibitem[{Hobson {et~al}\mbox{.}(2006)Hobson, Efstathiou, \&
   Lasenby}]{Hobson2006}
@@ -253,12 +234,6 @@ Huerta E.~A., Gair J.~R., 2009, Physical Review D, 79, 84021
 
 \bibitem[{Hughes \& Blandford(2003)}]{Hughes2003}
 Hughes S.~A., Blandford R.~D., 2003, The Astrophysical Journal, 585, L101
-
-\bibitem[{Israel(1967)}]{Israel1967}
-Israel W., 1967, Physical Review, 164, 1776
-
-\bibitem[{Israel(1968)}]{Israel1968}
-Israel W., 1968, Communications in Mathematical Physics, 8, 245
 
 \bibitem[{Jahnke \& Macci\`{o}(2011)}]{Jahnke2011}
 Jahnke K., Macci\`{o} A.~V., 2011, The Astrophysical Journal, 734, 92
@@ -302,16 +277,6 @@ King A.~R., Pringle J.~E., Hofmann J.~A., 2008, Monthly Notices of the Royal
 Kormendy J., Richstone D., 1995, Annual Review of Astronomy and Astrophysics,
   33, 581
 
-\bibitem[{Larson {et~al}\mbox{.}(2002)Larson, Hellings, \&
-  Hiscock}]{Larson2002}
-Larson S.~L., Hellings R.~W., Hiscock W.~A., 2002, Physical Review D, 66,
-  062001
-
-\bibitem[{Larson {et~al}\mbox{.}(2000)Larson, Hiscock, \&
-  Hellings}]{Larson2000}
-Larson S.~L., Hiscock W.~A., Hellings R.~W., 2000, Physical Review D, 62,
-  062001
-
 \bibitem[{Lynden-Bell \& Rees(1971)}]{Lynden-Bell1971}
 Lynden-Bell D., Rees M.~J., 1971, Monthly Notices of the Royal Astronomical
   Society, 152, 461
@@ -329,9 +294,6 @@ Magorrian J. {et~al.}, 1998, The Astronomical Journal, 115, 2285
   Lacey}]{Malbon2007}
 Malbon R.~K., Baugh C.~M., Frenk C.~S., Lacey C.~G., 2007, Monthly Notices of
   the Royal Astronomical Society, 382, 1394
-
-\bibitem[{Marconi \& Hunt(2003)}]{Marconi2003}
-Marconi A., Hunt L.~K., 2003, The Astrophysical Journal, 589, L21
 
 \bibitem[{Martel(2004)}]{Martel2004}
 Martel K., 2004, Physical Review D, 69, 044025
@@ -403,6 +365,9 @@ Peters P.~C., Mathews J., 1963, Physical Review, 131, 435
 \bibitem[{Press(1977)}]{Press1977}
 Press W., 1977, Physical Review D, 15, 965
 
+\bibitem[{Preto \& Amaro-Seoane(2010)}]{Preto2010}
+Preto M., Amaro-Seoane P., 2010, The Astrophysical Journal, 708, L42
+
 \bibitem[{Psaltis(2008)}]{Psaltis2008a}
 Psaltis D., 2008, Living Reviews in Relativity, 11
 
@@ -429,9 +394,6 @@ Roberts G.~O., Rosenthal J.~S., 2001, Statistical Science, 16, 351
 \bibitem[{Roberts \& Rosenthal(2007)}]{Roberts2007}
 Roberts G.~O., Rosenthal J.~S., 2007, Journal of Applied Probability, 44, 458
 
-\bibitem[{Robinson(1975)}]{Robinson1975}
-Robinson D., 1975, Physical Review Letters, 34, 905
-
 \bibitem[{Rosquist {et~al}\mbox{.}(2009)Rosquist, Bylund, \&
   Samuelsson}]{Rosquist2009}
 Rosquist K., Bylund T., Samuelsson L., 2009, International Journal of Modern
@@ -456,9 +418,6 @@ Schmoll S. {et~al.}, 2009, The Astrophysical Journal, 703, 2171
 Sikora M., Stawarz {\L}., Lasota J.-P., 2007, The Astrophysical Journal, 658,
   815
 
-\bibitem[{So{\l}tan(1982)}]{Soltan1982}
-So{\l}tan A., 1982, Monthly Notices of the Royal Astronomical Society, 200, 115
-
 \bibitem[{Tanaka {et~al}\mbox{.}(1993)Tanaka, Shibata, Sasaki, Tagoshi, \&
   Nakamura}]{Tanaka1993}
 Tanaka T., Shibata M., Sasaki M., Tagoshi H., Nakamura T., 1993, Progress of
@@ -471,11 +430,6 @@ Thorne K.~S., 1974, The Astrophysical Journal, 191, 507
   Dressler, Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer,
   Magorrian, Pinkney, \& Richstone}]{Tremaine2002}
 Tremaine S. {et~al.}, 2002, The Astrophysical Journal, 574, 740
-
-\bibitem[{Trippe {et~al}\mbox{.}(2007)Trippe, Paumard, Ott, Gillessen,
-  Eisenhauer, Martins, \& Genzel}]{Trippe2007}
-Trippe S., Paumard T., Ott T., Gillessen S., Eisenhauer F., Martins F., Genzel
-  R., 2007, Monthly Notices of the Royal Astronomical Society, 375, 764
 
 \bibitem[{Turner(1977)}]{Turner1977}
 Turner M., 1977, The Astrophysical Journal, 216, 610
