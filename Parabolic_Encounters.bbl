@@ -1,4 +1,4 @@
-\begin{thebibliography}{120}
+\begin{thebibliography}{121}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander \& Hopman(2009)}]{Alexander2009}
@@ -87,6 +87,9 @@ Burko L.~M., Khanna G., 2007, EPL, 78, 60005
 
 \bibitem[{Carter(1968)}]{Carter1968}
 Carter B., 1968, Phys.\ Rev., 174, 1559
+
+\bibitem[{Chabrier \& Baraffe(2000)}]{Chabrier2000}
+Chabrier G., Baraffe I., 2000, ARA\&A, 38, 337
 
 \bibitem[{Chandrasekhar(1998)}]{Chandrasekhar1998}
 Chandrasekhar S., 1998, {The Mathematical Theory of Black Holes}, Oxford
