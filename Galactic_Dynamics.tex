@@ -29,6 +29,8 @@
 \newcommand{\recip}[1]{\ensuremath{\dfrac{1}{#1}}}
 
 \newcommand{\order}[1]{\ensuremath{\mathcal{O}({#1})}}
+
+\newcommand{\innerprod}[2]{\ensuremath{\left({#1}\middle|{#2}\right)}}
 %\newcommand{\P}{\ensuremath{\mathrm{P}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -81,32 +83,32 @@ To establish the detectability and usefulness of EMRBs, it is necessary to calcu
 
 The detectability of a burst is dependent upon its SNR. To save calculating SNRs directly, it is possible to estimate the value form the periapse radius using a simple scaling relation. This is introduced in \secref{SNR}. We make use of this when selecting orbits of potential interest, but calculate the SNR from waveforms for more accurate results.
 
-Once of have determined which bursts are of interest, we can evaluate the accuracy to which parameters can be determined, should that burst be observed. To do so, we perform Markov chain Monte Carlo (MCMC) simulations \citep[chapter 29]{MacKay2003}. The methods employed are the same as in \citet{Berry2012}, but explained briefly in \secref{MCMC}.
+Once of have determined which bursts are of interest, we can evaluate the accuracy to which parameters can be determined, should that burst be observed. To do so, we perform Markov chain Monte Carlo (MCMC) simulations \citep[chapter 29]{MacKay2003}.
 
-\subsection{Numerical kludge waveforms}\label{sec:NK}}
+\subsection{Numerical kludge waveforms\label{sec:NK}}
 
-Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The waveforms are accurate to typically a few percent \citep{Tanaka1993,Gair2005}: the error in our waveforms has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citalet{Berry2012}).
+Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The waveforms are accurate to typically a few percent \citep{Tanaka1993,Gair2005}: the error in our waveforms has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citealt{Berry2012}).
 
 To construct our NK waveforms, we first integrate the Kerr geodesic equations of motion. We only consider parabolic (marginally bound) orbits, where the particle is at rest at infinity.
 
 To avoid difficulties with turning points in the trajectory, we employ angular variables in place of the radial and polar angular coordinates \citep{Drasco2004}
 \begin{align}
 r = {} & \frac{2 r\sub{p}}{1 + \cos\psi};\\
-\cos^2\theta = \frac{Q}{Q+L_z^2}\cos^2\chi,
-\end{equation}
+\cos^2\theta = {} & \frac{Q}{Q+L_z^2}\cos^2\chi,
+\end{align}
 where $Q$ is the Carter constant and $L_z$ is the angular momentum about the $z$-axis.
 
 Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is the waveform amplitude will not be precisely correct.
 
 We use the quadrupole-octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits.
 
-\subsection{SNR scaling}\label{sec:SNR}
+\subsection{SNR scaling\label{sec:SNR}}
 
 The SNR $\rho$ of a particular burst depends upon the precise shape of its trajectory (as specified by initial conditions) and the position of the detector. However, the most important parameter is the periapse distance.
 
 The $\rho$-$r\sub{p}$ relation is largely determined by the shape of the noise curve. For our simulations, we employ the noise model of \citet{Barack2004}. For bursts from the Galactic Centre, over much of the range of interest, the curve can be approximated as a simple power law \citep{Berry2012}
 \begin{equation}
-\log(\rho) \simeq -2.7\log\left(\frac{r\sub{p}}{r\sub{g}}\right) + \log\left\(\frac{\mu}{M_\odot}\right) + 4.9,
+\log(\rho) \simeq -2.7\log\left(\frac{r\sub{p}}{r\sub{g}}\right) + \log\left(\frac{\mu}{M_\odot}\right) + 4.9,
 \label{eq:SNR-scaling}
 \end{equation}
 where $\mu$ is the mass of the CO.
@@ -142,7 +144,7 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}_0) \propto \exp\left[-\recip{2}\innerpr
 \end{equation}
 Here $\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_0}$ is the overlap between waveforms defined by the standard signal inner product \citep{Cutler1994}. This is the probability of the realisation of noise signal $\boldsymbol{n}(t) = \boldsymbol{s}(t) - \boldsymbol{h}_0(t)$.
 
-To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. Markov chain Monte Carlo (MCMC) methods are widely used for inference problems; they are a family of algorithms used for integrating over a complicated probability distribution and are efficient for high-dimensional problems~\citep[chapter 29]{MacKay2003}. Parameter space is explored by constructing randomly a chain of $N$ samples, with an acceptance rate dependant upon their probablities. The distribution of points visited by the chain maps out the underlying distribution. We employ the same algorithm as was previously used in \citet{Berry2012}.
+To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a family of algorithms used for integrating over a complicated probability distribution and are efficient for high-dimensional problems. Parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution. We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2012}.
 
 \section{Calculating event rates}
 
@@ -425,14 +427,14 @@ The calculated numbers of events are shown in \tabref{Rates}.
 \begin{minipage}{\columnwidth}
  \centering
   \caption{Expected number of events.\label{tab:Rates}}
-  \begin{tabular}{@{} l D{,}{\times}{3.4} D{,}{\times}{3.4} D{.}{.}{1.1} D{.}{.}{1.3} @{}}
+  \begin{tabular}{@{} l D{,}{\times}{3.4} D{,}{\times}{3.4} @{}}
   \hline
-   Star & \multicolumn{1}{c}{$\mathcal{N}_2\super{int}$} & \multicolumn{1}{c}{$\mathcal{N}_2\super{run}$} & \multicolumn{1}{c}{$p_M$} & \multicolumn{1}{c}{$k_M/k_\star$\footnote{\citet*{Toonen2009}}} \\
+   Star & \multicolumn{1}{c}{$\mathcal{N}_2\super{int}$} & \multicolumn{1}{c}{$\mathcal{N}_2\super{run}$} \\
  \hline
- MS & 6.4,10^{-4} & 1 & -0.1 & 1 \\
- WD & 3.7,10^{-4} & -0.1 & 0.09 \\
- NS & 2.5,10^{-1} & 0.0 & 0.01  \\
- BH & 5.8,10^{-1} & 0.5 & 0.008 \\
+ MS & 6.4,10^{-4} & 6.4,10^{-4} \\
+ WD & 3.7,10^{-4} & 3.7,10^{-4} \\
+ NS & 2.5,10^{-1} & 2.5,10^{-1}  \\
+ BH & 5.8,10^{-1} & 5.8,10^{-1} \\
 \hline
 \end{tabular}
 \end{minipage}
@@ -553,7 +555,7 @@ The unbound contribution is
 \end{equation}
 where
 \begin{equation}
-\Xi = \lim_{w \rightarrow \infty}\left\{\alpha(w)\right\} = \simeq 4.31.
+\Xi = \lim_{w \rightarrow \infty}\left\{\alpha(w)\right\} \simeq 4.31.
 \end{equation}
 This reproduces the full function to better than $5\%$, ignoring variation from $\ln\left(qv_2^2\right)$.
 
