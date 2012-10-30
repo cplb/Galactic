@@ -1,4 +1,4 @@
-\begin{thebibliography}{121}
+\begin{thebibliography}{123}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander \& Hopman(2009)}]{Alexander2009}
@@ -8,17 +8,29 @@ Alexander T., Hopman C., 2009, ApJ, 697, 1861
 Amaro-Seoane P., 2012, {Stellar dynamics and extreme-mass ratio inspirals},
   arXiv:1205.5240 [astro-ph.CO]
 
-\bibitem[{Amaro-Seoane {et~al}\mbox{.}(2012)Amaro-Seoane, Aoudia, Babak,
-  Binetruy, Berti, Bohe, Caprini, Colpi, Cornish, Danzmann, Dufaux, Gair,
-  Jennrich, Jetzer, Klein, Lang, Lobo, Littenberg, McWilliams, Nelemans,
+\bibitem[{Amaro-Seoane {et~al}\mbox{.}(2012{\natexlab{a}})Amaro-Seoane, Aoudia,
+  Babak, Binetruy, Berti, Bohe, Caprini, Colpi, Cornish, Danzmann, Dufaux,
+  Gair, Jennrich, Jetzer, Klein, Lang, Lobo, Littenberg, McWilliams, Nelemans,
   Petiteau, Porter, Schutz, Sesana, Stebbins, Sumner, Vallisneri, Vitale,
   Volonteri, \& Ward}]{Amaro-Seoane2012a}
-Amaro-Seoane P. {et~al.}, 2012, Classical Quant.\ Grav., 29, 124016
+Amaro-Seoane P. {et~al.}, 2012{\natexlab{a}}, Classical Quant.\ Grav., 29,
+  124016
+
+\bibitem[{Amaro-Seoane {et~al}\mbox{.}(2012{\natexlab{b}})Amaro-Seoane, Aoudia,
+  Babak, Bin\'{e}truy, Berti, Boh\'{e}, Caprini, Colpi, Cornish, Danzmann,
+  Dufaux, Gair, Jennrich, Jetzer, Klein, Lang, Lobo, Littenberg, McWilliams,
+  Nelemans, Petiteau, Porter, Schutz, Sesana, Stebbins, Sumner, Vallisneri,
+  Vitale, Volonteri, \& Ward}]{Amaro-Seoane2012}
+Amaro-Seoane P. {et~al.}, 2012{\natexlab{b}}, {eLISA: Astrophysics and
+  cosmology in the millihertz regime}, arXiv:1201.3621 [astro-ph.CO]
 
 \bibitem[{Amaro-Seoane {et~al}\mbox{.}(2007)Amaro-Seoane, Gair, Freitag,
   Miller, Mandel, Cutler, \& Babak}]{Amaro-Seoane2007}
 Amaro-Seoane P., Gair J.~R., Freitag M., Miller M.~C., Mandel I., Cutler C.~J.,
   Babak S., 2007, Classical Quant.\ Grav., 24, R113
+
+\bibitem[{Amaro-Seoane \& Preto(2011)}]{Amaro-Seoane2011d}
+Amaro-Seoane P., Preto M., 2011, Classical and Quant.\ Grav., 28, 094017
 
 \bibitem[{Andrieu \& Thoms(2008)}]{Andrieu2008}
 Andrieu C., Thoms J., 2008, Statistics and Computing, 18, 343
