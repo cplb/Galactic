@@ -63,7 +63,7 @@ black hole physics -- Galaxy: centre -- gravitational waves -- methods: data ana
 
 \section{Introduction}\label{sec:Intro}
 
-It is well established that space is big \citep{Adams}. The Milky Way, our own island universe, is but one of a multitude of galaxies. Each one of these may have a massive black hole (MBH) nestled at its core \citep{Lynden-Bell1971, Soltan1982}.
+It is well established that space is big \citep[chapter 8]{Adams1979}. The Milky Way, our own island universe, is but one of a multitude of galaxies. Each one of these may have a massive black hole (MBH) nestled at its core \citep{Lynden-Bell1971, Soltan1982}.
 
 In previous work \citep{Berry2012}, we considered measuring the properties of the Galaxy's MBH using extreme-mass-ratio bursts (EMRBs). An EMRB is a short gravitational wave (GW) signal produced when a small object passes through periapsis on an orbit about a much more massive body; in our case this is a stellar mass compact object (CO) orbiting the MBH. If the periapse radius of the orbit is sufficiently small ($r\sub{p} \lesssim 10 r\sub{g}$ for a $10 M_\odot$ CO, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius), a single burst can be highly informative about the MBH, improving our knowledge of its mass and spin.
 
@@ -71,32 +71,104 @@ EMRBs could be considered as the precursors to the better studied extreme-mass-r
 
 In this work, we consider if EMRBs are detectable from other nearby galaxies. If so, they may be useful for constraining the properties of these galaxies' MBHs. Observations have shown MBH masses are correlated with properties of the host galaxies, such as bulge luminosity, mass, velocity dispersion and light concentration \citep{Kormendy1995, Magorrian1998, Ferrarese2000, Gebhardt2000, Graham2001, Tremaine2002, Marconi2003, Haring2004, Graham2007, Graham2011}. The two are linked via their shared history, such that one can inform us about the other.
 
-Astrophysical black holes (BHs) are described by two quantities: mass $M_\bullet$ and (dimsensionless) spin $a_\ast$ \citep{Chandrasekhar1998}. The spin is related to the angular momentum $J$ by
+Astrophysical black holes (BHs) are described by two quantities: mass $M$ and (dimsensionless) spin $a_\ast$ \citep{Chandrasekhar1998}. The spin is related to the angular momentum $J$ by
 \begin{equation}
-a_\ast = \frac{cJ}{GM_\bullet^2}.
+a_\ast = \frac{cJ}{GM^2},
 \end{equation}
-For many MBHs in the local neighbourhood, we have existing mass estimates. Measuring the spin would give us a complete picture, and would crucially give an insight into the formation history of the galaxy.
+For many MBHs in the local neighbourhood, we have existing mass estimates. Measuring the spin would give us a complete picture, and would crucially give an insight into the formation history of the galaxy\citep{Dotti2012,Volonteri2012a}.
 
-MBHs accumulate mass and angular momentum through accretion and mergers \citep{Volonteri2010, Yu2002}; the spin encodes information about the mechanism that has most recently dominated the evolution. A gaseous disc spins up the MBH, resulting in high spin values \citep{Volonteri2005}; randomly orientated accretion events lead to low spin values \citep*{King2006, King2008}; minor mergers with smaller BHs can decrease the spin \citep*{Hughes2003, Gammie2004}, and major mergers between MBHs gives a likely spin $|a_\ast| \sim 0.7$ \citep{Berti2008, Gonzalez2007}. Determining how the spin evolved shall tell us about how the galaxy evolved.
+MBHs accumulate mass and angular momentum through accretion and mergers \citep{Volonteri2010, Yu2002}; the spin encodes information about the mechanism that has most recently dominated the evolution. A gaseous disc spins up the MBH, resulting in high spin values \citep{Volonteri2005}; randomly orientated accretion events lead to low spin values \citep*{King2006, King2008}; minor mergers with smaller BHs can decrease the spin \citep*{Hughes2003, Gammie2004}, and major mergers between MBHs gives a likely spin $|a_\ast| \sim 0.7$ \citep{Berti2008, Gonzalez2007}. Determining how the spin evolved shall tell us about how the galaxy evolved\citep{Barausse2012}.
 
 We have some MBH spin measurements from X-ray observations of active galactic nuclei \citep[e.g.]{Nardini2011, Patrick2011, Gallo2011, Lohfink2012}.  Estimates span the entire range of allowed values, but are typically in the intermediate range of $a_\ast \sim 0.7$, with uncertainties of $\sim 10\%$. This population would be an interesting comparison for potential measurements from nearby galaxies.
 
-EMRBs could be an interesting signal for a space-borne gravitational wave detector
-
-
-An exciting means of inferring information about the MBH is through gravitational waves (GWs) emitted when compact objects (COs), such as stellar mass BHs, neutron stars (NSs), white dwarfs (WDs) or low mass main sequence (MS) stars, pass close by \citep{Sathyaprakash2009}. A space-borne detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}), is designed to be able to detect GWs in the frequency range of interest for these encounters \citep{Bender1998, Danzmann2003, Jennrich2011, Amaro-Seoane2012a}.\footnote{The revised \textit{eLISA} concept shares the same descoped design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} The identification of waves requires a set of accurate waveform templates covering parameter space. Much work has already been done on the waveforms generated when companion objects inspiral towards an MBH \citep{Glampedakis2005, Barack2009}; as they orbit, GWs carry away energy and angular momentum, causing the orbit to shrink until eventually the object plunges into the MBH. The initial orbits may be highly elliptical and a burst of radiation is emitted during each close encounter. These are extreme mass-ratio bursts (EMRBs; \citealt*{Rubbo2006}). Assuming that the companion is not scattered from its orbit, and does not plunge straight into the MBH, its orbit evolves, becoming more circular, and it shall begin to continuously emit significant gravitational radiation in the \textit{LISA}/\textit{eLISA} frequency range. The resulting signals are extreme mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}).
-
-Studies of these systems have usually focused upon the phase when the orbit is close to plunge and completes a large number of cycles in the detector's frequency band, allowing a high signal-to-noise ratio (SNR) to be accumulated. Here, we investigate high eccentricity orbits. These are the initial bursting orbits from which an EMRI may evolve, and are the consequence of scattering from two body encounters. The event rate for the detection of such EMRBs with \textit{LISA} has been estimated to be as high as $15\units{yr^{-1}}$ \citep{Rubbo2006}, although this has been subsequently revised downwards to the order of $1\units{yr^{-1}}$ \citep*{Hopman2007}. Even if only a single burst is detected during a mission, this is still an exciting possibility since the information carried by the GW should give an unparalleled probe of the structure of spacetime of the GC. Exactly what can be inferred depends upon the orbit, which is what we investigate here. 
-
-
-
-We make the simplifying assumption that all these orbits are marginally bound, or parabolic, since highly eccentric orbits appear almost indistinguishable from an appropriate parabolic orbit. Here ``parabolic'' and ``eccentricity'' refer to the energy of the geodesic and not to the geometric shape of the orbit.\footnote{Marginally bound Keplerian orbits in flat spacetime are parabolic in both senses.} Following such a trajectory an object may make just one pass of the MBH or, if the periapsis distance is small enough, it may complete a number of rotations. Such an orbit is referred to as zoom-whirl \citep{Glampedakis2002a}.
-
-In order to compute the gravitational waveform produced in such a case, we integrate the geodesic equations for a parabolic orbit in Kerr spacetime. We assume that the orbiting body is a test particle, such that it does not influence the underlying spacetime, and that the orbital parameters evolve negligibly during the orbit such that they may be held constant. We use this to construct an approximate numerical kludge (NK) waveform \citep{Babak2007}.
+EMRBs could be an interesting signal for a space-borne gravitational wave detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}; \citealt{Bender1998, Danzmann2003}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}; \citealt{Jennrich2011, Amaro-Seoane2012a}).\footnote{The revised \textit{eLISA} concept is the same revised design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} At the time of writing, there is no currently funded mission. However, \textit{LISA Pathfinder}, a technology demonstration mission, is due for launch at the end of 2014 \citep{Anza2005, Antonucci2012}. Hopefully, a full mission shall follow in the subsequent decade. Since there does not exist a definite mission design, we stick to the classic \textit{LISA} design for the majority of this work.
 
 This paper is organised as follows. We begin in \secref{Geodesic} with the construction of the geodesic orbits; these trajectories are used in the construction of NK waveforms as explained in \secref{Kludge}. In \secref{Detector} we establish what the \textit{LISA} detectors would measure, and in \secref{Signal} how the signal would be analysed. This includes a brief mention of window functions which is expanded in \apref{window}. Here we also present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range. In \secref{Waveforms} we look at our NK waveforms. We give fiducial power-law fits for SNR as a function of periapse radius, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens as the periapsis approaches the last non-plunging orbit. We explain how to extract the information from the bursts in \secref{Estimation}. Results estimating the precision to which parameters could be measured are presented in \secref{Results}. We briefly mention the possibility of detecting bursts from extra-galactic sources in \secref{Extragal}, before concluding in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
 
-Throughout this work we adopt a metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Uppercase Latin indices from the beginning of the alphabet are used for the output of the two \textit{LISA} detector-arms $A = \{\mathrm{I}, \mathrm{II}\}$, and lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ are used where noted, but in general factors of $G$ and $c$ are retained.
+EMRB waveforms are calculated and analysed as in \citet{Berry2012}, and we give only an outline of the techniques used. Waveform construction and the numerical kludge approximation are explained in \secref{Wave}. The basics of signal analysis are introduced in \secref{Sig}. In \secref{SNR}, the detectability of EMRBs from extragalactic MBHs is discussed. We show that bursts from other galaxies could be detected with \textit{LISA} or \textit{eLISA}. Following this, in \secref{MCMC} we discuss the information that could be extracted from these signals, and the constraints these could place.
+
+Throughout this work we adopt a metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ are used where noted, but in general factors of $G$ and $c$ are retained.
+
+\section{Waveform generation}\ref{sec:Wave}
+
+We employ a semirelativistic approximation \citep{Ruffini1981}: the CO travels along a geodesic in Kerr spacetime, but radiates as if it were in flat spacetime. This approach is known as a numerical kludge (NK). Comparison with more accurate, and computationally intensive, methods has shown that NK waveforms are reasonably accurate for extreme-mass-ratio systems \citep{Gair2005, Babak2007}: typical errors can few percent \citep{Tanaka1993,Gair2005,Berry2012}. Binding the motion to a true geodesic ensures the signal has the correct frequency components, although neglecting the effects of background curvature ensures that these do not have the correct amplitudes. The geodesic parameters are kept fixed throughout the orbit, as there should be negligible evolution due to the emission of gravitational radiation.
+
+All bursts are assumed to come from marginally bound, or parabolic, orbits. In this case, the CO starts at rest at infinity and has a single passage through periapsis. If the periapse radius is small enough, the orbit may still complete a number of rotations about the MBH; these are zoom-whirl orbits \citep{Glampedakis2002a}.
+
+When integrating the Kerr geodesic equations, we use angular variables instead of the radial and polar Boyer-Lindquist coordinates \citep{Drasco2004}
+\begin{align}
+r = {} & \frac{2 r\sub{p}}{1 + \cos\psi};\\
+\cos^2\theta = {} & \frac{Q}{Q+L_z^2}\cos^2\chi = \sin^2 \iota \cos^2\chi,
+\end{align}
+where $Q$ is the Carter constant, $L_z$ is the angular momentum about the $z$-axis and $\iota$ is the orbital inclination. This parametrization avoids complications associated with turning points of the motion.
+
+Once the geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. This choice is not unique, as a consequence of the arbitrary natue of the NK approximation. Using flat-space oblate spheroidal coordinates gives quantitatively similar results \citep{Berry2012}. The quadrupole-octupole formula is used to derive the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. The inclusion of higher order terms modify the amplitudes of some frequency components for the more relativistic orbits by a few tens of percent.
+
+\section{Signal analysis}\ref{sec:Sig}
+
+IN this section we briefly cover the basics of GW analysis. A more complete discussion can be found in \citet{Finn1992} and \citet{Cutler1994}. Those familiar with the subject may skip this section with impunity. In the following, uppercase Latin indices from the beginning of the alphabet are used for labelling detectors: $A = \{\mathrm{I}, \mathrm{II}\}$ for \textit{LISA}, but $A = \{\mathrm{I}\}$ for \textit{eLISA} which only has two arms, and so acts as a single detector.
+
+The measured strain $\boldsymbol{s}(t)$ is the combination of the signal and the detector noise
+\begin{equation}
+\boldsymbol{s}(t) = \boldsymbol{h}(t) + \boldsymbol{n}(t);
+\end{equation}
+we assume the noise is stationary and Gaussian, and noise in multiple data channels uncorrelated, but shares the same characterisation \citep{Cutler1998}. We can then define a signal inner product\citep{Cutler1994}
+\begin{equation}
+\innerprod{\boldsymbol{g}}{\boldsymbol{k}} = 2\intd{0}{\infty}{\frac{\tilde{g}_A^\ast(f)\tilde{k}_A(f) + \tilde{g}_A(f)\tilde{k}_A^\ast(f)}{S\sub{n}(f)}}{f},
+\label{eq:inner}
+\end{equation}
+introducing Fourier transforms
+\begin{equation}
+\tilde{g}(f) = \mathscr{F}\{g(t)\} = \intd{-\infty}{\infty}{g(t)\exp(2\pi i ft)}{t},
+\end{equation}
+and $S\sub{n}(f)$ is the noise spectral density. We use the noise model of \citet{Barack2004} for \textit{LISA}, and the simplified sensitivity model from \citet{Jennrich2011} for \textit{eLISA}.
+
+The signal-to-noise ratio (SNR) is
+\begin{equation}
+\rho[\boldsymbol{h}] = \innerprod{\boldsymbol{h}}{\boldsymbol{h}}^{1/2}.
+\label{eq:SNR}
+\end{equation}
+The probability of a realization of noise $\boldsymbol{n}(t) = \boldsymbol{n}_0(t)$ is
+\begin{equation}
+p(\boldsymbol{n}(t) = \boldsymbol{n}_0(t)) \propto \exp\left[-\recip{2}\innerprod{\boldsymbol{n}_0}{\boldsymbol{n}_0}\right].
+\end{equation}
+Therefore, if the incident waveform is $\boldsymbol{h}(t)$, the probability of measuring signal $\boldsymbol{s}(t)$ is
+\begin{equation}
+p(\boldsymbol{s}(t)|\boldsymbol{h}(t)) \propto \exp\left[-\recip{2}\innerprod{\boldsymbol{s}-\boldsymbol{h}}{\boldsymbol{s}-\boldsymbol{h}}\right].
+\label{eq:sig_prob}
+\end{equation}
+
+\section{Detectability}
+
+The detectability of a burst is determined upon its SNR. We assume a detection threshold of $\rho = 10$. The SNR of an EMRB depends upon many parameters. For a given MBH, the most important is the periapse radius $r\sub{p}$. There is a good correlation between $\rho$ and $r\sub{p}$; other parameters specifying the inclination of the orbit or the orientation of the system with respect to the detector only produce scatter around this relation. The form of the $\rho$--$r\sub{p}$ relation depends upon the noise curve.
+
+We parametrize the detectability in terms of a characteristic frequency
+\begin{equation}
+f_\ast = \sqrt{\frac{GM}{r\sub{p}}}.
+\end{equation}
+This allows comparison between different systems where the same periapse does not correspond to the same frequency, and thus the same point of the noise curve.
+
+We also expect the SNR to scale with other quantities. Let us define a characteristic strain amplitude for a burst $h_0$; we expect $\rho \propto h_0$, where the proportionality will be set by a frequency-dependent function than includes the effect of the noise curve. Assuming that the strain is dominated by the quadrupole contribution (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006})
+\begin{equation}
+h_0 \sim \frac{G}{c^6}\frac{\mu}{R}\frac{\dd}{\dd t^2}\left(r^2\right),
+\end{equation}
+where $r$ is a proxy for the position of the orbitting object. The characteristic rate of change is set by $f_\ast$ and the characteristic length scale is set by $r\sub{p}$. Hence
+\begin{align}
+h_0 \sim {} & \frac{G}{c^6}\frac{\mu}{R}f_\ast^2 r\sub{p}^2 \\
+ \sim {} & \frac{G^{5/2}}{c^6}\frac{\mu}{R}f_\ast^{-2/3}M^{2/3}.
+\end{align}
+Using this, we can factor out the most important dependencies to give a scaled SNR
+\begin{equation}
+\rho_\ast[\boldsymbol{h}] = \left(\frac{\mu}{M_\odot}\right)^{-1}\left(\frac{R}{\mathrm{kpc}}\right)\left(\frac{M}{10^6 M_\odot}\right)^{-2/3}\rho[\boldsymbol{h}].
+\end{equation}
+
+Space-based detectors are most sensitive from extreme-mass-ratio signals originating from MBHs with masses $10^5$--$10^6$. Higher mass objects produce signals at too low frequencies. We considered several nearby MBHs that were likely candidates for detectable burst signals. Details are given in \tabref{MBHs}.
+
+For each, we calculated SNRs at $\sim 10^4$ different periapse distances, uniformly distributed in log-space between the innermost orbit and $100 r\sub{g}$. Each had a spin and orbital inclination randomly chosen from distributions uniform in $a_\ast$ and $\cos \iota$.\footnote{The innermost orbit depends upon $a_ast$ and $\iota$, hence these are drawn first.} For every periapse, five SNRs were calculated, each having a different set of intrinsic parameters specifying the relative orientation of the MBH, the orbital phase and the position of the detector, drawn from appropriate uniform distributions. The scaled SNRs are plotted in \figref{scaled-SNR}. The plotted points are the average values of $\ln \rho_\ast$ calculated for each periapse distance.
+
+The curve shows that EMRB SNR does scale as expected, and $\rho_\ast$ can be describe as a one parameter curve. There remains some scatter about this (removing the averaging over intrinsic parameters increases this to about an order of magnitude); however, it is good enough for rough calculations.
+
+ 
 
 \section*{Acknowledgments}
 
