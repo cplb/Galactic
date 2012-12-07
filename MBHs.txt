@@ -1,0 +1,53 @@
+        galaxy = 'MW';
+        M_mass = 4.31e6*M_sol; % BH mass in kg (MW)
+        R_GC = 2.57e20; % GC distance in m (MW)
+        lambda_long = 266.851760; % Ecliptic longitude in degrees (MW)
+        beta_lat = -5.607669; % Ecliptic lattitude in degrees (MW)    
+    elseif gal == 2
+        galaxy = 'M32';
+        M_mass = 2.5e6*M_sol; % BH mass in kg (M32)
+        R_GC = 770 * kpc_m; % Distance in m (M32)
+        lambda_long = 27.6157552; % Ecliptic longitude in degrees (M32) http://ned.ipac.caltech.edu/cgi-bin/objsearch?search_type=Obj_id&objid=58140&objname=4&img_stamp=YES&hconst=73.0&omegam=0.27&omegav=0.73&corr_z=1
+        beta_lat = 32.9955052; % Ecliptic lattitude in degrees (M32) 2010ApJS..189...37E
+    elseif gal == 3 % Andromeda
+        galaxy = 'M31_8';
+        M_mass = 1.4e8*M_sol; % BH mass in kg
+        R_GC = 770 * kpc_m; % Distance in m (M31)
+        lambda_long = 27.8493889; % Ecliptic longitude in degrees (M31)  http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=Andromeda+galaxy&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES
+        beta_lat = 33.3488556; % Ecliptic lattitude in degrees (M31) 2010ApJS..189...37E
+    elseif gal == 4
+        galaxy = 'Circinus';
+        M_mass = 1.1e6*M_sol; % BH mass in kg 2008PASA...25..167G, 2003ApJ...590..162G
+        R_GC = 2820 * kpc_m; % Distance in m 2007AJ....133..504K
+        lambda_long = 238.6109607; % Ecliptic longitude in degrees http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=circinus+galaxy&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES#Positions_0
+        beta_lat = -47.9620338; % Ecliptic lattitude in degrees 2008MNRAS.389...63C
+    elseif gal == 5
+        galaxy = 'N4945';
+        M_mass = 1.4e6*M_sol; % BH mass in kg 1997ApJ...481L..23G
+        R_GC = 3820 * kpc_m; % Distance in m 2007AJ....133..504K
+        lambda_long = 217.0260945; % Ecliptic longitude in degrees http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=n4945&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES
+        beta_lat = -38.6451785; % Ecliptic lattitude in degrees  1997ApJ...481L..23G
+    elseif gal == 6 % Sculptor'
+        galaxy = 'NGC253';
+        M_mass = 10e6*M_sol; % BH mass in kg 2011MNRAS.412.2211G 2006ApJ...644..914R
+        R_GC = 3500 * kpc_m; % Distance in m 2005MNRAS.361..330R
+        lambda_long = 0.063100; % Ecliptic longitude in degrees http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=ngc+253&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES
+        beta_lat = -27.775686; % Ecliptic lattitude in degrees 2006ApJ...644..914R
+    elseif gal == 7 % M96
+        galaxy = 'NGC3368';
+        M_mass = 7.3e6*M_sol; % BH mass in kg 2011MNRAS.412.2211G 2010MNRAS.403..646N
+        R_GC = 10100 * kpc_m; % Distance in m 2011MNRAS.412.2211G 2001ApJ...546..681T
+        lambda_long = 158.630653; % Ecliptic longitude in degrees http://simbad.u-strasbg.fr/simbad/sim-id?Ident=M+96&jsessionid=19C45AFD2BE5568C8BC63CA776AE5792
+        beta_lat = 3.762609; % Ecliptic lattitude in degrees 2006AJ....131.1163S
+    elseif gal == 8
+        galaxy = 'NGC3489';
+        M_mass = 5.8e6*M_sol; % BH mass in kg 2011MNRAS.412.2211G 2010MNRAS.403..646N
+        R_GC = 11700 * kpc_m; % Distance in m 2011MNRAS.412.2211G 2001ApJ...546..681T
+        lambda_long = 160.894113; % Ecliptic longitude in degrees http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=ngc+3489&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES
+        beta_lat = 6.949283; % Ecliptic lattitude in degrees 2006AJ....131.1163S
+    elseif gal == 9
+        galaxy = 'NGC4395';
+        M_mass = 3.6e5*M_sol; % BH mass in kg 2005ApJ...632..799P
+        R_GC = 4000 * kpc_m; % Distance in m 2004AJ....127.2322T
+        lambda_long = 277.905783; % Ecliptic longitude in degrees http://ned.ipac.caltech.edu/cgi-bin/objsearch?objname=NGC+4561&extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES
+        beta_lat = 81.441329; % Ecliptic lattitude in degrees 2010ApJS..189...37E
