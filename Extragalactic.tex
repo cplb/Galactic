@@ -83,13 +83,11 @@ We have some MBH spin measurements from X-ray observations of active galactic nu
 
 EMRBs could be an interesting signal for a space-borne gravitational wave detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}; \citealt{Bender1998, Danzmann2003}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}; \citealt{Jennrich2011, Amaro-Seoane2012a}).\footnote{The revised \textit{eLISA} concept is the same revised design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} At the time of writing, there is no currently funded mission. However, \textit{LISA Pathfinder}, a technology demonstration mission, is due for launch at the end of 2014 \citep{Anza2005, Antonucci2012}. Hopefully, a full mission shall follow in the subsequent decade. Since there does not exist a definite mission design, we stick to the classic \textit{LISA} design for the majority of this work.
 
-This paper is organised as follows. We begin in \secref{Geodesic} with the construction of the geodesic orbits; these trajectories are used in the construction of NK waveforms as explained in \secref{Kludge}. In \secref{Detector} we establish what the \textit{LISA} detectors would measure, and in \secref{Signal} how the signal would be analysed. This includes a brief mention of window functions which is expanded in \apref{window}. Here we also present a novel window function, the Planck-Bessel window, which may be of use for signals with a large dynamic range. In \secref{Waveforms} we look at our NK waveforms. We give fiducial power-law fits for SNR as a function of periapse radius, which may be of use for back-of-the-envelope estimates. We confirm the accuracy of the kludge waveforms in \secref{Energy} by comparing the energy flux to fluxes calculated using other approaches. The typical error introduced by the NK approximation may be a few percent, but this worsens as the periapsis approaches the last non-plunging orbit. We explain how to extract the information from the bursts in \secref{Estimation}. Results estimating the precision to which parameters could be measured are presented in \secref{Results}. We briefly mention the possibility of detecting bursts from extra-galactic sources in \secref{Extragal}, before concluding in \secref{End} with a summary of our results. EMRBs may be informative if the event rate is high enough for them to be a viable source.
-
 EMRB waveforms are calculated and analysed as in \citet{Berry2012}, and we give only an outline of the techniques used. Waveform construction and the numerical kludge approximation are explained in \secref{Wave}. The basics of signal analysis are introduced in \secref{Sig}. In \secref{SNR}, the detectability of EMRBs from extragalactic MBHs is discussed. We show that bursts from other galaxies could be detected with \textit{LISA} or \textit{eLISA}. Following this, in \secref{MCMC} we discuss the information that could be extracted from these signals, and the constraints these could place.
 
 Throughout this work we adopt a metric with signature $(+,-,-,-)$. Greek indices are used to represent spacetime indices $\mu = \{0,1,2,3\}$ and lowercase Latin indices from the middle of the alphabet are used for spatial indices $i = \{1,2,3\}$. Lowercase Latin indices from the beginning of the alphabet are used for parameter space. Summation over repeated indices is assumed unless explicitly noted otherwise. Geometric units with $G = c = 1$ are used where noted, but in general factors of $G$ and $c$ are retained.
 
-\section{Waveform generation}\ref{sec:Wave}
+\section{Waveform generation}\label{sec:Wave}
 
 We employ a semirelativistic approximation \citep{Ruffini1981}: the CO travels along a geodesic in Kerr spacetime, but radiates as if it were in flat spacetime. This approach is known as a numerical kludge (NK). Comparison with more accurate, and computationally intensive, methods has shown that NK waveforms are reasonably accurate for extreme-mass-ratio systems \citep{Gair2005, Babak2007}: typical errors can few percent \citep{Tanaka1993,Gair2005,Berry2012}. Binding the motion to a true geodesic ensures the signal has the correct frequency components, although neglecting the effects of background curvature ensures that these do not have the correct amplitudes. The geodesic parameters are kept fixed throughout the orbit, as there should be negligible evolution due to the emission of gravitational radiation.
 
@@ -100,13 +98,25 @@ When integrating the Kerr geodesic equations, we use angular variables instead o
 r = {} & \frac{2 r\sub{p}}{1 + \cos\psi};\\
 \cos^2\theta = {} & \frac{Q}{Q+L_z^2}\cos^2\chi = \sin^2 \iota \cos^2\chi,
 \end{align}
-where $Q$ is the Carter constant, $L_z$ is the angular momentum about the $z$-axis and $\iota$ is the orbital inclination. This parametrization avoids complications associated with turning points of the motion.
+where $Q$ is the Carter constant, $L_z$ is the angular momentum about the $z$-axis and $\iota$ is the orbital inclination \citep*{Glampedakis2002}. This parametrization avoids complications associated with turning points of the motion.
 
-Once the geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. This choice is not unique, as a consequence of the arbitrary natue of the NK approximation. Using flat-space oblate spheroidal coordinates gives quantitatively similar results \citep{Berry2012}. The quadrupole-octupole formula is used to derive the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. The inclusion of higher order terms modify the amplitudes of some frequency components for the more relativistic orbits by a few tens of percent.
+Once the geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. This choice is not unique, as a consequence of the arbitrary nature of the NK approximation. Using flat-space oblate spheroidal coordinates gives quantitatively similar results \citep{Berry2012}. The quadrupole-octupole formula is used to derive the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. The inclusion of higher order terms modify the amplitudes of some frequency components for the more relativistic orbits by a few tens of percent.
 
-\section{Signal analysis}\ref{sec:Sig}
+The waveform is specified by a set of 14 parameters:
+\begin{enumerate}
+\item[(1)] The MBH's mass $M$.
+\item[(2)] The spin parameter $a_\ast$.
+\item[(3, 4)] The orientation angles for the MBH $\Theta\sub{K}$ and $\Phi\sub{K}$.
+\item[(5)] The ratio of the SS-GC distance $R$ and the CO mass $\mu$, which we denote as $\zeta = R/\mu$. This scales the amplitude of the waveform.
+\item[(6, 7)] The angular momentum of the CO parametrised in terms of total angular momentum $L_\infty = sqrt{Q + L_Z^2}$ and inclination $\iota$. We employ the latter, as the total angular momentum and inclination are less tightly correlated. Assuming spherical symmetry, we expect $\cos \iota$ to be uniformly distributed.
+\item[(8--10)] A set of coordinates to specify the trajectory. We use the angular phases at periapse, $\phi\sub{p}$ and $\chi\sub{p}$ (which determines $\theta\sub{p}$), as well as the time of periapse $t\sub{p}$.
+\item[(11, 12)] The coordinates of the MBH from the SS barycentre $\overline{\Theta}$ and $\overline{\Phi}$. These may be taken as the coordinates of Sgr A*, as the radio source is expected to be within $20 r\sub{g}$ of the MBH \citep{Reid2003,Doeleman2008}. We use the J2000.0 coordinates \citep{Reid1999, Yusef-Zadeh1999}. These change with time due to the rotation of the SS about the GC; the proper motion is about $6\units{mas\,yr^{-1}}$, mostly in the plane of the Galaxy \citep{Backer1999, Reid2003}. The position is already determined to high accuracy: an EMRB can only give weak constraints on source position.\footnote{For comparison, an EMRI, which should be more informative, can only give sky localisation to $\sim10^{-3}~\mathrm{steradians}$ \citep{Barack2004, Huerta2009}.} We take it as known and do not try to infer it.
+\item[(13, 14)] The orbital position of the detector given by $\overline{\phi}$ and $\varphi$. We assume the initial positions are chosen such that $\overline{\phi} = 0$ when $\varphi = 0$ \citep{Cutler1998}; this choice does not qualitatively influence our results. The orbital position should be known, so need not be inferred.
+\end{enumerate}
 
-IN this section we briefly cover the basics of GW analysis. A more complete discussion can be found in \citet{Finn1992} and \citet{Cutler1994}. Those familiar with the subject may skip this section with impunity. In the following, uppercase Latin indices from the beginning of the alphabet are used for labelling detectors: $A = \{\mathrm{I}, \mathrm{II}\}$ for \textit{LISA}, but $A = \{\mathrm{I}\}$ for \textit{eLISA} which only has two arms, and so acts as a single detector.
+\section{Signal analysis}\label{sec:Sig}
+
+In this section we briefly cover the basics of GW analysis. A more complete discussion can be found in \citet{Finn1992} and \citet{Cutler1994}. Those familiar with the subject may skip this section with impunity. In the following, uppercase Latin indices from the beginning of the alphabet are used for labelling detectors: $A = \{\mathrm{I}, \mathrm{II}\}$ for \textit{LISA}, but $A = \{\mathrm{I}\}$ for \textit{eLISA} which only has two arms, and so acts as a single detector.
 
 The measured strain $\boldsymbol{s}(t)$ is the combination of the signal and the detector noise
 \begin{equation}
@@ -138,41 +148,78 @@ p(\boldsymbol{s}(t)|\boldsymbol{h}(t)) \propto \exp\left[-\recip{2}\innerprod{\b
 \label{eq:sig_prob}
 \end{equation}
 
-\section{Detectability}
+\section{Detectability}\label{sec:SNR}
 
 The detectability of a burst is determined upon its SNR. We assume a detection threshold of $\rho = 10$. The SNR of an EMRB depends upon many parameters. For a given MBH, the most important is the periapse radius $r\sub{p}$. There is a good correlation between $\rho$ and $r\sub{p}$; other parameters specifying the inclination of the orbit or the orientation of the system with respect to the detector only produce scatter around this relation. The form of the $\rho$--$r\sub{p}$ relation depends upon the noise curve.
 
 We parametrize the detectability in terms of a characteristic frequency
 \begin{equation}
-f_\ast = \sqrt{\frac{GM}{r\sub{p}}}.
+f_\ast = \sqrt{\frac{GM}{r\sub{p}^3}}.
 \end{equation}
 This allows comparison between different systems where the same periapse does not correspond to the same frequency, and thus the same point of the noise curve.
 
 We also expect the SNR to scale with other quantities. Let us define a characteristic strain amplitude for a burst $h_0$; we expect $\rho \propto h_0$, where the proportionality will be set by a frequency-dependent function than includes the effect of the noise curve. Assuming that the strain is dominated by the quadrupole contribution (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006})
 \begin{equation}
-h_0 \sim \frac{G}{c^6}\frac{\mu}{R}\frac{\dd}{\dd t^2}\left(r^2\right),
+h_0 \sim \frac{G}{c^6}\frac{\mu}{R}\frac{\dd^2}{\dd t^2}\left(r^2\right),
 \end{equation}
-where $r$ is a proxy for the position of the orbitting object. The characteristic rate of change is set by $f_\ast$ and the characteristic length scale is set by $r\sub{p}$. Hence
+where $\mu$ is the CO mass, $R$ is the distance to the MBH, $t$ is time and $r$ is a proxy for the position of the orbitting object. The characteristic rate of change is set by $f_\ast$ and the characteristic length scale is set by $r\sub{p}$. Hence
 \begin{align}
 h_0 \sim {} & \frac{G}{c^6}\frac{\mu}{R}f_\ast^2 r\sub{p}^2 \\
  \sim {} & \frac{G^{5/2}}{c^6}\frac{\mu}{R}f_\ast^{-2/3}M^{2/3}.
 \end{align}
 Using this, we can factor out the most important dependencies to give a scaled SNR
 \begin{equation}
-\rho_\ast[\boldsymbol{h}] = \left(\frac{\mu}{M_\odot}\right)^{-1}\left(\frac{R}{\mathrm{kpc}}\right)\left(\frac{M}{10^6 M_\odot}\right)^{-2/3}\rho[\boldsymbol{h}].
+\rho_\ast = \left(\frac{\mu}{M_\odot}\right)^{-1}\left(\frac{R}{\mathrm{Mpc}}\right)\left(\frac{M}{10^6 M_\odot}\right)^{-2/3}\rho.
 \end{equation}
 
 Space-based detectors are most sensitive from extreme-mass-ratio signals originating from MBHs with masses $10^5$--$10^6$. Higher mass objects produce signals at too low frequencies. We considered several nearby MBHs that were likely candidates for detectable burst signals. Details are given in \tabref{MBHs}.
-
+\begin{table*}
+%\begin{minipage}{\columnwidth}
+ \centering
+  \caption{Sample of nearby MBHs that are candidates for producing detectable EMRBs.\label{tab:MBHs}}
+  \begin{tabular}{@{} l D{.}{.}{3.2} D{.}{.}{2.5} l @{}}
+  \hline
+   Galaxy & \multicolumn{1}{c}{$M/10^6 M_\odot$} & \multicolumn{1}{c}{$R/\mathrm{Mpc}$} & References \\
+ \hline
+ Milky Way (MW) & 4.31 & 0.00833& \citet{Gillessen2009} \\
+ M32 & 2.5 & 0.770 & \\
+ Andromeda (M31) & 140 & 0.770 &  \\
+ Circinus & 1.1 & 2.82 & \citet{Graham2008,Greenhill2003,Karachentsev2007} \\
+ NGC 4945 & 1.4 & 3.82	& \citet{Greenhill1997,Karachentsev2007} \\
+ Sculptor (NGC 253) & 10 & 3.5 & \citet{Graham2011,Rodriguez-Rico2006,Rekola2005} \\
+ NGC 3368 & 7.3 & 10.1 & \citet{Graham2011,Nowak2010,Tonry2001} \\
+ NGC 3489 & 5.8 & 11.7 & \citet{Graham2011,Nowak2010,Tonry2001} \\
+ NGC 4395 & 0.36 & 4.0& \citet{Peterson2005,Thim2004} \\
+\hline
+\end{tabular}
+%\end{minipage}
+\end{table*}
 For each, we calculated SNRs at $\sim 10^4$ different periapse distances, uniformly distributed in log-space between the innermost orbit and $100 r\sub{g}$. Each had a spin and orbital inclination randomly chosen from distributions uniform in $a_\ast$ and $\cos \iota$.\footnote{The innermost orbit depends upon $a_ast$ and $\iota$, hence these are drawn first.} For every periapse, five SNRs were calculated, each having a different set of intrinsic parameters specifying the relative orientation of the MBH, the orbital phase and the position of the detector, drawn from appropriate uniform distributions. The scaled SNRs are plotted in \figref{scaled-SNR}. The plotted points are the average values of $\ln \rho_\ast$ calculated for each periapse distance.
+\begin{figure}
+\begin{center}
+ %\includegraphics[width=0.43\textwidth]{Fig_SNR_ratio}
+ \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency.\label{fig:scaled-SNR}}
+   \end{center}
+\end{figure}The curve shows that EMRB SNR does scale as expected, and $\rho_\ast$ can be describe as a one-parameter curve. There remains some scatter about this (removing the averaging over intrinsic parameters increases this to about an order of magnitude); however, it is good enough for rough calculations.
 
-The curve shows that EMRB SNR does scale as expected, and $\rho_\ast$ can be describe as a one parameter curve. There remains some scatter about this (removing the averaging over intrinsic parameters increases this to about an order of magnitude); however, it is good enough for rough calculations.
+We approximate the trend with a best-fit curve
+\begin{equation}
+\rho_\ast = \alpha_1 f_\ast^{\beta_1} \left[1 + \left(\alpha_2 f_\ast\right)^{\beta_2}\right]\left[1 + \left(\alpha_3 f_\ast\right)^{\beta_4}\right]^{-\beta_5}.
+\label{eq:scaled-SNR}
+\end{equation}
+To fit this, we treat the problem as if it were a likelihood maximisation, with each averaged point having a Gaussian likelihood with standard deviation defined from the scatter because of the variation in the intrinsic parameters. The optimised values are
+\begin{equation}
+\begin{split}
+\alpha_1 = ; \quad \alpha_2 = ; \quad \alpha_3 = ;
+\beta_1 = ; \quad \beta_2 = ; \quad \beta_3 = ; \quad \beta_4 = ;
+\end{split}
+\end{equation}
 
- 
+\section{Parameter inference}\label{sec:MCMC}
 
 \section*{Acknowledgments}
 
-The authors would like to thank Donald Lynden-Bell for useful converstaions. CPLB is supported by STFC. JRG is supported by the Royal Society. The MCMC simulations were performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (\url{http://www.hpc.cam.ac.uk/}), provided by Dell Inc.\ using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England.
+The authors would like to thank Donald Lynden-Bell for useful conversations. CPLB is supported by STFC. JRG is supported by the Royal Society. The MCMC simulations were performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (\url{http://www.hpc.cam.ac.uk/}), provided by Dell Inc.\ using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England.
 
 \bibliographystyle{mn3e}
 \bibliography{Extragalactic}
