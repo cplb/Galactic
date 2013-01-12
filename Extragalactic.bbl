@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{73}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Adams(1979)}]{Adams1979}
@@ -65,7 +65,12 @@ Bekenstein J.~D., 1973, The Astrophysical Journal, 183, 657
 Bender P. {et~al.}, 1998, {LISA Pre-Phase A Report}. Tech. rep.,
   Max-Planck-Institut f\"{u}r Quantenoptik, Garching
 
-\bibitem[{Berry \& Gair(2012)}]{Berry2012}
+\bibitem[{Bender {et~al}\mbox{.}(2005)Bender, Kormendy, Bower, Green, Thomas,
+  Danks, Gull, Hutchings, Joseph, Kaiser, Lauer, Nelson, Richstone, Weistrop,
+  \& Woodgate}]{Bender2005}
+Bender R. {et~al.}, 2005, The Astrophysical Journal, 631, 280
+
+\bibitem[{Berry \& Gair(2012)}]{Berry2013}
 Berry C. P.~L., Gair J.~R., 2012, 25
 
 \bibitem[{Berti \& Volonteri(2008)}]{Berti2008}
@@ -160,8 +165,15 @@ Greenhill L.~J. {et~al.}, 2003, The Astrophysical Journal, 590, 162
 Greenhill L.~J., Moran J.~M., Herrnstein J.~R., 1997, The Astrophysical
   Journal, 481, L23
 
+\bibitem[{Haario {et~al}\mbox{.}(1999)Haario, Saksman, \&
+  Tamminen}]{Haario1999}
+Haario H., Saksman E., Tamminen J., 1999, Computational Statistics, 14, 375
+
 \bibitem[{H{\"a}ring \& Rix(2004)}]{Haring2004}
 H{\"a}ring N., Rix H.-W., 2004, The Astrophysical Journal, 604, L89
+
+\bibitem[{Hastings(1970)}]{Hastings1970}
+Hastings W.~K., 1970, Biometrika, 57, 97
 
 \bibitem[{Hobson {et~al}\mbox{.}(2006)Hobson, Efstathiou, \&
   Lasenby}]{Hobson2006}
@@ -176,6 +188,11 @@ Hughes S.~A., Blandford R.~D., 2003, The Astrophysical Journal, 585, L101
   Ward}]{Jennrich2011}
 Jennrich O. {et~al.}, 2011, {NGO Revealing a hidden Universe: opening a new
   chapter of discovery}. Tech. rep., European Space Agency
+
+\bibitem[{Karachentsev {et~al}\mbox{.}(2004)Karachentsev, Karachentseva,
+  Huchtmeier, \& Makarov}]{Karachentsev2004}
+Karachentsev I.~D., Karachentseva V.~E., Huchtmeier W.~K., Makarov D.~I., 2004,
+  The Astronomical Journal, 127, 2031
 
 \bibitem[{Karachentsev {et~al}\mbox{.}(2007)Karachentsev, Tully, Dolphin,
   Sharina, Makarova, Makarov, Sakai, Shaya, Kashibadze, Karachentseva, \&
@@ -203,6 +220,10 @@ Lohfink A.~M., Reynolds C.~S., Miller J.~M., Brenneman L.~W., Mushotzky R.~F.,
 Lynden-Bell D., Rees M.~J., 1971, Monthly Notices of the Royal Astronomical
   Society, 152, 461
 
+\bibitem[{MacKay(2003)}]{MacKay2003}
+MacKay D. J.~C., 2003, {Information Theory, Inference and Learning Algorithms}.
+  Cambridge University Press, Cambridge, p. 640
+
 \bibitem[{Magorrian {et~al}\mbox{.}(1998)Magorrian, Tremaine, Richstone,
   Bender, Bower, Dressler, Faber, Gebhardt, Green, Grillmair, Kormendy, \&
   Lauer}]{Magorrian1998}
@@ -210,6 +231,11 @@ Magorrian J. {et~al.}, 1998, The Astronomical Journal, 115, 2285
 
 \bibitem[{Marconi \& Hunt(2003)}]{Marconi2003}
 Marconi A., Hunt L.~K., 2003, The Astrophysical Journal, 589, L21
+
+\bibitem[{Metropolis {et~al}\mbox{.}(1953)Metropolis, Rosenbluth, Rosenbluth,
+  Teller, \& Teller}]{Metropolis1953}
+Metropolis N., Rosenbluth A.~W., Rosenbluth M.~N., Teller A.~H., Teller E.,
+  1953, The Journal of Chemical Physics, 21, 1087
 
 \bibitem[{Misner {et~al}\mbox{.}(1973)Misner, Thorne, \& Wheeler}]{Misner1973}
 Misner C.~W., Thorne K.~S., Wheeler J.~A., 1973, {Gravitation}. W. H. Freeman,
@@ -278,6 +304,11 @@ Tonry J.~L., Dressler A., Blakeslee J.~P., Ajhar E.~A., Fletcher A.~B., Luppino
   Dressler, Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer,
   Magorrian, Pinkney, \& Richstone}]{Tremaine2002}
 Tremaine S. {et~al.}, 2002, The Astrophysical Journal, 574, 740
+
+\bibitem[{Verolme {et~al}\mbox{.}(2002)Verolme, Cappellari, Copin, van~der
+  Marel, Bacon, Bureau, Davies, Miller, \& de~Zeeuw}]{Verolme2002}
+Verolme E.~K. {et~al.}, 2002, Monthly Notices of the Royal Astronomical
+  Society, 335, 517
 
 \bibitem[{Volonteri(2010)}]{Volonteri2010}
 Volonteri M., 2010, The Astronomy and Astrophysics Review, 18, 279
