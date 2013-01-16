@@ -67,7 +67,7 @@ It is well established that space is big \citep[chapter 8]{Adams1979}. The Milky
 
 In previous work \citep{Berry2013}, we considered measuring the properties of the Galaxy's MBH using extreme-mass-ratio bursts (EMRBs). An EMRB is a short gravitational wave (GW) signal produced when a small object passes through periapsis on an orbit about a much more massive body; in our case this is a stellar mass compact object (CO) orbiting the MBH. If the periapse radius of the orbit is sufficiently small ($r\sub{p} \lesssim 10 r\sub{g}$ for a $10 M_\odot$ CO, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius), a single burst can be highly informative about the MBH, improving our knowledge of its mass and spin.
 
-EMRBs could be considered as the precursors to the better studied extreme-mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}). Close collisions in the dense nuclear cluster surrounding the MBH scatter COs onto highly eccentric orbits. They proceed to emit an EMRB each orbit \citep*{Rubbo2006}. If they survive for long enough without being scattered again, the loss of energy-momentum carried away by gravitational radiation shall lead the orbit to circularise; eventually the GW signal changes, so there is continuous significant emission and we have an EMRI which continues until the inevitable plunge into the MBH. EMRBs are much shorter than EMRIs; they do not have as much time to accumulate high signal-to-noise ratios (SNRs), and consequently they are neither detectable to the same range, or as informative as EMRIs. However, a CO could emit many EMRBs before transitioning to the EMRI regime, making EMRBs an interesting signal for GW detection.
+EMRBs could be considered as the precursors to the better studied extreme-mass-ratio inspirals (EMRIs; \citealt{Amaro-Seoane2007}). Close collisions in the dense nuclear cluster surrounding the MBH scatter COs onto highly eccentric orbits. They proceed to emit an EMRB each orbit \citep*{Rubbo2006}. If they survive for long enough without being scattered again, the loss of energy-momentum carried away by gravitational radiation shall lead the orbit to circularise; eventually the GW signal changes, so there is continuous significant emission and we have an EMRI which continues until the inevitable plunge into the MBH. EMRBs are much shorter than EMRIs; they do not have as much time to accumulate high signal-to-noise ratios (SNRs), and consequently they are neither detectable to the same range, nor as informative as EMRIs. However, a CO could emit many EMRBs before transitioning to the EMRI regime, making EMRBs an interesting signal for GW detection.
 
 In this work, we consider if EMRBs are detectable from other nearby galaxies. If so, they may be useful for constraining the properties of these galaxies' MBHs. Observations have shown MBH masses are correlated with properties of the host galaxies, such as bulge luminosity, mass, velocity dispersion and light concentration \citep{Kormendy1995, Magorrian1998, Ferrarese2000, Gebhardt2000, Graham2001, Tremaine2002, Marconi2003, Haring2004, Graham2007, Graham2011}. The two are linked via their shared history, such that one can inform us about the other.
 
@@ -87,7 +87,7 @@ EMRB waveforms are calculated and analysed as in \citet{Berry2013}, and we give 
 
 \section{Waveform generation}\label{sec:Wave}
 
-We employ a semirelativistic approximation \citep{Ruffini1981}: the CO travels along a geodesic in Kerr spacetime, but radiates as if it were in flat spacetime. This approach is known as a numerical kludge (NK). Comparison with more accurate, and computationally intensive, methods has shown that NK waveforms are reasonably accurate for extreme-mass-ratio systems \citep{Gair2005, Babak2007}: typical errors can few percent \citep{Tanaka1993,Gair2005,Berry2013}. Binding the motion to a true geodesic ensures the signal has the correct frequency components, although neglecting the effects of background curvature ensures that these do not have the correct amplitudes. The geodesic parameters are kept fixed throughout the orbit, as there should be negligible evolution due to the emission of gravitational radiation.
+We employ a semirelativistic approximation \citep{Ruffini1981}: the CO travels along a geodesic in Kerr spacetime, but radiates as if it were in flat spacetime. This approach is known as a numerical kludge (NK). Comparison with more accurate, and computationally intensive, methods has shown that NK waveforms are reasonably accurate for extreme-mass-ratio systems \citep{Gair2005, Babak2007}: typical errors are a few percent \citep{Tanaka1993,Gair2005,Berry2013}. Binding the motion to a true geodesic ensures the signal has the correct frequency components, although neglecting the effects of background curvature ensures that these do not have the correct amplitudes. The geodesic parameters are kept fixed throughout the orbit, as there should be negligible evolution due to the emission of gravitational radiation.
 
 All bursts are assumed to come from marginally bound, or parabolic, orbits. In this case, the CO starts at rest at infinity and has a single passage through periapsis. If the periapse radius is small enough, the orbit may still complete a number of rotations about the MBH; these are zoom-whirl orbits \citep{Glampedakis2002a}.
 
@@ -106,7 +106,7 @@ The waveform is specified by a set of fourteen parameters:
 \item[(2)] The spin parameter $a_\ast$.
 \item[(3, 4)] The orientation angles for the MBH $\Theta\sub{K}$ and $\Phi\sub{K}$.
 \item[(5)] The source distance $R$ divided by the CO mass $\mu$, which we denote as $\zeta = R/\mu$. This scales the amplitude of the waveform.
-\item[(6, 7)] The angular momentum of the CO parametrised in terms of total angular momentum $L_\infty = \sqrt{Q + L_Z^2}$ and inclination $\iota$.
+\item[(6, 7)] The angular momentum of the CO parametrized in terms of total angular momentum $L_\infty = \sqrt{Q + L_Z^2}$ and inclination $\iota$.
 \item[(8--10)] The angular phases at periapse, $\phi\sub{p}$ and $\chi\sub{p}$ (which determines $\theta\sub{p}$), and the time of periapse $t\sub{p}$.
 \item[(11, 12)] The coordinates of the source (in ecliptic coordinates) $\overline{\Theta}$ and $\overline{\Phi}$. Sky position is already determined to high accuracy for each galaxy. Since an EMRB can only give weak constraints on source position we take it as known and do not infer it.\footnote{To be able to do this in practice it would be necessary to have a detection algorithm that can successfully identify the source galaxy. Since no work has yet been done on EMRB detection, we defer this question for future work.}
 \item[(13, 14)] The orbital position of the detector. This should be known and need not be inferred. We assume the same initial position as \citet{Cutler1998}; this does not qualitatively influence results.
@@ -157,11 +157,11 @@ f_\ast = \sqrt{\frac{GM}{r\sub{p}^3}}.
 \end{equation}
 This allows comparison between different systems where the same periapse does not correspond to the same frequency, and thus the same point of the noise curve.
 
-We also expect the SNR to scale with other quantities. We define a characteristic strain amplitude for a burst $h_0$; we expect $\rho \propto h_0$, where the proportionality will be set by a frequency-dependent function than includes the effect of the noise curve. Assuming that the strain is dominated by the quadrupole contribution (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006})
+We also expect the SNR to scale with other quantities. We define a characteristic strain amplitude for a burst $h_0$; we expect $\rho \propto h_0$, where the proportionality will be set by a frequency-dependent function that includes the effect of the noise curve. Assuming that the strain is dominated by the quadrupole contribution (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006})
 \begin{equation}
 h_0 \sim \frac{G}{c^6}\frac{\mu}{R}\frac{\dd^2}{\dd t^2}\left(r^2\right),
 \end{equation}
-where $\mu$ is the CO mass, $R$ is the distance to the MBH, $t$ is time and $r$ is a proxy for the position of the orbitting object. The characteristic rate of change is set by $f_\ast$ and the characteristic length scale is set by $r\sub{p}$. Hence
+where $\mu$ is the CO mass, $R$ is the distance to the MBH, $t$ is time and $r$ is a proxy for the position of the orbiting object. The characteristic rate of change is set by $f_\ast$ and the characteristic length scale is set by $r\sub{p}$. Hence
 \begin{align}
 h_0 \sim {} & \frac{G}{c^6}\frac{\mu}{R}f_\ast^2 r\sub{p}^2 \\
  \sim {} & \frac{G^{5/2}}{c^6}\frac{\mu}{R}f_\ast^{-2/3}M^{2/3}.
@@ -234,7 +234,7 @@ We can repeat the analysis for \textit{eLISA}. The scaled SNRs are shown in \fig
  \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency for the \textit{eLISA} design.\label{fig:scaled-SNR-eLISA}}
    \end{center}
 \end{figure}
-Since Andromeda was only marginally of interest for the classic \textit{LISA} design, we did not it this time. The curve is fitted with
+Since Andromeda was only marginally of interest for the classic \textit{LISA} design, we did not include it this time. The curve is fitted with
 \begin{equation}
 \begin{split}
 &\alpha_1 \simeq 7.39 \times 10; \ \ \alpha_2 \simeq 4.99 \times 10^3; \ \ \alpha_3 \simeq 5.27 \times 10;\\
@@ -254,7 +254,7 @@ Using either noise curve we see that EMRBs could potentially be seen from a rang
 
 \section{Parameter inference}\label{sec:MCMC}
 
-We are not only interested in if EMRBs are detectable, but also if we can extract information about their sources. The probability the burst is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
+We are not only interested in if EMRBs are detectable, but also if we can extract information about their sources. The probability that the burst is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
 \begin{equation}
 p(\boldsymbol{\lambda}|\boldsymbol{s}(t)) = \frac{p(\boldsymbol{s}(t)|\boldsymbol{\lambda})p(\boldsymbol{\lambda})}{p(\boldsymbol{s}(t))},
 \end{equation}
