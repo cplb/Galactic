@@ -109,7 +109,7 @@ The SNR $\rho$ of a particular burst depends upon the precise shape of its traje
 The $\rho$--$r\sub{p}$ relation is largely determined by the shape of the noise curve. For our simulations, we employ the noise model of \citet{Barack2004}. For bursts from the Galactic Centre, over much of the range of interest, the curve can be approximated as a simple power law \citep{Berry2013}
 \begin{equation}
 \log\rho \simeq -2.7\log\left(\frac{r\sub{p}}{r\sub{g}}\right) + \log\left(\frac{\mu}{M_\odot}\right) + 4.9,
-\label{eq:SNR-scaling}
+\label{eq:SNR-power-law}
 \end{equation}
 where $\mu$ is the mass of the CO.
 
@@ -394,7 +394,7 @@ When comparing with the relaxation time-scale we are comparing rates of change, 
 
 \subsubsection{Collisions}\label{sec:Collision}
 
-As a consequence of the high densities in the galactic core, stars may undergo a large number of close encounters with other stars \citep{Cohn1978}. These may lead to their destruction. MS stars, WDs, and NSs may be pulled apart by tidal forces if they stray too close to a a more massive object. As MS stars are diffuse, they would not tidally disrupt another star \citep{Murphy1991,Freitag2005}. Close encounters would result in some mass transfer; the cumulative effect of $20$--$30$ grazing collisions could destroy a MS star \citep{Freitag2006}. The number of collisions a star undergos in a time interval $\delta t$ is
+As a consequence of the high densities in the galactic core, stars may undergo a large number of close encounters with other stars \citep{Cohn1978}. These may lead to their destruction. MS stars, WDs, and NSs may be pulled apart by tidal forces if they stray too close to a a more massive object. As MS stars are diffuse, they would not tidally disrupt another star \citep{Murphy1991,Freitag2005}. Close encounters would result in some mass transfer; the cumulative effect of $20$--$30$ grazing collisions could destroy a MS star \citep{Freitag2006}. The number of collisions a star undergoes in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) A v(r,e,r\sub{p})\delta t,
 \end{equation}
@@ -416,7 +416,9 @@ Collisions provide the cutoff for bound MS stars, and are significant for bound 
 
 \subsection{Number of events}
 
-As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime $\mathcal{N}_2$, we numerically integrated the event rate. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius; the upper limit was the detection threshold as determined from \eqnref{SNR-scaling}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
+As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime, we numerically integrated the event rate. This estimate is denoted as $\mathcal{N}_2\super{int}$. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius; the upper limit was the detection threshold as determined from \eqnref{SNR-power-law}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
+
+To obtain a more accurate estimate, we  performed a number of mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
 
 The calculated numbers of events are shown in \tabref{Rates}.
 \begin{table}
