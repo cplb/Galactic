@@ -198,12 +198,12 @@ For each, we calculated SNRs at $\sim 10^4$ different periapse distances, unifor
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.43\textwidth]{Fig_SNR_scaled_fit}
- \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency.\label{fig:scaled-SNR}}
+ \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency. The fitted curve from \eqnref{scaled-SNR} is indicated by the line.\label{fig:scaled-SNR}}
    \end{center}
 \end{figure}
 The curve shows that EMRB SNR does scale as expected, and $\rho_\ast$ can be described as a one-parameter curve. There remains some scatter about this (removing the averaging over intrinsic parameters increases this to about an order of magnitude); however, it is good enough for rough calculations.
 
-We approximate the trend with a best-fit curve
+We approximate the trend with a parametrized curve
 \begin{equation}
 \rho_\ast = \alpha_1 f_\ast^{\beta_1} \left[1 + \left(\alpha_2 f_\ast\right)^{\beta_2}\right]\left[1 + \left(\alpha_3 f_\ast\right)^{\beta_3}\right]^{-\beta_4}.
 \label{eq:scaled-SNR}
@@ -231,7 +231,7 @@ We can repeat the analysis for \textit{eLISA}. The scaled SNRs are shown in \fig
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.43\textwidth]{Fig_SNR_scaled_fit_eLISA}
- \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency for the \textit{eLISA} design.\label{fig:scaled-SNR-eLISA}}
+ \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency for the \textit{eLISA} design. The fitted curve from \eqnref{scaled-SNR} is indicated by the line.\label{fig:scaled-SNR-eLISA}}
    \end{center}
 \end{figure}
 Since Andromeda was only marginally of interest for the classic \textit{LISA} design, we did not include it this time. The curve is fitted with
@@ -250,7 +250,7 @@ Using this to find the detectability range results in the curves shown in \figre
 \end{figure}
 The maximum distances are reduced compared to the \textit{LISA} case indicating that detectable bursts would be much rarer. There still remain a number of potential candidate galaxies. From our sample, Andromeda is on the very edge of possibility. NGC 3489, NGC 3368 and NGC 253 require a high spin, making them unlikely sources. Of the extragalactic sources, only M32 remains detectable with a $1 M_\odot$, and still it requires a non-zero spin.
 
-Using either noise curve we see that EMRBs could potentially be seen from a range of galaxies. The Galaxy's MBH remains securely detectable in either case. M32 is the next best. MBHs with masses $\sim 10^6$--$10^7 M_\odot$ are observable to the greatest distance. We currently know of few MBHs with masses at the lower end of the spectrum, $10^5$--$10^6 M_\odot$, but these would be good potential candidates.
+Using either noise curve we see that EMRBs could potentially be seen from a range of galaxies. The Galaxy's MBH remains securely detectable in either case. M32 is the next best. MBHs with masses $\sim 10^6$--$10^7 M_\odot$ are observable to the greatest distance. We currently know of few MBHs with masses at the lower end of the spectrum ($10^5$--$10^6 M_\odot$) but these would be good potential candidates.
 
 \section{Parameter inference}\label{sec:MCMC}
 
