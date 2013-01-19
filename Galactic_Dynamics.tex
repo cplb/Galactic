@@ -59,7 +59,7 @@ black hole physics -- celestial mechanics -- Galaxy: centre -- gravitational wav
 
 \section{Introduction}
 
-The most compelling evidence for the existence of astrophysical black holes (BHs) come from the measurement of stellar orbits at the centre of the Galaxy. The stars are found to orbit an object of mass $M_\bullet \simeq 4 \times 10^6 M_\odot$ coincident with the compact radio source Sagittarius A* \citep{Reid2004, Ghez2008, Gillessen2009}. This is the nearest member of a population massive black holes (MBHs; \citealt{Volonteri2010}) that are believed to occupy the centre of galaxies \citep{Lynden-Bell1969, Lynden-Bell1971, Rees1984, Ferrarese2005}. The Galactic Centre is an ideal laboratory for investigating the properties of an MBH and its surrounding nuclear star cluster \citep{Genzel2010}.
+The most compelling evidence for the existence of astrophysical black holes (BHs) comes from the measurement of stellar orbits at the centre of the Galaxy. The stars are found to orbit an object of mass $M_\bullet \simeq 4 \times 10^6 M_\odot$ coincident with the compact radio source Sagittarius A* \citep{Reid2004, Ghez2008, Gillessen2009}. This is the nearest member of a population of massive black holes (MBHs; \citealt{Volonteri2010}) that are believed to occupy the centre of galaxies \citep{Lynden-Bell1969, Lynden-Bell1971, Rees1984, Ferrarese2005}. The Galactic Centre is an ideal laboratory for investigating the properties of an MBH and its surrounding nuclear star cluster \citep{Genzel2010}.
 
 One means of investigating the properties of MBHs is through gravitational waves (GWs). A stellar mass compact object (CO), such as a main sequence (MS) star, white dwarf (WD), neutron star or stellar mass BH, emits gravitational radiation as it orbits the MBH. On account of the extreme-mass-ratio between the two bodies, we can approximate the CO as moving in the background spacetime of the MBH.
 
@@ -73,7 +73,7 @@ EMRBs are much shorter in duration than EMRIs. This means they do not accumulate
 
 For EMRBs to be a useful astronomical signal we require three things: the bursts contain sufficient information to improve our knowledge of their source systems; their event rate is sufficiently high that we expect to observe them over a mission life time, and the signals can be successfully extracted from the data stream.
 
-We have previous addressed the first concern: EMRBs can give good constraints on the key parameters describing the Galaxy's MBH if the periapse distance is $r\sub{p} \lesssim 10 r\sub{g}$, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius \citep{Berry2013}. This would allow us to improve upon the current uncertainty in the mass measurement of $8\%$ \citep{Gillessen2009}. In addition, we could also measure the spin magnitude to a precision of better than $0.1$.
+We have previously addressed the first concern: EMRBs can give good constraints on the key parameters describing the Galaxy's MBH if the periapse distance is $r\sub{p} \lesssim 10 r\sub{g}$, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius \citep{Berry2013}. This would allow us to improve upon the current uncertainty in the mass measurement of $8\%$ \citep{Gillessen2009}. In addition, we could also measure the spin magnitude to a precision of better than $0.1$.
 
 The second concern shall be the subject of this work. Previously, the best estimate for the event rate was given by \citet*{Hopman2007}; they predicted the event rate for \textit{LISA} was $\sim 1\units{yr^{-1}}$. We follow a similar approach, but significantly, we improve the calculation of SNR by using numerical kludge (NK) waveforms \citep{Babak2007}. In addition to this, we extend the analysis by not only considering the number of events that would be detectable, but also how many would be informative.
 
@@ -81,15 +81,15 @@ The second concern shall be the subject of this work. Previously, the best estim
 
 To establish the detectability and usefulness of EMRBs, it is necessary to calculate model waveforms. This is done using the numerical kludge approximation. We use exactly the same construction as is described in \citet{Berry2013}; the key details are outlined below.
 
-The detectability of a burst is dependent upon its SNR. To save calculating SNRs directly, it is possible to estimate the value form the periapse radius using a simple scaling relation. This is introduced in \secref{SNR}. We make use of this when selecting orbits of potential interest, but calculate the SNR from waveforms for more accurate results.
+The detectability of a burst is dependent upon its SNR. To save calculating SNRs directly, it is possible to estimate the value from the periapse radius using a simple scaling relation. This is introduced in \secref{SNR}. We make use of this when selecting orbits of potential interest, but calculate the SNR from waveforms for more accurate results.
 
-Once of have determined which bursts are of interest, we can evaluate the accuracy to which parameters can be determined, should that burst be observed. To do so, we perform Markov chain Monte Carlo (MCMC) simulations \citep[chapter 29]{MacKay2003}.
+Once we have determined which bursts are of interest, we can evaluate the accuracy to which parameters can be determined, should that burst be observed. To do so, we perform Markov chain Monte Carlo (MCMC) simulations \citep[chapter 29]{MacKay2003}.
 
 \subsection{Numerical kludge waveforms\label{sec:NK}}
 
 Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The waveforms are accurate to typically a few percent \citep{Tanaka1993,Gair2005}: the error in our waveforms has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citealt{Berry2013}).
 
-To construct our NK waveforms, we first integrate the Kerr geodesic equations of motion. We only consider parabolic (marginally bound) orbits, where the orbitting body is at rest at infinity.
+To construct our NK waveforms, we first integrate the Kerr geodesic equations of motion. We only consider parabolic (marginally bound) orbits, where the orbiting body is at rest at infinity.
 
 To avoid difficulties with turning points in the trajectory, we employ angular variables in place of the radial and polar coordinates \citep{Drasco2004}
 \begin{align}
@@ -126,7 +126,7 @@ The parameters left to infer are:
 \item[(1)] The MBH's mass $M_\bullet$. This is well constrained by the observation of stellar orbits about Sgr A*~\citep{Ghez2008, Gillessen2009}, the best estimate is $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$.
 \item[(2)] The spin parameter $a_\ast$.
 \item[(3, 4)] The orientation angles for the black hole spin $\Theta_\mathrm{K}$ and $\Phi_\mathrm{K}$.
-\item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using by stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$~\citep{Gillessen2009}.
+\item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$~\citep{Gillessen2009}.
 \item[(6, 7)] The angular momentum of the CO, parametrized by the magnitude at infinity $L_\infty = \sqrt{L_z^2 + Q}$ and the orbital inclination $\iota = \tan^{-1}(\sqrt{Q}/L_z)$.
 \item[(8--10)] Coordinates specifying the trajectory. We use the angular phases at periapse, $\phi_\mathrm{p}$ and $\chi_\mathrm{p}$, as well as the time of periapse $t_\mathrm{p}$.
 \end{enumerate}
@@ -220,7 +220,7 @@ where $M_1$ and $M_2$ are the masses of the binary's components, and $a\sub{B}$ 
 
 We assume $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$ \citep{Gillessen2009} and $\sigma = (103 \pm 20)\units{km\,s^{-1}}$ \citep{Tremaine2002}. This gives a core radius of $r\sub{c} = (1.7 \pm 0.7)\units{pc}$. Using the results of \citet{Ghez2008} we would expect the total mass of stars core to be $m_\star(r\sub{c}) = 6.4 \times 10^6 M_\odot$, which is within $5\%$ of the value obtained similarly from \citet{Genzel2003}. This gives a reference stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
 
-\subsection{Parametrising in terms of eccentricity \& periapsis}
+\subsection{Parametrizing in terms of eccentricity \& periapsis}
 
 We characterise orbits by their eccentricity $e$ and periapse radius $r\sub{p}$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $\mathcal{J}$ per unit mass are entirely characterised by these parameters
 \begin{align}
@@ -334,7 +334,7 @@ Tidal forces from the MBH can disrupt stars. This occurs at the tidal radius
 r\sub{T} \simeq \left(\frac{M_\bullet}{M}\right)^{1/3}R_M
 \label{eq:Tidal}
 \end{equation}
-where $R_M$ is the radius of the star \citep{Hills1975, Rees1988, Kobayashi2004}.\footnote{See \citet{Kesden2012} for a general relativistic treatment.} Any star on an orbit with $r\sub{p} < r\sub{T}$ is disrupted in the course of its orbit. Parametrising orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone \citep{Frank1976, Lightman1977, Cohn1978} as these were not incorporated into the Fokker-Planck calculations \citep{Hopman2009}.\footnote{The loss cone is a region in velocity space where orbits are depleted because stars are disrupted more rapidly than they can be replenished by two-body scattering.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term \citep{Lightman1977, Bahcall1977, Cohn1978}. Its effects are diluted by resonant relaxation \citep{Hopman2007,Toonen2009,Merritt2011}. Furthermore, the loss cone could be refilled by the wandering of the MBH because of perturbations from the inhomogeneities in the stellar potential \citep{Sigurdsson1997,Chatterjee2002,Merritt2007}.
+where $R_M$ is the radius of the star \citep{Hills1975, Rees1988, Kobayashi2004}.\footnote{See \citet{Kesden2012} for a general relativistic treatment.} Any star on an orbit with $r\sub{p} < r\sub{T}$ is disrupted in the course of its orbit. Parametrizing orbits by their periapsis allows us to easily determine which stars should be disrupted. We do not include the full effects of the loss cone \citep{Frank1976, Lightman1977, Cohn1978} as these were not incorporated into the Fokker-Planck calculations \citep{Hopman2009}.\footnote{The loss cone is a region in velocity space where orbits are depleted because stars are disrupted more rapidly than they can be replenished by two-body scattering.} The effect of the loss cone should be small, only modifying the DF by a logarithmic term \citep{Lightman1977, Bahcall1977, Cohn1978}. Its effects are diluted by resonant relaxation \citep{Hopman2007,Toonen2009,Merritt2011}. Furthermore, the loss cone could be refilled by the wandering of the MBH because of perturbations from the inhomogeneities in the stellar potential \citep{Sigurdsson1997,Chatterjee2002,Merritt2007}.
 
 Tidal disruption is significant for MS stars since they are least dense: calculated in this way, only MS stars are tidally disrupted outside of the MBH's event horizon \citep{Sigurdsson1997}. The tidal radius defines the cut-off for periapsis of high eccentricity ($e \ga 1$) orbits \citep{Lightman1977}.
 
@@ -342,7 +342,7 @@ Tidal disruption is significant for MS stars since they are least dense: calcula
 
 The motion of a star is determined not only by the dominant influence of the central MBH, but also by the other stars. The gravitational potential of the stars may be split into two components: a smooth background representing the average distribution of stars, and statistical fluctuations from random deviations in the stellar distribution. The former only contributes to the stars' orbits: we neglect this since we are more interested in the influence of the MBH. The latter may be approximated as a series of two-body encounters. These lead to scattering, in a manner much like Brownian motion \citep{Bekenstein1992,Maoz1993,Nelson1999}.
 
-The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen \citep[section 1.2.1]{Binney2008}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has form
+The two-body interactions mostly lead to small deflections. Over time, these may accumulate into a significant change in the dynamics. The relaxation time-scale characterises the time taken for this to happen \citep[section 1.2.1]{Binney2008}. It therefore quantifies the time over which an orbit may be repopulated by scattering. There are a variety of definitions for the relaxation time-scale. For a system with a purely Maxwellian distribution, the time-scale has the form
 \begin{equation}
 \tau\sub{R}\super{Max} \simeq \kappa\frac{\sigma^3}{G^2M_\star^2 n_\star\ln\Lambda},
 \label{eq:tauMaxwell}
@@ -390,7 +390,7 @@ Unbound stars only undergo a single periapse passage and only radiate one burst 
 
 The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the two regimes. The rate of change of energy goes to zero as a consequence of assuming the orbital parameters do not change over the course of an orbit. It is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
 
-When comparing with the relaxation time-scale we are comparing rates of change, with the shorter time-scale highlighting the more rapid process that dominates the evolution \citep{Amaro-Seoane2007}. We therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau_\mathcal{J}$ \citep{Merritt2011}. Orbits with $\tau\sub{GW} < \tau_\mathcal{J}$ become depleted by GW emission faster than they are replenished by scattering. The cusp does not extend to these orbits. Yet, these orbits are not totally depopulated as an object may pass through during its inspiral from greater periapse and eccentricity. The net effect is the distributions of MS stars, WDs and NSs at high eccentricities are relatively unchanged from their cusp states, but the BH population is significantly depleted.
+When comparing with the relaxation time-scale we are comparing rates of change, with the shorter time-scale highlighting the more rapid process that dominates the evolution \citep{Amaro-Seoane2007}. We therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau_\mathcal{J}$ \citep{Merritt2011}. Orbits with $\tau\sub{GW} < \tau_\mathcal{J}$ become depleted by GW emission faster than they are replenished by scattering. The cusp does not extend to these orbits. Yet, these orbits are not totally depopulated as an object may pass through during its inspiral from greater periapse and eccentricity. The net effects are the distributions of MS stars, WDs and NSs at high eccentricities are relatively unchanged from their cusp states, but the BH distribution is significantly depleted.
 
 \subsubsection{Collisions}\label{sec:Collision}
 
@@ -400,7 +400,7 @@ As a consequence of the high densities in the Galactic core, stars may undergo a
 \end{equation}
 where $A$ is the collisional cross-sectional area. For tidal disruption, where the encounter is with a collapsed object (WD, NS or BH), we set $A = \pi r_{\mathrm{T},\,{M'}}^2$, where $r_{\mathrm{T},\,{M'}}$ is the appropriate tidal radius: like \eqnref{Tidal} but with $M_\bullet$ replaced with the mass of the collapsed object $M'$. For collisions between MS stars, the cross-sectional area is simply the geometric $A = \pi R_\star^2$.\footnote{Here we assume the relative velocity of the colliding stars is much greater than the escape velocity of the star so we may neglect the effects of gravitational focusing.}
 
-For circular orbits we can find the radius at which collisions lead to disruptions by setting $\delta K = 1$ for tidal disruption or $\delta K = 20$ for grazing collisions, and $\delta t = \overline{\tau_\mathrm{R,\,M}}$. We use the system average relaxation time-scale for species of mass $M$ as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, for bound orbits
+For circular orbits we can find the radius at which collisions lead to disruptions by setting $\delta K = 1$ for tidal disruption or $\delta K = 20$ for grazing collisions, and $\delta t = \overline{\tau_\mathrm{R,\,M}}$. We use the system average relaxation time-scale for the species of mass $M$ as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, for bound orbits
 \begin{equation}
 K = 2 A \frac{\tau\sub{R}}{P(r\sub{p},e)}\intd{r\sub{p}}{(1+e)r\sub{p}/(1-e)}{n(r)\frac{v(r,e,r\sub{p})}{v_r(r,e,r\sub{p})}}{r},
 \end{equation}
@@ -632,7 +632,7 @@ The relaxation time-scale for individual components is used in determining the c
 
 \subsubsection{Orbital average}\label{sec:orbital-ave}
 
-We calculate the time-scale for an orbit, parameterised by $e$ and $r\sub{p}$, by averaging over one period.\footnote{We only consider bound orbits. The orbital relaxation time-scale is compared against the GW time-scale; the evolution of unbound orbits due to GW emission is negligible.} The mean squared velocity is
+We calculate the time-scale for an orbit, parametrized by $e$ and $r\sub{p}$, by averaging over one period.\footnote{We only consider bound orbits. The orbital relaxation time-scale is compared against the GW time-scale; the evolution of unbound orbits due to GW emission is negligible.} The mean squared velocity is
 \begin{equation}
 \left\langle v^2\left(e,r\sub{p}\right)\right\rangle = \frac{GM_\bullet(1 - e)}{r\sub{p}}.
 \end{equation}
