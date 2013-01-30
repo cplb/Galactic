@@ -418,7 +418,7 @@ Collisions provide the cut-off for bound MS stars, and are significant for bound
 
 As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime, we numerically integrated the event rate. This estimate is denoted as $\mathcal{N}_2\super{int}$. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius; the upper limit was the detection threshold as determined from \eqnref{SNR-power-law}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
 
-To obtain a more accurate estimate, we  performed a number of mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
+To obtain a more accurate estimate, we  performed $20000$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
 
 The calculated numbers of events are shown in \tabref{Rates}.
 \begin{table}
@@ -429,17 +429,19 @@ The calculated numbers of events are shown in \tabref{Rates}.
   \hline
    Star & \multicolumn{1}{c}{$\mathcal{N}_2\super{int}$} & \multicolumn{1}{c}{$\mathcal{N}_2\super{run}$} \\
  \hline
- MS & 1.3,10^{-3} & 1.3,10^{-3} \\
- WD & 7.4,10^{-4} & 7.4,10^{-4} \\
+ MS & 9.5,10^{-4} & 1.3,10^{-3} \\
+ WD & 1.0,10^{-2} & 1.0,10^{-2} \\
  NS & 5.0,10^{-1} & 5.0,10^{-1}  \\
- BH & 1.2,10^{-1} & 1.2,10^{-1} \\
+ BH & 1.2,10^{0} & 1.2,10^{0} \\
 \hline
 Total & 1.7,10^{0} & 1.7,10^{0} \\
 \hline
 \end{tabular}
 \end{minipage}
 \end{table}
-The overall rates are similar to those presented in \citet{Hopman2007}. The MS rate is lower because of a larger collisional cut-off, which also influences the WD rate; the NS rate is enhanced because of the inclusion of bursts from inspiralling objects. The physics for BHs is least changed, the (small) difference in event rate is partly a consequence of our more realistic SNRs. Only MS stars have a non-negligible (relative) contribution from unbound orbits.
+The overall rates are similar to those presented in \citet{Hopman2007}. The MS rate is lower because of a larger collisional cut-off. This also influences the WD rate, however the overall rate is little changed. The NS rate is enhanced because of the inclusion of bursts from inspiralling objects. The physics for BHs is least changed, the (small) difference in event rate is partly a consequence of our more realistic SNRs. Only MS stars have a non-negligible (relative) contribution from unbound orbits.
+
+Only BHs and NSs contribute to the event rate significantly.
 
 \section*{Acknowledgments}
 The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. CPLB is supported by STFC. JRG is supported by the Royal Society.
