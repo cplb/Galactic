@@ -1,4 +1,4 @@
-\begin{thebibliography}{73}
+\begin{thebibliography}{64}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Adams(1979)}]{Adams1979}
@@ -76,6 +76,11 @@ Berry C. P.~L., Gair J.~R., 2012, 25
 \bibitem[{Berti \& Volonteri(2008)}]{Berti2008}
 Berti E., Volonteri M., 2008, The Astrophysical Journal, 684, 822
 
+\bibitem[{Brenneman {et~al}\mbox{.}(2011)Brenneman, Reynolds, Nowak, Reis,
+  Trippe, Fabian, Iwasawa, Lee, Miller, Mushotzky, Nandra, \&
+  Volonteri}]{Brenneman2011}
+Brenneman L.~W. {et~al.}, 2011, The Astrophysical Journal, 736, 103
+
 \bibitem[{Chandrasekhar(1998)}]{Chandrasekhar1998}
 Chandrasekhar S., 1998, {The Mathematical Theory of Black Holes}, Oxford
   Classic Texts in the Physical Sciences. Oxford University Press, Oxford
@@ -96,30 +101,16 @@ Dotti M., Colpi M., Pallini S., Perego A., Volonteri M., 2012, 14
 \bibitem[{Drasco \& Hughes(2004)}]{Drasco2004}
 Drasco S., Hughes S., 2004, Physical Review D, 69, 044015
 
-\bibitem[{Ferrarese \& Merritt(2000)}]{Ferrarese2000}
-Ferrarese L., Merritt D., 2000, The Astrophysical Journal, 539, L9
-
 \bibitem[{Finn(1992)}]{Finn1992}
 Finn L.~S., 1992, Physical Review D, 46, 5236
 
 \bibitem[{Gair {et~al}\mbox{.}(2005)Gair, Kennefick, \& Larson}]{Gair2005}
 Gair J.~R., Kennefick D.~J., Larson S.~L., 2005, Physical Review D, 72, 084009
 
-\bibitem[{Gallo {et~al}\mbox{.}(2011)Gallo, Miniutti, Miller, Brenneman,
-  Fabian, Guainazzi, \& Reynolds}]{Gallo2011}
-Gallo L.~C., Miniutti G., Miller J.~M., Brenneman L.~W., Fabian A.~C.,
-  Guainazzi M., Reynolds C.~S., 2011, Monthly Notices of the Royal Astronomical
-  Society, 411, 607
-
 \bibitem[{Gammie {et~al}\mbox{.}(2004)Gammie, Shapiro, \&
   McKinney}]{Gammie2004}
 Gammie C.~F., Shapiro S.~L., McKinney J.~C., 2004, The Astrophysical Journal,
   602, 312
-
-\bibitem[{Gebhardt {et~al}\mbox{.}(2000)Gebhardt, Bender, Bower, Dressler,
-  Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer, Magorrian, Pinkney,
-  Richstone, \& Tremaine}]{Gebhardt2000}
-Gebhardt K. {et~al.}, 2000, The Astrophysical Journal, 539, L13
 
 \bibitem[{Gillessen {et~al}\mbox{.}(2009)Gillessen, Eisenhauer, Trippe,
   Alexander, Genzel, Martins, \& Ott}]{Gillessen2009}
@@ -138,17 +129,9 @@ Glampedakis K., Kennefick D., 2002, Physical Review D, 66, 044002
 Gonz{\'a}lez J.~A., Sperhake U., Br{\"u}gmann B., Hannam M., Husa S., 2007,
   Physical Review Letters, 98, 091101
 
-\bibitem[{Graham(2007)}]{Graham2007}
-Graham A.~W., 2007, Monthly Notices of the Royal Astronomical Society, 379, 711
-
 \bibitem[{Graham(2008)}]{Graham2008}
 Graham A.~W., 2008, Publications of the Astronomical Society of Australia, 25,
   167
-
-\bibitem[{Graham {et~al}\mbox{.}(2001)Graham, Erwin, Caon, \&
-  Trujillo}]{Graham2001}
-Graham A.~W., Erwin P., Caon N., Trujillo I., 2001, The Astrophysical Journal,
-  563, L11
 
 \bibitem[{Graham {et~al}\mbox{.}(2011)Graham, Onken, Athanassoula, \&
   Combes}]{Graham2011}
@@ -168,9 +151,6 @@ Greenhill L.~J., Moran J.~M., Herrnstein J.~R., 1997, The Astrophysical
 \bibitem[{Haario {et~al}\mbox{.}(1999)Haario, Saksman, \&
   Tamminen}]{Haario1999}
 Haario H., Saksman E., Tamminen J., 1999, Computational Statistics, 14, 375
-
-\bibitem[{H{\"a}ring \& Rix(2004)}]{Haring2004}
-H{\"a}ring N., Rix H.-W., 2004, The Astrophysical Journal, 604, L89
 
 \bibitem[{Hastings(1970)}]{Hastings1970}
 Hastings W.~K., 1970, Biometrika, 57, 97
@@ -211,11 +191,6 @@ King A.~R., Pringle J.~E., Hofmann J.~A., 2008, Monthly Notices of the Royal
 Kormendy J., Richstone D., 1995, Annual Review of Astronomy and Astrophysics,
   33, 581
 
-\bibitem[{Lohfink {et~al}\mbox{.}(2012)Lohfink, Reynolds, Miller, Brenneman,
-  Mushotzky, Nowak, \& Fabian}]{Lohfink2012}
-Lohfink A.~M., Reynolds C.~S., Miller J.~M., Brenneman L.~W., Mushotzky R.~F.,
-  Nowak M.~A., Fabian A.~C., 2012
-
 \bibitem[{Lynden-Bell \& Rees(1971)}]{Lynden-Bell1971}
 Lynden-Bell D., Rees M.~J., 1971, Monthly Notices of the Royal Astronomical
   Society, 152, 461
@@ -229,9 +204,6 @@ MacKay D. J.~C., 2003, {Information Theory, Inference and Learning Algorithms}.
   Lauer}]{Magorrian1998}
 Magorrian J. {et~al.}, 1998, The Astronomical Journal, 115, 2285
 
-\bibitem[{Marconi \& Hunt(2003)}]{Marconi2003}
-Marconi A., Hunt L.~K., 2003, The Astrophysical Journal, 589, L21
-
 \bibitem[{Metropolis {et~al}\mbox{.}(1953)Metropolis, Rosenbluth, Rosenbluth,
   Teller, \& Teller}]{Metropolis1953}
 Metropolis N., Rosenbluth A.~W., Rosenbluth M.~N., Teller A.~H., Teller E.,
@@ -241,21 +213,10 @@ Metropolis N., Rosenbluth A.~W., Rosenbluth M.~N., Teller A.~H., Teller E.,
 Misner C.~W., Thorne K.~S., Wheeler J.~A., 1973, {Gravitation}. W. H. Freeman,
   New York
 
-\bibitem[{Nardini {et~al}\mbox{.}(2011)Nardini, Fabian, Reis, \&
-  Walton}]{Nardini2011}
-Nardini E., Fabian A.~C., Reis R.~C., Walton D.~J., 2011, Monthly Notices of
-  the Royal Astronomical Society, 410, 1251
-
 \bibitem[{Nowak {et~al}\mbox{.}(2010)Nowak, Thomas, Erwin, Saglia, Bender, \&
   Davies}]{Nowak2010}
 Nowak N., Thomas J., Erwin P., Saglia R.~P., Bender R., Davies R.~I., 2010,
   Monthly Notices of the Royal Astronomical Society, 403, 646
-
-\bibitem[{Patrick {et~al}\mbox{.}(2011)Patrick, Reeves, Porquet, Markowitz,
-  Lobban, \& Terashima}]{Patrick2011}
-Patrick A.~R., Reeves J.~N., Porquet D., Markowitz A.~G., Lobban A.~P.,
-  Terashima Y., 2011, Monthly Notices of the Royal Astronomical Society, 411,
-  2353
 
 \bibitem[{Peterson {et~al}\mbox{.}(2005)Peterson, Bentz, Desroches, Filippenko,
   Ho, Kaspi, Laor, Maoz, Moran, Pogge, \& Quillen}]{Peterson2005}
@@ -300,11 +261,6 @@ Thim F., Hoessel J.~G., Saha A., Claver J., Dolphin A., Tammann G.~A., 2004,
 Tonry J.~L., Dressler A., Blakeslee J.~P., Ajhar E.~A., Fletcher A.~B., Luppino
   G.~A., Metzger M.~R., Moore C.~B., 2001, The Astrophysical Journal, 546, 681
 
-\bibitem[{Tremaine {et~al}\mbox{.}(2002)Tremaine, Gebhardt, Bender, Bower,
-  Dressler, Faber, Filippenko, Green, Grillmair, Ho, Kormendy, Lauer,
-  Magorrian, Pinkney, \& Richstone}]{Tremaine2002}
-Tremaine S. {et~al.}, 2002, The Astrophysical Journal, 574, 740
-
 \bibitem[{Verolme {et~al}\mbox{.}(2002)Verolme, Cappellari, Copin, van~der
   Marel, Bacon, Bureau, Davies, Miller, \& de~Zeeuw}]{Verolme2002}
 Verolme E.~K. {et~al.}, 2002, Monthly Notices of the Royal Astronomical
@@ -321,6 +277,11 @@ Volonteri M., Madau P., Quataert E., Rees M.~J., 2005, The Astrophysical
 \bibitem[{Volonteri {et~al}\mbox{.}(2012)Volonteri, Sikora, Lasota, \&
   Merloni}]{Volonteri2012a}
 Volonteri M., Sikora M., Lasota J.-P., Merloni A., 2012
+
+\bibitem[{Walton {et~al}\mbox{.}(2013)Walton, Nardini, Fabian, Gallo, \&
+  Reis}]{Walton2013}
+Walton D.~J., Nardini E., Fabian A.~C., Gallo L.~C., Reis R.~C., 2013, Monthly
+  Notices of the Royal Astronomical Society, 428, 2901
 
 \bibitem[{Yu \& Tremaine(2002)}]{Yu2002}
 Yu Q., Tremaine S., 2002, Monthly Notices of the Royal Astronomical Society,
