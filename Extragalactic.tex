@@ -177,19 +177,19 @@ Space-based detectors are most sensitive from extreme-mass-ratio signals origina
 %\begin{minipage}{\columnwidth}
  \centering
   \caption{Sample of nearby MBHs that are candidates for producing detectable EMRBs.\label{tab:MBHs}}
-  \begin{tabular}{@{} l D{.}{.}{3.2} D{.}{.}{2.5} l @{}}
+  \begin{tabular}{@{} l c  D{.}{.}{2.5} l @{}}
   \hline
-   Galaxy & \multicolumn{1}{c}{$M/10^6 M_\odot$} & \multicolumn{1}{c}{$R/\mathrm{Mpc}$} & References \\
+   Galaxy & \multicolumn{3}{c}{$M/10^6 M_\odot$} & \multicolumn{1}{c}{$R/\mathrm{Mpc}$} & References \\
  \hline
- Milky Way (MW) & 4.31 & 0.00833& \citet{Gillessen2009} \\
- M32 (NGC 221) & 2.5 & 0.770 & \citet{Verolme2002,Karachentsev2004} \\
- Andromeda (M31, NGC 224) & 140 & 0.770 & \citet{Bender2005,Karachentsev2004} \\
- Circinus & 1.1 & 2.82 & \citet{Graham2008,Greenhill2003,Karachentsev2007} \\
- NGC 4945 & 1.4 & 3.82 & \citet{Greenhill1997,Karachentsev2007} \\
- Sculptor (NGC 253) & 10 & 3.5 & \citet{Graham2011,Rodriguez-Rico2006,Rekola2005} \\
- NGC 4395 & 0.36 & 4.0& \citet{Peterson2005,Thim2004} \\
- NGC 3368 & 7.3 & 10.1 & \citet{Graham2011,Nowak2010,Tonry2001} \\
- NGC 3489 & 5.8 & 11.7 & \citet{Graham2011,Nowak2010,Tonry2001} \\
+ Milky Way (MW) & 4.31 \pm 0.36 & 0.00833 & \citet{Gillessen2009} \\
+ M32 (NGC 221) & 2.5 \pm 0.5 & 0.770 & \citet{Verolme2002,Karachentsev2004} \\
+ Andromeda (M31, NGC 224) & 140^{+90}_{-30} & 0.770 & \citet{Bender2005,Karachentsev2004} \\
+ Circinus & 1.1 \pm 0.2 & 2.82 & \citet{Graham2008,Greenhill2003,Karachentsev2007} \\
+ NGC 4945 & 1.4^{+0.7}_{-0.5} & 3.82 & \citet{Greenhill1997,Ferrarese2005,Karachentsev2007} \\
+ Sculptor (NGC 253) & 10^{+10}_{-5} & 3.5 & \citet{Graham2011,Rodriguez-Rico2006,Rekola2005} \\
+ NGC 4395 & 0.36 \pm 0.11 & 4.0& \citet{Peterson2005,Thim2004} \\
+ NGC 3368 & 7.3 \pm 1.5 & 10.1 & \citet{Graham2011,Nowak2010,Tonry2001} \\
+ NGC 3489 & 5.8 \pm 0.8 & 11.7 & \citet{Graham2011,Nowak2010,Tonry2001} \\
 \hline
 \end{tabular}
 %\end{minipage}
@@ -268,6 +268,34 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}) \propto \exp\left[-\recip{2}\innerprod
 \label{eq:likelihood}
 \end{equation}
 We assume non-informative priors on the parameters to reflect a state of ignorance: we do not incorporate information we have from other measurements such that results indicate what could be learnt from an EMRB alone.
+
+Having recovered the posterior distribution it is necessary to quantify the accuracy to which parameters could be measured. If the posterior were Gaussian, this can be done just by using the standard deviation. An alternative wis to use the range that encloses a given probability, but this is misleading if the distribtuion is multimodal. A robust means of characterising the width is by using a $k$-d tree.
+
+\section{Results}
+
+\begin{figure*}
+\begin{center}
+\subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_M32_MCMC_sigmas_rp_6}} \quad
+\subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_M32_MCMC_sigmas_SNR_6}} \\
+\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for M32. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_N4945_MCMC_sigmas_rp_6}} \quad
+\subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_N4945_MCMC_sigmas_SNR_6}} \\
+\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4945. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+\subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_N4395_MCMC_sigmas_rp_6}} \quad
+\subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_N4395_MCMC_sigmas_SNR_6}} \\
+\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4945. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\end{center}
+\end{figure*}
 
 \section{Conclusions}
 
