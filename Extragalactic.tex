@@ -53,8 +53,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-Extreme-mass-ratios bursts (EMRBs) are a class of potentially interesting gravitational wave signals. They are produced when a compact object passes through periapsis on a highly eccentric orbit about a much more massive object; we consider stellar mass objects orbiting the massive black holes (MBHs) found in the centre of galaxies. Such an object may emit many EMRBs before eventually inspiralling into the MBH. EMRBs from the Galaxy's MBH would be detectable with a space-borne gravitational wave detector; we investigate the possibility of detecting EMRBs from extragalactic sources. There are several nearby galaxies that could yield detectable bursts. For a detector like \textit{LISA}, sensitivity is greatest for EMRBs from MBHs of $\sim10^6$--$10^7 M_\odot$, which could be detected out to $\sim 100\units{Mpc}$. Considering the examples of M32, NGC 4945 and NGC 4395 we study if extragalactic EMRBs contain enough information for studying their sources. This is possible, but only if the periapse radius of the orbit is small. This limits the utility of EMRBs as an astronomical tool.
-
+Extreme-mass-ratios bursts (EMRBs) are a class of potentially interesting gravitational wave signals. They are produced when a compact object passes through periapsis on a highly eccentric orbit about a much more massive object; we consider stellar mass objects orbiting the massive black holes (MBHs) found in the centre of galaxies. Such an object may emit many EMRBs before eventually inspiralling into the MBH. EMRBs from the Galaxy's MBH would be detectable with a space-borne gravitational wave detector; we investigate the possibility of detecting EMRBs from extragalactic sources. There are several nearby galaxies that could yield detectable bursts. For a detector like \textit{LISA}, sensitivity is greatest for EMRBs from MBHs of $\sim10^6$--$10^7 M_\odot$, which could be detected out to $\sim 100\units{Mpc}$. Considering the examples of M32, NGC 4945 and NGC 4395 we study if extragalactic EMRBs contain enough information for studying their sources. This is possible, but only if the periapse radius of the orbit is small: of order $r\sub{p} \lesssim 8 r\sub{g}$ where $r\sub{g} = GM/c^2$ is the gravitational radius of the MBH. This limits the utility of EMRBs as an astronomical tool. If we are lucky, we could potentially place constraints of the MBH mass and spin of one part in $10^2$.
 \end{abstract}
 
 \begin{keywords}
@@ -83,7 +82,7 @@ We have some MBH spin measurements from X-ray observations of active galactic nu
 
 EMRBs could be an interesting signal for a space-borne gravitational wave detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}; \citealt{Bender1998, Danzmann2003}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}; \citealt{Jennrich2011, Amaro-Seoane2012a}).\footnote{The revised \textit{eLISA} concept is the same revised design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} At the time of writing, there is no currently funded mission. However, \textit{LISA Pathfinder}, a technology demonstration mission, is due for launch at the end of 2014 \citep{Anza2005, Antonucci2012}. Hopefully, a full mission shall follow in the subsequent decade. Since there does not exist a definite mission design, we stick to the classic \textit{LISA} design for the majority of this work.
 
-EMRB waveforms are calculated and analysed as in \citet{Berry2013}, and we give only an outline of the techniques used. Waveform construction and the numerical kludge approximation are explained in \secref{Wave}. The basics of signal analysis are introduced in \secref{Sig}. In \secref{SNR}, the detectability of EMRBs from extragalactic MBHs is discussed. We show that bursts from other galaxies could be detected with \textit{LISA} or \textit{eLISA}. Following this, in \secref{MCMC} we discuss the information that could be extracted from these signals, and the constraints these could place.
+EMRB waveforms are calculated and analysed as in \citet{Berry2013}, and we give only an outline of the techniques used. Waveform construction and the numerical kludge approximation are explained in \secref{Wave}. The basics of signal analysis are introduced in \secref{Sig}. In \secref{SNR}, the detectability of EMRBs from extragalactic MBHs is discussed. We show that bursts from other galaxies could be detected with \textit{LISA} or \textit{eLISA}. Following this, in \secref{Infer} we discuss how to assess information that could be extracted from these signals and in \secref{Res} we present examples of the constraints we could place using EMRBs.
 
 \section{Waveform generation}\label{sec:Wave}
 
@@ -252,7 +251,9 @@ The maximum distances are reduced compared to the \textit{LISA} case indicating 
 
 Using either noise curve we see that EMRBs could potentially be seen from a range of galaxies. The Galaxy's MBH remains securely detectable in either case. M32 is the next best. MBHs with masses $\sim 10^6$--$10^7 M_\odot$ are observable to the greatest distance. We currently know of few MBHs with masses at the lower end of the spectrum ($10^5$--$10^6 M_\odot$) but these would be good potential candidates.
 
-\section{Parameter inference}\label{sec:MCMC}
+\section{Parameter inference}\label{sec:Infer}
+
+\subsetcion{Mapping the posterior}\label{sec:MCMC}
 
 We are not only interested in if EMRBs are detectable, but also if we can extract information about their sources. The probability that the burst is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
 \begin{equation}
@@ -269,15 +270,54 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}) \propto \exp\left[-\recip{2}\innerprod
 \end{equation}
 We assume non-informative priors on the parameters to reflect a state of ignorance: we do not incorporate information we have from other measurements such that results indicate what could be learnt from an EMRB alone.
 
-Having recovered the posterior distribution it is necessary to quantify the accuracy to which parameters could be measured. If the posterior were Gaussian, this can be done just by using the standard deviation. An alternative wis to use the range that encloses a given probability, but this is misleading if the distribtuion is multimodal. A robust means of characterising the width is by using a $k$-d tree.
+\subsection{Characterising uncertainty}
 
-\section{Results}
+Having recovered the posterior distribution it is necessary to quantify the accuracy to which parameters could be measured. If the posterior were Gaussian, this can be done just by using the standard deviation. An alternative is to use the range that encloses a given probability, but this is misleading if the distribution is multimodal. A robust means of characterising the width is by using a $k$-d tree.
+
+\section{Results}\label{sec:Res}
+
+To investigate the potential of extragalactic EMRBs, we considered a sample of bursts from M32, the most promising candidate; NGC N4945, which is near to the optimal mass for \textit{LISA} without assuming spin, and NGC 4395, the lightest MBH in our sample. Circinus is similar to NGC 4945, so we expect comparable results: EMRBs from Circinus should be slightly more useful as Circinus is closer.
+
+\subsection{Posterior forms}
+
+As for bursts from the Galactic MBH, the posteriors can show strong and complicated parameter degeneracies. The lower SNR compared to Galactic bursts yields wider distributions that deteriorate to being uninformative at smaller periapses. Some example results are shown in \figref{MCMC-a}, \ref{fig:MCMC-b} and \ref{fig:MCMC-c}.
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=0.92\textwidth]{Fig_M32_MCMC_193_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These distributions are exceptionally cromulent and well converged. Angular momentum is in units of $L_\bullet = GM_\bullet c^{-1}$ and the scaled distance is in units of $\zeta_0 = 1 M_odot^{-1}\units{kpc}$. The EMRB is from M32 and has $r\sub{p} \simeq 5.53 r\sub{g}$.\label{fig:MCMC-a}}
+\end{center}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=0.92\textwidth]{Fig_N4395_MCMC_120_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These distributions begin to show the complicated shapes of degenerate distributions. Angular momentum is in units of $L_\bullet = GM_\bullet c^{-1}$ and the scaled distance is in units of $\zeta_0 = 1 M_odot^{-1}\units{kpc}$. The EMRB is from NGC 4395 and has $r\sub{p} \simeq 5.92 r\sub{g}$.\label{fig:MCMC-b}}
+\end{center}
+\end{figure*}
+
+\begin{figure*}
+\begin{center}
+   \includegraphics[width=0.92\textwidth]{Fig_M32_MCMC_159_triangle_40}
+\caption{Marginalised one and two dimensional posteriors. The scales are identical in both sets of plots. The dotted line indicates the true value. These are the worst-case-scenario distributions that are uninformative. Angular momentum is in units of $L_\bullet = GM_\bullet c^{-1}$ and the scaled distance is in units of $\zeta_0 = 1 M_odot^{-1}\units{kpc}$. The EMRB is from M32 and has $r\sub{p} \simeq 11.79 r\sub{g}$.}
+\label{fig:MCMC-c}
+\end{center}
+\end{figure*}
+
+The first is well-defined and near Gaussian. This shows that it is possible to obtain good results, similar to those from the Galactic MBH. Unfortunately, such tight distributions are not common.
+
+The second shows a more usual posterior; typical posteriors are not Gaussian, the shapes vary significantly, such that it is not possible to produce a standard shape. Non-Gaussianity manifests by the distributions broadening, developing curves and becoming banana-like. The degeneracies may evolve such that there are multiple modes.
+
+The third shows the culmination of the deterioration of the posterior. In this case, the distributions have extended to encompass the entire range for some parameters and so the EMRB is useless. The posteriors show intricate degeneracies in some of the angular parameters. These are naturally periodic and demonstrate that near identical bursts could be produced by various rotations of the MBH and orbit. Such bursts are not informative and so are not of interest, but we include this example so that there is no illusion of all EMRBs have perfect posteriors.
+
+\subsection{Parameter uncertainties}
+
+Characteristic distribution widths for the (logarithm of the) MBH mass and the spin are shown in \figref{sigmas-M32}, \ref{fig:sigmas-N4945} and \ref{fig:sigmas-N4395} for M32, NGC 4945 and NGC 4395 respectively. Plotted are the standard deviation $\sigma\sub{SD}$ and the half-width of 68-percentile range calculated from the $k$-d tree. These widths are equal for a normal distribution. Filled circles are used for runs that appear to have converged. Open circles are for those yet to converge, but which appear to be approaching an equilibrium state; widths should be accurate to within $\sim 10\%$.
 
 \begin{figure*}
 \begin{center}
 \subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_M32_MCMC_sigmas_rp_1}} \quad
 \subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_M32_MCMC_sigmas_rp_2}} \\
-\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for M32. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\caption{Distribution widths as functions of periapsis $r\sub{p}$ for M32. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative distribution, and the solid line the total prior range.}
 \end{center}
 \end{figure*}
 
@@ -285,7 +325,7 @@ Having recovered the posterior distribution it is necessary to quantify the accu
 \begin{center}
 \subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_N4945_MCMC_sigmas_rp_1}} \quad
 \subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_N4945_MCMC_sigmas_rp_2}} \\
-\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4945. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\caption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4945. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative distribution, and the solid line the total prior range.}
 \end{center}
 \end{figure*}
 
@@ -293,9 +333,13 @@ Having recovered the posterior distribution it is necessary to quantify the accu
 \begin{center}
 \subfigure[Natural logarithm of MBH mass.]{\includegraphics[width=0.42\textwidth]{Fig_N4395_MCMC_sigmas_rp_1}} \quad
 \subfigure[Dimensionless spin.]{\includegraphics[width=0.43\textwidth]{Fig_N4395_MCMC_sigmas_rp_2}} \\
-\contcaption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4945. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative prior, and the solid line the total prior range.}
+\caption{Distribution widths as functions of periapsis $r\sub{p}$ for NGC 4395. Light blue is used for the standard deviation, orange is the $68$-percentile half-width calculated from the $k$-d tree. Filled circles are used for converged runs, open circles for those yet to converge. The dotted line indicates the current uncertainty for $M$; the dashed lines the standard deviation for an uninformative distribution, and the solid line the total prior range.}
 \end{center}
 \end{figure*}
+
+The widths, corresponding to potential parameter accuracies, improve rapidly with decreasing periapsis. In the best case, uncertainties in mass and spin may be only one part in $10^2$. As might be expected from \figref{detect}, M32 has the smallest widths followed by NGC 4945 and then NGC 4395. The spin width saturates about the value expected from a uniform distribution. At this point we can no longer constrain the spin. the transition does not show any clear correlation with the magnitude of the spin.
+
+The other parameters show similar behaviour. The angular variables also reach maximum widths, corresponding to uninformative distributions. This does not appear to be directly tied to the spin width.
 
 \section{Conclusions}
 
@@ -306,6 +350,10 @@ The MBH in our own Galaxy is by far the best source for bursts; however, it is a
 However, we must still be cautious: EMRBs may be rare and the event rate may prevent us from observing any over a realistic mission lifetime. In a companion paper we shall look at the expectations for bursts from our own Galaxy. Bursts from any given extragalactic source should be less common, although this may be slightly ameliorated by the larger number of potential source systems.
 
 Utilising the classic \textit{LISA} design, EMRBs from a $10 M_\odot$ orbitting CO could potentially be detected out to a distance of $\sim 100\units{Mpc}$. With the descoped \textit{eLISA} design, this decreases to $\sim 10\units{Mpc}$. This may drastically reduce the chance of observing an EMRB. For both detectors, sensitivity is maximal for MBHs of $M \sim 10^6$--$10^7 M_\odot$, being slightly higher for \textit{LISA} than for \textit{eLISA}.
+
+Extragalactic EMRBs can provide good measurements of MBH mass and spin, but only across an extremely narrow range of periapses. We studied M32, NGC 4945 and NGC 4395 as examples. For all three we found that it is possible to extract information from bursts. The uncertainty may be one part in $10^2$--$10^3$ for M32, and slightly worse for NGC 4945 and NGC 4395, at about one part in $10^2$. These are not as good as from Galactic EMRBs, where the uncertainties could be as small as one part in $10^4$ \citep{Berry2013}, but would still be of great astrophysical interest.
+
+Potentially, an EMRB could place useful constraints, on the mass and spin of an MBH if the periapse radius is small enough.\footnote{Here we assume a mass measurement is useful if its uncertainty is smaller than the current measurement uncertainty, and a spin measurement is useful if it provides any constraint.} For M32 we require $r\sub{p} \lesssim 8 r\sub{g}$; for NGC 4945's we require $r\sub{p} \lesssim 8 r\sub{g}$ and $r\sub{p} \lesssim 7 r\sub{g}$ for mass and spin measurements respectively, and for NGC 4395 we require $r\sub{p} \lesssim 9 r\sub{g}$ and $r\sub{p} \lesssim 8 r\sub{g}$ for mass and spin respectively. Such orbits are likely to be rare, but just a single burst from any of the potential galaxies could give us information that is otherwise inaccessible.
 
 \section*{Acknowledgments}
 
