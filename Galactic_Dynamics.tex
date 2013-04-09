@@ -50,9 +50,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-An extreme-mass-ratio burst (EMRB) is a gravitational wave signal emitted when a compact object passes through periapsis on a highly eccentric orbit about a much more massive object, in our case a stellar mass object about a $10^6 M_\odot$ black hole. EMRBs are an unexplored means of probing the spacetime of massive black holes (MBHs). % Rephrase
-
-An EMRB from the Galactic MBH can be both detectable and highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool, EMRBs must be both informative and sufficiently common to be observable. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime. Stellar mass black holes dominate the event rate.
+When a compact object on a highly eccentric orbit about a much more massive object passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting about massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool, EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime. Stellar mass black holes dominate the event rate.
 \end{abstract}
 
 \begin{keywords}
@@ -81,7 +79,7 @@ The second concern shall be the subject of this work. Previously, the best estim
 
 We begin in \secref{Waveforms} by recapping how to generate and analyse burst waveforms. In \secref{Rates} we present our model for calculating event rates and discussing its ingredients. Whilst we have been careful in trying to account for all the relevant effects, the model remains approximate and can only be trusted to give order of magnitude estimates. Our results, showing both the predicted event rate and information content, are presented in \secref{Gal-Results} and discussed further in our conclusion, \secref{Gal-End}.
 
-\section{Waveforms and parameter uncertainties\label{sec:Waveforms}}
+\section{Waveforms and parameter uncertainties}\label{sec:Waveforms}
 
 To establish the detectability and usefulness of EMRBs, it is necessary to calculate model waveforms. This is done using the numerical kludge approximation. We use exactly the same construction as is described in \citet{Berry2013}; the key details are outlined below.
 
@@ -89,7 +87,7 @@ The detectability of a burst is dependent upon its SNR. To save calculating SNRs
 
 Once we have determined which bursts are of interest, we can evaluate the accuracy to which parameters can be determined, should that burst be observed. To do so, we perform Markov chain Monte Carlo (MCMC) simulations \citep[chapter 29]{MacKay2003}.
 
-\subsection{Numerical kludge waveforms\label{sec:NK}}
+\subsection{Numerical kludge waveforms}\label{sec:NK}
 
 Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The waveforms are accurate to typically a few percent \citep{Tanaka1993,Gair2005}: the error in our waveforms has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citealt{Berry2013}).
 
@@ -106,7 +104,7 @@ Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordina
 
 We use the quadrupole-octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits.
 
-\subsection{SNR scaling\label{sec:SNR}}
+\subsection{SNR scaling}\label{sec:SNR}
 
 The SNR $\rho$ of a particular burst depends upon the precise shape of its trajectory (as specified by initial conditions) and the position of the detector. However, the most important parameter is the periapse distance.
 
@@ -150,7 +148,7 @@ Here $\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_
 
 To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a class of algorithms used for integrating over complicated probability distributions. Parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution. We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2013}.
 
-\section{Calculating event rates\label{sec:Rates}}
+\section{Calculating event rates}\label{sec:Rates}
 
 \subsection{The distribution function}
 
@@ -416,7 +414,7 @@ assuming the stars in the reservoir external to the core are unlikely to undergo
 
 Collisions provide the cut-off for bound MS stars, and are significant for bound WDs.
 
-\section{Results\label{sec:Gal-Results}}
+\section{Results}\label{sec:Gal-Results}
 
 \subsection{Number of events}
 
@@ -444,9 +442,9 @@ Total & 1.7,10^{0} & 1.7,10^{0} \\
 \end{minipage}
 \end{table}
 The two approaches are in good agreement indicating: that the average relation \eqnref{SNR-power-law} is sufficiently accurate for these type of calculations, and that the Schwarzschild radius is a reasonable average inner cut-off. The total number of events per mission is plotted in \figref{Event-no}.
-\begin{figure}[!htp]
+\begin{figure}
 \begin{center}
-   \includegraphics[width=0.6\textwidth]{./images/Fig_Total_event_hist}
+   \includegraphics[width=0.45\textwidth]{Fig_Total_event_hist}
 \caption{Calculated number of detectable EMRBs over a two year mission. The histogram shows the number of events for 20000 realisations. The points show a Poisson distribution with a mean set by $\mathcal{N}_2\super{int}$.}
 \label{fig:Event-no}
 \end{center}
@@ -457,7 +455,7 @@ Only BHs and NSs contribute to the event rate significantly. Only MS stars have 
 
 The overall rates are similar to those presented in \citet{Hopman2007}. The MS rate is lower because of a larger collisional cut-off. This also influences the WD rate, but the overall rate is little changed. The NS rate is enhanced because of the inclusion of bursts from inspiralling objects. The physics for BHs is least changed, the (small) difference in event rate is partly a consequence of our more realistic SNRs.
 
-\section{Conclusion\label{sec:Gal-End}}
+\section{Conclusion}\label{sec:Gal-End}
 
 \section*{Acknowledgments}
 The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. CPLB is supported by STFC. JRG is supported by the Royal Society.
@@ -612,7 +610,7 @@ For the average of $\Delta E^2$, we replace $\ln\left(qv_2^2\right)$ by a suitab
 \end{equation}
 \citet{Just2011} find an extremely similar result fitting a Bahcall--Wolf cusp self-consistently. We calculate the averages for the bound and unbound contributions individually. We must distinguish between the bound population of field stars and the distribution of test stars over which we are averaging. We use subscripts $M$ and $M'$ respectively.\footnote{For masses: $m_M \equiv M$, $m_{M'} \equiv M'$.} The bound average may be approximated to about $10\%$ accuracy as
 \begin{align}
-\overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{2^{11/2}}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left\[ \varpi\left(p_M,p_{M'}\right) + \iota \left(p_M,p_{M'}\right) \right\] \delta t,
+\overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{2^{11/2}}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[ \varpi\left(p_M,p_{M'}\right) + \iota \left(p_M,p_{M'}\right) \right] \delta t,
 \end{align}
 introducing
 \begin{align}
@@ -637,8 +635,7 @@ and we have used another hypergeometric function \citep[15.6.1]{Olver2010}. For 
 The total relaxation time for a species is
 \begin{align}
 \overline{\tau_{\mathrm{R,}\,M'}} = {} & \left(\frac{{M'}\overline{v_{M'}^2}}{2}\right)^2\frac{\delta t}{\overline{\Delta E^2_{\mathrm{b},\,M'}} + \overline{\Delta E^2_{\mathrm{u},\,M'}}} \\
- \approx {} & \frac{3}{2^{15/2}}\frac{\Gamma(p_{M'} + 1)}{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}\frac{\overline{v_{M'}^2}^2}{G^2n_\ast\sigma\ln\left(\Lambda_{M'}\right)} \nonumber \\* 
-  & \times {} \left\{\sum_M k_M M^2 \left[ \varpi\left(p_M,p_{M'}\right) + \iota \left(p_M,p_{M'}\right)\right] \right. \nonumber \\*
+ \approx {} & \frac{3}{2^{15/2}}\frac{\Gamma(p_{M'} + 1)}{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}\frac{\overline{v_{M'}^2}^2}{G^2n_\ast\sigma\ln\left(\Lambda_{M'}\right)} \left\{\sum_M k_M M^2 \left[ \varpi\left(p_M,p_{M'}\right) + \iota \left(p_M,p_{M'}\right)\right] \right. \nonumber \\*
   & + \left. \vphantom{ \left[ \frac{p_{M'}^2\left(6 + 9p_M + 8p_M^2\right)}{210}\right]} C_M M^2 \left[\nu\left(p_{M'}\right) + \Xi\frac{\Beta\left(3-p_{M'},1+p_{M'}\right)}{2-p_{M'}}{_2F_1}\left(\recip{2},\frac{2-p_{M'}}{3};\frac{5-p_{M'}}{3};-\Xi^2\right)\right]\right\}^{-1}.
 \end{align}
 Combining these to form an average for the entire system gives

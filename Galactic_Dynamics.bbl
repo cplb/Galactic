@@ -63,8 +63,8 @@ Bahcall J.~N., Wolf R.~A., 1976, The Astrophysical Journal, 209, 214
 \bibitem[{Bahcall \& Wolf(1977)}]{Bahcall1977}
 Bahcall J.~N., Wolf R.~A., 1977, The Astrophysical Journal, 216, 883
 
-\bibitem[{Bar-Or {et~al}\mbox{.}(2012)Bar-Or, Kupi, \& Alexander}]{Bar-Or2012}
-Bar-Or B., Kupi G., Alexander T., 2012, 20
+\bibitem[{Bar-Or {et~al}\mbox{.}(2013)Bar-Or, Kupi, \& Alexander}]{Bar-Or2012}
+Bar-Or B., Kupi G., Alexander T., 2013, The Astrophysical Journal, 764, 52
 
 \bibitem[{Barack(2009)}]{Barack2009}
 Barack L., 2009, Classical and Quantum Gravity, 26, 213001(56)
@@ -90,8 +90,9 @@ Bekenstein J.~D., Maoz E., 1992, The Astrophysical Journal, 390, 79
 Bender P. {et~al.}, 1998, {LISA Pre-Phase A Report}. Tech. rep.,
   Max-Planck-Institut f\"{u}r Quantenoptik, Garching
 
-\bibitem[{Berry \& Gair(2012)}]{Berry2013}
-Berry C. P.~L., Gair J.~R., 2012, 25
+\bibitem[{Berry \& Gair(2013)}]{Berry2013}
+Berry C. P.~L., Gair J.~R., 2013, Monthly Notices of the Royal Astronomical
+  Society, 429, 589
 
 \bibitem[{Binney \& Tremaine(2008)}]{Binney2008}
 Binney J., Tremaine S., 2008, {Galactic Dynamics}, 2nd edn., Princeton Series
@@ -261,10 +262,6 @@ Lynden-Bell D., 1969, Nature, 223, 690
 Lynden-Bell D., Kalnajs A., 1972, Monthly Notices of the Royal Astronomical
   Society, 157, 1
 
-\bibitem[{Lynden-Bell \& Rees(1971)}]{Lynden-Bell1971}
-Lynden-Bell D., Rees M.~J., 1971, Monthly Notices of the Royal Astronomical
-  Society, 152, 461
-
 \bibitem[{MacKay(2003)}]{MacKay2003}
 MacKay D. J.~C., 2003, {Information Theory, Inference and Learning Algorithms}.
   Cambridge University Press, Cambridge, p. 640
@@ -290,6 +287,10 @@ Merritt D., Berczik P., Laun F., 2007, The Astronomical Journal, 133, 553
   Teller, \& Teller}]{Metropolis1953}
 Metropolis N., Rosenbluth A.~W., Rosenbluth M.~N., Teller A.~H., Teller E.,
   1953, The Journal of Chemical Physics, 21, 1087
+
+\bibitem[{Meyer {et~al}\mbox{.}(2012)Meyer, Ghez, Sch{\"o}del, Yelda, Boehle,
+  Lu, Do, Morris, Becklin, \& Matthews}]{Meyer2012}
+Meyer L. {et~al.}, 2012, Science, 338, 84
 
 \bibitem[{Miralda-Escude \& Gould(2000)}]{MiraldaEscude2000}
 Miralda-Escude J., Gould A., 2000, The Astrophysical Journal, 545, 847
