@@ -112,7 +112,7 @@ The waveform is specified by a set of fourteen parameters:
 \end{enumerate}
 There are ten in which we are interested in inferring. The most interesting are the MBH's mass and spin.
 
-We have assumed that sky position is known, to be able to do this in practice we must be able to successfully identify the source galaxy. No work has yet been done on EMRB detection and we will defer developing a detection algorithm for future work. However, we shall see that there are only a few potential galaxies that could produce detectable EMRBs. It should therefore not be too computationally expensive to check all the candidate sky positions. If multiple galaxies lie close together on the sky, such that they cannot be distinguished, it should be possible to use constraints on the MBH mass to differentiate them.
+We have assumed that sky position is known, to be able to do this in practice we must be able to successfully identify the source galaxy. No work has yet been done on EMRB detection and we will defer developing a detection algorithm for future work. However, we shall see that there are only a few potential galaxies that could produce detectable EMRBs. It should therefore not be too computationally expensive to check all the candidate sky positions. If multiple galaxies lie close together on the sky, such that they cannot be distinguished, it could be possible to use constraints on the MBH mass to differentiate them. This would not help with galaxies for which we do not have good MBH mass estimates.
 
 \section{Signal analysis}\label{sec:Sig}
 
@@ -327,7 +327,14 @@ Characteristic distribution widths for the (logarithm of the) MBH mass and the s
 \end{center}
 \end{figure*}
 
-The widths, corresponding to potential parameter accuracies, improve rapidly with decreasing periapsis. The two widths, $\sigma\sub{SD}$ and $\sigma_{0.68}$, are typically of similar sizes, despite manifest non-Gaussianity. This is true for all parameters: the greatest differences are when the distributions are strongly multimodal when $\sigma\sub{SD}$ may be a factor of a few larger than $\sigma_{0.68}$. Both widths tend to the appropriate limits for uninformative distributions.
+The widths, corresponding to potential parameter accuracies, improve rapidly with decreasing periapsis. The two widths, $\sigma\sub{SD}$ and $\sigma_{0.68}$, are typically of similar sizes, despite manifest non-Gaussianity. This is true for all parameters: the greatest differences are when the distributions are strongly multimodal when $\sigma\sub{SD}$ may be a factor of a few larger than $\sigma_{0.68}$. \Figref{sigma-ratio-mass} shows the fractional difference between the two widths of the $\ln(M/M_\odot)$ distribution for EMRBs from M32. The widths for $a_\ast$ are similar; the widths for $\phi\sub{p}$ show the greatest difference.
+\begin{figure}
+\begin{center}
+   \includegraphics[width=0.43\textwidth]{Fig_M32_MCMC_sigma_ratio_rp_1}
+\caption{Fractional difference between the the standard deviation $\sigma\sub{SD}$ and the $68$-percentile half-width $\sigma_{0.68}$ of the marginalised posterior for $\ln(M/M_\odot)$ as a function of periapsis for bursts from M32. Filled circles are converged runs, open circles for those yet to converge.\label{fig:sigma-ratio-mass}}
+\end{center}
+\end{figure}
+Both $\sigma\sub{SD}$ and $\sigma_{0.68}$ tend to the appropriate limits for uninformative distributions.
 
 In the best case, uncertainties in mass and spin may be only one part in $10^2$. As might be expected from \figref{detect}, M32 has the smallest widths followed by NGC 4945 and then NGC 4395. The spin width saturates about the value expected from a uniform distribution. At this point we can no longer constrain the spin. The transition does not show any clear correlation with the magnitude of the spin.
 
@@ -341,7 +348,7 @@ The MBH in our own Galaxy is by far the best source for bursts; however, it is a
 
 Utilising the classic \textit{LISA} design, EMRBs from a $10 M_\odot$ orbiting CO could be detected out to a distance of $\sim 100\units{Mpc}$. With the descoped \textit{eLISA} design, this decreases to $\sim 10\units{Mpc}$. This may drastically reduce the chance of observing an EMRB. For both detectors, sensitivity is maximal for MBHs of $M \sim 10^6$--$10^7 M_\odot$, being slightly higher for \textit{LISA} than for \textit{eLISA}.
 
-However, we must still be cautious: EMRBs may be rare and the event rate may prevent us from observing any over a realistic mission lifetime. In a companion paper we shall look at the expectations for bursts from our own Galaxy. Bursts from any given extragalactic source should be less common, although this may be slightly ameliorated by the larger number of potential source systems.
+However, we must still be cautious: EMRBs may be rare and the event rate may prevent us from observing any over a realistic mission lifetime. Bursts from any given extragalactic source should be less common than from the Galactic Centre, although this may be slightly ameliorated by the larger number of potential source systems. In a companion paper we shall look at the expectations for bursts from our own Galaxy. Adapting results fromthis by picking a maximum periapse radius of $8 r\sub{g}$, which is approximately the point at which bursts from our sample become interesting, we calculate a rough event rate of $\sim 0.2\units{yr^{-1}}$. This is an order of magnitude estimate using parameters for the Galaxy, which are much better constrained than for other galaxies. Using this as a reference, it appears that extragalactic EMRBs would not be common. However, assuming a $2\units{yr}$ mission lifetime and that our extragalactic candidates add up to be equivalent to a few Milky Ways, it might not be surprising to observe one or more EMRBs. 
 
 Extragalactic EMRBs can provide good measurements of MBH mass and spin, but only across an extremely narrow range of periapses. We studied M32, NGC 4945 and NGC 4395 as examples. For all three we found that it is possible to extract information from bursts. The uncertainty may be one part in $10^2$--$10^3$ for M32, and slightly worse for NGC 4945 and NGC 4395, at about one part in $10^2$. These are not as good as the constraints from Galactic EMRBs, where the uncertainties could be as small as one part in $10^4$ \citep{Berry2013}, but would still be of great astrophysical interest. These extragalactic MBHs are much harder to study than the MBH in our own Galaxy, for which we are still to obtain a definite spin value. Any measurement of spin would give us a glimpse into the formation history of the host galaxy.
 
