@@ -50,7 +50,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-When a compact object on a highly eccentric orbit about a much more massive object passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting about massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool, EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime. Stellar mass black holes dominate the event rate.
+When a compact object on a highly eccentric orbit about a much more massive body passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting thet massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime. Stellar mass black holes dominate the event rate.
 \end{abstract}
 
 \begin{keywords}
@@ -77,7 +77,7 @@ We have previously addressed the first concern: EMRBs can give good constraints 
 
 The second concern shall be the subject of this work. Previously, the best estimate for the event rate was given by \citet*{Hopman2007}; they predicted the event rate for \textit{LISA} was $\sim 1\units{yr^{-1}}$. We follow a similar approach, but significantly, we improve the calculation of SNR by using numerical kludge (NK) waveforms \citep{Babak2007}. In addition to this, we extend the analysis by not only considering the number of events that would be detectable, but also how many would be informative.
 
-We begin in \secref{Waveforms} by recapping how to generate and analyse burst waveforms. In \secref{Rates} we present our model for calculating event rates and discussing its ingredients. Whilst we have been careful in trying to account for all the relevant effects, the model remains approximate and can only be trusted to give order of magnitude estimates. Our results, showing both the predicted event rate and information content, are presented in \secref{Gal-Results} and discussed further in our conclusion, \secref{Gal-End}.
+We begin in \secref{Waveforms} by recapping how to generate and analyse burst waveforms. In \secref{Rates} we present our model for calculating event rates and discussing its ingredients. Whilst we have been careful in trying to account for all the relevant effects, the model remains approximate and can only be trusted to give order of magnitude estimates. Our results, including the predicted event rate along with a quantification of the estimated information content, are presented in \secref{Gal-Results} and discussed further in our conclusion, \secref{Gal-End}.
 
 \section{Waveforms and parameter uncertainties}\label{sec:Waveforms}
 
@@ -121,17 +121,18 @@ We assume a detection threshold of $\rho = 10$. This gives expected detection li
 
 Once we have a detected signal $\boldsymbol{s}(t)$, we can consider inference of the source parameters $\boldsymbol{\lambda}$. The waveform depends on the properties of the MBH; the CO and its orbit, and the detector.
 
-We assume the position of the detector is known, and the MBH is coincident with the radio source of Sgr A* which is within $20 r_\mathrm{g}$ of the MBH~\citep{Reid2003,Doeleman2008}. We use the J2000.0 coordinates which are determined to high accuracy~\citep{Reid1999, Yusef-Zadeh1999}.
+We assume the position of the detector is known, and the MBH is coincident with the radio source of Sgr A* which is within $20 r_\mathrm{g}$ of the MBH \citep{Reid2003,Doeleman2008}. We use the J2000.0 coordinates which are determined to high accuracy \citep{Reid1999, Yusef-Zadeh1999}.
 
-The parameters left to infer are:
+The parameters left to infer are \citep{Berry2013}:
 \begin{enumerate}
-\item[(1)] The MBH's mass $M_\bullet$. This is well constrained by the observation of stellar orbits about Sgr A*~\citep{Ghez2008, Gillessen2009}, we employ the estimate $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$.
+\item[(1)] The MBH's mass $M_\bullet$. This is well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, we employ the estimate $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$.
 \item[(2)] The spin parameter $a_\ast$.
 \item[(3, 4)] The orientation angles for the black hole spin $\Theta_\mathrm{K}$ and $\Phi_\mathrm{K}$.
-\item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$~\citep{Gillessen2009}.
+\item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$ \citep{Gillessen2009}.
 \item[(6, 7)] The angular momentum of the CO, parametrized by the magnitude at infinity $L_\infty = \sqrt{L_z^2 + Q}$ and the orbital inclination $\iota = \tan^{-1}(\sqrt{Q}/L_z)$.
 \item[(8--10)] Coordinates specifying the trajectory. We use the angular phases at periapse, $\phi_\mathrm{p}$ and $\chi_\mathrm{p}$, as well as the time of periapse $t_\mathrm{p}$.
 \end{enumerate}
+The first four are specific to the MBH, and we shall attempt to quantify the constraints we can expect to place on these from EMRBs.
 
 The probability the source is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
 \begin{equation}
@@ -145,6 +146,8 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}_0) \propto \exp\left[-\recip{2}\innerpr
 \label{eq:likelihood}
 \end{equation}
 Here $\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_0}$ is the overlap between waveforms defined by the standard signal inner product \citep{Cutler1994}. This is the probability of the realisation of noise signal $\boldsymbol{n}(t) = \boldsymbol{s}(t) - \boldsymbol{h}_0(t)$.
+
+We use uninformative priors on all the parameters: no existing constraints are used. We adopt uniform priors for all the parameters except: $M_\bullet$, $\zeta$ and $_\infty$, which are positive definite, where we use a prior uniform in the logarithm of the parameter, and $\Theta\sub{K}$ and $\iota$, where we use a prior uniform in the cosine of the angle.
 
 To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a class of algorithms used for integrating over complicated probability distributions. Parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution. We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2013}.
 
@@ -212,7 +215,7 @@ We use the Fokker-Planck model of \citet{Hopman2006, Hopman2006a} and \citet{Ale
 \end{tabular}
 \end{minipage}
 \end{table}
-The steeper power law for black holes means they segregate about the MBH.\footnote{Extrapolating, they would dominate in place of MS stars for radii $r < 10^{-4}r\sub{c}$.}
+The steeper power law for BHs means they segregate about the MBH.\footnote{Extrapolating, they would dominate in place of MS stars for radii $r < 10^{-4}r\sub{c}$.}
 
 Binaries may form in the Galactic core, encouraged by its high stellar density \citep{O'Leary2009}. However the binary fraction is still expected to be small \citep{Hopman2009}. Binaries are also disrupted by the MBH for periapses smaller than
 \begin{equation}
@@ -225,10 +228,13 @@ We assume $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$ \citep{Gillessen2009
 \subsection{Parametrizing in terms of eccentricity \& periapsis}
 
 We characterise orbits by their eccentricity $e$ and periapse radius $r\sub{p}$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $\mathcal{J}$ per unit mass are entirely characterised by these parameters
-\begin{align}
+\begin{equation}
 \label{eq:Energy_ecc}
-\mathcal{E} = {} & -\frac{GM_\bullet(1 - e)}{2r\sub{p}}; \quad \mathcal{J}^2 = GM_\bullet(1 + e)r\sub{p}.
-\end{align}
+\begin{split}
+\mathcal{E} & = -\frac{GM_\bullet(1 - e)}{2r\sub{p}}; \\
+\mathcal{J}^2 & = GM_\bullet(1 + e)r\sub{p}.
+\end{split}
+\end{equation}
 The DF is defined per element of phase space: it is necessary to change variables from position and velocity to eccentricity and periapsis. We decompose the velocity into three orthogonal components: radial $v_r$, azimuthal $v_\phi$ and polar $v_\theta$. We assume the core is spherically symmetric \citep{Genzel2003, Schodel2007}, therefore we are interested in the combination
 \begin{equation}
 v_\perp^2 = v_\phi^2 + v_\theta^2 = v^2 - v_r^2.
@@ -238,9 +244,12 @@ Under this change of variables
 \dd^3v = \dd v_r \dd v_\phi \dd v_\theta \rightarrow 2\pi v_\perp \,\dd v_r \,\dd v_\perp.
 \end{equation}
 The specific energy and angular momentum are given by
-\begin{align}
-\mathcal{E} = {} & \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r}; \quad \mathcal{J}^2 = r^2 v_\perp^2.
-\end{align}
+\begin{equation}
+\begin{split}
+\mathcal{E} & = \frac{v_r^2 + v_\perp^2}{2} - \frac{GM_\bullet}{r}; \\
+\mathcal{J}^2 & = r^2 v_\perp^2.
+\end{split}
+\end{equation}
 Combining these with our earlier expressions in terms of $e$ and $r\sub{p}$,
 \begin{align}
 v_\perp^2 = {} & \frac{GM_\bullet(1 + e)r\sub{p}}{r^2}, \\*
@@ -318,7 +327,7 @@ To generate a representative sample for the orbital parameters $e$ and $r\sub{p}
 
 From \eqnref{Gamma} we see the event rate is highly sensitive to the smallest value of the periapsis. Ultimately the orbits cannot encroach closer to the MBH than its last stable orbit. This depends upon the spin of the MBH, but is of the order of its Schwarzschild radius. Before we reach this point, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, but should produce reasonable estimates. We consider three processes: tidal disruption by the MBH; GW inspiral, and collisional disruption. Tidal disruption imposes a definite (albeit approximate) cut-off, while the others use statistical arguments. For these methods, we will need to define a reference time-scale for relaxation. This is done in \secref{Relax}, with further details found in \apref{time-scale}.
 
-The calculated inner cut-offs for the four stellar species are shown in \figref{Cuts}.
+The calculated inner cut-offs for the four stellar species across the range of bound orbits are shown in \figref{Cuts}.
 \begin{figure*}
 \begin{center}
    \subfigure[{Main sequence stars}]{\includegraphics[width=0.4\textwidth]{Fig_Inner_cut_1.eps}} \quad 
@@ -351,7 +360,9 @@ The two-body interactions mostly lead to small deflections. Over time, these may
 \end{equation}
 where the Coulomb logarithm is $\ln\Lambda = \ln(M_\bullet/M_\star)$ \citep{Bahcall1976}, and $\kappa$ is a dimensionless number. In his pioneering work, \citet{Chandrasekhar1941, Chandrasekhar1960} defined the time-scale as the period over which the squared change in energy was equal to the kinetic energy squared, this gives $\kappa = 9/16\sqrt{\pi} \simeq 0.32$. Subsequently, \citet{Chandrasekhar1941a} described relaxation statistically, treating fluctuations in the gravitational field probabilistically; this gives $\kappa = 9/2(2\pi)^{3/2} \simeq 0.29$. \citet{Bahcall1977} define a reference time-scale from their Boltzmann equation with $\kappa = 3/4\sqrt{8\pi} \simeq 0.15$; this is equal to the reference time-scale defined as the reciprocal of the coefficient of dynamical friction by \citet{Chandrasekhar1943a, Chandrasekhar1943}. \citet{Spitzer1958} define a reference time-scale from the gravitational Boltzmann equation of \citet{Spitzer1951} where $\kappa = \sqrt{2}/\pi \simeq 0.45$. Following \citet{Spitzer1971}, \citet[section 7.4.5]{Binney2008} estimate the time-scale from the velocity diffusion coefficient of the Fokker-Planck equation yielding $\kappa \simeq 0.34$.
 
-All these approaches yield consistent values, suggesting, as a first approximation, any is valid. We follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}. This makes the model self-consistent. Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. The derivation of the relaxation time-scale along with a discussion of its short-comings are included in \apref{time-scale}. An average time-scale for the entire system $\overline{\tau\sub{R}}$ is defined in \eqnref{system-relax}, and an average for an orbit $\left\langle\tau\sub{R}\right\rangle$ is defined in \eqnref{orbital-relax}. We defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation is complicated.
+All these approaches yield consistent values, suggesting, as a first approximation, any is valid. We follow the classic treatment of \citet[chapter 2]{Chandrasekhar1960} which is transparent in its assumptions, adapting from a Maxwellian distribution of velocities to one derived from the DFs \eqnref{Unbound_DF} and \eqnref{Bound_DF}; this makes the model self-consistent. The derivation of the relaxation time-scale along with a discussion of its short-comings are included in \apref{time-scale}. An average time-scale for the entire system $\overline{\tau\sub{R}}$ is defined in \eqnref{system-relax}, and an average for an orbit $\left\langle\tau\sub{R}\right\rangle$ is defined in \eqnref{orbital-relax}. 
+
+Since there is uncertainty in the astrophysical parameters, we will not be concerned by small discrepancies in the numerical prefactor that result from the simplifying approximations of this approach. We defer any investigation of the consequences of using an alternative formulation for future work, as differences may well be negligible whilst the computation is complicated.
 
 Two-body interactions lead to diffusion in both energy and angular momentum. When considering a single (bound) orbit, over a relaxation time-scale the energy changes by order of itself while the angular momentum changes by the angular momentum of a circular orbit with that energy $\mathcal{J}\sub{circ}(\mathcal{E})$ \citep{Lightman1977, Rauch1996, Hopman2005, Madigan2011}:\footnote{$\mathcal{J}\sub{circ}(\mathcal{E})$ is the maximum value for orbits of that energy.}
 \begin{equation}
@@ -402,11 +413,11 @@ As a consequence of the high densities in the Galactic core, stars may undergo a
 \end{equation}
 where $A$ is the collisional cross-sectional area. For tidal disruption, where the encounter is with a collapsed object (WD, NS or BH), we set $A = \pi r_{\mathrm{T},\,{M'}}^2$, where $r_{\mathrm{T},\,{M'}}$ is the appropriate tidal radius: like \eqnref{Tidal} but with $M_\bullet$ replaced with the mass of the collapsed object $M'$. For collisions between MS stars, the cross-sectional area is simply the geometric $A = \pi R_\star^2$.\footnote{Here we assume the relative velocity of the colliding stars is much greater than the escape velocity of the star so we may neglect the effects of gravitational focusing.}
 
-For circular orbits we can find the radius at which collisions lead to disruptions by setting $\delta K = 1$ for tidal disruption or $\delta K = 20$ for grazing collisions, and $\delta t = \overline{\tau_\mathrm{R,\,M}}$. We use the system average relaxation time-scale for the species of mass $M$ as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, for bound orbits
+For circular orbits we can find the radius at which collisions lead to disruptions by setting $\delta K = 1$ for tidal disruption or $\delta K = 20$ for grazing collisions, and $\delta t = \overline{\tau_{\mathrm{R},\,M}}$. We use the system average relaxation time-scale for the species of mass $M$ as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, for bound orbits
 \begin{equation}
 K = 2 A \frac{\tau\sub{R}}{P(r\sub{p},e)}\intd{r\sub{p}}{(1+e)r\sub{p}/(1-e)}{n(r)\frac{v(r,e,r\sub{p})}{v_r(r,e,r\sub{p})}}{r},
 \end{equation}
-where $P$ is the period of the orbit. Again we set $K = 1$ or $K = 20$ to find the orbits for which stars will be disrupted within $\overline{\tau_\mathrm{R,\,M}}$. For unbound orbits we are only interested in stars that would become disrupted before their periapse passage, so
+where $P$ is the period of the orbit. Again we set $K = 1$ or $K = 20$ to find the orbits for which stars will be disrupted within $\overline{\tau_{\mathrm{R},\,M}}$. For unbound orbits we are only interested in stars that would become disrupted before their periapse passage, so
 \begin{equation}
 K = A \intd{r\sub{p}}{r\sub{c}}{n(r)\frac{v(r,e,r\sub{p})}{v_r(r,e,r\sub{p})}}{r},
 \end{equation}
@@ -420,7 +431,7 @@ Collisions provide the cut-off for bound MS stars, and are significant for bound
 
 As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime, we numerically integrated the event rate. This estimate is denoted as $\mathcal{N}_2\super{int}$. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius; the upper limit was the detection threshold as determined from \eqnref{SNR-power-law}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
 
-To obtain a more accurate estimate, we  performed $20000$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
+To obtain a more accurate estimate, we  performed $2 \times 10^4$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
 
 The calculated numbers of events are shown in \tabref{Rates}.
 \begin{table}
@@ -441,11 +452,11 @@ Total & 1.7,10^{0} & 1.7,10^{0} \\
 \end{tabular}
 \end{minipage}
 \end{table}
-The two approaches are in good agreement indicating: that the average relation \eqnref{SNR-power-law} is sufficiently accurate for these type of calculations, and that the Schwarzschild radius is a reasonable average inner cut-off. The total number of events per mission is plotted in \figref{Event-no}.
+The two approaches are in good agreement indicating: that the average relation \eqnref{SNR-power-law} is sufficiently accurate for these type of calculations, and that the Schwarzschild radius is a reasonable absolute inner cut-off averaged over all MBH spins. The total number of events per mission is plotted in \figref{Event-no}.
 \begin{figure}
 \begin{center}
    \includegraphics[width=0.45\textwidth]{Fig_Total_event_hist}
-\caption{Calculated number of detectable EMRBs over a two year mission. The histogram shows the number of events for 20000 realisations. The points show a Poisson distribution with a mean set by $\mathcal{N}_2\super{int}$.}
+\caption{Calculated number of detectable EMRBs over a two year mission. The histogram shows the number of events for $2 \times 10^4$ realisations. The points show a Poisson distribution with a mean set by $\mathcal{N}_2\super{int}$.}
 \label{fig:Event-no}
 \end{center}
 \end{figure}
@@ -455,10 +466,75 @@ Only BHs and NSs contribute to the event rate significantly. Only MS stars have 
 
 The overall rates are similar to those presented in \citet{Hopman2007}. The MS rate is lower because of a larger collisional cut-off. This also influences the WD rate, but the overall rate is little changed. The NS rate is enhanced because of the inclusion of bursts from inspiralling objects. The physics for BHs is least changed, the (small) difference in event rate is partly a consequence of our more realistic SNRs.
 
+\subsection{Information content}
+
+We wish to quantify what we could learn over a mission about the MBH's mass and spin. We use the parameter set $\boldsymbol{\lambda}_\bullet = \{\ln (M_\bullet/M_\odot), a_\ast, \cos \Theta\sub{K}, \Phi\sub{K}\}$ as these have uniform priors.
+
+The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($...$ from BHs and $...$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to gleam much useful information from orbits with larger periapses.
+
+During an individual mission there may be either zero, one or multiple bursts of interest. In the first case we learn nothing. In the second we have only to consider the posterior from our MCMC. In the third we must combine the results of all the bursts. This is easy in theory: as the priors are uniform we have only to multiply the individual posteriors,
+\begin{equation}
+p(\boldsymbol{\lambda}_\bullet|\{\boldsymbol{s}_i(t)\}\sub{mission}) = \prod_i p(\boldsymbol{\lambda}_\bullet|\boldsymbol{s}_i(t)),
+\end{equation}
+where $\{\boldsymbol{s}_i(t)\}\sub{mission}$ is the set of bursts for the mission. However, since we have a sampled posterior rather than an analytic function, this is difficult in practise.
+
+The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? 
+
+How to multiple: $k$-d trees.
+
+The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. The widths coincide for Gaussian posteriors.
+
+Possible overestimation. Take smaller due to biasing.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.}
+
+\Figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
+\begin{figure*}
+\begin{center}
+   \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{}} \quad 
+   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{}} \\
+   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{}} \quad
+   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{}}
+\caption{Cumulativeroportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
+  \end{center}
+\end{figure*}
+It appears there is a $33\%$ chance of determining $\ln (M_\bullet/M_\odot)$ to a precision of $10^{-2}$ or a $10\%$ chance of determining it to $10^{-4}$. The current uncertainty of $\sim 0.08$ is bettered in over half ($52$) of the missions. The spin $a_\ast$ could be determined to a precision of $10^{-2}$ in $30\%$ of missions and there is a $10\%$ chance of determining it to better than $3\times 10^{-4}$.
+
+The distribution widths work for describing parameter estimation accuracies of individual missions, but are less use for calculating an average for what we expect to learn from a mission since they are undefined when no bursts are detected. There is an alternative means of characterising what we could learn: the information entropy of the posterior distribution.
+
+\citet{Shannon1948,Shannon1948a} introduced the idea of information entropy, which quantifies the expectation of information gained from an outcome or equivalent the amount of uncertainty about a system \citep[chapters 2 and 4]{MacKay2003}. For a discrete ensemble of probabilities $\{p_i\}$,
+\begin{equation}
+H(\{p_i\}) = -\sum_i p_i \ln p_i
+\end{equation}
+is the entropy measured in nats.\footnote{The unit is set by the base of the logarithm; the more familiar bit is calculated using base $2$, $1\units{bit} = \ln(2)\units{nats}$.} This is identical to its counterpart in statistical physics up to a factor of the Boltzmann constant. Generalising from discrete to continuous probabilities is not quite as simple as exchanging the sum for an integral; it is also necessary to introduce a measure function in the logarithm, otherwise the entropy would not be invariant under a simple parameter rescaling. For a continuous probability distribution $p(\lambda)$, we work in terms of the relative entropy \citep[section 1.4]{Ihara1993}
+\begin{equation}
+H(p|q) = \intd{}{}{p(\lambda)\ln\left(\frac{p(\lambda)}{q(\lambda)}\right)}{\lambda},
+\end{equation}
+where $q(\lambda)$ is another probability distribution, and we have changed sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback-Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
+
+The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^2)$.
+
+There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge, and are not cannot be simply translated should we obtain updated measurements.}
+
+Unfortunately, since posterior from EMRBs can be broader than this Gaussian; in the relative entropy is still positive (since the distributions are different) even though we are not gaining information. In these cases we set the entropy to zero by hand. In practise, we would combine all our data together to form a best estimate for the MBH's parameters. We do not do that here because we are interest in what information is contained in EMRBs alone.
+
+Calculated from $k$-d trees. Take larger value, although less sensitive than widths.
+
+The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Width} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim ...\units{nats}$.
+
+Taking the average across all $100$ mission realisations, we can calculated the expected information gain for each parameter:
+\begin{equation}
+\begin{split}
+\left\langle H_{\ln(M_\bullet/M_\odot)}\right\rangle\sub{mission} & = \pm \units{nats}; \\
+\left\langle H_{a_\asst}\right\rangle\sub{mission} & = \pm \units{nats}; \\
+\left\langle H_{\cos\Theta\sub{K}}\right\rangle\sub{mission} & = \pm \units{nats}; \\
+\left\langle H_{\Phi\sub{K}}\right\rangle\sub{mission} & = \pm \units{nats},
+\end{split}
+\end{equation}
+using $H_\lambda \def H(p(\lambda)|q(\lambda))$ for brevity. The typical entropy is about $\units{nats}$; this corresponds to ... of approximately $10^{...}$.
+
 \section{Conclusion}\label{sec:Gal-End}
 
 \section*{Acknowledgments}
-The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. CPLB is supported by STFC. JRG is supported by the Royal Society.
+The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. They also thank Rob Cole for productive suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society.
 
 \bibliographystyle{mn3e}
 \bibliography{Galactic}
@@ -479,9 +555,9 @@ Other authors have built upon the work of Chandrasekhar by considering inhomogen
 
 We consider the interaction of a field star, denoted by 1, with a test star, 2; the change in energy squared from interaction in time $\delta t$ is approximately \citep[chapter 2]{Chandrasekhar1960}
 \begin{equation}
-\Delta E^2(v_1) \simeq \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln\left(qv_2^2\right)\left\{\begin{array}{lr}\dfrac{v_1^2}{v_2} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{array}\right\}\,\dd v_1\delta t.
+\Delta E^2(v_1) \simeq \frac{8\pi}{3} n(v_1)G^2m_1^2 m_2^2\ln\left(qv_2^2\right)\left\{\begin{array}{lr}\dfrac{v_1^2}{v_2}\vspace{1.0mm} & v_1 \leq v_2\\ \dfrac{v_2^2}{v_1} & v_1 \geq v_2 \end{array}\right\}\,\dd v_1\delta t.
 \end{equation}
-Here $v_1$ and $v_2$ are the initial velocities, and $m_1$ and $m_2$ are the masses; $n(v_1)$ is the number of stars per velocity element $\dd v_1$ which is calculated assuming the density of stars is uniform.\footnote{The error introduced by this assumption can be partially absorbed by the appropriate choice of the Coloumb logarithm, which shall be introduced later~\citep{Just2011}.} The logarithmic term includes
+Here $v_1$ and $v_2$ are the initial velocities, and $m_1$ and $m_2$ are the masses; $n(v_1)$ is the number of stars per velocity element $\dd v_1$ which is calculated assuming the density of stars is uniform.\footnote{The error introduced by this assumption can be partially absorbed by the appropriate choice of the Coloumb logarithm, which shall be introduced later \citep{Just2011}.} The logarithmic term includes
 \begin{equation}
 q = \frac{D_0}{G\left(m_1+m_2\right)},
 \end{equation}
@@ -556,7 +632,7 @@ The resulting error, ignoring variation from $\ln\left(qv_2^2\right)$, is less t
 
 The unbound contribution is
 \begin{equation}
-\Delta E\sub{u}^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) C \Xi\left(\frac{v_2^2}{2\sigma^2}\right)\left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
+\Delta E\sub{u}^2 \approx \frac{16}{3}\sqrt{2\pi}G^2m_1^2m_2^2n_\ast\sigma\ln\left(qv_2^2\right) C \Xi \frac{v_2^2}{2\sigma^2} \left[\Xi^2 + \left(\frac{v_2^2}{2\sigma^2}\right)^3\right]^{-1/2}\,\delta t,
 \label{eq:Unbound-approx}
 \end{equation}
 where
@@ -594,7 +670,7 @@ The mean squared velocity for bound stars in the core is then
 \end{align}
 assuming $p_M < 1/2$.
 
-In the case $p_M = 1/2$ we encounter a logarithmic divergence. This reflects there being a physical cut-off.\footnote{A similar diverge necessitates the introduction of $D_0$ in \secref{Chandra}.} We use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we expect the maximum velocity to be lower due to a depletion of orbits. We also suspect a simple Newtonian description of these orbits is imprecise, but a full relativistic description is beyond this simple analysis. For $p_M = 1/2$,
+In the case $p_M = 1/2$ we encounter a logarithmic divergence. This reflects there being a physical cut-off.\footnote{A similar diverge necessitates the introduction of $D_0$ in \secref{Chandra}.} We use $v\sub{max} = c/2$, which is the maximum speed reached on a bound orbit about a Schwarzschild BH. Marginally higher speeds can be reached for prograde orbits about a Kerr BH, but the maximal velocity for retrograde orbits is marginally lower. In reality, we expect the maximum velocity to be lower due to a depletion of orbits. We also suspect a simple Newtonian description of these orbits is imprecise, but a full relativistic description is beyond this primary analysis. For $p_M = 1/2$,
 \begin{align}
 \overline{v^2_{M}} = {} & \frac{\sigma^2}{2}\left[12\ln(2) - 5 + 6 \ln\left(\frac{v\sub{max}^2}{2\sigma^2}\right)\right].
 \end{align}
@@ -674,11 +750,11 @@ Diffusion in angular momentum proceeds over a shorter time, as defined by \eqnre
 
 In deriving the relaxation time-scales it has been necessary to make a number of approximations, both mathematical and physical. We have been careful to ensure that the mathematical inaccuracies introduced are of the order of a few percent, and subdominant to the errors inherent from the physical assumptions and uncertainties in astronomical quantities. There are two key physical approximations that may limit the validity of the results.
 
-First, it was assumed  the density of stars was uniform. This is a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. It is not the case that density in the core is uniform. However, this approximation is not as bad as it first may seem. As a star travels on its orbit it moves through regions of different densities, sampling a range of different density-impact parameter distributions. Since we are only concerned with averaged time-scales, we hope this is sufficient to partially smear out changes in density \citep[cf.][]{Just2011}. To incorporate the complexity of the proper density distribution would greatly obfuscate the analysis.
+First, it was assumed that the density of stars is uniform. This is a pragmatic assumption necessary to perform integrals over impact parameter and angular orientation. This is not the case; however, as a star travels on its orbit it moves through regions of different densities, sampling a range of different density-impact parameter distributions. Since we are only concerned with averaged time-scales, this partially smears out changes in density \citep[cf.][]{Just2011}. To incorporate the complexity of the proper density distribution would greatly obfuscate the analysis.
 
-Second, we have only considered transfer of angular momentum based upon the diffusion of energy, and not through resonant relaxation (RR) which enhances (both scalar and vector) angular momentum diffusion \citep{Rauch1996,Rauch1998,Gurkan2007,Eilon2009,Madigan2011}. This occurs in systems where the radial and azimuthal frequencies are commensurate. Orbits precess slowly leading to large torques between the orbits. These torques cause the angular momentum to change linearly with time over a coherence time-scale set by the drift in orbits. Over longer time periods, the change in angular momentum again proceeds as a random walk, increasing with the square-root of time, as for non-resonant relaxation; but is still enhanced because of the change in the basic step size. Diffusion of energy remains unchanged; there could be several orders of magnitude difference in the two relaxation time-scales.
+Second, we have only considered transfer of angular momentum based upon the diffusion of energy, and not through resonant relaxation which enhances (both scalar and vector) angular momentum diffusion \citep{Rauch1996,Rauch1998,Gurkan2007,Eilon2009,Madigan2011}. This occurs in systems where the radial and azimuthal frequencies are commensurate. Orbits precess slowly leading to large torques between the orbits. These torques cause the angular momentum to change linearly with time over a coherence time-scale set by the drift in orbits. Over longer time periods, the change in angular momentum again proceeds as a random walk, increasing with the square-root of time, as for non-resonant relaxation; but is still enhanced because of the change in the basic step size. Diffusion of energy remains unchanged; there could be several orders of magnitude difference in the two relaxation time-scales.
 
-RR is important in systems with (nearly) Keplerian potentials, but is quenched when relativistic precession becomes significant: inside the Schwarzschild barrier \citep{Merritt2011}. It is less likely to be of concern for the orbits influenced by GW emission \citep{Sigurdsson1997}, and should not be significant for our purposes.
+Resonant relaxation is important in systems with (nearly) Keplerian potentials, but is quenched when relativistic precession becomes significant: inside the Schwarzschild barrier \citep{Merritt2011}. It is less likely to be of concern for the orbits influenced by GW emission \citep{Sigurdsson1997}, and should not be significant for our purposes.
 
 The optimal resolution would be to perform a full $N$-body simulation of the Galactic core. This would dispense with all the complications of considering relaxation time-scales and estimates for cut-off radii. Unfortunately such a task still remains computationally challenging at the present time \citep[e.g.,][]{Li2012}.
 
@@ -698,9 +774,8 @@ Again there is good agreement.\footnote{\citet*{Freitag2006} found that using a 
 \begin{equation}
 \overline{\tau\sub{R,\,BH}} \simeq 48 \tau\sub{R}\super{Max}.
 \end{equation}
-This time-scale is much larger on account of the higher mean-squared velocity.
 
-The time-scales for the lighter components are of the order of the Hubble time. The BH time-scale is much longer. This may indicate that the BH population is not fully relaxed: we may expect there has not been sufficient time for objects to diffuse onto the most tightly bound orbits. Then the mean-squared velocity would be lower. We expect many of the most tightly bound BHs are not in a relaxed state, since GW inspiral is the dominant effect in determining the profile. This would deplete some of the innermost orbits, and lower the mean square velocity for the population. Since we do not consider the collisional disruption of BHs, we do not use $\overline{\tau\sub{R,\,BH}}$ in our model; it therefore has no influence on our results.
+The time-scales for the lighter components are of the order of the Hubble time; the BH time-scale is much longer on account of the higher mean-squared velocity. This may indicate that the BH population is not fully relaxed: there has not been sufficient time for objects to diffuse onto the most tightly bound orbits (in which case the mean-squared velocity would be lower). We expect many of the most tightly bound BHs are not in a relaxed state, since GW inspiral is the dominant effect in determining the profile. This would deplete some of the innermost orbits, and lower the mean square velocity for the population. Since we do not consider the collisional disruption of BHs, we do not use $\overline{\tau\sub{R,\,BH}}$ in our model; it therefore has no influence on our results.
 
 The long BH time-scale also inevitably includes an artifact of our approximation that the system is homogeneous: in reality the BHs, being more tightly clustered towards the centre, pass through regions with greater density (both because of higher number density and a greater average object mass). Therefore, we expect the true relaxation time-scale to be reduced. 
 
@@ -735,7 +810,7 @@ where $\mathcal{R}$ is fixed by the initial conditions: for an orbit with initia
 \end{equation}
 The inspiral is complete when the eccentricity has decayed to zero; the inspiral time is \citep{Peters1964}
 \begin{equation}
-\tau\sub{insp}(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{\mathcal{R}^4}{\zeta}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
+\tau\sub{insp}(r\sub{p0},e_0) = \intd{0}{e_0}{\frac{15}{304}\frac{c^5\mathcal{R}^4}{G^3M_\bullet M(M_\bullet + M)}\frac{e^{29/19}}{(1-e^2)^{3/2}}\left(1 + \frac{121}{304}e^2\right)^{1181/2299}}{e}.
 \end{equation}
 This is best evaluated numerically, but it may be written in closed form as
 \begin{equation}

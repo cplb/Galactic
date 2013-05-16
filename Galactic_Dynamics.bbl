@@ -1,4 +1,4 @@
-\begin{thebibliography}{111}
+\begin{thebibliography}{115}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander(2005)}]{Alexander2005}
@@ -217,6 +217,10 @@ Hopman C., Alexander T., 2006{\natexlab{b}}, The Astrophysical Journal, 645,
 Hopman C., Freitag M., Larson S.~L., 2007, Monthly Notices of the Royal
   Astronomical Society, 378, 129
 
+\bibitem[{Ihara(1993)}]{Ihara1993}
+Ihara S., 1993, {Information Theory for Continuous Systems}. World Scientific
+  Publishing Company, London
+
 \bibitem[{Jennrich {et~al}\mbox{.}(2011)Jennrich, Binetruy, Colpi, Danzmann,
   Jetzer, Lobo, Nelemans, Schutz, Stebbins, Sumner, Vitale, \&
   Ward}]{Jennrich2011}
@@ -239,6 +243,9 @@ Keshet U., Hopman C., Alexander T., 2009, The Astrophysical Journal, 698, L64
   Meszaros}]{Kobayashi2004}
 Kobayashi S., Laguna P., Phinney E.~S., Meszaros P., 2004, The Astrophysical
   Journal, 615, 855
+
+\bibitem[{Kullback \& Leibler(1951)}]{Kullback1951}
+Kullback S., Leibler R.~A., 1951, The Annals of Mathematical Statistics, 22, 79
 
 \bibitem[{Landau \& Lifshitz(1958)}]{Landau1958}
 Landau L.~D., Lifshitz E.~M., 1958, {Statistical Physics}, Course of
@@ -373,6 +380,12 @@ Ruffini R., Sasaki M., 1981, Progress of Theoretical Physics, 66, 1627
   Merritt, Genzel, Sternberg, Meyer, Kul, Moultaka, Ott, \&
   Straubmeier}]{Schodel2007}
 Sch\"{o}del R. {et~al.}, 2007, Astronomy and Astrophysics, 469, 125
+
+\bibitem[{Shannon(1948{\natexlab{a}})}]{Shannon1948}
+Shannon C.~E., 1948{\natexlab{a}}, The Bell System Technical Journal, 27, 379
+
+\bibitem[{Shannon(1948{\natexlab{b}})}]{Shannon1948a}
+Shannon C.~E., 1948{\natexlab{b}}, The Bell System Technical Journal, 27, 623
 
 \bibitem[{Shapiro \& Marchant(1978)}]{Shapiro1978}
 Shapiro S.~L., Marchant A.~B., 1978, The Astrophysical Journal, 225, 603
