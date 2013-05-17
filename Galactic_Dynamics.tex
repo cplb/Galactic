@@ -470,7 +470,7 @@ The overall rates are similar to those presented in \citet{Hopman2007}. The MS r
 
 We wish to quantify what we could learn over a mission about the MBH's mass and spin. We use the parameter set $\boldsymbol{\lambda}_\bullet = \{\ln (M_\bullet/M_\odot), a_\ast, \cos \Theta\sub{K}, \Phi\sub{K}\}$ as these have uniform priors.
 
-The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($...$ from BHs and $...$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to gleam much useful information from orbits with larger periapses.
+The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($57$ from BHs and $39$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to gleam much useful information from orbits with larger periapses.
 
 During an individual mission there may be either zero, one or multiple bursts of interest. In the first case we learn nothing. In the second we have only to consider the posterior from our MCMC. In the third we must combine the results of all the bursts. This is easy in theory: as the priors are uniform we have only to multiply the individual posteriors,
 \begin{equation}
@@ -478,21 +478,25 @@ p(\boldsymbol{\lambda}_\bullet|\{\boldsymbol{s}_i(t)\}\sub{mission}) = \prod_i p
 \end{equation}
 where $\{\boldsymbol{s}_i(t)\}\sub{mission}$ is the set of bursts for the mission. However, since we have a sampled posterior rather than an analytic function, this is difficult in practise.
 
-The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? 
+The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? Bins that are too big give insufficient resloution, whilst those that are two small may not encompass any sampled points.
 
-How to multiple: $k$-d trees.
+One means of creating bins with sizes that reflect the structure of the distribution is using a $k$-d tree. This is a type of binary space partitioning tree \citep[sections 5.2, 12.1, 12.3]{Berg2008}; it is constructed finding the median in one dimension and then splitting the parameter space into two at this location. This process is then repeated in another dimension, then another, and so on recursively until the desired number of partitions, known as leaves, has been created. Constructing a $k$-d tree from a sampled probability distribution, creates smaller leaves in the regions of high probability, which are of most interest, and larger leaves in the areas of low probability \citep{Weinberg2012}.
 
-The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. The widths coincide for Gaussian posteriors.
+Taking each burst posterior in turn, we construct a $k$-d tree using the two-step method \citep*{Sidery2013}. We use this to bin the other posteriors and multiply the totals together. This gives us one estimate for the combined posterior for each of the input bursts. We resample the final distributions to create sets of points that can be treated the same as the output from an MCMC.
 
-Possible overestimation. Take smaller due to biasing.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.}
+The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. This is constructed by adding together the smallest leaves of the tree until the encompass a total probability of $0.68$. The widths coincide for Gaussian posteriors.
+
+The widths calculated from multiple burst posteriors may be biased to too large values. This happens either when using the $k$-d tree of a distribution that is much broader than the others, such that a small number of leaves contain the majority of the final posterior probability, or when using the $k$-d tree from a narrow distribution that has large leaves at the edges, the resample points from these leaves may skew the overall distribution.
+
+To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust agianst biasing.
 
 \Figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
 \begin{figure*}
 \begin{center}
-   \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{}} \quad 
-   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{}} \\
-   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{}} \quad
-   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{}}
+   \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \quad 
+   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \\
+   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \quad
+   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}}
 \caption{Cumulativeroportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
   \end{center}
 \end{figure*}
@@ -512,24 +516,24 @@ where $q(\lambda)$ is another probability distribution, and we have changed sign
 
 The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^2)$.
 
-There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge, and are not cannot be simply translated should we obtain updated measurements.}
+There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge and are not cannot be simply translated should we obtain updated measurements.}
 
 Unfortunately, since posterior from EMRBs can be broader than this Gaussian; in the relative entropy is still positive (since the distributions are different) even though we are not gaining information. In these cases we set the entropy to zero by hand. In practise, we would combine all our data together to form a best estimate for the MBH's parameters. We do not do that here because we are interest in what information is contained in EMRBs alone.
 
-Calculated from $k$-d trees. Take larger value, although less sensitive than widths.
+The entropies calculated from multiple burst posteriors may show a similar bias to the distribution widths. We use the largest calculated entropy value. The entropy appears less sensitive to the choice of the $k$-d tree used for the multiplication than the distribution widths.
 
-The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Width} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim ...\units{nats}$.
+The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Width} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
 Taking the average across all $100$ mission realisations, we can calculated the expected information gain for each parameter:
 \begin{equation}
 \begin{split}
-\left\langle H_{\ln(M_\bullet/M_\odot)}\right\rangle\sub{mission} & = \pm \units{nats}; \\
-\left\langle H_{a_\asst}\right\rangle\sub{mission} & = \pm \units{nats}; \\
-\left\langle H_{\cos\Theta\sub{K}}\right\rangle\sub{mission} & = \pm \units{nats}; \\
-\left\langle H_{\Phi\sub{K}}\right\rangle\sub{mission} & = \pm \units{nats},
+\left\langle H_{\ln(M_\bullet/M_\odot)}\right\rangle\sub{mission} & = 2.2 \pm 0.3 \units{nats}; \\
+\left\langle H_{a_\asst}\right\rangle\sub{mission} & = 3.0 \pm 0.4 \units{nats}; \\
+\left\langle H_{\cos\Theta\sub{K}}\right\rangle\sub{mission} & = 2.8 \pm 0.4 \units{nats}; \\
+\left\langle H_{\Phi\sub{K}}\right\rangle\sub{mission} & = 3.7 \pm 0.4 \units{nats},
 \end{split}
 \end{equation}
-using $H_\lambda \def H(p(\lambda)|q(\lambda))$ for brevity. The typical entropy is about $\units{nats}$; this corresponds to ... of approximately $10^{...}$.
+using $H_\lambda \def H(p(\lambda)|q(\lambda))$ for brevity. The quoted uncertainties are just the standard errors calculated from the scatter of entropies and do not include any of the other uncertaintites. The typical entropy is about $3 \units{nats}$; this corresponds to an improvement to the precision we know parameters by a factor of approximately $20$.
 
 \section{Conclusion}\label{sec:Gal-End}
 
