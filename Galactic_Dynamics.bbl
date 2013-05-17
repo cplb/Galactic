@@ -1,4 +1,4 @@
-\begin{thebibliography}{115}
+\begin{thebibliography}{118}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander(2005)}]{Alexander2005}
@@ -126,6 +126,11 @@ Cutler C., Flanagan E.~E., 1994, Physical Review D, 49, 2658
 
 \bibitem[{Danzmann \& R\"{u}diger(2003)}]{Danzmann2003}
 Danzmann K., R\"{u}diger A., 2003, Classical and Quantum Gravity, 20, S1
+
+\bibitem[{de~Berg {et~al}\mbox{.}(2008)de~Berg, Cheong, van Kreveld, \&
+  Overmars}]{Berg2008}
+de~Berg M., Cheong O., van Kreveld M., Overmars M., 2008, {Computational
+  Geometry: Algorithms and Applications}, 3rd edn. Springer, Berlin, p. 386
 
 \bibitem[{Doeleman {et~al}\mbox{.}(2008)Doeleman, Weintroub, Rogers, Plambeck,
   Freund, Tilanus, Friberg, Ziurys, Moran, Corey, Young, Smythe, Titus,
@@ -390,8 +395,11 @@ Shannon C.~E., 1948{\natexlab{b}}, The Bell System Technical Journal, 27, 623
 \bibitem[{Shapiro \& Marchant(1978)}]{Shapiro1978}
 Shapiro S.~L., Marchant A.~B., 1978, The Astrophysical Journal, 225, 603
 
+\bibitem[{Sidery {et~al}\mbox{.}(2013)Sidery, Gair, \& Mandel}]{Sidery2013}
+Sidery T., Gair J.~R., Mandel I., 2013, in preparation
+
 \bibitem[{Sigurdsson \& Rees(1997)}]{Sigurdsson1997}
-Sigurdsson S., Rees M., 1997, Monthly Notices of the Royal Astronomical
+Sigurdsson S., Rees M.~J., 1997, Monthly Notices of the Royal Astronomical
   Society, 284, 318
 
 \bibitem[{Spitzer \& Hart(1971)}]{Spitzer1971}
@@ -425,7 +433,7 @@ Toonen S., Hopman C., Freitag M., 2009, Monthly Notices of the Royal
 Tremaine S. {et~al.}, 2002, The Astrophysical Journal, 574, 740
 
 \bibitem[{Tremaine \& Weinberg(1984)}]{Tremaine1984}
-Tremaine S., Weinberg M., 1984, Monthly Notices of the Royal Astronomical
+Tremaine S., Weinberg M.~D., 1984, Monthly Notices of the Royal Astronomical
   Society, 209, 729
 
 \bibitem[{Turner(1977)}]{Turner1977}
@@ -437,10 +445,13 @@ Volonteri M., 2010, The Astronomy and Astrophysics Review, 18, 279
 \bibitem[{Weinberg(1986)}]{Weinberg1986}
 Weinberg M.~D., 1986, The Astrophysical Journal, 300, 93
 
+\bibitem[{Weinberg(2012)}]{Weinberg2012}
+Weinberg M.~D., 2012, Bayesian Analysis, 7, 737
+
 \bibitem[{Wyse(2008)}]{Wyse2008}
-Wyse R., 2008, in ASP Conference Series, Vol. 399, Panoramic Views of Galaxy
-  Formation and Evolution, Kodama T., Yamada T., Aoki K., eds., Astronomical
-  Society of the Pacific, San Francisco, California, pp. 445--448
+Wyse R. F.~G., 2008, in ASP Conference Series, Vol. 399, Panoramic Views of
+  Galaxy Formation and Evolution, Kodama T., Yamada T., Aoki K., eds.,
+  Astronomical Society of the Pacific, San Francisco, California, pp. 445--448
 
 \bibitem[{Young(1977)}]{Young1977}
 Young P.~J., 1977, The Astrophysical Journal, 217, 287

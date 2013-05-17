@@ -50,7 +50,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-When a compact object on a highly eccentric orbit about a much more massive body passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting thet massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime. Stellar mass black holes dominate the event rate.
+When a compact object on a highly eccentric orbit about a much more massive body passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting the massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime for {\textit{LISA}}. Stellar mass black holes dominate the event rate. Creating a sample of $100$ mission realisations, we calculated what we could learn about the MBH. On average, we expect to be able to determine the MBH mass to $\sim1\%$ and the spin to $\sim0.1$ using EMRBs alone.
 \end{abstract}
 
 \begin{keywords}
@@ -488,15 +488,15 @@ The precision to which a parameter can be constrained may be quantified by the w
 
 The widths calculated from multiple burst posteriors may be biased to too large values. This happens either when using the $k$-d tree of a distribution that is much broader than the others, such that a small number of leaves contain the majority of the final posterior probability, or when using the $k$-d tree from a narrow distribution that has large leaves at the edges, the resample points from these leaves may skew the overall distribution.
 
-To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust agianst biasing.
+To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust against biasing.
 
 \Figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
 \begin{figure*}
 \begin{center}
    \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \quad 
-   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \\
-   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \quad
-   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}}
+   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_2}} \\
+   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_3}} \quad
+   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_4}}
 \caption{Cumulativeroportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
   \end{center}
 \end{figure*}
@@ -522,20 +522,32 @@ Unfortunately, since posterior from EMRBs can be broader than this Gaussian; in 
 
 The entropies calculated from multiple burst posteriors may show a similar bias to the distribution widths. We use the largest calculated entropy value. The entropy appears less sensitive to the choice of the $k$-d tree used for the multiplication than the distribution widths.
 
-The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Width} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
+The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
 Taking the average across all $100$ mission realisations, we can calculated the expected information gain for each parameter:
 \begin{equation}
 \begin{split}
 \left\langle H_{\ln(M_\bullet/M_\odot)}\right\rangle\sub{mission} & = 2.2 \pm 0.3 \units{nats}; \\
-\left\langle H_{a_\asst}\right\rangle\sub{mission} & = 3.0 \pm 0.4 \units{nats}; \\
+\left\langle H_{a_\ast}\right\rangle\sub{mission} & = 3.0 \pm 0.4 \units{nats}; \\
 \left\langle H_{\cos\Theta\sub{K}}\right\rangle\sub{mission} & = 2.8 \pm 0.4 \units{nats}; \\
 \left\langle H_{\Phi\sub{K}}\right\rangle\sub{mission} & = 3.7 \pm 0.4 \units{nats},
 \end{split}
 \end{equation}
-using $H_\lambda \def H(p(\lambda)|q(\lambda))$ for brevity. The quoted uncertainties are just the standard errors calculated from the scatter of entropies and do not include any of the other uncertaintites. The typical entropy is about $3 \units{nats}$; this corresponds to an improvement to the precision we know parameters by a factor of approximately $20$.
+using $H_\lambda \equiv H(p(\lambda)|q(\lambda))$ for brevity. The quoted uncertainties are just the standard errors calculated from the scatter of entropies and do not include any of the other uncertaintites. The typical entropy is about $3 \units{nats}$; this corresponds to an improvement to the precision we know parameters by a factor of approximately $20$.
 
 \section{Conclusion}\label{sec:Gal-End}
+
+Extreme-mass-ratio bursts are a potentially interesting signal for a future space-based gravitational wave detector. The most promising source for EMRBs is the Galactic Centre. We built a simple theoretical model to predict the Galactic EMRB event rate. The event rate is dominated by stellar mass black holes which form a cusp about the central massive black hole as a consequence of mass segregation. We calculate that there could be on average $\sim1.7$ detectable bursts over a two-year mission lifetime assuming a \textit{LISA}-like interferometer, of which $\sim1.2$ are from BHs. The number of events scales linearly with the mission lifetime.
+
+The event rate is not high: EMRBs shall not be a prolific GW source; however, the rate is not negligible. We are not guaranteed to have a burst in a mission lifetime, but it seems more likely than not that will shall have at least one.
+
+The detectability of EMRBs is of little interest astrophysically unless we can extract information about their source systems. We investigated what could be learnt about the Galaxy's MBH. We created bursts for $100$ mission realisations, and characterised the posterior probability distributions for the MBH's parameters using MCMC sampling. In a large minority ($\sim40\%$) of realisation we cannot improve upon our existing knowledge. However, in most cases we can, and it may be possible to gain a highly precise measurement of the MBH's mass and spin.
+
+To quantify the information gained during a mission, we used the relative entropy with respect to our current knowledge. Averaging across all the missions, we found that we can expect to gain $2.2\units{nats}$ of information about the logarithm of the mass, $3.0\units{nats}$ about the spin magnitude, $2.8\units{nats}$ about the cosine of the polar angle for the spin axis and $4.2\units{nats}$ for the azimuthal angle. The entropy scales with the logarithm of width of the posterior distribution, hence these entropies represent improvements in the precision of our knowledge of the parameters by factors between $\sim9$ and $\sim40$. For the mass, this would mean the uncertainty would become $\sim1\%$, and we could expect to know the spin to a precision of order $\sim0.1$.
+
+It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation. The waveforms are much easier to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advance the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for are event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, whilst little information from other bursts, this amount is not totally zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs during the same mission, we binned our posterior distributuions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
+
+The centre of the Galaxy is a wonderful laboratory for testing our understanding of astrophysics, in particular for learning about MBHs and their influence on their environments. EMRBs could be a new means of probing this system.
 
 \section*{Acknowledgments}
 The authors are grateful for insightful discussions with Sverre Aarseth. The authors thank Tal Alexander and Clovis Hopman for useful correspondence. They also thank Rob Cole for productive suggestions. CPLB is supported by STFC. JRG is supported by the Royal Society.
