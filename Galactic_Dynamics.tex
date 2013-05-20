@@ -50,7 +50,7 @@ $^{1}$Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge
 \label{firstpage}
 
 \begin{abstract}
-When a compact object on a highly eccentric orbit about a much more massive body passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst. We consider stellar mass objects orbiting the massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime for {\textit{LISA}}. Stellar mass black holes dominate the event rate. Creating a sample of $100$ mission realisations, we calculated what we could learn about the MBH. On average, we expect to be able to determine the MBH mass to $\sim1\%$ and the spin to $\sim0.1$ using EMRBs alone.
+When a compact object on a highly eccentric orbit about a much more massive body passes through periapsis it emits a short gravitational wave signal known as an extreme-mass-ratio burst (EMRB). We consider stellar mass objects orbiting the massive black hole (MBH) found in the Galactic Centre. EMRBs provide a novel means of extracting information about the MBHs; an EMRB from the Galactic MBH could be highly informative if the orbital periapsis is small enough. However, to be a useful astronomical tool EMRBs must be both informative and sufficiently common to be detectable with a space-based interferometer. We construct a simple model to predict the event rate for Galactic EMRBs. We estimate there could be on average $\sim 1.7$ bursts in a two year mission lifetime for {\textit{LISA}}. Stellar mass black holes dominate the event rate. Creating a sample of $100$ mission realisations, we calculated what we could learn about the MBH. On average, we expect to be able to determine the MBH mass to $\sim1\%$ and the spin to $\sim0.1$ using EMRBs alone.
 \end{abstract}
 
 \begin{keywords}
@@ -102,7 +102,7 @@ where $Q$ is the Carter constant and $L_z$ is the angular momentum about the $z$
 
 Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is that the waveform amplitude will not be precisely correct.
 
-We use the quadrupole-octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits.
+We use the quadrupole-octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits, although the integrated effect is smaller.
 
 \subsection{SNR scaling}\label{sec:SNR}
 
@@ -115,7 +115,7 @@ The $\rho$--$r\sub{p}$ relation is largely determined by the shape of the noise 
 \end{equation}
 where $\mu$ is the mass of the CO.
 
-We assume a detection threshold of $\rho = 10$. This gives expected detection limits on the periapse radius. A $1 M_\odot$ CO should be detectable for $r\sub{p} \lesssim 27 r\sub{g}$, while a $10 M_\odot$ CO for $r\sub{p} < 65 r\sub{g}$.
+We assume a detection threshold of $\rho = 10$. This gives expected detection limits on the periapse radius. With a $1 M_\odot$ CO, bursts should be detectable for $r\sub{p} \lesssim 27 r\sub{g}$ and with a $10 M_\odot$ CO for $r\sub{p} < 65 r\sub{g}$.
 
 \subsection{Parameter estimation}
 
@@ -126,7 +126,7 @@ We assume the position of the detector is known, and the MBH is coincident with 
 The parameters left to infer are \citep{Berry2013}:
 \begin{enumerate}
 \item[(1)] The MBH's mass $M_\bullet$. This is well constrained by the observation of stellar orbits about Sgr A* \citep{Ghez2008, Gillessen2009}, we employ the estimate $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$.
-\item[(2)] The spin parameter $a_\ast$.
+\item[(2)] The spin parameter $a_\ast$. This is this constrained to the range $|a_\ast| < 1$.
 \item[(3, 4)] The orientation angles for the black hole spin $\Theta_\mathrm{K}$ and $\Phi_\mathrm{K}$.
 \item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$ \citep{Gillessen2009}.
 \item[(6, 7)] The angular momentum of the CO, parametrized by the magnitude at infinity $L_\infty = \sqrt{L_z^2 + Q}$ and the orbital inclination $\iota = \tan^{-1}(\sqrt{Q}/L_z)$.
@@ -163,12 +163,12 @@ where $v$ is orbital velocity. The number of stars is
 \begin{equation}
 N = \int \dd^3r \int \dd^3v f(\mathcal{E}).
 \end{equation}
-Close to the centre of the Galactic core, dynamics are dominated by the influence of the MBH as it is significantly more massive than the surrounding stars. Its radius of influence is \citep{Frank1976}
+Close to the centre of the Galactic core, dynamics are dominated by the influence of the MBH as it is significantly more massive than the surrounding stars. Its radius of influence is
 \begin{equation}
 r\sub{c} = \frac{GM_\bullet}{\sigma^2},
 \label{eq:r_c}
 \end{equation}
-where $\sigma^2$ is the line-of-sight velocity dispersion. We assume the mass of stars enclosed within $r\sub{c}$ is greater than the $M_\bullet$, which is much greater than the mass of a typical star $M_\star$ \citep{Bahcall1976}. We define a reference number density $n_\star$ from the enclosed mass $m_\ast(r)$ such that
+where $\sigma^2$ is the line-of-sight velocity dispersion \citep{Frank1976}. We assume the mass of stars enclosed within $r\sub{c}$ is greater than the $M_\bullet$, which is much greater than the mass of a typical star $M_\star$ \citep{Bahcall1976}. We define a reference number density $n_\star$ from the enclosed mass $m_\ast(r)$ such that
 \begin{equation}
 m_\star(r\sub{c}) = \frac{4\pi r\sub{c}^3}{3}n_\star M_\star.
 \end{equation}
@@ -431,13 +431,13 @@ Collisions provide the cut-off for bound MS stars, and are significant for bound
 
 As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime, we numerically integrated the event rate. This estimate is denoted as $\mathcal{N}_2\super{int}$. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius; the upper limit was the detection threshold as determined from \eqnref{SNR-power-law}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
 
-To obtain a more accurate estimate, we  performed $2 \times 10^4$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would expect to detect. This is denoted $\mathcal{N}_2\super{run}$.
+To obtain a more accurate estimate, we  performed $2 \times 10^4$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would detect. This is denoted $\mathcal{N}_2\super{run}$.
 
 The calculated numbers of events are shown in \tabref{Rates}.
 \begin{table}
 \begin{minipage}{\columnwidth}
  \centering
-  \caption{Expected number of events.\label{tab:Rates}}
+  \caption{Expected number of events per two year mission. $\mathcal{N}_2\super{int}$ is an estimate using the average SNR-periapsis scaling and $\mathcal{N}_2\super{run}$ is calculated by averaging results from $2 \times 10^4$ mission realisations.\label{tab:Rates}}
   \begin{tabular}{@{} l D{,}{\times}{3.4} D{,}{\times}{3.4} @{}}
   \hline
    Star & \multicolumn{1}{c}{$\mathcal{N}_2\super{int}$} & \multicolumn{1}{c}{$\mathcal{N}_2\super{run}$} \\
@@ -480,7 +480,7 @@ where $\{\boldsymbol{s}_i(t)\}\sub{mission}$ is the set of bursts for the missio
 
 The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? Bins that are too big give insufficient resolution, whilst those that are too small may not encompass any sampled points.
 
-One means of creating bins with sizes that reflect the structure of the distribution is using a $k$-d tree. This is a type of binary space partitioning tree \citep[sections 5.2, 12.1, 12.3]{Berg2008}; it is constructed finding the median in one dimension and then splitting the parameter space into two at this location. This process is then repeated in another dimension, then another, and so on recursively until the desired number of partitions, known as leaves, has been created. Constructing a $k$-d tree from a sampled probability distribution, creates smaller leaves in the regions of high probability, which are of most interest, and larger leaves in the areas of low probability \citep{Weinberg2012}.
+One means of creating bins with sizes that reflect the structure of the distribution is using a $k$-d tree. This is a type of binary space partitioning tree \citep[sections 5.2, 12.1, 12.3]{Berg2008}; it is constructed finding the median in one dimension and then splitting the parameter space into two at this location. This process is then repeated in another dimension, then another, and so on recursively until the desired number of partitions, known as leaves, have been created. Constructing a $k$-d tree from a sampled probability distribution, creates smaller leaves in the regions of high probability, which are of most interest, and larger leaves in the areas of low probability \citep{Weinberg2012}.
 
 Taking each burst posterior in turn, we construct a $k$-d tree using the two-step method \citep*{Sidery2013}. We use this to bin the other posteriors and multiply the totals together. This gives us one estimate for the combined posterior for each of the input bursts. We resample the final distributions to create sets of points that can be treated the same as the output from an MCMC.
 
@@ -512,7 +512,7 @@ H(p|q) = \intd{}{}{p(\lambda)\ln\left(\frac{p(\lambda)}{q(\lambda)}\right)}{\lam
 \end{equation}
 where $q(\lambda)$ is another probability distribution, and we have changed sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback-Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
 
-The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^2)$.
+The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the (logarithm of the) posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^2)$.
 
 There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge and are cannot be simply translated should we obtain updated measurements.}
 
@@ -520,7 +520,7 @@ Unfortunately, since posterior from EMRBs can be broader than this Gaussian, the
 
 The entropies calculated from multiple burst posteriors may show a similar bias to the distribution widths. We use the largest calculated entropy value. The entropy appears less sensitive to the choice of the $k$-d tree used for the multiplication than the distribution widths.
 
-The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
+The entropies are well correlated with the logarithm of the distribution widths as expected. The distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
 Taking the average across all $100$ mission realisations, we can calculate the expected information gain for each parameter:
 \begin{equation}
@@ -541,9 +541,9 @@ The event rate is not high: EMRBs shall not be a prolific GW source; however, th
 
 The detectability of EMRBs is of little interest astrophysically unless we can extract information about their source systems. We investigated what could be learnt about the Galaxy's MBH. We created bursts for $100$ mission realisations, and characterised the posterior probability distributions for the MBH's parameters using MCMC sampling. In a large minority ($\sim40\%$) of realisation we cannot improve upon our existing knowledge. However, in most cases we can, and it may be possible to gain a highly precise measurement of the MBH's mass and spin.
 
-To quantify the information gained during a mission, we used the relative entropy with respect to our current knowledge. Averaging across all the missions, we found that we can expect to gain $2.2\units{nats}$ of information about the logarithm of the mass, $3.0\units{nats}$ about the spin magnitude, $2.8\units{nats}$ about the cosine of the polar angle for the spin axis and $4.2\units{nats}$ for the azimuthal angle. The entropy scales with the logarithm of width of the posterior distribution, hence these entropies represent improvements in the precision of our knowledge of the parameters by factors between $\sim9$ and $\sim40$. For the mass, this would mean the uncertainty would become $\sim1\%$, and we could expect to know the spin to a precision of order $\sim0.1$.
+To quantify the information gained during a mission, we used the relative entropy with respect to our current knowledge. Averaging across all the missions, we found that we can expect to gain $2.2\units{nats}$ of information about the logarithm of the mass, $3.0\units{nats}$ about the spin magnitude, $2.8\units{nats}$ about the cosine of the polar angle for the spin axis and $4.2\units{nats}$ for the azimuthal angle. The entropy scales with the logarithm of width of the posterior distribution, hence these entropies represent improvements in the precision of our knowledge of the parameters by factors between $\sim9$ and $\sim40$. For the mass, this would mean the uncertainty would become $\sim1\%$; we could expect to know the spin to a precision of order $\sim0.1$.
 
-It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation. The waveforms are much easier to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advance the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for our event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, whilst little information is expected from other bursts, this amount is not totally zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs during the same mission, we binned our posterior distributions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
+It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation assuming parabolic trajectories. The waveforms are much easier to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advance the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for our event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, whilst little information is expected from other bursts, this amount is not totally zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs during the same mission, we binned our posterior distributions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
 
 The centre of the Galaxy is a wonderful laboratory for testing our understanding of astrophysics, in particular for learning about MBHs and their influence on their environments. EMRBs could be a new means of probing this system.
 
@@ -565,7 +565,7 @@ Chandrasekhar's approach has proved exceedingly successful despite the number of
 
 Other authors have built upon the work of Chandrasekhar by considering inhomogeneous stellar distributions, via perturbation theory \citep{Lynden-Bell1972,Tremaine1984,Weinberg1986}; modelling energy transfer as anomalous dispersion, which adds higher order moments to the transfer probability \citep{Bar-Or2012}, or using the tools of linear response theory and the fluctuation-dissipation theory \citep[chapter 7]{Landau1958}, which allows relaxation of certain assumptions, such as homogeneity \citep{Bekenstein1992,Maoz1993,Nelson1999}. We will not attempt to employ such sophisticated techniques at this stage.
 
-\subsection{Chandrasekhar's derivation of the change in energy}\label{sec:Chandra}
+\subsection{Chandrasekhar's change in energy}\label{sec:Chandra}
 
 We consider the interaction of a field star, denoted by 1, with a test star, 2; the change in energy squared from interaction in time $\delta t$ is approximately \citep[chapter 2]{Chandrasekhar1960}
 \begin{equation}
