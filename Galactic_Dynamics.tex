@@ -100,7 +100,7 @@ r = {} & \frac{2 r\sub{p}}{1 + \cos\psi};\\
 \end{align}
 where $Q$ is the Carter constant and $L_z$ is the angular momentum about the $z$-axis.
 
-Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is the waveform amplitude will not be precisely correct.
+Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is that the waveform amplitude will not be precisely correct.
 
 We use the quadrupole-octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits.
 
@@ -134,7 +134,7 @@ The parameters left to infer are \citep{Berry2013}:
 \end{enumerate}
 The first four are specific to the MBH, and we shall attempt to quantify the constraints we can expect to place on these from EMRBs.
 
-The probability the source is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
+The probability that the source is described by parameters $\boldsymbol{\lambda}$ is given by the posterior distribution
 \begin{equation}
 p(\boldsymbol{\lambda}|\boldsymbol{s}(t)) = \frac{p(\boldsymbol{s}(t)|\boldsymbol{\lambda})p(\boldsymbol{\lambda})}{p(\boldsymbol{s}(t))}.
 \end{equation}
@@ -255,7 +255,7 @@ Combining these with our earlier expressions in terms of $e$ and $r\sub{p}$,
 v_\perp^2 = {} & \frac{GM_\bullet(1 + e)r\sub{p}}{r^2}, \\*
 v_r^2 = {} & GM_\bullet\left[\frac{2}{r} - \frac{(1 - e)}{r\sub{p}} - \frac{(1 + e)r\sub{p}}{r^2}\right].
 \end{align}
-From the latter we can verify the turning points of an orbit occur at
+From the latter we can verify that the turning points of an orbit occur at
 \begin{equation}
 r = r\sub{p}, \: \frac{1+e}{1-e}r\sub{p};
 \end{equation}
@@ -403,7 +403,7 @@ Unbound stars only undergo a single periapse passage and only radiate one burst 
 
 The $(1-e)^{-1/2}$ dependence of $\tau\sub{GW}$ for bound orbits connects the two regimes. The rate of change of energy goes to zero as a consequence of assuming the orbital parameters do not change over the course of an orbit. It is a valid approximation since the large mass-ratio ensures a slow evolution of the system (\apref{Unbound}).
 
-When comparing with the relaxation time-scale we are comparing rates of change, with the shorter time-scale highlighting the more rapid process that dominates the evolution \citep{Amaro-Seoane2007}. We therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau_\mathcal{J}$ \citep{Merritt2011}. Orbits with $\tau\sub{GW} < \tau_\mathcal{J}$ become depleted by GW emission faster than they are replenished by scattering. The cusp does not extend to these orbits. Yet, these orbits are not totally depopulated as an object may pass through during its inspiral from greater periapse and eccentricity. The net effects are the distributions of MS stars, WDs and NSs at high eccentricities are relatively unchanged from their cusp states, but the BH distribution is significantly depleted.
+When comparing with the relaxation time-scale we are comparing rates of change, with the shorter time-scale highlighting the more rapid process that dominates the evolution \citep{Amaro-Seoane2007}. We therefore compare $\tau\sub{GW}$ with the orbital relaxation time-scale $\tau_\mathcal{J}$ \citep{Merritt2011}. Orbits with $\tau\sub{GW} < \tau_\mathcal{J}$ become depleted by GW emission faster than they are replenished by scattering. The cusp does not extend to these orbits. Yet, these orbits are not totally depopulated as an object may pass through during its inspiral from greater periapse and eccentricity. The net effects are the high-eccentricity distributions of MS stars, WDs and NSs are relatively unchanged from their cusp states, but the BH distribution is significantly depleted.
 
 \subsubsection{Collisions}\label{sec:Collision}
 
@@ -452,7 +452,7 @@ Total & 1.7,10^{0} & 1.7,10^{0} \\
 \end{tabular}
 \end{minipage}
 \end{table}
-The two approaches are in good agreement indicating: that the average relation \eqnref{SNR-power-law} is sufficiently accurate for these type of calculations, and that the Schwarzschild radius is a reasonable absolute inner cut-off averaged over all MBH spins. The total number of events per mission is plotted in \figref{Event-no}.
+The two approaches are in good agreement indicating that the average relation \eqnref{SNR-power-law} is sufficiently accurate for these type of calculations, and that the Schwarzschild radius is a reasonable absolute inner cut-off averaged over all MBH spins. The total number of events per mission is plotted in \figref{Event-no}.
 \begin{figure}
 \begin{center}
    \includegraphics[width=0.45\textwidth]{Fig_Total_event_hist}
@@ -470,25 +470,23 @@ The overall rates are similar to those presented in \citet{Hopman2007}. The MS r
 
 We wish to quantify what we could learn over a mission about the MBH's mass and spin. We use the parameter set $\boldsymbol{\lambda}_\bullet = \{\ln (M_\bullet/M_\odot), a_\ast, \cos \Theta\sub{K}, \Phi\sub{K}\}$ as these have uniform priors.
 
-The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($57$ from BHs and $39$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to gleam much useful information from orbits with larger periapses.
+The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($57$ from BHs and $39$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to glean much useful information from orbits with larger periapses.
 
 During an individual mission there may be either zero, one or multiple bursts of interest. In the first case we learn nothing. In the second we have only to consider the posterior from our MCMC. In the third we must combine the results of all the bursts. This is easy in theory: as the priors are uniform we have only to multiply the individual posteriors,
 \begin{equation}
 p(\boldsymbol{\lambda}_\bullet|\{\boldsymbol{s}_i(t)\}\sub{mission}) = \prod_i p(\boldsymbol{\lambda}_\bullet|\boldsymbol{s}_i(t)),
 \end{equation}
-where $\{\boldsymbol{s}_i(t)\}\sub{mission}$ is the set of bursts for the mission. However, since we have a sampled posterior rather than an analytic function, this is difficult in practise.
+where $\{\boldsymbol{s}_i(t)\}\sub{mission}$ is the set of bursts for the mission. However, since we have a sampled posterior rather than an analytic function, this is difficult in practice.
 
-The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? Bins that are too big give insufficient resloution, whilst those that are two small may not encompass any sampled points.
+The simplest thing to do is to bin the points and then multiply the numbers in each bin together (dividing by the area of the bin to convert back to a probability density). The question is then what is an appropriate bin size? Bins that are too big give insufficient resolution, whilst those that are too small may not encompass any sampled points.
 
 One means of creating bins with sizes that reflect the structure of the distribution is using a $k$-d tree. This is a type of binary space partitioning tree \citep[sections 5.2, 12.1, 12.3]{Berg2008}; it is constructed finding the median in one dimension and then splitting the parameter space into two at this location. This process is then repeated in another dimension, then another, and so on recursively until the desired number of partitions, known as leaves, has been created. Constructing a $k$-d tree from a sampled probability distribution, creates smaller leaves in the regions of high probability, which are of most interest, and larger leaves in the areas of low probability \citep{Weinberg2012}.
 
 Taking each burst posterior in turn, we construct a $k$-d tree using the two-step method \citep*{Sidery2013}. We use this to bin the other posteriors and multiply the totals together. This gives us one estimate for the combined posterior for each of the input bursts. We resample the final distributions to create sets of points that can be treated the same as the output from an MCMC.
 
-The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. This is constructed by adding together the smallest leaves of the tree until the encompass a total probability of $0.68$. The widths coincide for Gaussian posteriors.
+The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. This is constructed by adding together the smallest leaves of the tree until they encompass a total probability of $0.68$. The widths coincide for Gaussian posteriors.
 
-The widths calculated from multiple burst posteriors may be biased to too large values. This happens either when using the $k$-d tree of a distribution that is much broader than the others, such that a small number of leaves contain the majority of the final posterior probability, or when using the $k$-d tree from a narrow distribution that has large leaves at the edges, the resample points from these leaves may skew the overall distribution.
-
-To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust against biasing.
+The widths calculated from multiple burst posteriors may be biased to too large values. This can happen when combining distributions of significantly different widths. When using the $k$-d tree of a distribution that is much broader than the others, a small number of leaves can contain the majority of the final posterior probability and we cannot resolve the final width. When using the $k$-d tree from a narrow distribution there can be large leaves at the edges of the parameter ranges, because the resampled points from these leaves are uniformly distributed they can skew the overall distribution. To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust against biasing.
 
 \Figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
 \begin{figure*}
@@ -497,14 +495,14 @@ To reduce any potential bias, we use the smallest of the calculated widths.\foot
    \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_2}} \\
    \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_3}} \quad
    \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_4}}
-\caption{Cumulativeroportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
+\caption{Cumulative proportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
   \end{center}
 \end{figure*}
 It appears there is a $33\%$ chance of determining $\ln (M_\bullet/M_\odot)$ to a precision of $10^{-2}$ or a $10\%$ chance of determining it to $10^{-4}$. The current uncertainty of $\sim 0.08$ is bettered in over half ($52$) of the missions. The spin $a_\ast$ could be determined to a precision of $10^{-2}$ in $30\%$ of missions and there is a $10\%$ chance of determining it to better than $3\times 10^{-4}$.
 
 The distribution widths work for describing parameter estimation accuracies of individual missions, but are less use for calculating an average for what we expect to learn from a mission since they are undefined when no bursts are detected. There is an alternative means of characterising what we could learn: the information entropy of the posterior distribution.
 
-\citet{Shannon1948,Shannon1948a} introduced the idea of information entropy, which quantifies the expectation of information gained from an outcome or equivalent the amount of uncertainty about a system \citep[chapters 2 and 4]{MacKay2003}. For a discrete ensemble of probabilities $\{p_i\}$,
+\citet{Shannon1948,Shannon1948a} introduced the idea of information entropy, which quantifies the expectation for information gained from an outcome or, equivalently, the amount of uncertainty regarding a system \citep[chapters 2 and 4]{MacKay2003}. For a discrete ensemble of probabilities $\{p_i\}$,
 \begin{equation}
 H(\{p_i\}) = -\sum_i p_i \ln p_i
 \end{equation}
@@ -516,15 +514,15 @@ where $q(\lambda)$ is another probability distribution, and we have changed sign
 
 The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^2)$.
 
-There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge and are not cannot be simply translated should we obtain updated measurements.}
+There is one complication in using the relative entropy. We have used an improper prior for $\ln (M_\bullet/M_\odot)$; it is uniform over all the positive reals and so cannot be normalised. As an alternative, we can use a Gaussian with parameters set by the current observations \citep{Gillessen2009}. The relative entropy then compares constraints from bursts with those from observing stellar motions.\footnote{Whilst this is a useful comparison, this does mean that the results are specific to the current state of knowledge and are cannot be simply translated should we obtain updated measurements.}
 
-Unfortunately, since posterior from EMRBs can be broader than this Gaussian; in the relative entropy is still positive (since the distributions are different) even though we are not gaining information. In these cases we set the entropy to zero by hand. In practise, we would combine all our data together to form a best estimate for the MBH's parameters. We do not do that here because we are interest in what information is contained in EMRBs alone.
+Unfortunately, since posterior from EMRBs can be broader than this Gaussian, the relative entropy can still be positive (since the distributions are different) even though we are not gaining information. In these cases we set the entropy to zero by hand. In practice, we would combine all our data together to form a best estimate for the MBH's parameters. We do not do that here because we are interested in what information is contained in EMRBs alone.
 
 The entropies calculated from multiple burst posteriors may show a similar bias to the distribution widths. We use the largest calculated entropy value. The entropy appears less sensitive to the choice of the $k$-d tree used for the multiplication than the distribution widths.
 
 The entropies are well correlated with the logarithm of the distribution widths as expected. The cumulative distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
-Taking the average across all $100$ mission realisations, we can calculated the expected information gain for each parameter:
+Taking the average across all $100$ mission realisations, we can calculate the expected information gain for each parameter:
 \begin{equation}
 \begin{split}
 \left\langle H_{\ln(M_\bullet/M_\odot)}\right\rangle\sub{mission} & = 2.2 \pm 0.3 \units{nats}; \\
@@ -533,19 +531,19 @@ Taking the average across all $100$ mission realisations, we can calculated the 
 \left\langle H_{\Phi\sub{K}}\right\rangle\sub{mission} & = 3.7 \pm 0.4 \units{nats},
 \end{split}
 \end{equation}
-using $H_\lambda \equiv H(p(\lambda)|q(\lambda))$ for brevity. The quoted uncertainties are just the standard errors calculated from the scatter of entropies and do not include any of the other uncertaintites. The typical entropy is about $3 \units{nats}$; this corresponds to an improvement to the precision we know parameters by a factor of approximately $20$.
+using $H_\lambda \equiv H(p(\lambda)|q(\lambda))$ for brevity. The quoted uncertainties are just the standard errors calculated from the scatter of entropies and do not include any of the other uncertainties. The typical entropy is about $3 \units{nats}$; this corresponds to an improvement to the precision we know parameters by a factor of approximately $20$.
 
 \section{Conclusion}\label{sec:Gal-End}
 
 Extreme-mass-ratio bursts are a potentially interesting signal for a future space-based gravitational wave detector. The most promising source for EMRBs is the Galactic Centre. We built a simple theoretical model to predict the Galactic EMRB event rate. The event rate is dominated by stellar mass black holes which form a cusp about the central massive black hole as a consequence of mass segregation. We calculate that there could be on average $\sim1.7$ detectable bursts over a two-year mission lifetime assuming a \textit{LISA}-like interferometer, of which $\sim1.2$ are from BHs. The number of events scales linearly with the mission lifetime.
 
-The event rate is not high: EMRBs shall not be a prolific GW source; however, the rate is not negligible. We are not guaranteed to have a burst in a mission lifetime, but it seems more likely than not that will shall have at least one.
+The event rate is not high: EMRBs shall not be a prolific GW source; however, the rate is not negligible. We are not guaranteed to have a burst in a mission lifetime, but it seems more likely than not that we shall have at least one.
 
 The detectability of EMRBs is of little interest astrophysically unless we can extract information about their source systems. We investigated what could be learnt about the Galaxy's MBH. We created bursts for $100$ mission realisations, and characterised the posterior probability distributions for the MBH's parameters using MCMC sampling. In a large minority ($\sim40\%$) of realisation we cannot improve upon our existing knowledge. However, in most cases we can, and it may be possible to gain a highly precise measurement of the MBH's mass and spin.
 
 To quantify the information gained during a mission, we used the relative entropy with respect to our current knowledge. Averaging across all the missions, we found that we can expect to gain $2.2\units{nats}$ of information about the logarithm of the mass, $3.0\units{nats}$ about the spin magnitude, $2.8\units{nats}$ about the cosine of the polar angle for the spin axis and $4.2\units{nats}$ for the azimuthal angle. The entropy scales with the logarithm of width of the posterior distribution, hence these entropies represent improvements in the precision of our knowledge of the parameters by factors between $\sim9$ and $\sim40$. For the mass, this would mean the uncertainty would become $\sim1\%$, and we could expect to know the spin to a precision of order $\sim0.1$.
 
-It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation. The waveforms are much easier to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advance the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for are event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, whilst little information from other bursts, this amount is not totally zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs during the same mission, we binned our posterior distributuions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
+It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation. The waveforms are much easier to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advance the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for our event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, whilst little information is expected from other bursts, this amount is not totally zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs during the same mission, we binned our posterior distributions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
 
 The centre of the Galaxy is a wonderful laboratory for testing our understanding of astrophysics, in particular for learning about MBHs and their influence on their environments. EMRBs could be a new means of probing this system.
 
@@ -747,7 +745,7 @@ The orbital average is calculated according to \citep[section 2.2b]{Spitzer1987}
 \begin{equation}
 \left\langle X\right\rangle = \recip{T}\intd{0}{T}{X(t)}{t},
 \end{equation}
-where $T$ is the orbital period. Despite our best efforts, we have been unsuccessful at obtaining analytic forms for the averaged changes in energy squared. Therefore we compute them numerically. Switching to orbital phase angle $\vartheta$, we define
+where $T$ is the orbital period. Despite our best efforts, we have been unsuccessful in obtaining analytic forms for the averaged changes in energy squared. Therefore we compute them numerically. Switching to orbital phase angle $\vartheta$, we define
 \begin{align}
 I\sub{b}(e,\varrho,p) = {} & \intd{0}{\pi}{\recip{(1 + e \cos\vartheta)^2}\gamma\left(\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right);p\right)}{\vartheta} \\
 I\sub{u}(e,\varrho,\Xi) = {} & \intd{0}{\pi}{\frac{\Xi}{(1 + e \cos\vartheta)^2}\left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]\left\{\Xi^2 + \left[\frac{1}{2(1+e)\rho}\left(1+e^2+2e\cos\vartheta\right)\right]^3\right\}^{-1/2}}{\vartheta}.
