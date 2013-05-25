@@ -147,7 +147,7 @@ p(\boldsymbol{s}(t)|\boldsymbol{\lambda}_0) \propto \exp\left[-\recip{2}\innerpr
 \end{equation}
 Here $\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_0}$ is the overlap between waveforms defined by the standard signal inner product \citep{Cutler1994}. This is the probability of the realisation of noise signal $\boldsymbol{n}(t) = \boldsymbol{s}(t) - \boldsymbol{h}_0(t)$.
 
-We use uninformative priors on all the parameters: no existing constraints are used. We adopt uniform priors for all the parameters except: $M_\bullet$, $\zeta$ and $_\infty$, which are positive definite, where we use a prior uniform in the logarithm of the parameter, and $\Theta\sub{K}$ and $\iota$, where we use a prior uniform in the cosine of the angle.
+We use uninformative priors on all the parameters: no existing constraints are used. We adopt uniform priors for all the parameters except: $M_\bullet$, $\zeta$ and $L_\infty$, which are positive definite, where we use a prior uniform in the logarithm of the parameter, and $\Theta\sub{K}$ and $\iota$, where we use a prior uniform in the cosine of the angle.
 
 To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a class of algorithms used for integrating over complicated probability distributions. Parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution. We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2013}.
 
