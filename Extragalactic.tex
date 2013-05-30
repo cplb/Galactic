@@ -80,7 +80,7 @@ MBHs accumulate mass and angular momentum through accretion and mergers \citep{V
 
 We have some MBH spin measurements from X-ray observations of active galactic nuclei \citep[e.g.,][]{Walton2013}. Estimates span the entire range of allowed values, but are typically in the range of $|a_\ast| \sim 0.7$ and above, with uncertainties of $\sim 10\%$. There may be an observational bias toward high spin values \citep{Brenneman2011}. It would be interesting to compare observations of the active galactic nuclei population with measurements from the population of nearby galaxies to see if they share universal characteristics or define distinct demographics. %Nardini2011, Patrick2011, Gallo2011, Lohfink2012
 
-EMRBs could be an interesting signal for a space-borne gravitational wave detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}; \citealt{Bender1998, Danzmann2003}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}; \citealt{Jennrich2011, Amaro-Seoane2012a}).\footnote{The revised \textit{eLISA} concept is the same revised design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} At the time of writing, there is no currently funded mission. However, \textit{LISA Pathfinder}, a technology demonstration mission, is due for launch at the end of 2014 \citep{Anza2005, Antonucci2012}. There is optimism that a full mission shall follow in the subsequent decade. Since there does not exist a definite mission design, we stick to the classic \textit{LISA} design for the majority of this work, although we do use the \textit{eLISA} design when considering the detectability of bursts. The principal effect of using a descoped design is a reduction in SNR; this would reduce the precision to which parameters could be inferred.
+EMRBs could be an interesting signal for a space-borne gravitational wave detector, such as the \textit{Laser Interferometer Space Antenna} (\textit{LISA}; \citealt{Bender1998, Danzmann2003}) or the \textit{evolved Laser Interferometer Space Antenna} (\textit{eLISA}; \citealt{Jennrich2011, Amaro-Seoane2012a}).\footnote{The revised \textit{eLISA} concept is the same revised design as the \textit{New Gravitational-wave Observatory} (\textit{NGO}) submitted to the European Space Agency for their L1 mission selection.} At the time of writing, there is no currently funded mission. However, \textit{LISA Pathfinder}, a technology demonstration mission, is due for launch in 2015 \citep{Anza2005, Antonucci2012, McNamara2013}. There is optimism that a full mission shall follow in the subsequent decade. Since there does not exist a definite mission design, we stick to the classic \textit{LISA} design for the majority of this work, although we do use the \textit{eLISA} design when considering the detectability of bursts. The principal effect of using a descoped design is a reduction in SNR; this would reduce the precision to which parameters could be inferred.
 
 EMRB waveforms are calculated and analysed as in \citet{Berry2013} and therefore, in the following, we give only an outline of the techniques used. Waveform construction and the numerical kludge approximation are outlined in \secref{Wave}. The basics of signal analysis are introduced in \secref{Sig}. In \secref{SNR}, the detectability of EMRBs from extragalactic MBHs is discussed. We show that bursts from other galaxies could be detected with \textit{LISA} or \textit{eLISA}. Following this, in \secref{Infer} we discuss how to assess information that could be extracted from these signals and in \secref{Res} we present examples of the constraints we could place using EMRBs. We conclude in \secref{End} with a discussion of our findings.
 
@@ -103,7 +103,7 @@ The waveform is specified by a set of fourteen parameters:
 \begin{enumerate}
 \item[(1)] The MBH's mass $M$.
 \item[(2)] The spin parameter $a_\ast$.
-\item[(3, 4)] The orientation angles for the MBH $\Theta\sub{K}$ and $\Phi\sub{K}$.
+\item[(3, 4)] The orientation angles for the MBH spin $\Theta\sub{K}$ and $\Phi\sub{K}$.
 \item[(5)] The source distance $R$ divided by the CO mass $\mu$, which we denote as $\zeta = R/\mu$. This scales the amplitude of the waveform.
 \item[(6, 7)] The angular momentum of the CO parametrized in terms of total angular momentum $L_\infty = \sqrt{Q + L_z^2}$ and inclination $\iota$.
 \item[(8--10)] The angular phases at periapse, $\phi\sub{p}$  and $\chi\sub{p}$ (which determines $\theta\sub{p}$), and the time of periapse $t\sub{p}$.
@@ -116,7 +116,7 @@ We have assumed that sky position is known; to be able to do this in practice we
 
 \section{Signal analysis}\label{sec:Sig}
 
-In this section we briefly cover the basics of GW analysis. A more complete discussion can be found in \citet{Finn1992} and \citet{Cutler1994}; those familiar with the subject may skip this section. In the following, detectors are labelled with indices $A = \{\mathrm{I}, \mathrm{II}\}$ for \textit{LISA}, which has three arms and acts as two detectors, and $A = \{\mathrm{I}\}$ for \textit{eLISA}, which has only two arms and so acts as a single detector.
+In this section we briefly cover the basics of GW analysis. A more complete discussion can be found in \citet{Finn1992} and \citet{Cutler1994}, and a review in \citet{Jaranowski2012}; those familiar with the subject may skip this section. In the following, detectors are labelled with indices $A = \{\mathrm{I}, \mathrm{II}\}$ for \textit{LISA}, which has three arms and acts as two detectors, and $A = \{\mathrm{I}\}$ for \textit{eLISA}, which has only two arms and so acts as a single detector.
 
 The measured strain $\boldsymbol{s}(t)$ is the combination of the signal and the detector noise
 \begin{equation}
@@ -239,14 +239,18 @@ We can repeat the analysis for \textit{eLISA}. The scaled SNRs are shown in \fig
  \caption{Scaled signal-to-noise ratio for EMRBs as a function of characteristic frequency for the \textit{eLISA} design. The fitted curve from \eqnref{scaled-SNR} is indicated by the line.\label{fig:scaled-SNR-eLISA}}
    \end{center}
 \end{figure}
-Since Andromeda was only marginally of interest for the classic \textit{LISA} design, we did not include it this time. This reduces the scatter at low characteristic frequencies. The curve is fitted with
+Since Andromeda was only marginally of interest for the classic \textit{LISA} design, we did not include it this time. This reduces the scatter at low characteristic frequencies.
+
+The curve is fitted with
 \begin{equation}
 \begin{split}
 &\alpha_1 \simeq 73.9; \ \ \alpha_2 \simeq 4.99 \times 10^3; \ \ \alpha_3 \simeq 52.7;\\
 &\beta_1 \simeq 1.47; \ \ \beta_2 \simeq 0.85; \ \ \beta_3 \simeq 1.76; \ \ \beta_4 \simeq 1.25.
 \end{split}
 \end{equation}
-Using this to find the detectability range results in the curves shown in \figref{detect-eLISA}.
+The fit parameters are markedly different from those for \textit{eLISA}. However, since we are fitting a phenomenological model and the parameters have no physical significance, we are not concerned with this. The parameters yield a good fir to the data, which is all that is required.
+
+Using this fit to find the detectability range results in the curves shown in \figref{detect-eLISA}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=0.43\textwidth]{Fig_M_R_detect_2}
