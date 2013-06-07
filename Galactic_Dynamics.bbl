@@ -1,4 +1,4 @@
-\begin{thebibliography}{118}
+\begin{thebibliography}{119}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander(2005)}]{Alexander2005}
@@ -71,6 +71,11 @@ Barack L., 2009, Classical and Quantum Gravity, 26, 213001(56)
 
 \bibitem[{Barack \& Cutler(2004)}]{Barack2004}
 Barack L., Cutler C., 2004, Physical Review D, 69, 082005
+
+\bibitem[{Bartos {et~al}\mbox{.}(2013)Bartos, Haiman, Kocsis, \&
+  M{\'a}rka}]{Bartos2013}
+Bartos I., Haiman Z., Kocsis B., M{\'a}rka S., 2013, Physical Review Letters,
+  110, 221102
 
 \bibitem[{Baumgardt {et~al}\mbox{.}(2004)Baumgardt, Makino, \&
   Ebisuzaki}]{Baumgardt2004}
