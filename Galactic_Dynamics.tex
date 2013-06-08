@@ -73,7 +73,7 @@ For EMRBs to be a useful astronomical signal we require three things: the bursts
 
 We have previously addressed the first requirement: EMRBs can give good constraints on the key parameters describing the Galaxy's MBH if the periapse distance is $r\sub{p} \lesssim 10 r\sub{g}$, where $r\sub{g} = GM_\bullet/c^2$ is a gravitational radius \citep{Berry2013}. This would allow us to improve upon the current uncertainty in the mass measurement of $8\%$ \citep{Gillessen2009}. In addition, we could also measure the spin magnitude to a precision of better than $0.1$.
 
-The second requirement shall be the subject of this work. Previously, the best estimate for the event rate was given by \citet*{Hopman2007}; they predicted the event rate for \textit{LISA} is $\sim 1\units{yr^{-1}}$. We follow a similar approach, but, significantly, we improve the calculation of SNR by using numerical kludge (NK) waveforms \citep{Babak2007}; our models differs in a number of small ways, most notably, we allows for bursts to come from objects in the earliest stages of GW inspiral. In addition to this, we extend the analysis by not only considering the number of events that would be detectable, but also how many would be informative.
+The second requirement shall be the subject of this work. Previously, the best estimate for the event rate was given by \citet*{Hopman2007}; they predicted the event rate for \textit{LISA} is $\sim 1\units{yr^{-1}}$. We follow a similar approach, but, significantly, we improve the calculation of SNR by using numerical kludge (NK) waveforms \citep{Babak2007}; our models differ in a number of small ways, most notably, we allow for bursts to come from objects in the earliest stages of GW inspiral. In addition to this, we extend the analysis by not only considering the number of events that would be detectable, but also how many would be informative.
 
 We begin in \secref{Waveforms} by recapping how to generate and analyse burst waveforms. In \secref{Rates} we present our model for calculating event rates and discuss its ingredients. Whilst we have been careful in trying to account for all the relevant effects, the model remains approximate and can only be trusted to give order of magnitude estimates. Our results, including the predicted event rate along with a quantification of the estimated information content, are presented in \secref{Gal-Results} and discussed further in our conclusion, \secref{Gal-End}.
 
@@ -119,7 +119,7 @@ We assume a detection threshold of $\rho = 10$. This gives expected detection li
 
 Once we have a detected signal $\boldsymbol{s}(t)$, we can consider inference of the source parameters $\boldsymbol{\lambda}$. The waveform depends on the properties of the MBH; the CO and its orbit, and the detector.
 
-We assume the position of the detector is known, and the MBH is coincident with the radio source of Sgr A* which thought to be within $20 r_\mathrm{g}$ of the MBH \citep{Reid2003,Doeleman2008}. We use the J2000.0 coordinates which are determined to high accuracy \citep{Reid1999, Yusef-Zadeh1999}.
+We assume the position of the detector is known, and the MBH is coincident with the radio source of Sgr A* which is thought to be within $20 r_\mathrm{g}$ of the MBH \citep{Reid2003,Doeleman2008}. We use the J2000.0 coordinates which are determined to high accuracy \citep{Reid1999, Yusef-Zadeh1999}.
 
 The parameters left to infer are \citep{Berry2013}:
 \begin{enumerate}
@@ -332,7 +332,7 @@ The calculated inner cut-offs for the four stellar species across the range of b
    \subfigure[{White dwarfs}]{\includegraphics[width=0.4\textwidth]{Fig_Inner_cut_2.eps}} \\
    \subfigure[{Neutron stars}]{\includegraphics[width=0.4\textwidth]{Fig_Inner_cut_3.eps}} \quad
    \subfigure[{Black holes}]{\includegraphics[width=0.4\textwidth]{Fig_Inner_cut_4.eps}}
-\caption{Inner cut-off radii for the Galactic Centre as a function of eccentricity. The solid line is the Schwarzschild radius of the MBH; this gives an indication of the innermost possible orbit which actually varies with MBH spin and orbital inclination.Tthe dashed line is the tidal radius which is a hard cutoff inside of which there should be no undisrupted stars. The dot-dashed line is the collisional cut-off which is a statistical cutoff inside of which we do not expect any stars. The dotted line is the transition to the GW-dominated inspiral regime, inside of this we expect inspiralling stars in place of the relaxed distribution.\label{fig:Cuts}}
+\caption{Inner cut-off radii for the Galactic Centre as a function of eccentricity. The solid line is the Schwarzschild radius of the MBH; this gives an indication of the innermost possible orbit which actually varies with MBH spin and orbital inclination. The dashed line is the tidal radius which is a hard cutoff inside of which there should be no undisrupted stars. The dot-dashed line is the collisional cut-off which is a statistical cutoff inside of which we do not expect any stars. The dotted line is the transition to the GW-dominated inspiral regime, inside of this we expect inspiralling stars in place of the relaxed distribution.\label{fig:Cuts}}
   \end{center}
 \end{figure*}
 
@@ -405,7 +405,7 @@ When comparing with the relaxation time-scale we are comparing rates of change, 
 
 \subsubsection{Collisions}\label{sec:Collision}
 
-As a consequence of the high densities in the Galactic core, stars may undergo a large number of close encounters with other stars \citep{Cohn1978}. These may lead to their destruction. MS stars, WDs, and NSs may be pulled apart by tidal forces if they stray too close to a more massive object. As MS stars are diffuse, they would not tidally disrupt another star \citep{Murphy1991,Freitag2005}. Close encounters would result in some mass transfer; the cumulative effect of $20$--$30$ grazing collisions could destroy a MS star \citep{Freitag2006}. The number of collisions a star undergoes in a time interval $\delta t$ is
+As a consequence of the high densities in the Galactic core, stars may undergo a large number of close encounters with other stars \citep{Cohn1978}. These may lead to their destruction. MS stars, WDs, and NSs may be pulled apart by tidal forces if they stray too close to a more massive object. As MS stars are diffuse, they would not tidally disrupt another star \citep{Murphy1991,Freitag2005}. Close encounters would result in some mass transfer; the cumulative effect of $20$--$30$ grazing collisions could destroy an MS star \citep{Freitag2006}. The number of collisions a star undergoes in a time interval $\delta t$ is
 \begin{equation}
 \delta K = n(r) A v(r,e,r\sub{p})\delta t,
 \end{equation}
@@ -508,7 +508,7 @@ is the entropy measured in nats.\footnote{The unit is set by the base of the log
 \begin{equation}
 H(p|q) = \intd{}{}{p(\lambda)\ln\left(\frac{p(\lambda)}{q(\lambda)}\right)}{\lambda},
 \end{equation}
-where $q(\lambda)$ is another probability distribution, and we have changed sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback-Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$ everywhere; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
+where $q(\lambda)$ is another probability distribution, and we have changed the sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback-Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$ everywhere; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
 
 The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the (logarithm of the) posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln(z) - (1/2)(1 - z^{-2})$.
 
@@ -696,7 +696,7 @@ For the average of $\Delta E^2$, we replace $\ln\left(qv_2^2\right)$ by a suitab
 \begin{equation}
 \ln\left(q\overline{v_2^2}\right) = \ln \Lambda_M \simeq \ln\left(\frac{M_\bullet}{M}\right).
 \end{equation}
-\citet{Just2011} find an extremely similar result fitting a Bahcall--Wolf cusp self-consistently. We calculate the averages for the bound and unbound populations individually and then combine these to obtain the total change for each species. We must distinguish between the bound population of field stars and the distribution of test stars over which we are averaging. We use subscripts $M$ and $M'$ respectively.\footnote{In a slight abuse of notation, we use for masses $m_M \equiv M$ and $m_{M'} \equiv M'$, and hope that it is clear that the summation is over species.} The bound average may be approximated to about $10\%$ accuracy as
+\citet{Just2011} find an extremely similar result fitting a Bahcall--Wolf cusp self-consistently. We calculate the averages for the bound and unbound populations individually and then combine these to obtain the total change for each species. We must distinguish between the bound population of field stars and the distribution of test stars over which we are averaging. We use subscripts $M$ and $M'$ respectively.\footnote{In a slight abuse of notation, we use for masses $m_M \equiv M$ and $m_{M'} \equiv M'$, and hope that it is clear that the summation is over the species.} The bound average may be approximated to about $10\%$ accuracy as
 \begin{align}
 \overline{\Delta E^2_{\mathrm{b},\,M'}} \approx {} & \sum_M\frac{2^{11/2}}{3}G^2M^2{M'}^2n_\ast\sigma\ln\left(\Lambda_{M'}\right) k_M \frac{(3/2 - p_{M'})\Gamma(p_{M'} + 7/2)}{\Gamma(p_{M'} + 1)} \left[ \varpi\left(p_M,p_{M'}\right) + \iota \left(p_M,p_{M'}\right) \right] \delta t,
 \end{align}
