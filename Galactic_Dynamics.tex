@@ -87,7 +87,7 @@ Once we have determined which bursts are of interest, we can evaluate the accura
 
 \subsection{Numerical kludge waveforms}\label{sec:NK}
 
-Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. The waveforms are accurate to typically a few percent \citep{Tanaka1993,Gair2005}: the error in our waveforms has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citealt{Berry2013}).
+Extreme-mass-ratio signals can be simulated in a computationally efficient manner using a semirelativistic approximation \citep{Ruffini1981}: we assume the CO moves along a geodesic in the Kerr geometry, but radiates as if it were in flat spacetime. This technique is known as a numerical kludge. The justification of this technique is through comparison with more accurate, and computationally intensive, methods \citep{Gair2005, Babak2007}. Using a geodesic for the trajectory ensures that the signal has the correct frequency components but neglecting the effects of background curvature means that these need not have the correct amplitudes. The typical errors in the amplitude profile of a waveform  can be a few percent \citep{Tanaka1993,Gair2005}: the total amplitude error in our waveforms, integrating over all frequencies, has been estimated as typically $\sim 5\%$, increasing to $\sim 10\%$ for the most relativistic orbits ($r\sub{p} \lesssim 4 r\sub{g}$; \citealt{Berry2013}).
 
 To construct our NK waveforms, we first integrate the Kerr geodesic equations of motion. We only consider parabolic (marginally bound) orbits, where the orbiting body would be at rest at infinity.
 
@@ -115,7 +115,7 @@ where $\mu$ is the mass of the CO.
 
 We assume a detection threshold of $\rho = 10$. This gives expected detection limits on the periapse radius. With a $1 M_\odot$ CO, bursts should be detectable for $r\sub{p} \lesssim 27 r\sub{g}$ and with a $10 M_\odot$ CO for $r\sub{p} < 65 r\sub{g}$.
 
-\subsection{Parameter estimation}
+\subsection{Parameter estimation}\label{sec:param-est-MCMC}
 
 Once we have a detected signal $\boldsymbol{s}(t)$, we can consider inference of the source parameters $\boldsymbol{\lambda}$. The waveform depends on the properties of the MBH; the CO and its orbit, and the detector.
 
@@ -127,7 +127,7 @@ The parameters left to infer are \citep{Berry2013}:
 \item[(2)] The spin parameter $a_\ast$. This is constrained to the range $|a_\ast| < 1$.
 \item[(3, 4)] The orientation angles for the black hole spin $\Theta_\mathrm{K}$ and $\Phi_\mathrm{K}$. These are measured relative to the polar axis of the ecliptic coordinate system commonly used for describing the positions of celestial objects.
 \item[(5)] The ratio of the Galactic Centre distance and the CO mass $\zeta = R_0/\mu$. This scales the amplitude of the waveform. The distance has been measured using stellar orbits to be $R_0 = 8.33 \pm 0.35~\mathrm{kpc}$ \citep{Gillessen2009}.
-\item[(6, 7)] The angular momentum of the CO, parametrized by the magnitude at infinity $L_\infty = \sqrt{L_z^2 + Q}$, , and the orbital inclination $\iota = \tan^{-1}(\sqrt{Q}/L_z)$.
+\item[(6, 7)] The angular momentum of the CO, parametrized by the magnitude at infinity $L_\infty = \sqrt{L_z^2 + Q}$ and the orbital inclination $\iota = \tan^{-1}(\sqrt{Q}/L_z)$.
 \item[(8--10)] Coordinates specifying the trajectory. We use the angular phases at periapse, $\phi_\mathrm{p}$ and $\chi_\mathrm{p}$, as well as the time of periapse $t_\mathrm{p}$.
 \end{enumerate}
 The first four are specific to the MBH, and we shall attempt to quantify the constraints we can expect to place on these from EMRBs.
@@ -147,13 +147,17 @@ Here $\innerprod{\boldsymbol{s}-\boldsymbol{h}_0}{\boldsymbol{s}-\boldsymbol{h}_
 
 We use uninformative priors on all the parameters: no existing constraints are used. We adopt uniform priors for all the parameters except: $M_\bullet$, $\zeta$ and $L_\infty$, which are positive definite, where we use a prior uniform in the logarithm of the parameter, and $\Theta\sub{K}$ and $\iota$, where we use a prior uniform in the cosine of the angle.
 
-To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a class of algorithms used for integrating over complicated probability distributions. The parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their relative probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution. We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2013}.
+To assess the accuracy to which parameters can be determined, we must find the width of the posterior distribution. MCMC methods are widely used for inference problems; they are a class of algorithms used for integrating over complicated probability distributions. The parameter space is explored by constructing randomly a chain of samples, with an acceptance rate dependent upon their relative probabilities \citep{Metropolis1953,Hastings1970}. The distribution of points visited by the chain maps out the underlying distribution.
+
+We employ the same semi-adaptive algorithm as was previously used in \citet{Berry2013}. In this scheme, there is an initial phase where the proposal distribution (used in the selection of new points) is adjusted to match the distribution of points previously accepted, this tailors the width of the proposal to the particular posterior under consideration \citep*{Haario1999}. The proposal is then fixed for the main phase to ensure ergodicity \citep{Roberts2007,Andrieu2008} and only accepted points from this phase are used to characterise the posterior. This allows us to efficiently recover posteriors for a wide range of bursts.
 
 \section{Calculating event rates}\label{sec:Rates}
 
-\subsection{The distribution function}
+Having determined how to generate a waveform and extract the information from it, we must now consider how likely it is that such a waveform would be observed. We wish to calculate the event rate for EMRBs, the probability that there is an encounter between a compact object, on an orbit described by eccentricity $e$ and periapse radius $r\sub{p}$, and the MBH. To do so we must build a model to describe the distribution of COs about the MBH. The number density of stars in the six-dimensional phase space of position and velocity is described by the distribution function (DF) $f$ \citep[section 4.1]{Binney2008}. We introduce approximate forms for the DF appropriate for describing the Galactic core in \secref{DF}. These are calibrated using the simulations of \citet{Alexander2009}, the parameters of which, together with the others used to describe the Galactic core, are given in \secref{GC-Param}. Having set the distribution of COs, we explain how to convert this to an event rate in \secref{e-rp}. In \eqnref{Gamma} we give an expression that relates the event rate for an orbit $\Gamma(e,\,r\sub{p})$ and the DF. There is one final consideration before we can calculate the total event rate: that there is an inner periapsis below which orbits become depopulated. This is explained in \secref{inner-cut}. We consider tidal disruption and collisions, which we assume truncate the DF at a finite periapsis; hence the event rate inside these cut-off is zero. We also consider GW inspiral, which we assume modifies the event rate by altering the distribution of COs away from the relaxed state described by the DF. With these inner cut-offs established, we have completely defined the event rate distribution. This can then give the probability of an EMRB and the total event rate, which is presented in \secref{no-events}.
 
-We wish to calculate the probability that there is an encounter between a compact object, on an orbit described by eccentricity $e$ and periapse radius $r\sub{p}$, and the MBH. We begin by following the work of \citet{Bahcall1976, Bahcall1977} and assuming the distribution function (DF; the number density of stars in the six-dimensional phase space of position and velocity) $f$ within the Galactic core is only a function of the orbital energy \citep{Shapiro1978}. The energy per unit mass of the orbit is
+\subsection{The distribution function}\label{sec:DF}
+
+Following the work of \citet{Bahcall1976, Bahcall1977}, we assume the DF within the Galactic core is only a function of the orbital energy \citep{Shapiro1978}. The energy per unit mass of the orbit is
 \begin{equation}
 \mathcal{E} = \frac{v^2}{2} - \frac{GM_\bullet}{r},
 \end{equation}
@@ -223,7 +227,7 @@ where $M_1$ and $M_2$ are the masses of the binary's components, and $a\sub{B}$ 
 
 We assume $M_\bullet = (4.31 \pm 0.36) \times 10^6 M_\odot$ \citep{Gillessen2009} and $\sigma = (103 \pm 20)\units{km\,s^{-1}}$ \citep{Tremaine2002}. This gives a core radius of $r\sub{c} = (1.7 \pm 0.7)\units{pc}$. Using the results of \citet{Ghez2008} we would expect the total mass of stars in the core to be $m_\star(r\sub{c}) = 6.4 \times 10^6 M_\odot$, which is within $5\%$ of the value obtained similarly from \citet{Genzel2003}. This gives a reference stellar density of $n_\star = 2.8 \times 10^5\units{pc^{-3}}$.
 
-\subsection{Parametrizing in terms of eccentricity and periapsis}
+\subsection{The event rate in terms of eccentricity and periapsis}\label{sec:e-rp}
 
 We characterise orbits by their eccentricity $e$ and periapse radius $r\sub{p}$. The latter, unlike the semimajor axis, is always well defined regardless of eccentricity. For Keplerian orbits, the energy $\mathcal{E}$ and angular momentum $\mathcal{J}$ per unit mass are entirely characterised by these parameters
 \begin{equation}
@@ -321,7 +325,9 @@ The orbital period drops out from the calculation, so we do not have to worry ab
 
 To generate a representative sample for the orbital parameters $e$ and $r\sub{p}$, we use $\Gamma(e, r\sub{p})\dd e\, \dd r\sub{p}$ as the rate for a Poisson distribution.
 
-\subsection{The inner cut-off}
+The total event rate can be found by integrating $\Gamma(e,\,r\sub{p})$, but before we can do this we must set the limits of the integral. The maximum periapse is set by the limit of detectability. It is particular to the detector. The inner periapse is set by physical processes. These are explained in the following section.
+
+\subsection{The inner cut-off}\label{sec:inner-cut}
 
 From \eqnref{Gamma} we see the event rate is highly sensitive to the smallest value of the periapsis. Ultimately the orbits cannot encroach closer to the MBH than its last stable orbit. This depends upon the spin of the MBH, but is of the order of its Schwarzschild radius. Before we reach this point, there are other processes that may intervene to deplete the orbiting stars. Our treatment of these is approximate, but should produce reasonable estimates. We consider three processes: tidal disruption by the MBH (\secref{Tidal}); GW inspiral (\secref{GW-in}), and collisional disruption (\secref{Collision}). Tidal disruption imposes a definite (albeit approximate) cut-off, while the others use statistical arguments. For these methods, we will need to define a reference time-scale for relaxation. This is done in \secref{Relax}, with further details found in \apref{time-scale}.
 
@@ -388,7 +394,7 @@ where the term in angular brackets is the orbit-averaged rate of energy radiatio
  {} & \times {} \left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1} \\
  \approx {} & \frac{5}{64}\frac{c^5r\sub{p}^4}{G^3MM_\bullet^2}\frac{(1+e)^{7/2}}{(1-e)^{1/2}}\left(1+\frac{73}{24}e^2 + \frac{37}{96}e^4\right)^{-1}.
 \end{align}
-For comparison, the total time taken for the inspiral, if undisturbed, is given in \eqnref{Bound_inspiral}. The characteristic time-scale is a better measure of the depletion of an orbit as it only depends upon the parameters of that orbit, and not its future evolution.
+For comparison, the total time taken for the inspiral, if undisturbed, is given in \eqnref{Bound_inspiral}.
 
 The time-scale associated with changes in angular momentum is \citep{Peters1964}
 \begin{align}
@@ -415,8 +421,9 @@ where $A$ is the collisional cross-sectional area. For tidal disruption, where t
 For circular orbits we can find the radius at which collisions lead to disruptions by setting $\delta K = 1$ for tidal disruption or $\delta K = 20$ for grazing collisions, and $\delta t = \overline{\tau_{\mathrm{R},\,M}}$. We use the system average relaxation time-scale for the species of mass $M$ as this is the time over which stars are replenished from the reservoir. For non-circular orbits we must consider variation with position. Using $\delta r = v_r \delta t$, and then converting to an integral, for bound orbits
 \begin{equation}
 K = 2 A \frac{\overline{\tau_{\mathrm{R},\,M}}}{P(r\sub{p},e)}\intd{r\sub{p}}{(1+e)r\sub{p}/(1-e)}{n(r)\frac{v(r,e,r\sub{p})}{v_r(r,e,r\sub{p})}}{r},
+\label{eq:collision-K}
 \end{equation}
-where $P$ is the period of the orbit. Again we set $K = 1$ or $K = 20$ to find the orbits for which stars will be disrupted within $\overline{\tau_{\mathrm{R},\,M}}$. For unbound orbits we are only interested in stars that would become disrupted before their periapse passage, so
+where $P$ is the period of the orbit. Again we set $K = 1$ or $K = 20$, and then numerically solve \eqnref{collision-K} to find the orbits for which stars will be disrupted within $\overline{\tau_{\mathrm{R},\,M}}$. For unbound orbits we are only interested in stars that would become disrupted before their periapse passage, so
 \begin{equation}
 K = A \intd{r\sub{p}}{r\sub{c}}{n(r)\frac{v(r,e,r\sub{p})}{v_r(r,e,r\sub{p})}}{r},
 \end{equation}
@@ -426,11 +433,11 @@ Orbits within the collisional cut-off are assumed to be depopulated and do not c
 
 \section{Results}\label{sec:Gal-Results}
 
-\subsection{Number of events}
+\subsection{Number of events}\label{sec:no-events}
 
 As a first approximation for the number of events expected in a $2\units{yr}$ mission lifetime, we numerically integrated the event rate. This estimate is denoted as $\mathcal{N}_2\super{int}$. The lower limit on $r\sub{p}$ was set to be the largest of the tidal cut-off, the collisional cut-off or the MBH's Schwarzschild radius.\footnote{The transition to the GW inspiral regime is not a cut-off, but reflects a change in the form of the stellar distribution, hence it is not included amongst the other inner periapses as a lower limit.} The Schwarzschild radius $r\sub{S} = 2 r\sub{g}$ is used as a proxy for an averaged innermost orbit's periapse; the innermost parabolic orbit for non-spinning MBHs has $r\sub{p} = 4r\sub{g}$ and the innermost parabolic orbit for a maximally spinning MBH has $r\sub{p} = r\sub{g}$ for a prograde equatorial orbit and $r\sub{p} = (3 + 2\sqrt{2})r\sub{g}$ for a retrograde equatorial orbit. The upper limit was the detection threshold as determined from \eqnref{SNR-power-law}. The lower bound on eccentricity was set to $0.9$, below which we do not trust the parabolic approximation for burst waveforms; since the DF decays exponentially with eccentricity for unbound orbits, the upper limit does not influence our results.
 
-To obtain a more accurate estimate, we performed $2 \times 10^4$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would detect. This is denoted $\mathcal{N}_2\super{run}$.
+To obtain a more accurate estimate, we performed $2 \times 10^4$ mission realisations. For each mission, we randomly selected a set of parameters to describe the MBH, and then picked orbits with probabilities defined by their event rates. The orbital position of the \textit{LISA} detector was also chosen randomly.\footnote{We use the same condition on the initial orientation as in \citet{Berry2013}, following \citet{Cutler1998}. This does not qualitatively influence our results.} The SNR of the resulting bursts were calculated (with the detector in a position corresponding to a random time), and a detection was recorded if $\rho > 10$. By averaging the number of events per mission, we can estimate the expected number of bursts we would detect. This is denoted $\mathcal{N}_2\super{run}$.
 
 The calculated numbers of events are shown in \tabref{Rates}.
 \begin{table}
@@ -467,9 +474,9 @@ The overall rates are similar to those presented in \citet{Hopman2007}. The MS r
 
 \subsection{Information content}
 
-We wish to quantify what we could learn over a mission about the MBH's mass and spin. We use the parameter set $\boldsymbol{\lambda}_\bullet = \{\ln (M_\bullet/M_\odot), a_\ast, \cos \Theta\sub{K}, \Phi\sub{K}\}$ as these have uniform priors.
+We wish to quantify what we could learn over a mission about the MBH's mass and spin. We use the parameter set $\boldsymbol{\lambda}_\bullet = \{\ln (M_\bullet/M_\odot), a_\ast, \cos \Theta\sub{K}, \Phi\sub{K}\}$ as each of these has a uniform prior.
 
-The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($57$ from BHs and $39$ from NSs) across $63$ missions. Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to glean much useful information from orbits with larger periapses.
+The information carried by a burst is encoded in its posterior probability distribution. This can be recovered using an MCMC as explained in \secref{param-est-MCMC}. We ran MCMCs for bursts from the first $100$ of our mission realisations that had periapses $r\sub{p} < 16 r\sub{g}$. There were a total of $96$ interesting bursts ($57$ from BHs and $39$ from NSs) across $63$ missions. For examples of recovered posterior distributions, see \citet{Berry2013,Berry2013a}.\footnote{The former shows posteriors for Galactic bursts where the CO is $10 M_\odot$. The latter shows posteriors for extragalctic bursts and a $10 M_\odot$ CO. The CO mass is degenerate with the distance to the source, hence the extragalactic bursts give an indication of what happens when the CO mass is reduced. Whilst changing from a $10 M_\odot$ BH to a $1.4 M_\odot$ NS is not as extreme as moving the source to another galaxy, the posteriors give an indication of what happens as $\zeta$ is increased (and SNR decreased).} Ideally we would use information from all detectable bursts, but this would be computationally expensive and we do not expect to glean much useful information from orbits with larger periapses.
 
 During an individual mission there may be either zero, one or multiple bursts of interest. In the first case we learn nothing. In the second we have only to consider the posterior from our MCMC. In the third we must combine the results of all the bursts. This is easy in theory: as the priors are uniform we have only to multiply the individual posteriors,
 \begin{equation}
@@ -481,13 +488,13 @@ The simplest thing to do is to bin the points and then multiply the numbers in e
 
 One means of creating bins with sizes that reflect the structure of the distribution is using a $k$-d tree. This is a type of binary space partitioning tree \citep[sections 5.2, 12.1, 12.3]{Berg2008}; it is constructed finding the median in one dimension and then splitting the parameter space into two at this location. This process is then repeated in another dimension, then another, and so on recursively until the desired number of partitions, known as leaves, have been created. Constructing a $k$-d tree from a sampled probability distribution creates smaller leaves in the regions of high probability, which are of most interest, and larger leaves in the areas of low probability \citep{Weinberg2012}.
 
-Taking each burst posterior in turn, we construct a $k$-d tree using the two-step method \citep*{Sidery2013}. We use this to bin the other posteriors and multiply the totals together. This gives us one estimate for the combined posterior for each of the input bursts. We resample the final distributions to create sets of points that can be treated the same as the output from an MCMC.
+Taking each burst posterior in turn, we construct a $k$-d tree using the two-step method \citep*{Sidery2013,Berry2013a}: the data is (randomly) divided in two, the first half is used to create the leaves and the second half is used to populate the leaves. This reduces biasing due to fluctuations in the sampled data. We use this tree to bin the other posteriors and multiply the totals together. This gives us one estimate for the combined posterior for each of the input bursts. We resample the final distributions (sampling each leaf uniformly) to create sets of points that can be treated the same as the output from an MCMC.
 
 The precision to which a parameter can be constrained may be quantified by the width of the distribution. We shall use the standard deviation $\sigma\sub{SD}$ and the half-width of the $68$-percentile range constructed from one-dimensional $k$-d trees $\sigma_{0.68}$. This is constructed by adding together the smallest leaves of the tree until they encompass a total probability of $0.68$. The widths coincide for Gaussian posteriors.
 
 The widths calculated from multiple burst posteriors may be biased to too large values. This can happen when combining distributions of significantly different widths. When using the $k$-d tree of a distribution that is much broader than the others, a small number of leaves can contain the majority of the final posterior probability and we cannot resolve the final width. When using the $k$-d tree from a narrow distribution there can be large leaves at the edges of the parameter ranges, because the resampled points from these leaves are uniformly distributed they can skew the overall distribution. To reduce any potential bias, we use the smallest of the calculated widths.\footnote{The distributions were checked to ensure that they did not have anomalously small widths due to a computational error.} The $68$-percentile half-width appears more robust against biasing.
 
-\Figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
+Combining the results from the set of realisations, \figref{Widths} shows the fraction of missions $\mathcal{F}(\sigma > \varsigma)$ that have posterior widths larger than $\varsigma$.
 \begin{figure*}
 \begin{center}
    \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_1}} \quad 
@@ -519,7 +526,17 @@ In practice, if we were trying to infer the mass of the MBH we would combine all
 
 The entropies calculated from multiple burst posteriors may show a similar bias to the distribution widths. We use the largest calculated entropy value. The entropy appears less sensitive to the choice of the $k$-d tree used for the multiplication than the distribution widths.
 
-The entropies are well correlated with the logarithm of the distribution widths as expected. The distributions of the fraction of missions with entropies smaller than a given value closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
+The entropies are well correlated with the logarithm of the distribution widths as expected. The distributions of the fraction of missions with entropies smaller than a given value are shown in \figref{H-ent}.
+\begin{figure*}
+\begin{center}
+   \subfigure[{Logarithm of mass}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_1}} \quad 
+   \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_2}} \\
+   \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_3}} \quad
+   \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_4}}
+\caption{Cumulative proportion of mission realisations that produced posteriors with relative entropies larger than the ordinate value.\label{fig:H-ent}}
+  \end{center}
+\end{figure*}
+They closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
 Taking the average across all $100$ mission realisations, we can calculate the expected information gain for each parameter:
 \begin{equation}
@@ -542,7 +559,7 @@ The detectability of EMRBs is of little interest astrophysically unless we can e
 
 To quantify the information gained during a mission, we used the relative entropy with respect to our current knowledge. Averaging across all the missions, we found that we can expect to gain $2.2\units{nats}$ of information about the logarithm of the mass, $3.0\units{nats}$ about the spin magnitude, $2.8\units{nats}$ about the cosine of the polar angle for the spin axis and $4.2\units{nats}$ for the azimuthal angle. The entropy scales with the logarithm of the width of the posterior distribution, hence these entropies represent improvements in the precision of our knowledge of the parameters by factors between $\sim9$ and $\sim40$. For the mass, this would mean the uncertainty would become $\sim1\%$; we could expect to know the spin to a precision of order $\sim0.1$.
 
-It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation assuming parabolic trajectories. The waveforms are easy to compute, but may have inaccuracies of a few percent at small periapses \citep{Berry2013}. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advances the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for our event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, yet whilst little information is expected from other bursts, the amount is not zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs from the same mission, we binned our posterior distributions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
+It must be stressed that these results are only order of magnitude estimates. There are a number of sources of uncertainty found throughout our analysis. First, to calculate the EMRB waveforms we employed the numerical kludge approximation assuming parabolic trajectories. The waveforms are easy to compute, but may have inaccuracies in their amplitude profiles of a few percent at small periapses \citep{Berry2013}. This should not significantly influence detectability but may lead to differences in the shape of the posterior distributions. Since the errors in the waveforms are small this should not qualitatively effect our results. Second, in calculating the event rate we made both mathematical and physical approximations. The former are correct to a few percent and so are negligible compared to the latter. Our model, however, does include all the relevant physical processes, and further advances the previous work of \citet{Rubbo2006} and \citet{Hopman2007}. Third, the astrophysical parameters used as inputs for our event rate calculation are themselves uncertain. Fourth, when calculating the constraints for our mission realisations, we only considered EMRBs from orbits with periapses smaller than $16 r\sub{g}$, yet whilst little information is expected from other bursts, the amount is not zero. This may lead to us slightly underestimating the total information that could be extracted from EMRBs. Finally, when combining posteriors from multiple EMRBs from the same mission, we binned our posterior distributions. This could lead to a small bias, making us underestimate the usefulness of bursts. Overall, the uncertainty in astrophysical parameters is likely to be the greatest source of error. As we learn more about the Galactic Centre, we can be more confident in our prediction.
 
 The centre of the Galaxy is a wonderful laboratory for testing our understanding of astrophysics, in particular for learning about MBHs and their influence on their environments. EMRBs could be a new means of probing this system.
 

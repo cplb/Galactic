@@ -1,4 +1,4 @@
-\begin{thebibliography}{119}
+\begin{thebibliography}{124}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander(2005)}]{Alexander2005}
@@ -24,6 +24,9 @@ Amaro-Seoane P., Gair J.~R., Freitag M., Miller M.~C., Mandel I., Cutler C.~J.,
 
 \bibitem[{Amaro-Seoane \& Preto(2011)}]{Amaro-Seoane2011}
 Amaro-Seoane P., Preto M., 2011, Classical and Quantum Gravity, 28, 094017
+
+\bibitem[{Andrieu \& Thoms(2008)}]{Andrieu2008}
+Andrieu C., Thoms J., 2008, Statistics and Computing, 18, 343
 
 \bibitem[{Antonucci {et~al}\mbox{.}(2012)Antonucci, Armano, Audley, Auger,
   Benedetti, Binetruy, Bogenstahl, Bortoluzzi, Bosetti, Brandt, Caleno,
@@ -95,9 +98,13 @@ Bekenstein J.~D., Maoz E., 1992, The Astrophysical Journal, 390, 79
 Bender P. {et~al.}, 1998, {LISA Pre-Phase A Report}. Tech. rep.,
   Max-Planck-Institut f\"{u}r Quantenoptik, Garching
 
-\bibitem[{Berry \& Gair(2013)}]{Berry2013}
-Berry C. P.~L., Gair J.~R., 2013, Monthly Notices of the Royal Astronomical
-  Society, 429, 589
+\bibitem[{Berry \& Gair(2013{\natexlab{a}})}]{Berry2013a}
+Berry C. P.~L., Gair J.~R., 2013{\natexlab{a}}, Monthly Notices of the Royal
+  Astronomical Society, 14
+
+\bibitem[{Berry \& Gair(2013{\natexlab{b}})}]{Berry2013}
+Berry C. P.~L., Gair J.~R., 2013{\natexlab{b}}, Monthly Notices of the Royal
+  Astronomical Society, 429, 589
 
 \bibitem[{Binney \& Tremaine(2008)}]{Binney2008}
 Binney J., Tremaine S., 2008, {Galactic Dynamics}, 2nd edn., Princeton Series
@@ -125,6 +132,9 @@ Chatterjee P., Hernquist L., Loeb A., 2002, The Astrophysical Journal, 572, 371
 
 \bibitem[{Cohn \& Kulsrud(1978)}]{Cohn1978}
 Cohn H., Kulsrud R.~M., 1978, The Astrophysical Journal, 226, 1087
+
+\bibitem[{Cutler(1998)}]{Cutler1998}
+Cutler C., 1998, Physical Review D, 57, 7089
 
 \bibitem[{Cutler \& Flanagan(1994)}]{Cutler1994}
 Cutler C., Flanagan E.~E., 1994, Physical Review D, 49, 2658
@@ -197,6 +207,10 @@ Gualandris A., Merritt D., 2012, The Astrophysical Journal, 744, 74
 \bibitem[{G\"{u}rkan \& Hopman(2007)}]{Gurkan2007}
 G\"{u}rkan M.~A., Hopman C., 2007, Monthly Notices of the Royal Astronomical
   Society, 379, 1083
+
+\bibitem[{Haario {et~al}\mbox{.}(1999)Haario, Saksman, \&
+  Tamminen}]{Haario1999}
+Haario H., Saksman E., Tamminen J., 1999, Computational Statistics, 14, 375
 
 \bibitem[{Hastings(1970)}]{Hastings1970}
 Hastings W.~K., 1970, Biometrika, 57, 97
@@ -377,6 +391,9 @@ Reid M.~J., Menten K.~M., Genzel R., Ott T., Sch\"{o}del R., Brunthaler A.,
   Treuhaft}]{Reid1999}
 Reid M.~J., Readhead A. C.~S., Vermeulen R.~C., Treuhaft R.~N., 1999, The
   Astrophysical Journal, 524, 816
+
+\bibitem[{Roberts \& Rosenthal(2007)}]{Roberts2007}
+Roberts G.~O., Rosenthal J.~S., 2007, Journal of Applied Probability, 44, 458
 
 \bibitem[{Rubbo {et~al}\mbox{.}(2006)Rubbo, Holley-Bockelmann, \&
   Finn}]{Rubbo2006}
