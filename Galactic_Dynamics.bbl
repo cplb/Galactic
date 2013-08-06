@@ -1,4 +1,4 @@
-\begin{thebibliography}{124}
+\begin{thebibliography}{127}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Alexander(2005)}]{Alexander2005}
@@ -27,6 +27,17 @@ Amaro-Seoane P., Preto M., 2011, Classical and Quantum Gravity, 28, 094017
 
 \bibitem[{Andrieu \& Thoms(2008)}]{Andrieu2008}
 Andrieu C., Thoms J., 2008, Statistics and Computing, 18, 343
+
+\bibitem[{Antonini(2013)}]{Antonini2013}
+Antonini F., 2013, The Astrophysical Journal, 763, 62
+
+\bibitem[{Antonini {et~al}\mbox{.}(2012)Antonini, Capuzzo-Dolcetta,
+  Mastrobuono-Battisti, \& Merritt}]{Antonini2011a}
+Antonini F., Capuzzo-Dolcetta R., Mastrobuono-Battisti A., Merritt D., 2012,
+  The Astrophysical Journal, 750, 111
+
+\bibitem[{Antonini \& Merritt(2012)}]{Antonini2011}
+Antonini F., Merritt D., 2012, The Astrophysical Journal, 745, 83
 
 \bibitem[{Antonucci {et~al}\mbox{.}(2012)Antonucci, Armano, Audley, Auger,
   Benedetti, Binetruy, Bogenstahl, Bortoluzzi, Bosetti, Brandt, Caleno,
@@ -166,10 +177,10 @@ Ferrarese L., Ford H., 2005, Space Science Reviews, 116, 523
 Frank J., Rees M.~J., 1976, Monthly Notices of the Royal Astronomical Society,
   176, 633
 
-\bibitem[{Freitag {et~al}\mbox{.}(2006)Freitag, Amaro-�Seoane, \&
+\bibitem[{Freitag {et~al}\mbox{.}(2006)Freitag, Amaro-Seoane, \&
   Kalogera}]{Freitag2006}
-Freitag M., Amaro-�Seoane P., Kalogera V., 2006, The Astrophysical Journal,
-  649, 91
+Freitag M., Amaro-Seoane P., Kalogera V., 2006, The Astrophysical Journal, 649,
+  91
 
 \bibitem[{Freitag \& Benz(2005)}]{Freitag2005}
 Freitag M., Benz W., 2005, Monthly Notices of the Royal Astronomical Society,
@@ -290,7 +301,7 @@ Lynden-Bell D., 1967, Monthly Notices of the Royal Astronomical Society, 136,
 Lynden-Bell D., 1969, Nature, 223, 690
 
 \bibitem[{Lynden-Bell \& Kalnajs(1972)}]{Lynden-Bell1972}
-Lynden-Bell D., Kalnajs A., 1972, Monthly Notices of the Royal Astronomical
+Lynden-Bell D., Kalnajs A.~J., 1972, Monthly Notices of the Royal Astronomical
   Society, 157, 1
 
 \bibitem[{MacKay(2003)}]{MacKay2003}
