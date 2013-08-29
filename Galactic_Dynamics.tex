@@ -96,7 +96,7 @@ r = {} & \frac{2 r\sub{p}}{1 + \cos\psi};\\
 \end{align}
 where $Q$ is the Carter constant and $L_z$ is the angular momentum about the $z$-axis.
 
-Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist co-ordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is that the waveform amplitude shall not be precisely correct.
+Once the Kerr geodesic is constructed, we identify the Boyer-Lindquist coordinates with flat-space spherical polars \citep{Gair2005, Babak2007}. Using the relativistic trajectory ensures the waveform incorporates the correct frequency components; translating to flat-space means we can make use of the flat-space wave-generation formula. The downside of this is that the waveform amplitude shall not be precisely correct.
 
 We use the quadrupole--octupole formula for the gravitational strain \citep{Bekenstein1973, Press1977, Yunes2008}. This is the familiar quadrupole formula (\citealt*[section 36.10]{Misner1973}; \citealt[section 17.9]{Hobson2006}), plus the next order terms. The higher order terms modify the amplitudes of some frequency components by a few tens of percent for the more relativistic orbits, although the integrated effect is smaller.
 
@@ -506,7 +506,7 @@ Combining the results from the set of realisations, \figref{Widths} shows the fr
    \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_2}} \\
    \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_3}} \quad
    \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_sigma_4}}
-\caption{Cumulative proportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the ordinate value.\label{fig:Widths}}
+\caption{Cumulative proportion of mission realisations that produced posteriors with standard deviation (solid line) or $68$-percentile half-width (dashed line) larger than the abscissa value.\label{fig:Widths}}
   \end{center}
 \end{figure*}
 It appears there is a $33\%$ chance of determining $\ln (M_\bullet/M_\odot)$ to a precision of $10^{-2}$ or a $10\%$ chance of determining it to $10^{-4}$. The current uncertainty of $\sim 0.08$ is bettered in over half ($52\%$) of the missions. The spin $a_\ast$ could be determined to a precision of $10^{-2}$ in $30\%$ of missions and there is a $10\%$ chance of determining it to better than $3\times 10^{-4}$.
@@ -521,7 +521,7 @@ is the entropy measured in nats.\footnote{The unit is set by the base of the log
 \begin{equation}
 H(p|q) = \intd{}{}{p(\lambda)\ln\left(\frac{p(\lambda)}{q(\lambda)}\right)}{\lambda},
 \end{equation}
-where $q(\lambda)$ is another probability distribution, and we have changed the sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback-Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$ everywhere; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
+where $q(\lambda)$ is another probability distribution, and we have changed the sign compared to the discrete case so that the entropy is non-negative. The relative entropy, or Kullback--Leiber divergence, measures the difference between distributions and is zero only if $p(\lambda) = q(\lambda)$ everywhere; with $p(\lambda)$ as the posterior and $q(\lambda)$ as the prior, it quantifies the information gained \citep{Kullback1951}.
 
 The relative entropy is perfect for our purpose. It is zero when we do not observe a burst or the burst is uninformative such that we do not learn anything. Otherwise it scales approximately with the (logarithm of the) posterior width, giving an indication of how much could be learnt. For example, if $p(\lambda)$ and $q(\lambda)$ were both uniform distributions, with $p(\lambda)$ having $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z$; if they were both Gaussian with equal means, and $p(\lambda)$ had $1/z$ the width of $q(\lambda)$, $H(p|q) = \ln z - (1/2)(1 - z^{-2})$.
 
@@ -538,10 +538,10 @@ The entropies are well correlated with the logarithm of the distribution widths 
    \subfigure[{Spin magnitude}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_2}} \\
    \subfigure[{Cosine of polar angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_3}} \quad
    \subfigure[{Azimuthal angle}]{\includegraphics[width=0.4\textwidth]{Fig_mission_entropy_4}}
-\caption{Cumulative proportion of mission realisations that produced posteriors with relative entropies larger than the ordinate value.\label{fig:H-ent}}
+\caption{Cumulative proportion of mission realisations that produced posteriors with relative entropies larger than the abscissa value.\label{fig:H-ent}}
   \end{center}
 \end{figure*}
-They closely mirror those in \figref{Widths} (but the scale on the ordinate axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
+They closely mirror those in \figref{Widths} (but the scale on the abscissa axis is now linear). There is a clustering at small entropies; the largest entropies are $\sim 13\units{nats}$ for $\ln(M_\bullet/M_\odot)$ and $\sim 15\units{nats}$ for the other parameters.
 
 Taking the average across all $100$ mission realisations, we can calculate the expected information gain for each parameter:
 \begin{equation}
